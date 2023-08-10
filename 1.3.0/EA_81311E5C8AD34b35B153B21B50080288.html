@@ -1,0 +1,158 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="nl-nl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="Pkg"><meta name="DC.language" content="nl-nl"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Consolidatie van regelgeving</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="Pkg"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a><ul><li><a href="stop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="leeswijzers.html">Leeswijzers</a></li><li><a href="EA_4D1D7FD517FE4d8dA9A2B905D202C92B.html">Informatiemodel</a><ul><li><a href="EA_9E187217A693458593B4BC483B77322B.html">Legenda van de diagrammen</a></li><li><a href="EA_068BE3F17D2D41a8AA2E39A355337401.html">Toepassingsgebied</a></li><li><a href="EA_BEA65540863F4cedAE03E4C3D0A29EAA.html">Algemeen</a></li><li><a href="EA_A1BBB86A635B4bf6B2FCECD1CFE6A3C9.html">Besluiten en regelgeving</a></li><li><a href="EA_E0EFE05F9FBB45c6AB2493B9FF9037EC.html">Officiële publicaties</a></li><li class="active"><a href="EA_81311E5C8AD34b35B153B21B50080288.html">Consolidatie van regelgeving</a><ul><li><a href="EA_F798EBB99D38431f9884C8D2E7DA0B6B.html">Juridische verantwoording</a></li><li><a href="EA_06EBFA9D4CAD4ff29AFBE17665E06C18.html">Actuele consolidatie informatie</a></li><li><a href="EA_AFAF97EA251247c9B2CC7B9922384BF8.html">Consolidatie van een instrument</a></li><li><a href="EA_21F155BFDF91485e9CC1901FE5B5A024.html">Toestanden</a></li><li><a href="EA_354F82ADD7C2441cBF0FA7D361B63C75.html">Proefversies voor een besluit</a></li></ul></li></ul></li><li><a href="businessrules.html">Bedrijfsregels</a></li></ul></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title topictitle1" id="ariaid-title1">Consolidatie van regelgeving</h1>
+  <div class="body">
+      <section class="section"><h2 class="title sectiontitle">Automatiseerbaar proces</h2>
+     Onderdeel van het <a class="xref" href="proces_overzicht.html">geïntegreerd proces van bekendmaken en consolideren</a> is het <a class="xref" href="proces_consolidatie.html">consolideren van besluiten</a>, waarbij de wijzigingen die in
+    besluiten beschreven staan worden toegepast op de regelgeving en het resultaat daarvan
+    beschikbaar gesteld wordt. De standaard is zo ontworpen dat het proces van consolideren vergaand
+    geautomatiseerd kan worden: <ul class="ul">
+      <li class="li"> Het startpunt voor het besluitvormingsproces is de gewijzigde regelgeving zoals het
+        bevoegd gezag dat opstelt. Het opnemen daarvan in een besluit van (de wijziging van) de
+        regeling of informatieobject kan geautomatiseerd worden. </li>
+      <li class="li"> Bij een besluit wordt op een machine-leesbare manier <a class="xref link_ea" href="EA_5E740899BABE47d1B62053A402064B33.html#Pkg__305E440BFEBD473c99462D33B0933F7D">consolidatie-informatie</a>]
+        toegevoegd om het verband tussen de gewijzigde regelingen en/of informatieobjecten en
+        geldigheidsinformatie (zoals de inwerkingtreding) aan te geven. </li>
+      <li class="li"> Via de <a class="xref" href="consolideren_overzicht.html">geautomatiseerde consolidatie</a> kan
+        het effect van een besluit op de regelgeving bepaald worden. De geautomatiseerde
+        consolidatie kan door elk systeem uitgevoerd worden dat over voldoende informatie beschikt.
+        De LVBB voert het uit voor de bekendgemaakte besluiten en stelt de resultaten beschikbaar,
+        onder andere via het <a class="xref" href="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/" target="_blank">bronhouderkoppelvlak</a>. </li>
+      <li class="li"> Uit de resultaten van de geautomatiseerde consolidatie is af te leiden waar juridische
+        ambiguïteiten het afronden van de consolidatie belemmeren. Het bevoegd gezag kan daar op
+        reageren door aanvullende informatie te verstrekken. </li>
+      <li class="li"> De uitkomst van de geautomatiseerde consolidatie kan gebruikt worden om
+        regelgeving-gerelateerde informatie synchroon te houden met geldende regelgeving; STOP
+        beschrijft daartoe enkele <a class="xref" href="synchronisatie_overzicht.html">sychronisatiemechanismen</a>. </li>
+    </ul>
+  </section>
+  <section class="section" id="Pkg__uitkomst"><h2 class="title sectiontitle">Uitkomst van de geautomatiseerde consolidatie</h2>
+     De uitkomst van de geautomatiseerde
+    consolidatie valt in vier delen uiteen: <ul class="ul">
+      <li class="li"> De <a class="xref link_ea" href="EA_06EBFA9D4CAD4ff29AFBE17665E06C18.html#Pkg">actuele
+          consolidatie-informatie</a> zoals verkregen door het combineren van alle <a class="xref link_ea" href="EA_5E740899BABE47d1B62053A402064B33.html#Pkg__305E440BFEBD473c99462D33B0933F7D">consolidatie-informatie</a> die in
+        (definitieve) besluiten is meegegeven. </li>
+      <li class="li"> Voor elk besluit dat een of meer regelingen en/of informatieobjecten instelt, wijzigt
+        en/of intrekt kunnen <a class="xref link_ea" href="EA_354F82ADD7C2441cBF0FA7D361B63C75.html#Pkg">proefversies</a> van de regelingen en informatieobjecten worden gemaakt, die aangeven
+        hoe de regelingen/informatieobjecten komen te luiden als het besluit in werking zou treden.
+        Bij die proefversies wordt alleen rekening gehouden met andere besluiten voor zover dat
+        noodzakelijk is, niet met <em class="ph i">alle</em> andere besluiten. De proefversies kunnen voor elk
+        besluit opgesteld worden, en zijn vooral bedoeld voor niet-definitieve (zoals
+        ontwerp-)besluiten. </li>
+      <li class="li"> Voor elke regeling en elk (consolideerbaar) informatieobject waarvan tenminste één versie
+        in werking getreden is: de <a class="xref link_ea" href="EA_21F155BFDF91485e9CC1901FE5B5A024.html#Pkg">toestanden</a>] van de geconsolideerde regeling of geconsolideerd informatieobject. Er
+        is een <a class="xref link_ea" href="EA_AFAF97EA251247c9B2CC7B9922384BF8.html#Pkg">directe relatie</a>
+        tussen de toestanden en de versies van een regeling of informatieobject zoals het bevoegd
+        gezag die opstelt. </li>
+    </ul> De geautomatiseerde consolidatie wordt voor elk <a class="xref link_ea" href="EA_188A75C61FB54d108E7659F3FE5DE8F3.html#Pkg__AB6FDC32D3F3474eBBE7438305EB0E26">work</a> afzonderlijk uitgevoerd, ook als
+    een work samen met andere works één juridisch geheel vormt. </section>
+  <section class="section"><h2 class="title sectiontitle">Karakterisering van de uitkomst</h2>
+     De geautomatiseerde consolidatie kan als een
+      <em class="ph i">black box</em> gezien worden, waarvan de uitkomst als eigenschappen heeft: <ul class="ul">
+      <li class="li"> Nieuwe geconsolideerde regelgeving (of een proefconsolidatie daarvan) ontstaat zodra het
+        betreffende systeem (zoals de LVBB) voldoende informatie ontvangen heeft voor de
+        consolidatie van een besluit. Het kan voorkomen dat een besluit bekendgemaakt wordt of dat
+        een beroepsorgaan een uitspraak heeft gedaan, maar dat het effect op de geconsolideerde
+        regelgeving pas enige tijd later beschikbaar komt. Dat kan leiden tot aanpassing van
+        geconsolideerde regelgeving die in het verleden geldig was. </li>
+      <li class="li"> Een geconsolideerde regeling of informatieobject wordt beschreven als een verzameling
+        toestanden, waarvan er op elk moment in de tijd maar één geldig is. Behoudens het vorige
+        punt is altijd bekend welke toestanden er zijn en wat hun geldigheid is. In de loop van de
+        tijd zullen er toestanden bijkomen, maar er kunnen ook toestanden verdwijnen. </li>
+      <li class="li"> De inhoud van een toestand kan in de loop van de tijd wijzigen. Een wijziging kan de
+        juridische inhoud betreffen, wat in STOP leidt tot een nieuwe toestand met dezelfde
+        geldigheid als de oude toestand. Bij een revisie van de regelgeving is de juridische inhoud
+        niet gewijzigd maar is bijvoorbeeld een tekst voorzien van redactioneel commentaar; dat
+        leidt tot een andere inhoud van dezelfde toestand. </li>
+
+      <li class="li"> Voor de proefversies voor een besluit geldt: <ul class="ul">
+          <li class="li"> Het is altijd bekend wat de juridische inhoud van een proefversie is. Die zal
+            voortbouwen op de geldende regelgeving op het moment dat het besluit bekendgemaakt
+            wordt, maar het bevoegd gezag is niet wettelijk verplicht het besluit te baseren op de
+            regelgeving die geldt ten tijde van de bekendmaking of beoogde inwerkingtreding van het
+            besluit. De proefversies kunnen daarom gebaseerd zijn op eerder geldende regelgeving of
+            zelfs op regelgeving die als zodanig nooit geldig is geworden. Dit komt voor als er
+            tussen het opstellen van het besluit en het bekendmaken daarvan andere besluiten in
+            werking getreden zijn waarmee het besluit geen rekening gehouden heeft. </li>
+          <li class="li"> Een enkel besluit kan tot meerdere proefconsolidaties van dezelfde regeling of
+            informatieobject leiden als het besluit <a class="xref" href="proces_besluit.html#gefaseerd">meerdere versies</a> van nieuwe regelgeving bevat. </li>
+        </ul>
+      </li>
+
+      <li class="li"> Voor de toestanden van geconsolideerde regelgeving geldt: <ul class="ul">
+          <li class="li"> Het is niet altijd bekend wat de juridische inhoud van een toestand is. Dat kan
+            gebeuren omdat het bevoegd gezag nog niet voldoende informatie verstrekt heeft, maar het
+            kan ook vanwege juridische tegenstrijdigheden onmogelijk zijn de inhoud te bepalen. Het
+            bevoegd gezag is wettelijk verplicht om voor de huidige en toekomstige geldende
+            regelgeving de inhoud aan de LVBB aan te leveren (en juridische tegenstrijdigheden op te
+            lossen), maar een dergelijke verplichting bestaat niet als regelgeving wordt aangepast
+            die alleen in het verleden geldig was. </li>
+        </ul>
+      </li>
+      <li class="li"> Voor proefconsolidaties op basis van (definitieve) besluiten die nog niet in werking
+        getreden zijn geldt: <ul class="ul">
+          <li class="li"> Er kunnen meerdere proefconsolidaties van dezelfde regeling of informatieobject zijn,
+            elk op basis van (meerdere) definitieve besluiten. Er zijn proefconsolidaties voor alle
+            combinaties van <a class="xref" href="doel.html">doelen</a> waarvan nog geen
+            inwerkingtredingsdatum bekend is, maar waarvoor wel versies van een regeling of
+            informatieobject in de besluiten zijn beschreven. </li>
+          <li class="li"> De juridische inhoud zal zoveel mogelijk voortbouwen op de geldende regelgeving, maar
+            als dat niet kan dan wordt de proefconsolidatie op basis van eerder geldende regelgeving
+            of zelfs op regelgeving die als zodanig nooit geldig is geworden. Dit komt voor als er
+            tussen het opstellen van het besluit en het bekendmaken daarvan andere besluiten in
+            werking getreden zijn waarmee in de proefconsolidatie geen rekening gehouden kon worden
+            wegens het ontbreken van informatie. Het bevoegd gezag is pas wettelijk verplicht die
+            informatie aan te leveren bij de inwerkingtreding van de besluiten die tot de
+            proefconsolidatie hebben geleid. </li>
+          <li class="li"> Omdat het bevoegd gezag niet wettelijk verplicht is een geconsolideerde versie van de
+            besluiten beschikbaar te stellen, kan het <a class="xref" href="proces_besluit.html#gespreid">voorkomen</a> dat de juridische inhoud in meerdere versies is vastgelegd waarvan
+            het bevoegd gezag nog niet heeft aangegeven welke versie de juiste is. </li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+</div>
+</article></main></body></html>

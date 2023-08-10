@@ -1,0 +1,45 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="geografisch-informatie-object"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Geografisch informatie-object</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="geografisch-informatie-object"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a><ul><li><a href="stop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="leeswijzers.html">Leeswijzers</a><ul><li><a href="toepassing.html">Basis van STOP</a></li><li><a href="architectuur.html">Architectuur en ontwerpkeuzes</a></li><li><a href="gebruik.html">Software-ontwikkeling met STOP</a><ul><li><a href="quickstart_overzicht.html">Snelstartgids STOP-XML</a></li><li><a href="tekstmodellen.html">Modellering van tekst</a></li><li><a href="io-intro.html">Informatie-object</a></li><li class="active"><a href="gio-intro.html">Geografisch informatie-object</a><ul><li><a href="gio-onderdelen.html">Onderdelen GIO</a></li><li><a href="gio-soorten.html#soorten-gios">Soorten GIO's</a></li><li><a href="gio-bekendgemaakt.html">Bekendgemaakte GIO</a></li><li><a href="gio-handelingen.html">Werken met GIO's</a></li></ul></li><li><a href="IO_Document.html">Document als informatie-object</a></li><li><a href="naamgevingsconventie.html">Naamgevingsconventie</a></li><li><a href="context_modules.html">Tijdsafhankelijke (context)informatie</a></li><li><a href="annotaties.html">Annotaties</a></li></ul></li><li><a href="voortbouwen_op_STOP.html">Voortbouwen op STOP</a></li></ul></li><li><a href="EA_4D1D7FD517FE4d8dA9A2B905D202C92B.html">Informatiemodel</a></li><li><a href="businessrules.html">Bedrijfsregels</a></li></ul></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1">Geografisch informatie-object</h1><div class="body"></div><article class="topic nested1" aria-labelledby="ariaid-title2" id="inhoud-deze-sectie"><h2 class="title topictitle2" id="ariaid-title2">Inhoud deze sectie</h2><div class="body"><p class="p">In dit deel wordt uiteengezet wat een Geografisch informatie-object (GIO) is, welke onderdelen en varianten een GIO heeft, en hoe u kunt werken met een GIO.</p></div></article><article class="topic nested1" aria-labelledby="ariaid-title3" id="wat-is-een-gio"><h2 class="title topictitle2" id="ariaid-title3">Wat is een GIO?</h2><div class="body"><p class="p">Een GIO is een geografisch informatie-object. Het wordt gebruikt om een <a class="xref" href="werkingsgebieden-stop.html">werkingsgebied</a> van een (onderdeel van een) regeling vast te stellen. Een werkingsgebied het gebied aan waarbinnen een of meerdere juridische regels in de tekst van een regeling geldig zijn. Met een GIO kan de exacte ligging van (een of meer locaties in) het werkingsgebied op een juridisch correcte manier worden vastgelegd. Vanuit de tekst van een regeling wordt dan voor het werkingsgebied naar de GIO verwezen. Het GIO zelf bevat geometrische data die de begrenzing van de locatie(s) aangeven. Optioneel kan een locatie normwaarden hebben of behoren tot een groep (een zogenoemd GIO-deel).</p></div></article><article class="topic nested1" aria-labelledby="ariaid-title4" id="vormen"><h2 class="title topictitle2" id="ariaid-title4">Vormen</h2><div class="body"><p class="p">Een GIO kan net als een regeling geconsolideerd worden en heeft daardoor twee verschijningsvormen:</p><ul class="ul"><li class="li"><p class="p">een juridisch geldige GIO. Deze is onderdeel van een besluit.</p></li><li class="li"><p class="p">een geconsolideerde GIO. Deze behoort tot de service-informatie.</p></li></ul></div></article><article class="topic nested1" aria-labelledby="ariaid-title5" id="kenmerken"><h2 class="title topictitle2" id="ariaid-title5">Kenmerken</h2><div class="body"><ul class="ul"><li class="li"><p class="p">Een GIO volgt het <a class="xref" href="EA_188A75C61FB54d108E7659F3FE5DE8F3.html#Pkg__29F89190FCE1470289A3566A3FC13663">FRBR-model</a>: een GIO is een <a class="xref" href="EA_188A75C61FB54d108E7659F3FE5DE8F3.html#Pkg__AB6FDC32D3F3474eBBE7438305EB0E26">work</a> dat door de tijd heen bestaat, maar op een moment in de tijd altijd tot uitdrukking komt in een <a class="xref" href="EA_188A75C61FB54d108E7659F3FE5DE8F3.html#Pkg__F689C5A0EC9B4b3491F3558906741DB8">expression</a> (specifieke versie).</p></li><li class="li"><p class="p">Een GIO-wijziging wordt aangeleverd als volledige nieuwe versie, met een verwijzing naar de vorige versie.</p></li><li class="li"><p class="p">Het GIO en de GIO-delen hebben een <a class="xref" href="identificatie_niet-tekst.html">unieke identificatie</a> (JOIN-ID).</p></li></ul></div></article><article class="topic nested1" aria-labelledby="ariaid-title6" id="zie-ook"><h2 class="title topictitle2" id="ariaid-title6">Zie ook</h2><div class="body"><ul class="ul"><li class="li"><p class="p"><a class="xref" href="werkingsgebieden-stop.html">Werkingsgebieden in juridische zin</a>.</p></li><li class="li"><p class="p"><a class="xref" href="vaststellen-wijzigen-gio.html">Hoe het juridisch zit met GIO's</a>.</p></li><li class="li"><p class="p">Het overzicht van <a class="xref" href="brmodule:geo_GeoInformatieObjectVersie" target="_blank">geo-bedrijfsregels</a>.</p></li><li class="li"><p class="p"><a class="xref" href="git:voorbeelden/Coderingen/GIO/GIO-varianten" target="_blank">Voorbeelden van GIO's</a> met verschillende typen geometrische data.</p></li></ul></div></article></article></main></body></html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="een-gio-intrekken"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Een GIO intrekken</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="een-gio-intrekken"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a><ul><li><a href="stop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="leeswijzers.html">Leeswijzers</a><ul><li><a href="toepassing.html">Basis van STOP</a></li><li><a href="architectuur.html">Architectuur en ontwerpkeuzes</a></li><li><a href="gebruik.html">Software-ontwikkeling met STOP</a><ul><li><a href="quickstart_overzicht.html">Snelstartgids STOP-XML</a></li><li><a href="tekstmodellen.html">Modellering van tekst</a></li><li><a href="io-intro.html">Informatie-object</a></li><li><a href="gio-intro.html">Geografisch informatie-object</a><ul><li><a href="gio-onderdelen.html">Onderdelen GIO</a></li><li><a href="gio-soorten.html#soorten-gios">Soorten GIO's</a></li><li><a href="gio-bekendgemaakt.html">Bekendgemaakte GIO</a></li><li><a href="gio-handelingen.html">Werken met GIO's</a><ul><li><a href="gio-maken.html">Een GIO maken</a></li><li><a href="gio-toevoegen.html">Een GIO toevoegen</a></li><li><a href="gio-wijzigen.html">Een GIO wijzigen</a></li><li class="active"><a href="gio-intrekken.html">Een GIO intrekken</a></li></ul></li></ul></li><li><a href="IO_Document.html">Document als informatie-object</a></li><li><a href="naamgevingsconventie.html">Naamgevingsconventie</a></li><li><a href="context_modules.html">Tijdsafhankelijke (context)informatie</a></li><li><a href="annotaties.html">Annotaties</a></li></ul></li><li><a href="voortbouwen_op_STOP.html">Voortbouwen op STOP</a></li></ul></li><li><a href="EA_4D1D7FD517FE4d8dA9A2B905D202C92B.html">Informatiemodel</a></li><li><a href="businessrules.html">Bedrijfsregels</a></li></ul></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1">Een GIO intrekken</h1><div class="body"><p class="p">Een regelingwijziging kan er toe leiden dat een GIO niet langer nodig is, bijvoorbeeld omdat het artikel dat naar betreffende GIO verwees, wordt geschrapt. De juridische werking van een GIO wordt beëindigd door het GIO in te trekken. Een intrekking moet tot uitdrukking komen in zowel de tekst als de <a class="xref" href="EA_5E740899BABE47d1B62053A402064B33.html#Pkg__E480ACE31F414f8aB3CF2309232EB934">consolidatie-informatie</a> van het besluit.</p><p class="p">Dit doet men als volgt:</p><ol class="ol"><li class="li"><p class="p">De verwijzing naar het GIO in de regelingtekst wordt verwijderd.</p></li><li class="li"><p class="p">De JOIN-ID van het GIO in de bijlage van de regeling wordt verwijderd.</p></li><li class="li"><p class="p">In de <code class="ph codeph">ConsolidatieInformatie</code> van het besluit in <code class="ph codeph">Intrekkingen</code> wordt aangegeven dat het GIO wordt ingetrokken.</p></li></ol></div></article></main></body></html>

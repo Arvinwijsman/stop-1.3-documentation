@@ -1,0 +1,164 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="nl-nl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="Pkg"><meta name="DC.language" content="nl-nl"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Legenda van de diagrammen</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="Pkg"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a><ul><li><a href="stop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="leeswijzers.html">Leeswijzers</a></li><li><a href="EA_4D1D7FD517FE4d8dA9A2B905D202C92B.html">Informatiemodel</a><ul><li class="active"><a href="EA_9E187217A693458593B4BC483B77322B.html">Legenda van de diagrammen</a></li><li><a href="EA_068BE3F17D2D41a8AA2E39A355337401.html">Toepassingsgebied</a></li><li><a href="EA_BEA65540863F4cedAE03E4C3D0A29EAA.html">Algemeen</a></li><li><a href="EA_A1BBB86A635B4bf6B2FCECD1CFE6A3C9.html">Besluiten en regelgeving</a></li><li><a href="EA_E0EFE05F9FBB45c6AB2493B9FF9037EC.html">Officiële publicaties</a></li><li><a href="EA_81311E5C8AD34b35B153B21B50080288.html">Consolidatie van regelgeving</a></li></ul></li><li><a href="businessrules.html">Bedrijfsregels</a></li></ul></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title topictitle1" id="ariaid-title1">Legenda van de diagrammen</h1>
+  <div class="body">
+      <div class="div">
+    <p class="p">
+      In het informatiemodel wordt gebruik gemaakt van UML
+      (klasse)diagrammen om aan te geven hoe de informatie gestructureerd is.
+      Onderstaand diagram illustreert de verschillende onderdelen van zo'n diagram.
+    </p>
+    <p class="p">
+      Vaak worden er kleuren gebruikt om samenhang tussen concepten te tonen. Om welke
+      samenhang het gaat is terug te vinden in de legenda. In onderstaand diagram wordt
+      de meest gebruikte indeling gehanteerd:
+    </p>
+    <dl class="dl">
+      
+        <dt class="dt dlterm">Juridische informatie</dt>
+        <dd class="dd">
+          Juridisch authentieke informatie wordt gevormd door een product waarvan de inhoud via
+          een juridisch voorgeschreven procedure door een overheid vastgesteld en gepubliceerd wordt.
+          Als er een juridische discussie ontstaat over wat een overheid besloten of gepubliceerd heeft,
+          dan moet op de authentieke producten teruggevallen kunnen worden om tot een antwoord te komen.
+          Aan ICT die is ingericht voor authentieke producten worden daarom hoge eisen gesteld omtrent
+          beschikbaarheid, onveranderlijkheid en duurzaamheid. Voorbeelden van authentieke producten
+          zijn het besluit als vastgesteld door bevoegd gezag en de bekendmaking daarvan volgens de
+          richtlijnen van de Bekendmakingswet (bijvoorbeeld als PDF/1A).
+          <p class="p">
+            Ook informatie met juridische werking, dus een product dat juridische zeggingskracht heeft
+            omdat er vanuit een juridisch authentiek product naar verwezen wordt, valt onder juridische
+            informatie. Het product wordt zelf niet via een juridisch voorgeschreven procedure vastgesteld
+            en is dus niet juridisch authentiek. Een voorbeeld is een NEN-norm waarnaar verwezen wordt
+            vanuit de (juridisch authentieke) tekst van een besluit. De NEN-norm wordt niet door een
+            bevoegd gezag via een juridische procedure vastgesteld, maar vanwege de verwijzing wordt
+            de NEN-norm onderdeel van het besluit. Aan ICT die is ingericht voor producten met een
+            juridische werking worden daarom dezelfde hoge eisen gesteld omtrent beschikbaarheid,
+            onveranderlijkheid en duurzaamheid als aan juridisch authentieke producten.
+          </p>
+        </dd>
+      
+      
+        <dt class="dt dlterm">Service informatie</dt>
+        <dd class="dd">
+          Service informatie is een product waarvan de informatie is afgeleid uit juridisch
+          authentieke producten en waarvoor geen juridisch voorgeschreven procedure bestaat om vast
+          te stellen dat de inhoud juridisch correct is. Een serviceproduct kan niet als bron dienen
+          in juridische discussies over wat een overheid besloten heeft. Er kan wel een juridische
+          verplichting zijn om een serviceproduct te maken en te publiceren. Een voorbeeld van een
+          serviceproduct is de geconsolideerde regeling waarin alle (juridisch authentieke) besluiten
+          verwerkt zijn die voor de regeling relevant zijn. ICT die is ingericht voor serviceproducten
+          hoeft niet aan dezelfde hoge eisen voor onveranderlijkheid en duurzaamheid te voldoen die
+          gelden voor juridisch authentieke producten, en er is vrijheid om ICT volgens eigen inzichten
+          in te richten. Aan serviceproducten worden wel kwaliteitseisen gesteld, want eenieder moet
+          er van uit kunnen gaan dat de inhoud overeenkomt met wat in de onderliggende (juridisch)
+          authentieke documenten staat.
+        </dd>
+      
+      
+        <dt class="dt dlterm">Abstracties</dt>
+        <dd class="dd">
+          Het informatiemodel gebruikt abstracties om concepten aan te duiden die niet als zodanig
+          bestaan, maar die een groep van vergelijkbare informatieproducten representeren. Door
+          abstracties te gebruiken kan iets gezegd worden over de hele groep zonder in te gaan op
+          de individuele informatieproducten. In de tekst wordt wel steeds aangegeven welke dat
+          zijn; ze staan genoemd als specialisatie van de abstracties.
+        </dd>
+      
+    </dl>
+  </div>
+<figure class="fig fignone ea_diagram" id="Pkg__386EC4E40CF0443fBF699E2CBEB76CA2">
+<div class="p"><div class="fig imagemap"><img usemap="#d196503e60" class="image zoomable" src="img/EA_386EC4E40CF0443fBF699E2CBEB76CA2.png"><map name="d196503e60" id="d196503e60"><area href="#Pkg__386EC4E40CF0443fBF699E2CBEB76CA2" alt="Legenda van de diagrammen (diagram)" title="Legenda van de diagrammen (diagram)" shape="rect" coords="372,13,606,77"></map></div></div>
+</figure>
+<div class="div">
+    <ul class="ul">
+
+      <li class="li">
+        <em class="ph i">Publicatie</em>, <em class="ph i">Bekendmaking</em>, <em class="ph i">Besluit</em> en <em class="ph i">Informatieobject</em> zijn elementen
+        die door het informatiemodel beschreven worden.
+      </li>
+
+      <li class="li">
+        De relatie tussen <em class="ph i">Bekendmaking</em> en <em class="ph i">Publicatie</em> geeft een specialisatie/generalisatie aan:
+        een <em class="ph i">Bekendmaking</em> is (een specialisatie van) een <em class="ph i">Publicatie</em>.
+      </li>
+
+      <li class="li">
+        In het voorbeeld is een <em class="ph i">Publicatie</em> een <em class="ph i">Work</em>. Omdat het concept <em class="ph i">Work</em> niet in
+        het diagram opgenomen is kan de generalisatie/specialisatie relatie niet ingetekend worden.
+        In plaats daarvan staat <em class="ph i">Work</em> rechtsboven in het vakje van <em class="ph i">Publicatie</em>.
+      </li>
+
+      <li class="li">
+        De relatie tussen <em class="ph i">Besluit</em> en <em class="ph i">Bekendmaking</em> geeft aan dat een <em class="ph i">Bekendmaking</em> een <em class="ph i">Besluit</em> bevat.
+        De 1 geeft de kardinaliteit aan: een <em class="ph i">Bekendmaking</em> bevat 1 <em class="ph i">Besluit</em>.
+      </li>
+
+      <li class="li">
+        Algemene relaties worden met een gewone lijn of met een pijl aangegeven, al dan niet
+        voorzien van beschrijving en/of kardinaliteit. De lijn tussen <em class="ph i">Besluit</em> en <em class="ph i">Informatieobject</em>
+        is een voorbeeld van een algemene relatie aan. De kardinaliteit 1..* geeft aan dat een informatieobject
+        gerelateerd is aan één of meer besluiten, de 0..* geeft aan dat een besluit gerelateerd is aan
+        nul of meer informatieobjecten.
+      </li>
+
+      <li class="li">
+        Bij het <em class="ph i">Informatieobject</em> is aangegeven dat het concept een eigenschap <em class="ph i">Identificatie</em> heeft
+        dat een IRI is. Bij <em class="ph i">Metadata besluit</em> is met [0..1] de kardinaliteit van de eigenschap
+        <em class="ph i">Soort besluit</em> aangegeven, als een eigenschap die 0 of 1 waarde kan hebben.
+        In het informatiemodel worden eigenschappen alleen in diagrammen opgenomen
+        als dat relevant is voor de context waarin het diagram gebruikt wordt; in de tekst
+        worden wel alle eigenschappen beschreven.
+      </li>
+
+      <li class="li">
+        <em class="ph i">Legenda van de diagrammen</em> is een verwijzing naar een ander diagram dat elders in de documentatie is opgenomen.
+      </li>
+
+    </ul>
+  </div>
+</div>
+</article></main></body></html>

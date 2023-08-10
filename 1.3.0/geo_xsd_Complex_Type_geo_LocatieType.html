@@ -1,0 +1,426 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="nl-nl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="LocatieType"><meta name="DC.language" content="nl-nl"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Complex Type geo:LocatieType</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="LocatieType"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a><ul><li><a href="imop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="imop_xml.html">XML-serialisatie</a></li><li><a href="uitwisselpakket.html">Uitwisselpakket</a></li><li><a href="schemata_gebruik.html">Gebruik van IMOP</a></li><li><a href="schema_documentatie.html">Schemadocumentatie</a><ul><li><a href="schema_documentatie_legenda.html">Legenda van de schemadocumentatie</a></li><li><a href="imop_modules.html">STOP-modules in IMOP</a></li><li><a href="tekst_xsd_Main_schema_tekst_xsd.html">Schema imop-tekst.xsd</a></li><li><a href="gio_xsd_Main_schema_gio_xsd.html">Schema imop-gio.xsd</a></li><li><a href="geo_xsd_Main_schema_geo_xsd.html">Schema imop-geo.xsd</a><ul><li><a href="geo_xsd_Simple_Type_geo_dtGroepID.html">dtGroepID</a></li><li><a href="geo_xsd_Element_geo_GeoInformatieObjectVaststelling.html">GeoInformatieObjectVaststelling</a></li><li><a href="geo_xsd_Complex_Type_geo_GeoInformatieObjectVaststellingType.html">GeoInformatieObjectVaststellingType</a></li><li><a href="geo_xsd_Element_geo_GeoInformatieObjectVersie.html">GeoInformatieObjectVersie</a></li><li><a href="geo_xsd_Complex_Type_geo_GeoInformatieObjectVersieType.html">GeoInformatieObjectVersieType</a></li><li><a href="geo_xsd_Element_geo_Groep.html">Groep</a></li><li><a href="geo_xsd_Element_geo_groepID.html">groepID</a></li><li><a href="geo_xsd_Complex_Type_geo_GroepType.html">GroepType</a></li><li><a href="geo_xsd_Element_geo_Locatie.html">Locatie</a></li><li class="active"><a href="geo_xsd_Complex_Type_geo_LocatieType.html">LocatieType</a></li></ul></li><li><a href="se_xsd_Main_schema_se_xsd.html">Schema se-FeatureStyle-imop.xsd</a></li><li><a href="ogc_xsd_Main_schema_ogc_xsd.html">Schema se-filter-imop.xsd</a></li><li><a href="data_xsd_Main_schema_data_xsd.html">Schema imop-data.xsd</a></li><li><a href="cons_xsd_Main_schema_cons_xsd.html">Schema imop-consolidatie.xsd</a></li><li><a href="rsc_xsd_Main_schema_rsc_xsd.html">Schema imop-resources.xsd</a></li><li><a href="br_xsd_Main_schema_br_xsd.html">Schema imop-bedrijfsregels.xsd</a></li><li><a href="sv_xsd_Main_schema_sv_xsd.html">Schema imop-schemata.xsd</a></li><li><a href="uws_xsd_Main_schema_uws_xsd.html">Schema imop-uitwisseling.xsd</a></li></ul></li><li><a href="imop_bedrijfsregels.html">Bedrijfsregels</a></li><li><a href="imop_waardelijsten.html">Waardelijsten</a></li></ul></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+   <h1 class="title topictitle1" id="ariaid-title1">Complex Type geo:LocatieType</h1>
+   <div class="body">
+      <table class="table frame-all"><caption></caption><colgroup><col style="width:10.714285714285714%"><col style="width:89.28571428571429%"></colgroup><tbody class="tbody">
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Namespace</td>
+                  <td class="entry align-left colsep-1 rowsep-1">https://standaarden.overheid.nl/stop/imop/geo/</td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Informatie</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="div">
+    <p class="p">
+Een Locatie bevat een geometrie
+(begrenzing van een gebied) en kan een naam hebben. Een GIO bestaat uit een collectie Locaties. Een Locatie kan een
+kwalitatieve- of een kwantitatieve normwaarde bevatten en een
+identificiatie van een groep waar de Locatie toe behoort.
+    </p>
+  </div>
+  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Informatiemodel</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <a class="xref link_ea" href="EA_1C752EC8163240cbA9644D1CD9266E58.html#Pkg__7C5BE984FA2D4a0b8BCD816E8FF23677">Locatie (entiteit)</a></td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Diagram</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="p">
+                        <div class="fig imagemap" id="LocatieType__geo_xsd_Complex_Type_geo_LocatieType"><img usemap="#d319009e73" class="image" src="img/geo_xsd_Complex_Type_geo_LocatieType.png"><map name="d319009e73" id="d319009e73"><area href="http://www.ogc.org/standards/gml" target="_blank" alt="id (http://www.opengis.net/gml/3.2)" title="id (http://www.opengis.net/gml/3.2)" shape="rect" coords="283,119,360,144"><area href="http://www.ogc.org/standards/gml" target="_blank" alt="metaDataProperty (http://www.opengis.net/gml/3.2)" title="metaDataProperty (http://www.opengis.net/gml/3.2)" shape="rect" coords="446,205,582,230"><area href="http://www.ogc.org/standards/gml" target="_blank" alt="description (http://www.opengis.net/gml/3.2)" title="description (http://www.opengis.net/gml/3.2)" shape="rect" coords="446,240,549,265"><area href="http://www.ogc.org/standards/gml" target="_blank" alt="descriptionReference (http://www.opengis.net/gml/3.2)" title="descriptionReference (http://www.opengis.net/gml/3.2)" shape="rect" coords="446,275,600,300"><area href="http://www.ogc.org/standards/gml" target="_blank" alt="identifier (http://www.opengis.net/gml/3.2)" title="identifier (http://www.opengis.net/gml/3.2)" shape="rect" coords="446,310,537,335"><area href="http://www.ogc.org/standards/gml" target="_blank" alt="name (http://www.opengis.net/gml/3.2)" title="name (http://www.opengis.net/gml/3.2)" shape="rect" coords="446,345,522,370"><area href="http://www.ogc.org/standards/gml" target="_blank" alt="StandardObjectProperties (http://www.opengis.net/gml/3.2)" title="StandardObjectProperties (http://www.opengis.net/gml/3.2)" shape="rect" coords="343,164,541,190"><area href="http://www.ogc.org/standards/gml" target="_blank" alt="AbstractGMLType (http://www.opengis.net/gml/3.2)" title="AbstractGMLType (http://www.opengis.net/gml/3.2)" shape="rect" coords="258,43,501,65"><area href="http://www.ogc.org/standards/gml" target="_blank" alt="boundedBy (http://www.opengis.net/gml/3.2)" title="boundedBy (http://www.opengis.net/gml/3.2)" shape="rect" coords="326,394,431,419"><area href="http://www.ogc.org/standards/gml" target="_blank" alt="location (http://www.opengis.net/gml/3.2)" title="location (http://www.opengis.net/gml/3.2)" shape="rect" coords="326,429,413,454"><area href="http://www.ogc.org/standards/gml" target="_blank" alt="AbstractFeatureType (http://www.opengis.net/gml/3.2)" title="AbstractFeatureType (http://www.opengis.net/gml/3.2)" shape="rect" coords="244,3,502,25"><area href="#LocatieType_naam" alt="Element geo:LocatieType / geo:naam" title="Element geo:LocatieType / geo:naam" shape="rect" coords="312,471,417,515"><area href="#LocatieType_geometrie" alt="Element geo:LocatieType / geo:geometrie" title="Element geo:LocatieType / geo:geometrie" shape="rect" coords="312,525,390,550"><area href="geo_xsd_Element_geo_groepID.html#groepID" alt="Element geo:groepID" title="Element geo:groepID" shape="rect" coords="312,560,444,604"><area href="#LocatieType_kwantitatieveNormwaarde" alt="Element geo:LocatieType / geo:kwantitatieveNormwaarde" title="Element geo:LocatieType / geo:kwantitatieveNormwaarde" shape="rect" coords="312,614,470,658"><area href="#LocatieType_kwalitatieveNormwaarde" alt="Element geo:LocatieType / geo:kwalitatieveNormwaarde" title="Element geo:LocatieType / geo:kwalitatieveNormwaarde" shape="rect" coords="312,668,463,712"></map></div>
+                     </div>
+                  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Type</td>
+                  <td class="entry align-left colsep-1 rowsep-1">extension of <a class="xref" href="http://www.ogc.org/standards/gml" target="_blank">AbstractFeatureType (http://www.opengis.net/gml/3.2)</a>
+                  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Type hierarchy</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <ul class="ul">
+                        <li class="li">
+                           <p class="p">
+                              <a class="xref" href="http://www.ogc.org/standards/gml" target="_blank">AbstractGMLType (http://www.opengis.net/gml/3.2)</a>
+                           </p>
+                           <ul class="ul">
+                              <li class="li">
+                                 <p class="p">
+                                    <a class="xref" href="http://www.ogc.org/standards/gml" target="_blank">AbstractFeatureType (http://www.opengis.net/gml/3.2)</a>
+                                 </p>
+                                 <ul class="ul">
+                                    <li class="li">
+                                       <p class="p">
+                                          <a class="xref" href="#LocatieType">Complex Type geo:LocatieType</a>
+                                       </p>
+                                    </li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Gebruikt door</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="p">
+                        <table class="table frame-all"><caption></caption><colgroup><col style="width:20%"><col style="width:80%"></colgroup><tbody class="tbody">
+                                 <tr class="row">
+                                    <td class="entry align-left colsep-1 rowsep-1">Element </td>
+                                    <td class="entry align-left colsep-1 rowsep-1">
+                                       <a class="xref" href="geo_xsd_Element_geo_Locatie.html#Locatie">Element geo:Locatie</a>
+                                    </td>
+                                 </tr>
+                              </tbody></table>
+                     </div>
+                  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Kinderen</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <a class="xref" href="#LocatieType_geometrie">Element geo:LocatieType / geo:geometrie</a>, <a class="xref" href="geo_xsd_Element_geo_groepID.html#groepID">Element geo:groepID</a>, <a class="xref" href="#LocatieType_kwalitatieveNormwaarde">Element geo:LocatieType / geo:kwalitatieveNormwaarde</a>, <a class="xref" href="#LocatieType_kwantitatieveNormwaarde">Element geo:LocatieType / geo:kwantitatieveNormwaarde</a>, <a class="xref" href="#LocatieType_naam">Element geo:LocatieType / geo:naam</a>, <a class="xref" href="http://www.ogc.org/standards/gml" target="_blank">boundedBy (http://www.opengis.net/gml/3.2)</a>, <a class="xref" href="http://www.ogc.org/standards/gml" target="_blank">description (http://www.opengis.net/gml/3.2)</a>, <a class="xref" href="http://www.ogc.org/standards/gml" target="_blank">descriptionReference (http://www.opengis.net/gml/3.2)</a>, <a class="xref" href="http://www.ogc.org/standards/gml" target="_blank">identifier (http://www.opengis.net/gml/3.2)</a>, <a class="xref" href="http://www.ogc.org/standards/gml" target="_blank">location (http://www.opengis.net/gml/3.2)</a>, <a class="xref" href="http://www.ogc.org/standards/gml" target="_blank">metaDataProperty (http://www.opengis.net/gml/3.2)</a>, <a class="xref" href="http://www.ogc.org/standards/gml" target="_blank">name (http://www.opengis.net/gml/3.2)</a>
+                  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Attributen</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="p">
+                        <table class="table frame-all"><caption></caption><colgroup><col style="width:42.857142857142854%"><col style="width:42.857142857142854%"><col style="width:14.285714285714285%"></colgroup><thead class="thead">
+                                 <tr class="row">
+                                    <th class="entry align-left colsep-1 rowsep-1" id="LocatieType__entry__21">QName</th>
+                                    <th class="entry align-left colsep-1 rowsep-1" id="LocatieType__entry__22">Type</th>
+                                    <th class="entry align-left colsep-1 rowsep-1" id="LocatieType__entry__23">Use</th>
+                                 </tr>
+                              </thead><tbody class="tbody">
+                                 <tr class="row">
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="LocatieType__entry__21">
+                                       <a class="xref" href="http://www.ogc.org/standards/gml" target="_blank">id (http://www.opengis.net/gml/3.2)</a>
+                                    </td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="LocatieType__entry__22">ID</td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="LocatieType__entry__23">optional</td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="LocatieType__entry__21 LocatieType__entry__22 LocatieType__entry__23" colspan="3">The attribute gml:id supports provision of a handle for the XML element representing a GML Object. Its use is mandatory for all GML objects. It is of XML type ID, so is constrained to be unique in the XML document within which it occurs.</td>
+                                 </tr>
+                              </tbody></table>
+                     </div>
+                  </td>
+               </tr>
+               <tr class="row nobr-xsd:geo:LocatieType">
+                  <td class="entry align-left colsep-1 rowsep-1">Beperkingen</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="p"><table class="table"><caption></caption><colgroup><col style="width:9.090909090909092%"><col style="width:90.9090909090909%"></colgroup><tbody class="tbody"><tr class="row"><td class="entry"><a class="xref link_br" href="businessrules_STOP_3000.html#Bedrijfsregels__br_STOP3020">STOP3020</a></td><td class="entry"><div class="div"><p class="p">Coördinaten van een geometrisch object in een GIO MOETEN gebruikmaken van één van de twee ruimtelijke referentiesystemen:</p> <ol class="ol"> <li class="li"><strong class="ph b">RD</strong>: <code class="ph codeph">srsName='urn:ogc:def:crs:EPSG::28992'</code> of</li> <li class="li"><strong class="ph b">ETRS89</strong>: <code class="ph codeph">srsName='urn:ogc:def:crs:EPSG::4258'</code>.</li> </ol></div></td></tr></tbody></table></div></td>
+               </tr>
+            </tbody></table>
+   </div>
+   <article class="topic nested1" aria-labelledby="ariaid-title2" id="LocatieType_naam">
+      <h2 class="title topictitle2" id="ariaid-title2">Element geo:LocatieType / geo:naam</h2>
+      <div class="body">
+         <table class="table frame-all"><caption></caption><colgroup><col style="width:10.714285714285714%"><col style="width:89.28571428571429%"></colgroup><tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Namespace</td>
+                     <td class="entry align-left colsep-1 rowsep-1">https://standaarden.overheid.nl/stop/imop/geo/</td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Informatie</td>
+                     <td class="entry align-left colsep-1 rowsep-1">
+                        <div class="div">
+    <p class="p">Naam van deze Locatie. Als deze naam ingevuld is wordt deze als label
+    getoond in de lvbb viewer.</p>
+  </div>
+</td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Informatiemodel</td>
+                     <td class="entry align-left colsep-1 rowsep-1">
+                        </td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Diagram</td>
+                     <td class="entry align-left colsep-1 rowsep-1">
+                        <p class="p"></p>
+                     </td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Type</td>
+                     <td class="entry align-left colsep-1 rowsep-1">xs:string</td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Eigenschappen</td>
+                     <td class="entry align-left colsep-1 rowsep-1">
+                        <div class="p">
+                           <table class="table frame-all"><caption></caption><colgroup><col style="width:20%"><col style="width:80%"></colgroup><tbody class="tbody">
+                                    <tr class="row">
+                                       <td class="entry align-left colsep-1 rowsep-1">content: </td>
+                                       <td class="entry align-left colsep-1 rowsep-1">
+                                          <strong class="ph b">simple</strong>
+                                       </td>
+                                    </tr>
+                                    <tr class="row">
+                                       <td class="entry align-left colsep-1 rowsep-1">minOccurs: </td>
+                                       <td class="entry align-left colsep-1 rowsep-1">
+                                          <strong class="ph b">0</strong>
+                                       </td>
+                                    </tr>
+                                    <tr class="row">
+                                       <td class="entry align-left colsep-1 rowsep-1">maxOccurs: </td>
+                                       <td class="entry align-left colsep-1 rowsep-1">
+                                          <strong class="ph b">1</strong>
+                                       </td>
+                                    </tr>
+                                 </tbody></table>
+                        </div>
+                     </td>
+                  </tr>
+                  </tbody></table>
+      </div>
+   </article>
+   <article class="topic nested1" aria-labelledby="ariaid-title3" id="LocatieType_geometrie">
+      <h2 class="title topictitle2" id="ariaid-title3">Element geo:LocatieType / geo:geometrie</h2>
+      <div class="body">
+         <table class="table frame-all"><caption></caption><colgroup><col style="width:10.714285714285714%"><col style="width:89.28571428571429%"></colgroup><tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Namespace</td>
+                     <td class="entry align-left colsep-1 rowsep-1">https://standaarden.overheid.nl/stop/imop/geo/</td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Informatie</td>
+                     <td class="entry align-left colsep-1 rowsep-1">
+                        <div class="div">
+    <div class="p"> Geometrie van deze Locatie. In de serialisatie wordt deze uitgewisseld
+    zoals beschreven in
+      <a class="xref" href="https://docs.geostandaarden.nl/nen3610/def-st-basisgeometrie-20200930/" target="_blank">Basisgeometrie</a>.
+    Te weten Simple Features Profile 2 (SF2) geometrieën exclusief cirkels en bogen.
+    
+    Van de in dit document genoemde ruimtelijke referentiesystemen zijn in een GIO alleen toegestaan:
+      <ol class="ol">
+       <li class="li">RD stelsel (2D): srsName='urn:ogc:def:crs:EPSG::28992'</li>
+       <li class="li">ETRS89 (2D): srsName='urn:ogc:def:crs:EPSG::4258'</li>
+       </ol>
+    </div>
+    <p class="p">Indien de geo:id (de GUID, zie <a class="xref" href="https://docs.geostandaarden.nl/nen3610/def-st-basisgeometrie-20200930/" target="_blank">Basisgeometrie</a>)
+      van twee geometrieen gelijk is, moet de daadwerkelijke geometrie ook dezelfde zijn.</p>
+  </div>
+</td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Informatiemodel</td>
+                     <td class="entry align-left colsep-1 rowsep-1">
+                        </td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Diagram</td>
+                     <td class="entry align-left colsep-1 rowsep-1">
+                        <div class="p">
+                           <div class="fig imagemap" id="LocatieType_geometrie__geo_xsd_Element_geo_geometrie"><img usemap="#d319009e777" class="image" src="img/geo_xsd_Element_geo_geometrie.png"><map name="d319009e777" id="d319009e777"><area href="https://docs.geostandaarden.nl/nen3610/basisgeometrie/#gml" target="_blank" alt="Geometrie (http://www.geostandaarden.nl/basisgeometrie/1.0)" title="Geometrie (http://www.geostandaarden.nl/basisgeometrie/1.0)" shape="rect" coords="177,6,304,31"></map></div>
+                        </div>
+                     </td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Eigenschappen</td>
+                     <td class="entry align-left colsep-1 rowsep-1">
+                        <div class="p">
+                           <table class="table frame-all"><caption></caption><colgroup><col style="width:20%"><col style="width:80%"></colgroup><tbody class="tbody">
+                                    <tr class="row">
+                                       <td class="entry align-left colsep-1 rowsep-1">content: </td>
+                                       <td class="entry align-left colsep-1 rowsep-1">
+                                          <strong class="ph b">complex</strong>
+                                       </td>
+                                    </tr>
+                                    <tr class="row">
+                                       <td class="entry align-left colsep-1 rowsep-1">minOccurs: </td>
+                                       <td class="entry align-left colsep-1 rowsep-1">
+                                          <strong class="ph b">1</strong>
+                                       </td>
+                                    </tr>
+                                 </tbody></table>
+                        </div>
+                     </td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Kinderen</td>
+                     <td class="entry align-left colsep-1 rowsep-1">
+                        <a class="xref" href="https://docs.geostandaarden.nl/nen3610/basisgeometrie/#gml" target="_blank">Geometrie (http://www.geostandaarden.nl/basisgeometrie/1.0)</a>
+                     </td>
+                  </tr>
+                  </tbody></table>
+      </div>
+   </article>
+   <article class="topic nested1" aria-labelledby="ariaid-title4" id="LocatieType_kwantitatieveNormwaarde">
+      <h2 class="title topictitle2" id="ariaid-title4">Element geo:LocatieType / geo:kwantitatieveNormwaarde</h2>
+      <div class="body">
+         <table class="table frame-all"><caption></caption><colgroup><col style="width:10.714285714285714%"><col style="width:89.28571428571429%"></colgroup><tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Namespace</td>
+                     <td class="entry align-left colsep-1 rowsep-1">https://standaarden.overheid.nl/stop/imop/geo/</td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Informatie</td>
+                     <td class="entry align-left colsep-1 rowsep-1">
+                        <div class="div">
+    <p class="p">Wanneer bij een Locatie een kwantitatieve Normwaarde hoort (zoals
+    beschreven in IMOW) is deze waarde opgenomen in dit veld. Een kwantitatieve
+    normwaarde is altijd gecodeerd als als een
+    <code class="keyword markupname xmlelement">&lt;xs:double&gt;</code></p>
+  </div>
+</td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Informatiemodel</td>
+                     <td class="entry align-left colsep-1 rowsep-1">
+                        </td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Diagram</td>
+                     <td class="entry align-left colsep-1 rowsep-1">
+                        <p class="p"></p>
+                     </td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Type</td>
+                     <td class="entry align-left colsep-1 rowsep-1">xs:double</td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Eigenschappen</td>
+                     <td class="entry align-left colsep-1 rowsep-1">
+                        <div class="p">
+                           <table class="table frame-all"><caption></caption><colgroup><col style="width:20%"><col style="width:80%"></colgroup><tbody class="tbody">
+                                    <tr class="row">
+                                       <td class="entry align-left colsep-1 rowsep-1">content: </td>
+                                       <td class="entry align-left colsep-1 rowsep-1">
+                                          <strong class="ph b">simple</strong>
+                                       </td>
+                                    </tr>
+                                    <tr class="row">
+                                       <td class="entry align-left colsep-1 rowsep-1">minOccurs: </td>
+                                       <td class="entry align-left colsep-1 rowsep-1">
+                                          <strong class="ph b">0</strong>
+                                       </td>
+                                    </tr>
+                                    <tr class="row">
+                                       <td class="entry align-left colsep-1 rowsep-1">maxOccurs: </td>
+                                       <td class="entry align-left colsep-1 rowsep-1">
+                                          <strong class="ph b">1</strong>
+                                       </td>
+                                    </tr>
+                                 </tbody></table>
+                        </div>
+                     </td>
+                  </tr>
+                  </tbody></table>
+      </div>
+   </article>
+   <article class="topic nested1" aria-labelledby="ariaid-title5" id="LocatieType_kwalitatieveNormwaarde">
+      <h2 class="title topictitle2" id="ariaid-title5">Element geo:LocatieType / geo:kwalitatieveNormwaarde</h2>
+      <div class="body">
+         <table class="table frame-all"><caption></caption><colgroup><col style="width:10.714285714285714%"><col style="width:89.28571428571429%"></colgroup><tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Namespace</td>
+                     <td class="entry align-left colsep-1 rowsep-1">https://standaarden.overheid.nl/stop/imop/geo/</td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Informatie</td>
+                     <td class="entry align-left colsep-1 rowsep-1">
+                        <div class="div">
+    <p class="p">Wanneer bij een Locatie een kwalitatieve Normwaarde hoort (zoals beschreven in IMOW) is deze waarde opgenomen in dit veld. Een kwalitatieve normwaarde is een (niet-lege) tekstuele omschrijving.</p>
+  </div>
+</td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Informatiemodel</td>
+                     <td class="entry align-left colsep-1 rowsep-1">
+                        </td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Diagram</td>
+                     <td class="entry align-left colsep-1 rowsep-1">
+                        <p class="p"></p>
+                     </td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Type</td>
+                     <td class="entry align-left colsep-1 rowsep-1">xs:string</td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Eigenschappen</td>
+                     <td class="entry align-left colsep-1 rowsep-1">
+                        <div class="p">
+                           <table class="table frame-all"><caption></caption><colgroup><col style="width:20%"><col style="width:80%"></colgroup><tbody class="tbody">
+                                    <tr class="row">
+                                       <td class="entry align-left colsep-1 rowsep-1">content: </td>
+                                       <td class="entry align-left colsep-1 rowsep-1">
+                                          <strong class="ph b">simple</strong>
+                                       </td>
+                                    </tr>
+                                    <tr class="row">
+                                       <td class="entry align-left colsep-1 rowsep-1">minOccurs: </td>
+                                       <td class="entry align-left colsep-1 rowsep-1">
+                                          <strong class="ph b">0</strong>
+                                       </td>
+                                    </tr>
+                                    <tr class="row">
+                                       <td class="entry align-left colsep-1 rowsep-1">maxOccurs: </td>
+                                       <td class="entry align-left colsep-1 rowsep-1">
+                                          <strong class="ph b">1</strong>
+                                       </td>
+                                    </tr>
+                                 </tbody></table>
+                        </div>
+                     </td>
+                  </tr>
+                  <tr class="row nobr-xsd:geo:kwalitatieveNormwaarde:LocatieType">
+                     <td class="entry align-left colsep-1 rowsep-1">Beperkingen</td>
+                     <td class="entry align-left colsep-1 rowsep-1">
+                        <div class="p"><table class="table"><caption></caption><colgroup><col style="width:9.090909090909092%"><col style="width:90.9090909090909%"></colgroup><tbody class="tbody"><tr class="row"><td class="entry"><a class="xref link_br" href="businessrules_STOP_3000.html#Bedrijfsregels__br_STOP3010">STOP3010</a></td><td class="entry"><div class="div"><p class="p">Een <code class="ph codeph">kwalitatieveNormwaarde</code> mag geen lege string (“”) zijn.</p></div></td></tr></tbody></table></div></td>
+                  </tr>
+               </tbody></table>
+      </div>
+   </article>
+</article></main></body></html>

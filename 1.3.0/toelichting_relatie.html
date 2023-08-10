@@ -1,0 +1,45 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="toelichtingsrelaties-voor-artikelsgewijze-toelichting"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Toelichtingsrelaties voor artikelsgewijze toelichting</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="toelichtingsrelaties-voor-artikelsgewijze-toelichting"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a><ul><li><a href="stop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="leeswijzers.html">Leeswijzers</a><ul><li><a href="toepassing.html">Basis van STOP</a></li><li><a href="architectuur.html">Architectuur en ontwerpkeuzes</a></li><li><a href="gebruik.html">Software-ontwikkeling met STOP</a><ul><li><a href="quickstart_overzicht.html">Snelstartgids STOP-XML</a></li><li><a href="tekstmodellen.html">Modellering van tekst</a></li><li><a href="io-intro.html">Informatie-object</a></li><li><a href="gio-intro.html">Geografisch informatie-object</a></li><li><a href="IO_Document.html">Document als informatie-object</a></li><li><a href="naamgevingsconventie.html">Naamgevingsconventie</a></li><li><a href="context_modules.html">Tijdsafhankelijke (context)informatie</a></li><li><a href="annotaties.html">Annotaties</a><ul><li><a href="directe_mutatie.html">Directe mutatie van annotaties</a></li><li class="active"><a href="toelichting_relatie.html">Toelichtingsrelaties voor artikelsgewijze toelichting</a></li></ul></li></ul></li><li><a href="voortbouwen_op_STOP.html">Voortbouwen op STOP</a></li></ul></li><li><a href="EA_4D1D7FD517FE4d8dA9A2B905D202C92B.html">Informatiemodel</a></li><li><a href="businessrules.html">Bedrijfsregels</a></li></ul></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1">Toelichtingsrelaties voor artikelsgewijze toelichting</h1><div class="body"></div><article class="topic nested1" aria-labelledby="ariaid-title2" id="artikelgewijze-toelichting"><h2 class="title topictitle2" id="ariaid-title2">Artikelgewijze toelichting</h2><div class="body"><p class="p">Een artikelgewijze toelichting wordt gebruikt om in detail aan te geven hoe de regels luiden (geconsolideerde toelichting bij een geconsolideerde regeling) of wat er besloten en dus veranderd is (toelichting bij een besluit). Voor de tekst van een regeling wordt dan een artikel, lid of verandering daarvan toegelicht. Dit is een voldoende detailniveau, omdat in principe artikelen en leden zo geschreven worden dat ze over één onderwerp gaan en daarvan één aspect regelen. De artikelgewijze toelichting is zelf een aaneenschakeling van stukjes tekst die samen een doorlopend verhaal vormen, maar elk van de stukjes over één of meer artikelen/leden is zelfstandig leesbaar.</p></div></article><article class="topic nested1" aria-labelledby="ariaid-title3" id="waarom-toelichtingsrelaties"><h2 class="title topictitle2" id="ariaid-title3">Waarom Toelichtingsrelaties?</h2><div class="body"><p class="p">De Toelichtingsrelatie-annotatie legt het verband tussen een stukje toelichting en de regeling-/besluit-onderdelen waar dat stukje over gaat. Dat is <strong class="ph b">niet</strong> om het verwijzen vanuit de toelichting naar een artikel/lid mogelijk te maken, want dat kan al met IntRef, maar om de relatie om te kunnen draaien. Het wordt dan mogelijk om bij een artikel/lid/verandering de toelichting te tonen.</p><p class="p">Met het oog op de toekomst biedt Toelichtingsrelaties ook de mogelijkheid om een toelichting aan een <a class="xref" href="gio-intro.html">geografisch informatieobject(GIO)</a> te koppelen zodat een toelichting bij een GIO of GIO-deel getoond zou kunnen worden. In het geval van een toelichting op een GIO die in een Besluit genoemd wordt: op betreffende GIO informatiepagina. In het geval van een toelichting op een GIO die in de Regeling genoemd wordt: bij het geconsolideerde GIO. Gebruik hiervan wordt vooralsnog afgeraden.</p></div></article><article class="topic nested1" aria-labelledby="ariaid-title4" id="werking-toelichtingsrelaties"><h2 class="title topictitle2" id="ariaid-title4">Werking Toelichtingsrelaties</h2><div class="body"><p class="p">Zowel bij een Besluit als bij een Regeling kan er door het bevoegd gezag een <a class="xref" href="tekst_xsd_Element_tekst_ArtikelgewijzeToelichting.html#ArtikelgewijzeToelichting">artikelsgewijze toelichting</a> worden opgesteld. Van een Besluit worden deze niet geconsolideerd, van een Regeling wel. Deze toelichtingen vormen een 1:n relatie met artikelen en/of informatieobjecten uit het Besluit of de Regeling. Om deze relaties te beschrijven biedt STOP de module <a class="xref" href="data_xsd_Element_data_Toelichtingsrelaties.html#Toelichtingsrelaties">Toelichtingsrelaties</a>.</p><br><img class="image" src="img/toelichtingsrelaties.png" alt="image"><br><p class="p">Toelichtingsrelaties geeft de relatie tussen wId van de artikelsgewijze toelichting enerzijds en één of meerdere wId's van artikelen die in de regeling of besluit zijn opgenomen, anderzijds.</p><p class="p">De Toelichtingsrelaties kunnen worden gebruikt om bij presentatie van de regelingtekst of besluittekst de van toepassing zijnde toelichting te tonen.</p></div></article><article class="topic nested1" aria-labelledby="ariaid-title5" id="beperkingen-toelichtingsrelaties"><h2 class="title topictitle2" id="ariaid-title5">Beperkingen Toelichtingsrelaties</h2><div class="body"><p class="p">Niet elke Artikelgewijze Toelichting hoeft opgenomen te worden in de Toelichtingrelaties.</p><p class="p">De wId's die gebruikt worden in Toelichtingsrelaties moeten daadwerkelijk bestaan, zowel in de Artikelgewijze Toelichting als in het Besluit of de Regeling.</p><p class="p">Vooralsnog worden Toelichtingsrelaties bij GIO's afgeraden. Gebruik in plaats daarvan een Toelichtingsrelatie bij de verwijzing naar het GIO in de regeling.</p><p class="p">Voorlopig biedt STOP niet de mogelijkheid om Toelichtingsrelatie te muteren, het is alleen mogelijk om het volledig aan te leveren.</p></div></article></article></main></body></html>

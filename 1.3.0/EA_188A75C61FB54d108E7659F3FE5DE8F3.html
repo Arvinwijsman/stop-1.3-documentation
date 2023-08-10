@@ -1,0 +1,208 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="nl-nl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="Pkg"><meta name="DC.language" content="nl-nl"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Het FRBR model</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="Pkg"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a><ul><li><a href="stop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="leeswijzers.html">Leeswijzers</a></li><li><a href="EA_4D1D7FD517FE4d8dA9A2B905D202C92B.html">Informatiemodel</a><ul><li><a href="EA_9E187217A693458593B4BC483B77322B.html">Legenda van de diagrammen</a></li><li><a href="EA_068BE3F17D2D41a8AA2E39A355337401.html">Toepassingsgebied</a></li><li><a href="EA_BEA65540863F4cedAE03E4C3D0A29EAA.html">Algemeen</a><ul><li class="active"><a href="EA_188A75C61FB54d108E7659F3FE5DE8F3.html">Het FRBR model</a></li><li><a href="EA_BD0B9B5F34C548eeB092538800D54713.html">Identificatie</a></li><li><a href="EA_1A45BBE5EC4F4bb2BBD7F5E701CE0479.html">Instrument en instrumentversies</a></li><li><a href="EA_F557E4DB59344ae894555F646FE2631E.html">Implementatie en versionering</a></li><li><a href="EA_59E55D5894754481B3D9890DD60CD071.html">Tekstmodellering</a></li><li><a href="EA_61016E983B974885A6CEF61D9C34F3C3.html">Objectgericht modelleren en muteren</a></li><li><a href="EA_E15D6EFB90DE4277A46E39F7FE5EFFCC.html">Begrippen en waardelijsten</a></li></ul></li><li><a href="EA_A1BBB86A635B4bf6B2FCECD1CFE6A3C9.html">Besluiten en regelgeving</a></li><li><a href="EA_E0EFE05F9FBB45c6AB2493B9FF9037EC.html">Officiële publicaties</a></li><li><a href="EA_81311E5C8AD34b35B153B21B50080288.html">Consolidatie van regelgeving</a></li></ul></li><li><a href="businessrules.html">Bedrijfsregels</a></li></ul></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title topictitle1" id="ariaid-title1">Het FRBR model</h1>
+  <div class="body">
+      <figure class="fig fignone ea_diagram" id="Pkg__29F89190FCE1470289A3566A3FC13663">
+<div class="p"><div class="fig imagemap"><img usemap="#d117969e18" class="image zoomable" src="img/EA_29F89190FCE1470289A3566A3FC13663.png"><map name="d117969e18" id="d117969e18"><area href="#Pkg__15169AAC5D674a188950B4C947B71624" alt="Item (entiteit)" title="Item (entiteit)" shape="rect" coords="13,378,132,439"><area href="#Pkg__02BBFF32DE204a02879B87B5F5570C7F" alt="Manifestation (entiteit)" title="Manifestation (entiteit)" shape="rect" coords="13,257,132,318"><area href="#Pkg__F689C5A0EC9B4b3491F3558906741DB8" alt="Expression (entiteit)" title="Expression (entiteit)" shape="rect" coords="13,135,132,196"><area href="#Pkg__AB6FDC32D3F3474eBBE7438305EB0E26" alt="Work (entiteit)" title="Work (entiteit)" shape="rect" coords="13,13,132,74"></map></div></div>
+</figure>
+<div class="div">
+    <div class="p"> Het model dat STOP hanteert voor instrumenten, instrumentversies en modules is gebaseerd op
+      de Functional Requirements for Bibliographic Records (FRBR). In FRBR wordt onderscheid gemaakt
+      in een work, expression, manifestation en item. De betekenis ervan wordt vaak uitgelegd aan de
+      hand van het voorbeeld van een boek: <dl class="dl">
+        
+          <dt class="dt dlterm">Een boek in de zin van een fysiek object dat vast te pakken is wordt in FRBR aangemerkt als item.</dt>
+          <dd class="dd"> Een voorbeeld van het digitale equivalent is een bestand of e-mail bijvoegsel. Waar
+            een fysiek item kenmerken heeft als de staat waarin het verkeert, of het ezelsoren
+            heeft, heeft een digitaal item als kenmerk een bestandsnaam, locatie waar het te vinden
+            is, of grootte in bytes.Een voorbeeld van het digitale equivalent is een bestand of
+            e-mail bijvoegsel. Waar een fysiek item kenmerken heeft als de staat waarin het
+            verkeert, of het ezelsoren heeft, heeft een digitaal item als kenmerk een bestandsnaam,
+            locatie waar het te vinden is, of grootte in bytes. </dd>
+        
+        
+          <dt class="dt dlterm">
+            Een boek in de zin van een specifieke uitgave die in de boekhandel te koop is heet in
+            FRBR een manifestation.
+          </dt>
+          <dd class="dd"> Het heeft bijvoorbeeld een ISBN-nummer en een groene omslag: kenmerken die alle items
+            hebben van dezelfde manifestation. Het digitale equivalent van een manifestation heeft
+            bijvoorbeeld het bestands- of uitwisselformaat als kenmerk. </dd>
+        
+        
+          <dt class="dt dlterm">
+            Een boek in de zin van de letterlijke tekst van het verhaal, ongeacht de lettergrootte of kleur
+            van de omslag, heet in FRBR een expression.
+          </dt>
+          <dd class="dd"> Kenmerken van een expression zijn bijvoorbeeld de taal van de tekst, of het de
+            originele of moderne spelling gebruikt. </dd>
+        
+        
+          <dt class="dt dlterm">Een boek in de zin van een verhaal dat door een bepaalde schrijver is geschreven heet in FRBR een work.</dt>
+          <dd class="dd"> Het gaat dan om de strekking van het verhaal, de ideeën die erin verwerkt zijn. </dd>
+        
+      </dl> De vier termen zijn gerelateerd: een work wordt uitgedrukt in een expression die
+      vormgegeven wordt als een manifestation waarvan een item een voorbeeld is. </div>
+  </div>
+  <div class="div">
+    <p class="p"><a class="xref" href="https://www.ifla.org/files/assets/cataloguing/frbr/frbr_2008.pdf" target="_blank">De specificatie van het FRBR-model </a> is een product van IFLA
+      (International Federation of Library Associations and Institutions).</p>
+  </div>
+<section class="section ea_elementen"><h2 class="title sectiontitle">Elementen</h2>
+            
+            <table class="table ea_element" id="Pkg__F689C5A0EC9B4b3491F3558906741DB8"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__F689C5A0EC9B4b3491F3558906741DB8__entry__1" colspan="4">Expression</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row">
+                        <td class="entry ea_doc_titel" headers="Pkg__F689C5A0EC9B4b3491F3558906741DB8__entry__1">Definitie</td>
+                        <td class="entry ea_element_beschrijving" headers="Pkg__F689C5A0EC9B4b3491F3558906741DB8__entry__1" colspan="3"><div class="div">
+    <p class="p">De "specifieke intellectuele of artistieke vorm die een werk aanneemt elke keer dat het wordt
+      gerealiseerd". Een Expression is één van de basisenititeiten in het <a class="xref link_ea" href="#Pkg">FRBR model</a></p>
+  </div>
+  </td>
+                    </tr>
+                    <tr class="row">
+                        <td class="entry ea_doc_titel" headers="Pkg__F689C5A0EC9B4b3491F3558906741DB8__entry__1">Beschrijving</td>
+                        <td class="entry ea_element_beschrijving" headers="Pkg__F689C5A0EC9B4b3491F3558906741DB8__entry__1" colspan="3"><div class="div">
+    <p class="p">Een Expression is de realisatie van <a class="xref link_ea" href="#Pkg__AB6FDC32D3F3474eBBE7438305EB0E26">Work</a>. Een Expression wordt vormgegeven door een <a class="xref link_ea" href="#Pkg__02BBFF32DE204a02879B87B5F5570C7F">Manifestation</a> waarvan een <a class="xref link_ea" href="#Pkg__15169AAC5D674a188950B4C947B71624">Item</a> een specifieke kopie is.</p>
+  </div>
+</td>
+                    </tr>
+                    <tr class="row">
+                            <td class="entry ea_genspec_titel" headers="Pkg__F689C5A0EC9B4b3491F3558906741DB8__entry__1">Generalisatie van</td>
+                            <td class="entry ea_genspec_lijst" headers="Pkg__F689C5A0EC9B4b3491F3558906741DB8__entry__1" colspan="3"><a class="xref link_ea" href="EA_587A8F5146CD44d9AB6EA1BEE8573352.html#Pkg__F6CF2841BA644c418913CF3E98731186">Besluitversie (entiteit)</a>, <a class="xref link_ea" href="EA_E0EFE05F9FBB45c6AB2493B9FF9037EC.html#Pkg__1364730C7F434e0c9B905EE4FE23E4AD">Herdruk (entiteit)</a>, <a class="xref link_ea" href="EA_587A8F5146CD44d9AB6EA1BEE8573352.html#Pkg__5CE37AD33BBB4307B5983F00E49E985B">Informatieobjectversie (entiteit)</a>, <a class="xref link_ea" href="EA_E0EFE05F9FBB45c6AB2493B9FF9037EC.html#Pkg__59C8D8A8B1B74e0eA4CEB093D9CB6624">Initiële publicatie (entiteit)</a>, <a class="xref ea_genspec_direct link_ea" href="EA_1A45BBE5EC4F4bb2BBD7F5E701CE0479.html#Pkg__21707A82A7DD486b9D7CA5921A07CEE5">Instrumentversie (entiteit)</a>, <a class="xref link_ea" href="EA_233F9A157B1F4d11A41DBE8FC3424244.html#Pkg__53F6AC39237E4919833E45AFF5F27556">Kennisgevingversie (entiteit)</a>, <a class="xref link_ea" href="EA_E8EDA73EF3B842a9AB27E3B3E23B1470.html#Pkg__78E46D48EAE345a9B0D04A7EB181FD39">Officiële-publicatieversie (entiteit)</a>, <a class="xref link_ea" href="EA_E0EFE05F9FBB45c6AB2493B9FF9037EC.html#Pkg__5542C0263DF949be831517E16F79BA58">Rectificatieversie (entiteit)</a>, <a class="xref link_ea" href="EA_CE0701FE9A054073B11E9531BE7681D4.html#Pkg__2073B973F420471d96743BFB20F7653B">Rectificatieversie (entiteit)</a>, <a class="xref link_ea" href="EA_212F1874134F41cc9EFE006ABEA7DC38.html#Pkg__57F08FC1CF364d579490BD4A609CFA65">Regelingversie (entiteit)</a>, <a class="xref ea_genspec_direct link_ea" href="EA_AFAF97EA251247c9B2CC7B9922384BF8.html#Pkg__44363340236B437d88C976236E18934B">Toestand (entiteit)</a></td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry ea_eltpackages_titel" headers="Pkg__F689C5A0EC9B4b3491F3558906741DB8__entry__1">Zie ook</td>
+                            <td class="entry ea_eltpackages_lijst" headers="Pkg__F689C5A0EC9B4b3491F3558906741DB8__entry__1" colspan="3"><a class="xref link_ea" href="EA_BD0B9B5F34C548eeB092538800D54713.html#Pkg">Identificatie (onderwerp)</a>, <a class="xref link_ea" href="EA_1A45BBE5EC4F4bb2BBD7F5E701CE0479.html#Pkg">Instrument en instrumentversies (onderwerp)</a></td>
+                        </tr>
+                    </tbody></table>
+            <table class="table ea_element" id="Pkg__15169AAC5D674a188950B4C947B71624"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__15169AAC5D674a188950B4C947B71624__entry__1" colspan="4">Item</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row">
+                        <td class="entry ea_doc_titel" headers="Pkg__15169AAC5D674a188950B4C947B71624__entry__1">Definitie</td>
+                        <td class="entry ea_element_beschrijving" headers="Pkg__15169AAC5D674a188950B4C947B71624__entry__1" colspan="3"><div class="div">
+    <p class="p">Een "enkel exemplaar van een <a class="xref link_ea" href="#Pkg__02BBFF32DE204a02879B87B5F5570C7F">Manifestation</a>. De entiteit die als item is gedefinieerd, is een concrete entiteit."
+      Een Item is één van de basisenititeiten in het <a class="xref link_ea" href="#Pkg">FRBR model</a></p>
+  </div>
+  </td>
+                    </tr>
+                    <tr class="row">
+                        <td class="entry ea_doc_titel" headers="Pkg__15169AAC5D674a188950B4C947B71624__entry__1">Beschrijving</td>
+                        <td class="entry ea_element_beschrijving" headers="Pkg__15169AAC5D674a188950B4C947B71624__entry__1" colspan="3"><div class="div">
+    <p class="p">De STOP standaard bevat geen modellering van items. </p>
+  </div>
+</td>
+                    </tr>
+                    </tbody></table>
+            <table class="table ea_element" id="Pkg__02BBFF32DE204a02879B87B5F5570C7F"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__02BBFF32DE204a02879B87B5F5570C7F__entry__1" colspan="4">Manifestation</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row">
+                        <td class="entry ea_doc_titel" headers="Pkg__02BBFF32DE204a02879B87B5F5570C7F__entry__1">Definitie</td>
+                        <td class="entry ea_element_beschrijving" headers="Pkg__02BBFF32DE204a02879B87B5F5570C7F__entry__1" colspan="3"><div class="div">
+    <p class="p">De "fysieke belichaming van een <a class="xref link_ea" href="#Pkg__F689C5A0EC9B4b3491F3558906741DB8">Expression</a> van een <a class="xref link_ea" href="#Pkg__AB6FDC32D3F3474eBBE7438305EB0E26">Work</a>. Als entiteit vertegenwoordigt Manifestation alle fysieke objecten die dezelfde
+      kenmerken hebben, zowel wat betreft intellectuele inhoud als fysieke vorm." Een Manifestation is
+      één van de basisenititeiten in het <a class="xref link_ea" href="#Pkg">FRBR model</a></p>
+  </div>
+  </td>
+                    </tr>
+                    <tr class="row">
+                        <td class="entry ea_doc_titel" headers="Pkg__02BBFF32DE204a02879B87B5F5570C7F__entry__1">Beschrijving</td>
+                        <td class="entry ea_element_beschrijving" headers="Pkg__02BBFF32DE204a02879B87B5F5570C7F__entry__1" colspan="3"><div class="div">
+    <p class="p">Eén fysiek examplaar van een <em class="ph i">Manifestion</em> heet in FBRB-termen een <a class="xref link_ea" href="#Pkg__15169AAC5D674a188950B4C947B71624">Item</a>. </p>
+  </div>
+</td>
+                    </tr>
+                    <tr class="row">
+                            <td class="entry ea_genspec_titel" headers="Pkg__02BBFF32DE204a02879B87B5F5570C7F__entry__1">Generalisatie van</td>
+                            <td class="entry ea_genspec_lijst" headers="Pkg__02BBFF32DE204a02879B87B5F5570C7F__entry__1" colspan="3"><a class="xref ea_genspec_direct link_ea" href="EA_1A45BBE5EC4F4bb2BBD7F5E701CE0479.html#Pkg__7EEB91EED06344c2B950764F76AD7631">Serialisatie van instrumentversie (entiteit)</a></td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry ea_eltpackages_titel" headers="Pkg__02BBFF32DE204a02879B87B5F5570C7F__entry__1">Zie ook</td>
+                            <td class="entry ea_eltpackages_lijst" headers="Pkg__02BBFF32DE204a02879B87B5F5570C7F__entry__1" colspan="3"><a class="xref link_ea" href="EA_BD0B9B5F34C548eeB092538800D54713.html#Pkg">Identificatie (onderwerp)</a>, <a class="xref link_ea" href="EA_1A45BBE5EC4F4bb2BBD7F5E701CE0479.html#Pkg">Instrument en instrumentversies (onderwerp)</a></td>
+                        </tr>
+                    </tbody></table>
+            <table class="table ea_element" id="Pkg__AB6FDC32D3F3474eBBE7438305EB0E26"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__AB6FDC32D3F3474eBBE7438305EB0E26__entry__1" colspan="4">Work</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row">
+                        <td class="entry ea_doc_titel" headers="Pkg__AB6FDC32D3F3474eBBE7438305EB0E26__entry__1">Definitie</td>
+                        <td class="entry ea_element_beschrijving" headers="Pkg__AB6FDC32D3F3474eBBE7438305EB0E26__entry__1" colspan="3"><div class="div">
+    <p class="p">Een "apart te onderscheiden, afzonderlijke intellectuele of artistieke creatie". Een Work is
+      één van de basisentiteiten in het <a class="xref link_ea" href="#Pkg">FRBR model</a></p>
+  </div>
+  </td>
+                    </tr>
+                    <tr class="row">
+                        <td class="entry ea_doc_titel" headers="Pkg__AB6FDC32D3F3474eBBE7438305EB0E26__entry__1">Beschrijving</td>
+                        <td class="entry ea_element_beschrijving" headers="Pkg__AB6FDC32D3F3474eBBE7438305EB0E26__entry__1" colspan="3"><div class="div">
+    <p class="p">Een Work wordt gerealiseerd door middel van een <a class="xref link_ea" href="#Pkg__F689C5A0EC9B4b3491F3558906741DB8">Expression</a>. Een Expression wordt
+      vormgegeven door een <a class="xref link_ea" href="#Pkg__02BBFF32DE204a02879B87B5F5570C7F">Manifestation</a> waarvan een <a class="xref link_ea" href="#Pkg__15169AAC5D674a188950B4C947B71624">Item</a> een specifieke kopie is.</p>
+  </div>
+</td>
+                    </tr>
+                    <tr class="row">
+                            <td class="entry ea_genspec_titel" headers="Pkg__AB6FDC32D3F3474eBBE7438305EB0E26__entry__1">Generalisatie van</td>
+                            <td class="entry ea_genspec_lijst" headers="Pkg__AB6FDC32D3F3474eBBE7438305EB0E26__entry__1" colspan="3"><a class="xref link_ea" href="EA_ED1B61D3297C4ae6BD9A4FDB6BDF83F9.html#Pkg__6C84EB40239C40799E20168539A71E46">Alleen bekend te maken informatieobject (entiteit)</a>, <a class="xref link_ea" href="EA_587A8F5146CD44d9AB6EA1BEE8573352.html#Pkg__63D800160E03495fBB8E7A09E59065FD">Besluit (entiteit)</a>, <a class="xref ea_genspec_direct link_ea" href="EA_AFAF97EA251247c9B2CC7B9922384BF8.html#Pkg__B706DD68A6F74c289C1811B92664F4DF">Consolidatie van instrument (entiteit)</a>, <a class="xref link_ea" href="EA_4B8D0B2D93B743069F927FD0F26A99DE.html#Pkg__640EE86477CF429385B0B395E9490AAD">Geo-informatieobject (GIO) (entiteit)</a>, <a class="xref link_ea" href="EA_ED1B61D3297C4ae6BD9A4FDB6BDF83F9.html#Pkg__68D4DBB0EBA74407AAB03A581FB888E6">Informatief informatieobject (entiteit)</a>, <a class="xref link_ea" href="EA_ED1B61D3297C4ae6BD9A4FDB6BDF83F9.html#Pkg__1DD171612BB8497aAE52786726F6C717">Informatieobject (entiteit)</a>, <a class="xref ea_genspec_direct link_ea" href="EA_1A45BBE5EC4F4bb2BBD7F5E701CE0479.html#Pkg__A96006311DE447558E50900C7FCA768F">Instrument (entiteit)</a>, <a class="xref link_ea" href="EA_ED1B61D3297C4ae6BD9A4FDB6BDF83F9.html#Pkg__B102A8F7DA264c86B550E9BC4B9EE36D">Juridisch informatieobject (entiteit)</a>, <a class="xref link_ea" href="EA_233F9A157B1F4d11A41DBE8FC3424244.html#Pkg__A1D2F77D2DFD414d83C5FD40D7C32AAB">Kennisgeving (entiteit)</a>, <a class="xref link_ea" href="EA_E0EFE05F9FBB45c6AB2493B9FF9037EC.html#Pkg__E0FD044DBCCA401983396F4DDAF87A02">Officiële publicatie (entiteit)</a>, <a class="xref link_ea" href="EA_E071E43092384cd394D942ECD77D959F.html#Pkg__B999F481659D4a16B0FA58168E747404">Ontwerpbesluit (entiteit)</a>, <a class="xref link_ea" href="EA_CE0701FE9A054073B11E9531BE7681D4.html#Pkg__E2A77D305DFE4531BAD7B6C314BB83D9">Rectificatie (entiteit)</a>, <a class="xref link_ea" href="EA_212F1874134F41cc9EFE006ABEA7DC38.html#Pkg__E9207E2C266F47bbACD3E918249ADF16">Regeling (entiteit)</a>, <a class="xref link_ea" href="EA_E0EFE05F9FBB45c6AB2493B9FF9037EC.html#Pkg__846D56352AFC44acAAA08E5938F1F479">Soort = Bekendmaking (entiteit)</a>, <a class="xref link_ea" href="EA_E0EFE05F9FBB45c6AB2493B9FF9037EC.html#Pkg__600E3BDED308437887058532C3FD1925">Soort = Kennisgeving (entiteit)</a>, <a class="xref link_ea" href="EA_E0EFE05F9FBB45c6AB2493B9FF9037EC.html#Pkg__D615B0EB173A4a8886A9FED48AEFAF23">Soort = Rectificatie (entiteit)</a>, <a class="xref link_ea" href="EA_E0EFE05F9FBB45c6AB2493B9FF9037EC.html#Pkg__4895E5BA646E4c09819DEDED0D6871BD">Soort = Terinzagelegging (entiteit)</a>, <a class="xref link_ea" href="EA_ED1B61D3297C4ae6BD9A4FDB6BDF83F9.html#Pkg__9E3BA084C46446549A77BD56C62ACE5B">Te consolideren informatieobject (entiteit)</a></td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry ea_eltpackages_titel" headers="Pkg__AB6FDC32D3F3474eBBE7438305EB0E26__entry__1">Zie ook</td>
+                            <td class="entry ea_eltpackages_lijst" headers="Pkg__AB6FDC32D3F3474eBBE7438305EB0E26__entry__1" colspan="3"><a class="xref link_ea" href="EA_BD0B9B5F34C548eeB092538800D54713.html#Pkg">Identificatie (onderwerp)</a>, <a class="xref link_ea" href="EA_1A45BBE5EC4F4bb2BBD7F5E701CE0479.html#Pkg">Instrument en instrumentversies (onderwerp)</a></td>
+                        </tr>
+                    </tbody></table>
+        </section>
+  </div>
+</article></main></body></html>

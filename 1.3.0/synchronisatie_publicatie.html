@@ -1,0 +1,46 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="scenario-bij-publicatie-van-een-besluit-of-bericht-dat-leidt-tot-nieuwe-regelgeving"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Scenario: bij publicatie van een besluit of bericht dat leidt tot nieuwe regelgeving</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="scenario-bij-publicatie-van-een-besluit-of-bericht-dat-leidt-tot-nieuwe-regelgeving"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a><ul><li><a href="stop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="leeswijzers.html">Leeswijzers</a><ul><li><a href="toepassing.html">Basis van STOP</a></li><li><a href="architectuur.html">Architectuur en ontwerpkeuzes</a></li><li><a href="gebruik.html">Software-ontwikkeling met STOP</a></li><li><a href="voortbouwen_op_STOP.html">Voortbouwen op STOP</a><ul><li><a href="juridische_verantwoording.html">Bepaling juridische verantwoording</a></li><li><a href="muteren_procedureverloop.html">Muteren van het procedureverloop</a></li><li><a href="consolideren_overzicht.html">Bepaling geconsolideerde regelgeving</a></li><li><a href="synchronisatie_overzicht.html">Synchronisatie van regelgeving-gerelateerde informatie</a><ul><li><a href="synchronisatie_scenarios.html">Synchronisatiescenario's</a><ul><li><a href="synchronisatie_na_consolidatie.html">Na (proef)consolidatie</a></li><li class="active"><a href="synchronisatie_publicatie.html">Bij publicatie</a></li><li><a href="synchronisatie_regelgeving.html">Bij regelgeving</a></li><li><a href="synchronisatie_eigen_beheercyclus.html">Eigen beheercyclus</a></li></ul></li></ul></li><li><a href="eigen_procedureverloop.html">Gebruik van niet door STOP ondersteunde besluittypen en procedures</a></li></ul></li></ul></li><li><a href="EA_4D1D7FD517FE4d8dA9A2B905D202C92B.html">Informatiemodel</a></li><li><a href="businessrules.html">Bedrijfsregels</a></li></ul></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1">Scenario: bij publicatie van een besluit of bericht dat leidt tot nieuwe regelgeving</h1><div class="body"><p class="p">Dit scenario is een optie als alleen synchronisatie vereist is met de geldende regelgeving, en de gerelateerde informatie opgesteld of geverifieerd kan worden voordat een besluit (of ander bericht dat de geconsolideerde regelgeving wijzigt) gepubliceerd wordt.</p></div><article class="topic nested1" aria-labelledby="ariaid-title2" id="geldende-versie-van-regelgeving"><h2 class="title topictitle2" id="ariaid-title2">Geldende versie van regelgeving</h2><div class="body"><p class="p">Bij publicatie is bekend op welke datum een nieuwe versie van de regelgeving de geldende versie wordt:</p><ul class="ul"><li class="li"><p class="p">in geval van een besluit waarvan de inwerkingtredingsdatum bekend is: per datum inwerkingtreding (ook voor terugwerkende kracht);</p></li><li class="li"><p class="p">in geval van een rectificatie: per datum van de publicatie;</p></li><li class="li"><p class="p">in geval van het oplossen van consolidatieproblemen: per datum ontvangst;</p></li><li class="li"><p class="p">in geval van het achteraf doorgeven van een (rechterlijke) interventie: per datum van de publicatie.
+Hierbij is ook bekend welke versie van een (geconsolideerde) regeling de geldende versie wordt, aangezien die in het besluit of bericht besloten ligt.</p></li></ul><p class="p">Uit het toestandsoverzicht dat de LVBB beschikbaar stelt (en dat ook bij een bevoegd gezag uit eigen berekening bekend kan zijn) is ook af te leiden welke toestanden in de toekomst een geldende versie gaan worden:</p><br><img class="image" src="img/EA_24022A15D3764a128A04DBF65C224434.png" alt="Bepalen van alle geldende toestanden"><br><p class="p">Zowel uit het toestandenoverzicht als (bij publicatie van een besluit of bericht) aan de hand van de validatie door de LVBB kan afgeleid worden of er sprake is van samenloop die nog opgelost moet worden.</p></div></article><article class="topic nested1" aria-labelledby="ariaid-title3" id="synchronisatie"><h2 class="title topictitle2" id="ariaid-title3">Synchronisatie</h2><div class="body"><p class="p">De regelgeving-gerelateerde informatie wordt voorzien van de datum waarop een versie van de regelgeving voor het eerst geldig wordt. Systemen die de regelgeving-gerelateerde informatie gebruiken moeten die combineren met gegevens zoals ze op die datum gelden. Die systemen kunnen het toestandenoverzicht van de LVBB gebruiken om de dan geldende regelgeving te bepalen.</p><p class="p">De ontvanger van de regelgeving-gerelateerde informatie kan niet verifiëren met welke regelgeving de informatie geassocieerd is. Het bevoegd gezag moet zorgen voor een proces waarbij de informatie en regelgeving in samenhang bijgewerkt worden. Daarbij dient ook rekening gehouden te worden met eventuele spoedbesluiten die in korte tijd opgesteld (soms in niet-publieke procedures) en bekendgemaakt worden en meteen in werking treden, zoals een voorbereidingsbesluit.</p><p class="p">Deze methode van synchronisatie is niet geschikt voor proefconsolidaties, aangezien voor proefconsolidaties geen geldigheidsdatum bekend is.</p></div></article></article></main></body></html>

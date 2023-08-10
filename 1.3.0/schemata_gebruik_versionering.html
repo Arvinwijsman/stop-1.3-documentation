@@ -1,0 +1,74 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="versionering-van-modules"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Versionering van modules</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="versionering-van-modules"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a><ul><li><a href="imop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="imop_xml.html">XML-serialisatie</a></li><li><a href="uitwisselpakket.html">Uitwisselpakket</a></li><li><a href="schemata_gebruik.html">Gebruik van IMOP</a><ul><li><a href="schemata_gebruik_url.html">IMOP op het internet</a></li><li><a href="schemata_gebruik_lokaal.html">IMOP lokaal gebruiken</a></li><li class="active"><a href="schemata_gebruik_versionering.html">Versionering van modules</a></li><li><a href="schemata_gebruik_schematrons.html">Schematrons</a></li><li><a href="schemata_gebruik_transformaties.html">Transformaties</a></li></ul></li><li><a href="schema_documentatie.html">Schemadocumentatie</a></li><li><a href="imop_bedrijfsregels.html">Bedrijfsregels</a></li><li><a href="imop_waardelijsten.html">Waardelijsten</a></li></ul></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1">Versionering van modules</h1><div class="body"></div><article class="topic nested1" aria-labelledby="ariaid-title2" id="versies-van-stop-imop-en-xml-serialisatie"><h2 class="title topictitle2" id="ariaid-title2">Versies van STOP, IMOP en XML-serialisatie</h2><div class="body"><p class="p">In STOP worden versienummers volgens <a class="xref" href="https://semver.org" target="_blank">SemVer</a> gebruikt voor drie verschillende onderdelen:</p><ul class="ul"><li class="li"><p class="p">De versie van de standaard (STOP), bijvoorbeeld <code class="ph codeph">1.1.0</code> of <code class="ph codeph">1.1.0-preview</code>. Het derde nummer is altijd 0, en een label wordt alleen gebruikt voor "previews" en "release candidates".</p></li><li class="li"><p class="p">De versie van het implementatiemodel (IMOP). Als er een nieuwe versie van de standaard uitkomt heeft het bijbehorende IMOP hetzelfde versienummer als de standaard. Als er daarna uitbreidingen of bug fixes uitkomen voor IMOP terwijl de standaard gelijk blijft, dan wordt het derde nummer opgehoogd (van 1.1.0 naar 1.1.1 naar 1.1.2 etc).</p></li><li class="li"><p class="p">De versie van de XML-serialisatie van STOP informatie. Dit is gelijk aan de versie van IMOP die gebruikt is voor het opstellen van de XML serialisatie (vastgelegd in het <a class="xref" href="xml_documenten.html">schemaversie</a> attribuut).</p></li></ul><p class="p">Bij <em class="ph i">versionering van modules</em> wordt de derde versie bedoeld: de versie van de XML-serialisatie van een module. In opeenvolgende versies van STOP zullen niet voor alle modules een ander informatiemodel en/of bedrijfsregels gelden; veel modules zullen juist gelijk blijven. Dat betekent ook dat de XML-serialisatie van de informatie in een specifieke module voor opeenvolgende versies van STOP gelijk zal zijn (afgezien van het <code class="ph codeph">schemaversie</code> attribuut).</p></div></article><article class="topic nested1" aria-labelledby="ariaid-title3" id="cumulatief-versieoverzicht"><h2 class="title topictitle2" id="ariaid-title3">Cumulatief versieoverzicht</h2><div class="body"><p class="p">Elke versie van IMOP bevat een cumulatief overzicht met voor elke module een beschrijving van alle bekende en nog ondersteunde versies. Het overzicht voor deze versie van IMOP is terug te vinden in <a class="xref" href="https://koop.gitlab.io/STOP/standaard/1.3.0/go/go.html?id=git%3Aschema/stop/1.3.0/versie.xml" target="_blank">versie.xml</a>. Het overzicht voor alle gepubliceerde versies (exclusief previews en release candidates) is te vinden op <a class="xref" href="https://standaarden.overheid.nl/stop/versiescompleet.xml" target="_blank">https://standaarden.overheid.nl/stop/versiescompleet.xml</a>.</p><p class="p">In het versieoverzicht is per versie van een module vastgelegd:</p><ul class="ul"><li class="li"><p class="p">De versie van de standaard waarin de versie van de module is geïntroduceerd.</p></li><li class="li"><p class="p">De URL van het schema waarin de structuur van de XML-serialisatie is beschreven.</p></li><li class="li"><p class="p">De URL van de schematron(s) die de XML-serialisatie kunnen valideren</p></li><li class="li"><p class="p">De transformaties (indien beschikbaar) om de XML-serialisatie te converteren naar de XML-serialisatie van een vorige of volgende versie van de standaard.</p></li></ul><p class="p">Een voorbeeld van een versieoverzicht voor een module is:</p><pre class="pre codeblock xml"><code>&lt;Module&gt;
+  &lt;localName&gt;ConsolidatieInformatie&lt;/localName&gt;
+  &lt;namespace&gt;https://standaarden.overheid.nl/stop/imop/data/&lt;/namespace&gt;
+  &lt;implementatie&gt;
+    &lt;Moduleversie&gt;
+      &lt;introductieversie&gt;1.0.0&lt;/introductieversie&gt;
+      &lt;schema&gt;https://standaarden.overheid.nl/stop/1.0.4/imop-data.xsd&lt;/schema&gt;
+      &lt;schematron&gt;https://standaarden.overheid.nl/stop/1.1.0/imop-aknjoin.sch&lt;/schematron&gt;
+      &lt;schematron&gt;https://standaarden.overheid.nl/stop/1.0.4/imop-consolidatie.sch&lt;/schematron&gt;
+      &lt;heeftTransformatie&gt;
+        &lt;Transformatie&gt;
+          &lt;introductieversie&gt;1.1.0&lt;/introductieversie&gt;
+          &lt;locatie&gt;https://standaarden.overheid.nl/stop/1.1.0/identiteitstransformatie.xslt&lt;/locatie&gt;
+        &lt;/Transformatie&gt;
+      &lt;/heeftTransformatie&gt;
+    &lt;/Moduleversie&gt;
+    &lt;Moduleversie&gt;
+      &lt;introductieversie&gt;1.1.0&lt;/introductieversie&gt;
+      &lt;schema&gt;https://standaarden.overheid.nl/stop/1.1.0/imop-data.xsd&lt;/schema&gt;
+      &lt;schematron&gt;https://standaarden.overheid.nl/stop/1.1.0/imop-aknjoin.sch&lt;/schematron&gt;
+      &lt;schematron&gt;https://standaarden.overheid.nl/stop/1.1.0/imop-consolidatie.sch&lt;/schematron&gt;
+      &lt;heeftTransformatie&gt;
+        &lt;Transformatie&gt;
+          &lt;introductieversie&gt;1.0.0&lt;/introductieversie&gt;
+          &lt;locatie&gt;https://standaarden.overheid.nl/stop/1.1.0/consolidatieinformatie_110_naar_104.xslt&lt;/locatie&gt;
+        &lt;/Transformatie&gt;
+      &lt;/heeftTransformatie&gt;
+    &lt;/Moduleversie&gt;
+  &lt;/implementatie&gt;
+&lt;/Module&gt;</code></pre><p class="p">Hierin is te lezen:</p><ul class="ul"><li class="li"><p class="p">De module <code class="ph codeph">ConsolidatieInformatie</code> uit de IMOP-data-namespace kent twee versies. De eerste is geïntroduceerd in STOP <code class="ph codeph">1.0.0</code>, de tweede in STOP <code class="ph codeph">1.1.0</code>.</p></li><li class="li"><p class="p">De versie uit STOP <code class="ph codeph">1.0.0</code> moet gevalideerd worden tegen een schema uit IMOP <code class="ph codeph">1.0.4</code> en tegen een schematron uit IMOP <code class="ph codeph">1.0.4</code> (<code class="ph codeph">imop-consolidatie.sch</code>) en één uit IMOP <code class="ph codeph">1.1.0</code> (<code class="ph codeph">imop-aknjoin.sch</code>). De versie uit <code class="ph codeph">1.1.0</code> moet gevalideerd worden tegen een schema en twee schematrons uit IMOP <code class="ph codeph">1.1.0</code>.</p></li><li class="li"><p class="p">Er zijn transformaties beschikbaar om de XML-serialisatie voor versie 1.0.0 naar versie 1.1.0 om te zetten en omgekeerd. Het is <a class="xref" href="schemata_gebruik_transformaties.html">op voorhand</a> niet gegarandeerd dat beide transformaties slagen.</p></li></ul><p class="p">Voor een verdere uitleg zie het <a class="xref" href="https://koop.gitlab.io/STOP/standaard/1.3.0/go/go.html?id=git%3Avoorbeelden/Architectuur/Versie-informatie" target="_blank">versies.xml voorbeeld</a>.</p></div></article><article class="topic nested1" aria-labelledby="ariaid-title4" id="gebruik-van-het-versieoverzicht-voor-creatie"><h2 class="title topictitle2" id="ariaid-title4">Gebruik van het versieoverzicht voor creatie</h2><div class="body"><p class="p">Voor het maken van de XML-serialisatie op basis van een specifieke IMOP-versie dient <code class="ph codeph">versies.xml</code> gebruikt te worden voor die IMOP-versie. Deze is te vinden <a class="xref" href="schemata_gebruik_url.html">in de IMOP-versie op internet</a> en is onderdeel van de <a class="xref" href="schemata_gebruik_lokaal.html">download</a> van IMOP.</p><p class="p">Voor elke module moet uit deze <code class="ph codeph">versies.xml</code> de moduleversie met de grootste introductieversie gebruikt worden - dit is voor deze IMOP-versie de huidige moduleversie. Het schema dat bij die moduleversie vermeld staat is het schema uit deze IMOP-versie. Ook de schematrons die erbij vermeld staan zijn uit deze IMOP versie afkomstig.</p><p class="p">De XML-serialisatie van de module moet gemaakt worden volgens het schema uit deze IMOP-versie en conform alle bedrijfsregels die STOP voor de module beschrijft. De software die de XML-serialisatie maakt wordt geacht te valideren dat de resulterende XML voldoet aan de bedrijfsregels die in de schematrons voor de module zijn vastgelegd. Als de XML-serialisatie onderdeel is van een XML-document dat meerdere (type) modules bevat, dan moet het XML-document worden <a class="xref" href="schemata_gebruik_schematrons.html">gevalideerd</a> met alle schematrons die in <code class="ph codeph">versies.xml</code> voor de huidige moduleversie van de verschillende modules is vermeld.</p></div></article><article class="topic nested1" aria-labelledby="ariaid-title5" id="gebruik-van-het-versieoverzicht-voor-validatie"><h2 class="title topictitle2" id="ariaid-title5">Gebruik van het versieoverzicht voor validatie</h2><div class="body"><p class="p">Als software een XML-document ontvangen heeft en deze wil valideren, dan moeten de volgende stappen gevolgd worden:</p><ul class="ul"><li class="li"><p class="p">Elke IMOP-module in het XML-document moet volgens <a class="xref" href="xml_documenten.html">dezelfde IMOP-versie</a> zijn opgesteld, te zien aan het <code class="ph codeph">schemaversie</code> attribuut.</p></li><li class="li"><p class="p">Voor elke IMOP-module moet de bijbehorende moduleversie worden opgezocht in de huidige (meest recente) <code class="ph codeph">versies.xml</code>. Software die op een bepaalde versie van IMOP is gebouwd zal <code class="ph codeph">versies.xml</code> uit die IMOP-versie gebruiken.</p></li><li class="li"><p class="p">De bijbehorende moduleversie is die versie waarvoor de introductieversie kleiner dan of gelijk is aan de <code class="ph codeph">schemaversie</code>; als er meerdere moduleversies aan dat criterium voldoen dan moet de moduleversie met de grootste introductieversie genomen worden.</p></li><li class="li"><p class="p">De XML-serialisatie van de module moet gevalideerd worden tegen het schema dat bij de moduleversie vermeld staat. Daarna moet de XML <a class="xref" href="schemata_gebruik_schematrons.html">gevalideerd</a> worden tegen de vermelde schematrons.</p></li></ul></div></article></article></main></body></html>

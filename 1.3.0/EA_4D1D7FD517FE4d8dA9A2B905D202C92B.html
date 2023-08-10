@@ -1,0 +1,103 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="nl-nl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="Pkg"><meta name="DC.language" content="nl-nl"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Informatiemodel</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="Pkg"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a><ul><li><a href="stop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="leeswijzers.html">Leeswijzers</a></li><li class="active"><a href="EA_4D1D7FD517FE4d8dA9A2B905D202C92B.html">Informatiemodel</a><ul><li><a href="EA_9E187217A693458593B4BC483B77322B.html">Legenda van de diagrammen</a></li><li><a href="EA_068BE3F17D2D41a8AA2E39A355337401.html">Toepassingsgebied</a></li><li><a href="EA_BEA65540863F4cedAE03E4C3D0A29EAA.html">Algemeen</a></li><li><a href="EA_A1BBB86A635B4bf6B2FCECD1CFE6A3C9.html">Besluiten en regelgeving</a></li><li><a href="EA_E0EFE05F9FBB45c6AB2493B9FF9037EC.html">Officiële publicaties</a></li><li><a href="EA_81311E5C8AD34b35B153B21B50080288.html">Consolidatie van regelgeving</a></li></ul></li><li><a href="businessrules.html">Bedrijfsregels</a></li></ul></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title topictitle1" id="ariaid-title1">Informatiemodel</h1>
+  <div class="body">
+      <div class="div">
+    <p class="p">Het Informatiemodel Officiële Publicaties geeft een overzicht van de informatie die een rol speelt voor officiële publicaties
+    en een aantal van de bronnen die gepubliceerd worden. Daarnaast beschrijft het publicaties en serviceproducten die uit de bronnen en 
+    publicaties afgeleid kunnen worden.</p>
+    <p class="p">
+      Het doel van het informatiemodel is het geven van inzicht in de betekenis van de informatie en de onderlinge samenhang. 
+      In de modellering worden daarom soms keuzes gemaakt die de structuur van de informatie duidelijker laten zien. Daarbij 
+      is geen rekening gehouden met de implementeerbaarheid van het model.
+    </p>
+    <p class="p">
+      De standaard beschrijft ook een <a class="xref" href="schema_documentatie.html">implementatie</a> van het informatiemodel.
+      De implementatie is vormgegeven met bruikbaarheid in software als primaire doel. Daardoor loopt de modellering in
+      het informatiemodel en in de implementatie uiteen. De implementatie is wel direct te relateren aan het informatiemodel. 
+      Bij elk element uit het informatiemodel is aangegeven in welk(e) element(en) het geïmplementeerd is.
+    </p>
+  </div>
+  <div class="div">
+    <div class="p">
+      Het informatiemodel valt in vier delen uiteen:
+      <ul class="ul">
+        <li class="li">
+          <a class="xref link_ea" href="EA_BEA65540863F4cedAE03E4C3D0A29EAA.html#Pkg">Algemeen</a>: een beschrijving van de 
+          basiselementen van het informatiemodel en het basisontwerp dat gebruikt wordt voor de modellering 
+          van publicaties en bronnen.
+        </li>
+        <li class="li">
+          <a class="xref link_ea" href="EA_A1BBB86A635B4bf6B2FCECD1CFE6A3C9.html#Pkg">Besluiten en regelgeving</a>: de bronnen
+          voor publicaties.
+          Besluiten zijn de bron voor een deel van de officiële publicaties. Besluiten worden onder
+          andere gebruikt om te komen tot
+          regelgeving; beschikbaarstelling van de regelgeving is ook onderdeel van de STOP standaard.
+          Besluiten en regelgeving worden opgesteld door bevoegd gezagen; de standaard modelleert het 
+          resultaat van dat proces en niet alle aspecten die bij het opstellen komen kijken.
+        </li>
+        <li class="li">
+          <a class="xref link_ea" href="EA_E0EFE05F9FBB45c6AB2493B9FF9037EC.html#Pkg">Officiële publicaties</a>: een
+          beschrijving van de officiële publicaties, zoals bekendmakingen,
+          kennisgevingen en ter inzage leggingen. Het betreft publicaties die veelal wettelijk zijn
+          voorgeschreven en die verschijnen in de publicatiebladen van de bevoegd gezagen. De publicaties
+          zijn voor eenieder toegankelijk via <a class="xref" href="https://www.officielebekendmakingen.nl/" target="_blank">officielebekendmakingen.nl</a>.
+        </li>
+        <li class="li">
+          <a class="xref link_ea" href="EA_81311E5C8AD34b35B153B21B50080288.html#Pkg">Consolidatie van regelgeving</a>: een
+          model voor het beschrijven van de regelgeving die volgt uit de gepubliceerde besluiten.
+          Het bevoegd gezag stelt besluiten op aan de hand van een versie van de regelgeving zoals die
+          beoogd te zijn. In het ideale geval zal het besluit bij inwerkingtreding dan ook de beoogde 
+          regelgeving opleveren. Door de (juridische) interactie tussen de verschillende besluiten is 
+          dat niet altijd het geval. Via consolidatie is op een juridisch correcte manier af te leiden 
+          hoe de regelgeving daadwerkelijk luidt. Het afleiden en beschikbaar stellen van de geconsolideerde 
+          regelgeving is onderdeel van de standaard.
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+</article></main></body></html>

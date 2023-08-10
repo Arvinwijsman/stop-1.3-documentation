@@ -1,0 +1,71 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="verwijzing-naar-schemas"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Verwijzing naar schema's</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="verwijzing-naar-schemas"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a><ul><li><a href="imop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="imop_xml.html">XML-serialisatie</a><ul><li><a href="xml_modulairestructuur.html">Modulaire structuur</a></li><li><a href="xml_documenten.html">IMOP-modules in XML-documenten</a></li><li class="active"><a href="xml_schemalocation.html">Verwijzing naar schema's</a></li><li><a href="xml_witruimte.html">Witruimte in XML</a></li></ul></li><li><a href="uitwisselpakket.html">Uitwisselpakket</a></li><li><a href="schemata_gebruik.html">Gebruik van IMOP</a></li><li><a href="schema_documentatie.html">Schemadocumentatie</a></li><li><a href="imop_bedrijfsregels.html">Bedrijfsregels</a></li><li><a href="imop_waardelijsten.html">Waardelijsten</a></li></ul></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1">Verwijzing naar schema's</h1><div class="body"></div><article class="topic nested1" aria-labelledby="ariaid-title2" id="attribuut-xsischemalocation"><h2 class="title topictitle2" id="ariaid-title2">Attribuut <code class="ph codeph">xsi:schemaLocation</code></h2><div class="body"><p class="p">Het is aan te raden in een XML-document vast te leggen tegen welke XSD het document is gemaakt en valideert. Dat maakt het eenvoudiger om de XML te lezen en valideren door software die niet op de hoogte is van de schemaversies zoals IMOP die hanteert.</p><p class="p">Dit kan door via het attribuut  <a class="xref" href="https://www.w3.org/TR/xmlschema-1/#Instance_Document_Constructions" target="_blank"><code class="ph codeph">schemaLocation</code></a>  in de <code class="ph codeph">xsi</code>-namespace de relatie vast te leggen tussen de namespace waarin een module is gedefinieerd en de locatie van het schema. De waarde van het attribuut bestaat uit één of meer paren van een namespace gevolgd door de locatie van het schema voor die namespace. Het is gebruikelijk om dat attribuut aan het root element van het XML document toe te voegen:</p><pre class="pre codeblock xml"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;RegelingCompact 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://standaarden.overheid.nl/stop/imop/tekst/ 
+                        https://standaarden.overheid.nl/stop/1.3.0/imop-tekst.xsd"
+
+ xmlns="https://standaarden.overheid.nl/stop/imop/tekst/" 
+ schemaversie="1.3.0"&gt;
+  ...
+  &lt;/RegelingCompact&gt; </code></pre><p class="p">of als er meerdere namespaces gebruikt worden:</p><pre class="pre codeblock xml"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;Regeling xmlns="https://mijn.systeem.nl/api/"
+
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://standaarden.overheid.nl/stop/imop/tekst/ 
+                        https://standaarden.overheid.nl/stop/1.3.0/imop-tekst.xsd
+                        https://standaarden.overheid.nl/stop/imop/data/ 
+                        https://standaarden.overheid.nl/stop/1.3.0/imop-data.xsd"&gt;
+
+  &lt;RegelingCompact xmlns="https://standaarden.overheid.nl/stop/imop/tekst/" 
+   schemaversie="1.3.0"&gt;
+    ...
+  &lt;/RegelingCompact&gt; 
+  &lt;RegelingMetadata xmlns="https://standaarden.overheid.nl/stop/imop/data/" 
+   schemaversie="1.3.0"&gt;
+    ...
+  &lt;/RegelingMetadata&gt; 
+&lt;/Regeling&gt;</code></pre></div></article><article class="topic nested1" aria-labelledby="ariaid-title3" id="xsischemalocation-verwijst-naar-internet"><h2 class="title topictitle2" id="ariaid-title3"><code class="ph codeph">xsi:schemaLocation</code> verwijst naar internet</h2><div class="body"><p class="p">De aanbevolen werkwijze is om de <a class="xref" href="schemata_gebruik_url.html">URL</a> van het schema uit de corresponderende IMOP-versie als <code class="ph codeph">xsi:schemaLocation</code> op te nemen. Elke XML-software die in staat is schema-informatie van het internet te betrekken kan dan de XML interpreteren volgens het schema dat gebruikt is om de XML te maken.</p></div></article><article class="topic nested1" aria-labelledby="ariaid-title4" id="xsischemalocation-is-optioneel"><h2 class="title topictitle2" id="ariaid-title4"><code class="ph codeph">xsi:schemaLocation</code> is optioneel</h2><div class="body"><p class="p">Software die IMOP implementeert mag niet vertrouwen op de aanwezigheid of correctheid van het <code class="ph codeph">xsi:schemaLocation</code> attribuut. De software moet het <code class="ph codeph">schemaversie</code> attribuut van een module lezen en aan de hand daarvan bepalen <a class="xref" href="schemata_gebruik_versionering.html">welke schema's en schematrons</a> gebruikt moeten worden voor de validatie van de XML.</p><p class="p">Het <code class="ph codeph">xsi:schemaLocation</code> mag daarom worden weggelaten. Als het wordt weggelaten dan zal generieke XML-software (zoals XML-viewers of editors) de XML kunnen laten zien, maar geen ondersteuning bieden waarvoor kennis van het XML schema vereist is.</p><p class="p">Het gebruik van relatieve paden (zoals <code class="ph codeph">../stop/imop-tekst.xsd</code>) of lokale paden (zoals <code class="ph codeph">C:/STOP/xsd/1.3.0/imop-tekst.xsd</code>) wordt sterk afgeraden. Dit verlaagt de portabiliteit van de XML-bestanden.</p></div></article></article></main></body></html>

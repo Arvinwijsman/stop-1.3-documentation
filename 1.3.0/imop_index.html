@@ -1,0 +1,45 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="implementatiemodel-officiële-publicaties"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Implementatiemodel Officiële Publicaties</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="implementatiemodel-officiële-publicaties"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a></li><li class="active"><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a><ul><li><a href="imop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="imop_xml.html">XML-serialisatie</a></li><li><a href="uitwisselpakket.html">Uitwisselpakket</a></li><li><a href="schemata_gebruik.html">Gebruik van IMOP</a></li><li><a href="schema_documentatie.html">Schemadocumentatie</a></li><li><a href="imop_bedrijfsregels.html">Bedrijfsregels</a></li><li><a href="imop_waardelijsten.html">Waardelijsten</a></li></ul></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1">Implementatiemodel Officiële Publicaties</h1><div class="body"></div><article class="topic nested1" aria-labelledby="ariaid-title2" id="inleiding"><h2 class="title topictitle2" id="ariaid-title2">Inleiding</h2><div class="body"><p class="p">Dit is de documentatie van versie 1.3.0 van het Implementatiemodel Officiële Publicaties (IMOP) die is gepubliceerd op 07-01-2022. Dit onderdeel beschrijft de XML-implementatie van STOP, vastgelegd middels <strong class="ph b"><a class="xref" href="https://www.w3.org/TR/xmlschema-1/" target="_blank">XML Schema Documents (XSD)</a></strong> en <strong class="ph b"><a class="xref" href="https://schematron.com/" target="_blank">Schematrons</a></strong>.</p><p class="p">De XML-implementatie is geen directe vertaling van het <a class="xref" href="EA_4D1D7FD517FE4d8dA9A2B905D202C92B.html#Pkg">informatiemodel van STOP</a>. Het informatiemodel is vormgegeven om duidelijk te maken welke informatie van belang is en hoe die met elkaar samenhangt. De implementatie is vormgegeven met bruikbaarheid in software als primaire doel. Daardoor zijn er andere modelleerkeuzes gemaakt. De implementatie is wel direct te relateren aan het informatiemodel. Bij zo veel mogelijk elementen uit de XML-schema's is aangegeven van welk(e) element(en) uit het informatiemodel het element een implementatie is.</p></div></article><article class="topic nested1" aria-labelledby="ariaid-title3" id="documentatie"><h2 class="title topictitle2" id="ariaid-title3">Documentatie</h2><div class="body"><p class="p">De documentatie van IMOP bestaat uit een aantal onderdelen:</p><dl class="dl"><dt class="dt dlterm"><a class="xref" href="imop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></dt><dd class="dd"><p class="p">Hierin is beschreven welke wijzigingen in de IMOP zijn aangebracht als gevolg van wijzigingen in STOP en/of als verbetering of uitbreiding van eerdere IMOP-versies, en welke wijzigingen in de bijbehorende documentatie zijn aangebracht ten opzichte van eerdere documentatie-versies.</p></dd><dt class="dt dlterm"><a class="xref" href="imop_xml.html">XML-serialisatie</a></dt><dd class="dd"><p class="p">Toelichting op de serialisatie van STOP-informatie in XML volgens IMOP.</p></dd><dt class="dt dlterm"><a class="xref" href="uitwisselpakket.html">Uitwisselpakket</a></dt><dd class="dd"><p class="p">IMOP kent ook een manier om IMOP-modules op een standaard manier te verpakken in een gecomprimeerd bestand. Dit uitwisselpakket kan gebruikt worden in API's. Het kan ook gebruikt worden om STOP-informatie via een enkel bestand uit te wisselen.</p></dd><dt class="dt dlterm"><a class="xref" href="schemata_gebruik.html">Gebruik van IMOP</a></dt><dd class="dd"><p class="p">Toelichting op het gebruik van de technische hulpmiddelen die als onderdeel van IMOP beschikbaar gesteld worden.</p></dd><dt class="dt dlterm"><a class="xref" href="schema_documentatie.html">Schemadocumentatie</a></dt><dd class="dd"><p class="p">De documentatie van de XML-schema's.</p></dd><dt class="dt dlterm">Schematrondocumentatie</dt><dd class="dd"><p class="p">De schematrons zijn niet apart gedocumenteerd. In het overzicht van de <a class="xref" href="businessrules.html">bedrijfsregels</a> is aangegeven welke bedrijfsregels als schematron beschikbaar zijn. Deze sectie bevat een <a class="xref" href="imop_bedrijfsregels.html">toelichting op het gebruik van bedrijfsregels</a>.</p></dd><dt class="dt dlterm">Transformaties</dt><dd class="dd"><p class="p">Een beschrijving van de transformaties die nodig zijn om een <a class="xref" href="xml_modulairestructuur.html">IMOP-module</a> te converteren van/naar een andere IMOP-versie.</p></dd></dl></div></article><article class="topic nested1" aria-labelledby="ariaid-title4" id="technische-hulpmiddelen"><h2 class="title topictitle2" id="ariaid-title4">Technische hulpmiddelen</h2><div class="body"><dl class="dl"><dt class="dt dlterm">Schema's, schematrons en transformaties</dt><dd class="dd"><p class="p">De technische hulpmiddelen zijn te vinden op <a class="xref" href="https://koop.gitlab.io/STOP/standaard/1.3.0/go/go.html?id=git%3Aschema" target="_blank">Gitlab</a>.</p></dd><dt class="dt dlterm"><a class="xref" href="imop_waardelijsten.html">Waardelijsten</a></dt><dd class="dd"><p class="p">IMOP schrijft voor diverse XML-elementen het gebruik van voorgedefinieerde waardes voor. De toegestane waardes zijn te vinden op <a class="xref" href="https://koop.gitlab.io/STOP/standaard/1.3.0/go/go.html?id=git%3Awaardelijsten" target="_blank">Gitlab</a>.</p></dd><dt class="dt dlterm">Voorbeelden</dt><dd class="dd"><p class="p">Voorbeelden van de toepassing van technische implementatie van de standaard zijn te vinden op <a class="xref" href="https://koop.gitlab.io/STOP/standaard/1.3.0/go/go.html?id=git%3Avoorbeelden" target="_blank">Gitlab</a>.</p></dd></dl></div></article></article></main></body></html>

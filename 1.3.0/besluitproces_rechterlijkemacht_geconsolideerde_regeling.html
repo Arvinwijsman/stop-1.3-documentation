@@ -1,0 +1,173 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="gerechtelijkeprocedurestatus"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>GerechtelijkeProcedureStatus</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="gerechtelijkeprocedurestatus"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a><ul><li><a href="stop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="leeswijzers.html">Leeswijzers</a><ul><li><a href="toepassing.html">Basis van STOP</a><ul><li><a href="juridische-context.html">Juridische context STOP</a></li><li><a href="proces_overzicht.html">Hoofdlijnen van het STOP-proces</a><ul><li><a href="proces_overzicht_compleet.html">Geïntegreerd proces van bekendmaken en consolideren</a><ul><li><a href="proces_besluit_en_regeling.html">Besluit en regeling</a></li><li><a href="proces_consolidatie.html">Consolidatie van besluiten</a></li><li><a href="doel.html">Doel</a></li><li><a href="proces_tekstmodellen.html">Tekstmodellen voor (artikelgewijze) regelingen en besluiten</a></li><li><a href="proces_besluit.html">Opnemen van regelgeving in een besluit</a></li><li><a href="proces_iwt.html">Inwerkingtredingsbepaling</a></li><li><a href="proces_overgangsrecht.html">Overgangsrecht</a></li><li><a href="proces_samenloop.html">Oplossen van samenloop</a></li><li><a href="besluitproces_rectificatie.html">Rectificatie van een besluit</a></li><li><a href="besluitproces_rechterlijkemacht.html">Beroep</a><ul><li><a href="besluitproces_rechterlijkemacht_achtergrond.html">Over beroep</a></li><li><a href="besluitproces_rechterlijkemacht_herroepelijkheidbesluit.html">Herroepelijkheid</a></li><li><a href="besluitproces_rechterlijke_macht_beroep_en_geconsolideerde_regelgeving.html">Beroep en geconsolideerde regeling</a><ul><li><a href="besluitproces_rechterlijkemacht_procedurele_status.html">Procedurestap</a></li><li class="active"><a href="besluitproces_rechterlijkemacht_geconsolideerde_regeling.html">GerechtelijkeProcedureStatus</a></li><li><a href="besluitproces_rechterlijkemacht_statusbesluitbepalen.html">Status van een besluit</a></li></ul></li><li><a href="besluitproces_rechterlijke_macht_omgaan_met_beroep.html">Verwerken beroep</a></li></ul></li></ul></li></ul></li></ul></li><li><a href="architectuur.html">Architectuur en ontwerpkeuzes</a></li><li><a href="gebruik.html">Software-ontwikkeling met STOP</a></li><li><a href="voortbouwen_op_STOP.html">Voortbouwen op STOP</a></li></ul></li><li><a href="EA_4D1D7FD517FE4d8dA9A2B905D202C92B.html">Informatiemodel</a></li><li><a href="businessrules.html">Bedrijfsregels</a></li></ul></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1">GerechtelijkeProcedureStatus</h1><div class="body"><p class="p">Het BG meldt relevante gebeurtenissen in het beroepsproces door het <a class="xref" href="besluitproces_rechterlijkemacht_procedurele_status.html">doorgeven van een procedurestap</a>.  Hoe vanuit de aangeleverde procedurestappen de status van een besluit afgeleid wordt, staat beschreven in <a class="xref" href="besluitproces_rechterlijkemacht_statusbesluitbepalen.html">status besluit bepalen</a>.</p><p class="p">Bij de wijzigingen die het besluit aanbrengt in de geconsolideerde regeling, moet worden weergegeven dat de wijzigingen nog niet definitief zijn, indien het besluit nog <em class="ph i">niet onherroepelijk</em> is. In deze sectie wordt beschreven hoe bij een geconsolideerde regeling de status wordt getoond van de besluit(en) die hebben geleid tot deze versie van de regeling.</p></div><article class="topic nested1" aria-labelledby="ariaid-title2" id="herroepelijkheid-geconsolideerde-regeling"><h2 class="title topictitle2" id="ariaid-title2">Herroepelijkheid geconsolideerde regeling</h2><div class="body"><p class="p">Een geconsolideerde regeling wordt samengesteld uit het besluit dat de initiële versie van de regeling instelt en de besluiten die vervolgens wijzigingen aanbrengen in deze regeling. Is een besluit vatbaar voor beroep, dan is de instelling van de initiële regeling of zijn de wijzigingen die het besluit heeft aangebracht in de regeling, pas definitief als het besluit onherroepelijk is geworden.</p><p class="p">De publicatie van de geconsolideerde regeling wacht niet totdat het besluit onherroepelijk is. De geconsolideerde regeling wordt direct gepubliceerd, met een "kanttekening" bij de delen van de regeling die nog niet onherroepelijk zijn, omdat het besluit dat deze delen heeft ingevoegd of gewijzigd, nog niet onherroepelijk is.</p><p class="p">Wordt een besluit onherroepelijk, dan worden de "kanttekeningen" bij die delen van de regeling die door betreffend besluit zijn aangebracht, weggehaald.</p></div></article><article class="topic nested1" aria-labelledby="ariaid-title3" id="over-gerechtelijkeprocedurestatus"><h2 class="title topictitle2" id="ariaid-title3">Over GerechtelijkeProcedureStatus</h2><div class="body"><p class="p">Deze kanttekeningen zijn opgenomen in de <a class="xref" href="context_modules.html">contextmodule</a> <code class="ph codeph">GerechtelijkeProcedureStatus</code>. Elke geconsolideerde regeling heeft deze module, zodat altijd te achterhalen is welke besluiten hebben geleid tot deze regelingversie, en wat de status van deze besluiten is.</p><p class="p"><code class="ph codeph">GerechtelijkeProcedureStatus</code> is een contextmodule omdat de status van de geconsolideerde regeling kan wijzigen onafhankelijk van de regeling zelf, bijvoorbeeld doordat na afloop van de beroepstermijn een besluit onherroepelijk wordt. Het besluit verandert niet inhoudelijk, maar de status ervan wel: door het verstrijken van de tijd is de beroepstermijn verlopen en is het besluit onherroepelijk geworden.</p><p class="p">De <a class="xref" href="EA_C0439F1B47B549bf95F43D2318161D9B.html#Pkg__2F904AAEEDB24d0c9D44B765150A6034">GerechtelijkeProcedureStatus</a> module heeft een <code class="ph codeph">bekendOp</code> en <code class="ph codeph">ontvangenOp</code> datum aan de hand waarvan <a class="xref" href="tijdreizen.html">tijdreizen</a> mogelijk is. Daarnaast bevat <code class="ph codeph">GerechtelijkeProcedureStatus</code> informatie over één of meer besluiten. Een regeling ontstaat immers uit één of meer besluiten. Per besluit wordt de status weergegeven en wordt aan de hand van de <a class="xref" href="eid_wid.html">wId</a>'s aangegeven welke delen van de regeling door dit besluit ontstaan of gewijzigd zijn. Dit zijn dus niet alle <code class="ph codeph">wId</code>'s in de tekst, maar alleen de <code class="ph codeph">wId</code>'s van de muteerbare eenheden in de tekst. Om als lezer zelf het betreffende besluit te kunnen raadplegen, is er een verwijzing naar het gepubliceerde besluit en eventueel ook een verwijzing naar de website van het BG waar een toelichting op de status gegeven kan worden. <a class="xref" href="cons_xsd_Element_cons_GerechtelijkeProcedureStatus.html#GerechtelijkeProcedureStatus">GerechtelijkeProcedureStatus(schema)</a></p></div></article><article class="topic nested1" aria-labelledby="ariaid-title4" id="voorbeelden"><h2 class="title topictitle2" id="ariaid-title4">Voorbeelden</h2><div class="body"></div><article class="topic nested2" aria-labelledby="ariaid-title5" id="niet-onherroepelijk"><h3 class="title topictitle3" id="ariaid-title5">Niet onherroepelijk</h3><div class="body"><p class="p">De <code class="ph codeph">GerechtelijkeProcedureStatus</code> behorende bij een geconsolideerde regelingversie na de publicatie van een, voor beroep vatbaar besluit. Het betreft een besluit dat artikelen 1, 2 en 3 heeft toegevoegd/gewijzigd van de regeling.</p><pre class="pre codeblock xml"><code>&lt;GerechtelijkeProcedureStatus&gt;
+    &lt;bekendOp&gt;2020-01-21&lt;/bekendOp&gt;
+    &lt;ontvangenOp&gt;2020-01-21&lt;/ontvangenOp&gt;
+    &lt;BesluitStatus&gt;
+        &lt;FRBRWork&gt;/akn/nl/bill/gm9999/2020/B2020-00013&lt;/FRBRWork&gt;
+        &lt;onherroepelijkVanaf&gt;2020-03-04&lt;/onherroepelijkVanaf&gt;
+        &lt;geschorst&gt;false&lt;/geschorst&gt;
+        &lt;gepubliceerdIn&gt;
+            &lt;JuridischeBronpublicatie&gt;
+                &lt;url&gt;https://www.officielebekendmakingen.nl/gmb-2020-87904&lt;/url&gt;
+                &lt;publicatieIdentifier&gt;gmb-2020-87904&lt;/publicatieIdentifier&gt;
+                &lt;publicatienaam&gt;Gemeenteblad 2020, 87904&lt;/publicatienaam&gt;
+                &lt;soortGepubliceerdWork&gt;/join/id/stop/gepubliceerdwork_001&lt;/soortGepubliceerdWork&gt;
+                &lt;ondertekendOp&gt;2020-01-17&lt;/ondertekendOp&gt;
+                &lt;gepubliceerdOp&gt;2020-01-21&lt;/gepubliceerdOp&gt;
+            &lt;/JuridischeBronpublicatie&gt;
+        &lt;/gepubliceerdIn&gt;
+        &lt;wId&gt;gm9999_1__art_1&lt;/wId&gt;
+        &lt;wId&gt;gm9999_1__art_2&lt;/wId&gt;
+        &lt;wId&gt;gm9999_1__art_3&lt;/wId&gt;
+    &lt;/BesluitStatus&gt; 
+&lt;/GerechtelijkeProcedureStatus&gt;</code></pre><p class="p">De gerechtelijkeprocedurestatus verwijst naar het besluit als Work, het gaat immers om het besluit zelf en niet om de publicatie van het besluit.</p><p class="p">Vandaar dat <code class="ph codeph">gepubliceerdIn</code> een of meer <code class="ph codeph">JuridischeBronpublicaties</code> kan bevatten. De publicatie van een besluit heeft soms een rectificatie(s) nodig om het besluit zelf volledig correct te publiceren.</p><p class="p">De <code class="ph codeph">Besluitstatus</code> bevat de datum <code class="ph codeph">OnherroepelijkVanaf</code>, de ingangsdatum van de beroepstermijn.</p><p class="p">Een of meer <code class="ph codeph">wId</code>'s duiden de onderdelen van de regeling die door dit besluit zijn toegevoegd of aangepast.</p></div></article><article class="topic nested2" aria-labelledby="ariaid-title6" id="beroepen-ingesteld"><h3 class="title topictitle3" id="ariaid-title6">Beroep(en) ingesteld</h3><div class="body"><p class="p">Zijn er aan het einde van de beroepstermijn een of meerdere beroepen ingesteld, dan is de datum <code class="ph codeph">onherroepelijkVanaf</code> niet meer correct. Het BG heeft de procedurestap "Beroep(en) ingesteld" aangeleverd en de <code class="ph codeph">GerechtelijkeProcedureStatus</code> van dat besluit wordt aangepast.</p><pre class="pre codeblock xml"><code>&lt;GerechtelijkeProcedureStatus&gt;
+    &lt;bekendOp&gt;2020-02-14&lt;/bekendOp&gt;
+    &lt;ontvangenOp&gt;2020-03-04&lt;/ontvangenOp&gt;
+    &lt;BesluitStatus&gt;
+        &lt;FRBRWork&gt;/akn/nl/bill/gm9999/2020/B2020-00013&lt;/FRBRWork&gt;
+        &lt;!-- onherroepelijkVanaf datum gewist --&gt;
+        &lt;geschorst&gt;false&lt;/geschorst&gt;
+        &lt;gepubliceerdIn&gt;
+            &lt;JuridischeBronpublicatie&gt;
+                &lt;url&gt;https://www.officielebekendmakingen.nl/gmb-2020-87904&lt;/url&gt;
+                &lt;publicatieIdentifier&gt;gmb-2020-87904&lt;/publicatieIdentifier&gt;
+                &lt;publicatienaam&gt;Gemeenteblad 2020, 87904&lt;/publicatienaam&gt;
+                &lt;soortGepubliceerdWork&gt;/join/id/stop/gepubliceerdwork_001&lt;/soortGepubliceerdWork&gt;
+                &lt;ondertekendOp&gt;2020-01-17&lt;/ondertekendOp&gt;
+                &lt;gepubliceerdOp&gt;2020-01-21&lt;/gepubliceerdOp&gt;
+            &lt;/JuridischeBronpublicatie&gt;
+        &lt;/gepubliceerdIn&gt;
+        &lt;wId&gt;gm9999_1__art_1&lt;/wId&gt;
+        &lt;wId&gt;gm9999_1__art_2&lt;/wId&gt;
+        &lt;wId&gt;gm9999_1__art_3&lt;/wId&gt;
+    &lt;/BesluitStatus&gt; 
+&lt;/GerechtelijkeProcedureStatus&gt;</code></pre></div></article><article class="topic nested2" aria-labelledby="ariaid-title7" id="geschorst"><h3 class="title topictitle3" id="ariaid-title7">Geschorst</h3><div class="body"><p class="p">Hieronder een voorbeeld nadat het BG met een procedurestap de tussenuitspraak van de rechter: besluit geschorst, heeft doorgegeven:</p><pre class="pre codeblock xml"><code>&lt;GerechtelijkeProcedureStatus&gt;
+    &lt;bekendOp&gt;2020-06-01&lt;/bekendOp&gt;
+    &lt;ontvangenOp&gt;2020-06-03&lt;/ontvangenOp&gt;
+    &lt;BesluitStatus&gt;
+        &lt;FRBRWork&gt;/akn/nl/bill/gm9999/2020/B2020-00013&lt;/FRBRWork&gt;
+        &lt;geschorst&gt;true&lt;/geschorst&gt; &lt;!-- schorsing ingesteld --&gt;
+        &lt;gepubliceerdIn&gt;
+            &lt;JuridischeBronpublicatie&gt;
+                &lt;url&gt;https://www.officielebekendmakingen.nl/gmb-2020-87904&lt;/url&gt;
+                &lt;publicatieIdentifier&gt;gmb-2020-87904&lt;/publicatieIdentifier&gt;
+                &lt;publicatienaam&gt;Gemeenteblad 2020, 87904&lt;/publicatienaam&gt;
+                &lt;soortGepubliceerdWork&gt;/join/id/stop/gepubliceerdwork_001&lt;/soortGepubliceerdWork&gt;
+                &lt;ondertekendOp&gt;2020-01-17&lt;/ondertekendOp&gt;
+                &lt;gepubliceerdOp&gt;2020-01-21&lt;/gepubliceerdOp&gt;
+            &lt;/JuridischeBronpublicatie&gt;
+        &lt;/gepubliceerdIn&gt;
+        &lt;wId&gt;gm9999_1__art_1&lt;/wId&gt;
+        &lt;wId&gt;gm9999_1__art_2&lt;/wId&gt;
+        &lt;wId&gt;gm9999_1__art_3&lt;/wId&gt;
+        &lt;meerInformatie&gt;https://www.pyrodam.nl/actueel/schorsing-87904&lt;/meerInformatie&gt;
+    &lt;/BesluitStatus&gt; 
+&lt;/GerechtelijkeProcedureStatus&gt;</code></pre><p class="p">De boolean <code class="ph codeph">Geschorst</code> is nu <code class="ph codeph">true</code> en met <code class="ph codeph">meerInformatie</code> geeft het BG een URL verwijzing naar de website van het BG. Het BG kan op haar website bijvoorbeeld de precieze consequenties uitleggen van het besluit van de rechter om een (gedeelte) van het besluit te schorsen.</p></div></article><article class="topic nested2" aria-labelledby="ariaid-title8" id="niet-onherroepelijk-1"><h3 class="title topictitle3" id="ariaid-title8">Niet onherroepelijk</h3><div class="body"><p class="p">Als de rechter de schorsing opheft, maar nog geen definitieve uitspraak doet, wordt de schorsing-vlag verwijderd. Doordat de datum <code class="ph codeph">onherroepelijkVanaf</code> ontbreekt, zijn de artikelen in de geconsolideerde regeling nog "niet onherroepelijk".</p><pre class="pre codeblock xml"><code>&lt;GerechtelijkeProcedureStatus&gt;
+    &lt;bekendOp&gt;2020-07-14&lt;/bekendOp&gt;
+    &lt;ontvangenOp&gt;2020-07-16&lt;/ontvangenOp&gt;
+    &lt;BesluitStatus&gt;
+        &lt;FRBRWork&gt;/akn/nl/bill/gm9999/2020/B2020-00013&lt;/FRBRWork&gt;
+        &lt;geschorst&gt;false&lt;/geschorst&gt; &lt;!-- schorsing opgeheven --&gt;
+        &lt;gepubliceerdIn&gt;
+            &lt;JuridischeBronpublicatie&gt;
+                &lt;url&gt;https://www.officielebekendmakingen.nl/gmb-2020-87904&lt;/url&gt;
+                &lt;publicatieIdentifier&gt;gmb-2020-87904&lt;/publicatieIdentifier&gt;
+                &lt;publicatienaam&gt;Gemeenteblad 2020, 87904&lt;/publicatienaam&gt;
+                &lt;soortGepubliceerdWork&gt;/join/id/stop/gepubliceerdwork_001&lt;/soortGepubliceerdWork&gt;
+                &lt;ondertekendOp&gt;2020-01-17&lt;/ondertekendOp&gt;
+                &lt;gepubliceerdOp&gt;2020-01-21&lt;/gepubliceerdOp&gt;
+            &lt;/JuridischeBronpublicatie&gt;
+        &lt;/gepubliceerdIn&gt;
+        &lt;wId&gt;gm9999_1__art_1&lt;/wId&gt;
+        &lt;wId&gt;gm9999_1__art_2&lt;/wId&gt;
+        &lt;wId&gt;gm9999_1__art_3&lt;/wId&gt;
+    &lt;/BesluitStatus&gt; 
+&lt;/GerechtelijkeProcedureStatus&gt;</code></pre></div></article><article class="topic nested2" aria-labelledby="ariaid-title9" id="onherroepelijk"><h3 class="title topictitle3" id="ariaid-title9">Onherroepelijk</h3><div class="body"><p class="p">Als de definitieve uitspraak van de rechter de beroepen ongegrond verklaard, geeft het BG met een procedurestap "beroep(en) definitief afgedaan" door, dat het besluit onherroepelijk is geworden. De <code class="ph codeph">GerechtelijkeProcedureStatus</code> bevat nu een datum <code class="ph codeph">onherroepelijkVanaf</code> in het verleden en daarmee is het besluit  "onherroepelijk".</p><pre class="pre codeblock xml"><code>&lt;GerechtelijkeProcedureStatus&gt;
+    &lt;bekendOp&gt;2020-07-14&lt;/bekendOp&gt;
+    &lt;ontvangenOp&gt;2020-08-31&lt;/ontvangenOp&gt;
+    &lt;BesluitStatus&gt;
+        &lt;FRBRWork&gt;/akn/nl/bill/gm9999/2020/B2020-00013&lt;/FRBRWork&gt;
+        &lt;onherroepelijkVanaf&gt;2020-08-25&lt;/onherroepelijkVanaf&gt; 
+        &lt;geschorst&gt;false&lt;/geschorst&gt; &lt;!-- schorsing niet meer van toepassing --&gt;
+        &lt;gepubliceerdIn&gt;
+            &lt;JuridischeBronpublicatie&gt;
+                &lt;url&gt;https://www.officielebekendmakingen.nl/gmb-2020-87904&lt;/url&gt;
+                &lt;publicatieIdentifier&gt;gmb-2020-87904&lt;/publicatieIdentifier&gt;
+                &lt;publicatienaam&gt;Gemeenteblad 2020, 87904&lt;/publicatienaam&gt;
+                &lt;soortGepubliceerdWork&gt;/join/id/stop/gepubliceerdwork_001&lt;/soortGepubliceerdWork&gt;
+                &lt;ondertekendOp&gt;2020-01-17&lt;/ondertekendOp&gt;
+                &lt;gepubliceerdOp&gt;2020-01-21&lt;/gepubliceerdOp&gt;
+            &lt;/JuridischeBronpublicatie&gt;
+        &lt;/gepubliceerdIn&gt;
+        &lt;wId&gt;gm9999_1__art_1&lt;/wId&gt;
+        &lt;wId&gt;gm9999_1__art_2&lt;/wId&gt;
+        &lt;wId&gt;gm9999_1__art_3&lt;/wId&gt;
+    &lt;/BesluitStatus&gt; 
+&lt;/GerechtelijkeProcedureStatus&gt;</code></pre></div></article><article class="topic nested2" aria-labelledby="ariaid-title10" id="vernietigd"><h3 class="title topictitle3" id="ariaid-title10">Vernietigd</h3><div class="body"><p class="p">Indien de rechter de beroepen gegrond verklaard, wordt een (gedeelte) van het besluit vernietigd. Bij een vernietiging publiceert het BG altijd een kennisgeving met de uitspraak van de rechter. Deze publicatie wordt opgenomen in de <code class="ph codeph">GerechtelijkeProcedureStatus</code>.</p><pre class="pre codeblock xml"><code>&lt;BesluitStatus&gt;
+    &lt;FRBRWork&gt;/akn/nl/bill/gm9999/2020/B2020-00025&lt;/FRBRWork&gt;
+    &lt;onherroepelijkVanaf&gt;2020-12-05&lt;/onherroepelijkVanaf&gt;
+    &lt;geschorst&gt;false&lt;/geschorst&gt;
+    &lt;gepubliceerdIn&gt;
+        &lt;JuridischeBronpublicatie&gt; &lt;!-- Wijzigingsbesluit --&gt;
+            &lt;url&gt;https://www.officielebekendmakingen.nl/gmb-2020-89103&lt;/url&gt;
+            &lt;publicatieIdentifier&gt;gmb-2020-89103&lt;/publicatieIdentifier&gt;
+            &lt;publicatienaam&gt;Gemeenteblad 2020, 89123&lt;/publicatienaam&gt;
+            &lt;soortGepubliceerdWork&gt;/join/id/stop/gepubliceerdwork_001&lt;/soortGepubliceerdWork&gt;
+            &lt;ondertekendOp&gt;2020-06-19&lt;/ondertekendOp&gt;
+            &lt;gepubliceerdOp&gt;2020-06-20&lt;/gepubliceerdOp&gt;
+        &lt;/JuridischeBronpublicatie&gt;
+        &lt;JuridischeBronpublicatie&gt; &lt;!-- Kennisgeving gedeeltelijke vernietiging --&gt;
+            &lt;url&gt;https://www.officielebekendmakingen.nl/gmb-2020-89456&lt;/url&gt;
+            &lt;publicatieIdentifier&gt;gmb-2020-89456&lt;/publicatieIdentifier&gt;
+            &lt;publicatienaam&gt;Gemeenteblad 2020, 89456&lt;/publicatienaam&gt;
+            &lt;soortGepubliceerdWork&gt;/join/id/stop/gepubliceerdwork_001&lt;/soortGepubliceerdWork&gt;
+            &lt;ondertekendOp&gt;2020-12-14&lt;/ondertekendOp&gt;
+            &lt;gepubliceerdOp&gt;2020-12-15&lt;/gepubliceerdOp&gt;
+        &lt;/JuridischeBronpublicatie&gt;
+    &lt;/gepubliceerdIn&gt;
+    &lt;wId&gt;gm9999_1__art_2&lt;/wId&gt;
+    &lt;wId&gt;gm9999_1__cmp_A__content_o_1&lt;/wId&gt;
+&lt;/BesluitStatus&gt;</code></pre><p class="p">Is met de uitspraak de beroepsprocedure afgerond, is geen hoger beroep meer mogelijk of er is geen gebruik gemaakt van een hogere beroep mogelijkheid, dan geeft het BG met een procedurestap "beroep(en) definitief afgedaan" door, dat het besluit onherroepelijk is geworden. De <code class="ph codeph">GerechtelijkeProcedureStatus</code> bevat dan een datum <code class="ph codeph">onherroepelijkVanaf</code> in het verleden en daarmee is het besluit  "onherroepelijk", zoals in bovenstaand voorbeeld.</p></div></article></article><article class="topic nested1" aria-labelledby="ariaid-title11" id="zie-ook"><h2 class="title topictitle2" id="ariaid-title11">Zie ook</h2><div class="body"><ul class="ul"><li class="li"><p class="p">Juridische informatie over <a class="xref" href="juridische-uitgangspunten.html#beroep">beroep</a> en de <a class="xref" href="verwerking-beroep.html">verwerking van beroep in STOP</a>.</p></li><li class="li"><p class="p"><a class="xref" href="besluitproces_rechterlijkemacht_scenarios.html">Verwerken uitspraak beroep</a> voor een compleet overzicht van alle stappen van het BG in een beroepsprocedure.</p></li><li class="li"><p class="p">Volledige <a class="xref" href="https://koop.gitlab.io/STOP/standaard/1.3.0/go/go.html?id=git%3Avoorbeelden/Besluiten%20en%20regelingen/03%20Proces%20rondom%20besluit/05%20Scenarios%20mbt%20gerechtelijke%20macht/index.md" target="_blank">XML voorbeelden</a> van de verschillende beroepscenario's.</p></li></ul></div></article></article></main></body></html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="nl-nl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="InformatieObjectMetadata"><meta name="DC.language" content="nl-nl"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Element data:InformatieObjectMetadata</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="InformatieObjectMetadata"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a><ul><li><a href="imop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="imop_xml.html">XML-serialisatie</a></li><li><a href="uitwisselpakket.html">Uitwisselpakket</a></li><li><a href="schemata_gebruik.html">Gebruik van IMOP</a></li><li><a href="schema_documentatie.html">Schemadocumentatie</a><ul><li><a href="schema_documentatie_legenda.html">Legenda van de schemadocumentatie</a></li><li><a href="imop_modules.html">STOP-modules in IMOP</a></li><li><a href="tekst_xsd_Main_schema_tekst_xsd.html">Schema imop-tekst.xsd</a></li><li><a href="gio_xsd_Main_schema_gio_xsd.html">Schema imop-gio.xsd</a></li><li><a href="geo_xsd_Main_schema_geo_xsd.html">Schema imop-geo.xsd</a></li><li><a href="se_xsd_Main_schema_se_xsd.html">Schema se-FeatureStyle-imop.xsd</a></li><li><a href="ogc_xsd_Main_schema_ogc_xsd.html">Schema se-filter-imop.xsd</a></li><li><a href="data_xsd_Main_schema_data_xsd.html">Schema imop-data.xsd</a><ul><li><a href="data_xsd_Element_data_actor.html">actor</a></li><li><a href="data_xsd_Element_data_afkorting.html">afkorting</a></li><li><a href="data_xsd_Element_data_afkortingen.html">afkortingen</a></li><li><a href="data_xsd_Attribute_Group_data_agSchemaVersie.html">agSchemaVersie</a></li><li><a href="data_xsd_Element_data_alternatieveTitel.html">alternatieveTitel</a></li><li><a href="data_xsd_Element_data_alternatieveTitels.html">alternatieveTitels</a></li><li><a href="data_xsd_Element_data_Basisversie.html">Basisversie</a></li><li><a href="data_xsd_Element_data_beginInzagetermijnOp.html">beginInzagetermijnOp</a></li><li><a href="data_xsd_Element_data_bekendOp.html">bekendOp</a></li><li><a href="data_xsd_Element_data_BeoogdeRegelgeving.html">BeoogdeRegelgeving</a></li><li><a href="data_xsd_Element_data_BeoogdeRegeling.html">BeoogdeRegeling</a></li><li><a href="data_xsd_Element_data_BeoogdInformatieobject.html">BeoogdInformatieobject</a></li><li><a href="data_xsd_Element_data_BesluitMetadata.html">BesluitMetadata</a></li><li><a href="data_xsd_Element_data_Bestand.html">Bestand</a></li><li><a href="data_xsd_Element_data_bestandsnaam.html">bestandsnaam</a></li><li><a href="data_xsd_Element_data_bevatWijzigingenVoor.html">bevatWijzigingenVoor</a></li><li><a href="data_xsd_Element_data_citeertitel.html">citeertitel</a></li><li><a href="data_xsd_Element_data_CiteertitelInformatie.html">CiteertitelInformatie</a></li><li><a href="data_xsd_Element_data_component.html">component</a></li><li><a href="data_xsd_Element_data_ConsolidatieInformatie.html">ConsolidatieInformatie</a></li><li><a href="data_xsd_Element_data_datum.html">datum</a></li><li><a href="data_xsd_Element_data_datumTeMuterenStap.html">datumTeMuterenStap</a></li><li><a href="data_xsd_Element_data_doel.html">doel</a></li><li><a href="data_xsd_Element_data_doelen.html">doelen</a></li><li><a href="data_xsd_Simple_Type_data_dtComponent.html">dtComponent</a></li><li><a href="data_xsd_Simple_Type_data_dtDateTimeUTC.html">dtDateTimeUTC</a></li><li><a href="data_xsd_Simple_Type_data_dtDoelidentificatie.html">dtDoelidentificatie</a></li><li><a href="data_xsd_Simple_Type_data_dtGroepID.html">dtGroepID</a></li><li><a href="data_xsd_Simple_Type_data_dtSchemaVersie.html">dtSchemaVersie</a></li><li><a href="data_xsd_Simple_Type_data_dtSTOPidentificatie.html">dtSTOPidentificatie</a></li><li><a href="data_xsd_Simple_Type_data_dtTijdstempeltype.html">dtTijdstempeltype</a></li><li><a href="data_xsd_Simple_Type_data_dtWaardeRef.html">dtWaardeRef</a></li><li><a href="data_xsd_Simple_Type_data_dtWID.html">dtWID</a></li><li><a href="data_xsd_Element_data_eId.html">eId</a></li><li><a href="data_xsd_Element_data_eindeBeroepstermijnOp.html">eindeBeroepstermijnOp</a></li><li><a href="data_xsd_Element_data_eindeBezwaartermijnOp.html">eindeBezwaartermijnOp</a></li><li><a href="data_xsd_Element_data_eindeInzagetermijnOp.html">eindeInzagetermijnOp</a></li><li><a href="data_xsd_Element_data_eindverantwoordelijke.html">eindverantwoordelijke</a></li><li><a href="data_xsd_Element_data_ExpressionIdentificatie.html">ExpressionIdentificatie</a></li><li><a href="data_xsd_Element_data_formaatInformatieobject.html">formaatInformatieobject</a></li><li><a href="data_xsd_Element_data_FRBRExpression.html">FRBRExpression</a></li><li><a href="data_xsd_Element_data_FRBRWork.html">FRBRWork</a></li><li><a href="data_xsd_Element_data_gemaaktOp.html">gemaaktOp</a></li><li><a href="data_xsd_Element_data_gemaaktOpBasisVan.html">gemaaktOpBasisVan</a></li><li><a href="data_xsd_Element_data_gepubliceerdOp.html">gepubliceerdOp</a></li><li><a href="data_xsd_Element_data_GIO.html">GIO</a></li><li><a href="data_xsd_Element_data_groepID.html">groepID</a></li><li><a href="data_xsd_Element_data_grondslag.html">grondslag</a></li><li><a href="data_xsd_Element_data_grondslagen.html">grondslagen</a></li><li><a href="data_xsd_Element_data_hash.html">hash</a></li><li><a href="data_xsd_Element_data_heeftBestand.html">heeftBestand</a></li><li><a href="data_xsd_Element_data_heeftBestanden.html">heeftBestanden</a></li><li><a href="data_xsd_Element_data_heeftCiteertitelInformatie.html">heeftCiteertitelInformatie</a></li><li><a href="data_xsd_Element_data_heeftGeboorteregeling.html">heeftGeboorteregeling</a></li><li class="active"><a href="data_xsd_Element_data_InformatieObjectMetadata.html">InformatieObjectMetadata</a></li><li><a href="data_xsd_Element_data_informatieobjectRef.html">informatieobjectRef</a></li><li><a href="data_xsd_Element_data_informatieobjectRefs.html">informatieobjectRefs</a></li><li><a href="data_xsd_Element_data_InformatieObjectVersieMetadata.html">InformatieObjectVersieMetadata</a></li><li><a href="data_xsd_Element_data_instrument.html">instrument</a></li><li><a href="data_xsd_Element_data_instrumentVersie.html">instrumentVersie</a></li><li><a href="data_xsd_Element_data_Intrekking.html">Intrekking</a></li><li><a href="data_xsd_Element_data_Intrekkingen.html">Intrekkingen</a></li><li><a href="data_xsd_Element_data_isOfficieel.html">isOfficieel</a></li><li><a href="data_xsd_Element_data_isTijdelijkDeelVan.html">isTijdelijkDeelVan</a></li><li><a href="data_xsd_Element_data_jaargang.html">jaargang</a></li><li><a href="data_xsd_Element_data_KennisgevingMetadata.html">KennisgevingMetadata</a></li><li><a href="data_xsd_Element_data_label.html">label</a></li><li><a href="data_xsd_Element_data_maker.html">maker</a></li><li><a href="data_xsd_Element_data_mededelingOver.html">mededelingOver</a></li><li><a href="data_xsd_Element_data_meerInformatie.html">meerInformatie</a></li><li><a href="data_xsd_Element_data_Momentopname.html">Momentopname</a></li><li><a href="data_xsd_Element_data_naamInformatieObject.html">naamInformatieObject</a></li><li><a href="data_xsd_Element_data_OfficielePublicatieMetadata.html">OfficielePublicatieMetadata</a></li><li><a href="data_xsd_Element_data_OfficielePublicatieVersieMetadata.html">OfficielePublicatieVersieMetadata</a></li><li><a href="data_xsd_Element_data_officieleTitel.html">officieleTitel</a></li><li><a href="data_xsd_Element_data_ondertekendOp.html">ondertekendOp</a></li><li><a href="data_xsd_Element_data_onderwerp.html">onderwerp</a></li><li><a href="data_xsd_Element_data_onderwerpen.html">onderwerpen</a></li><li><a href="data_xsd_Element_data_ontvangenOp.html">ontvangenOp</a></li><li><a href="data_xsd_Element_data_OntvlochtenVersie.html">OntvlochtenVersie</a></li><li><a href="data_xsd_Element_data_opvolgerVan.html">opvolgerVan</a></li><li><a href="data_xsd_Element_data_opvolging.html">opvolging</a></li><li><a href="data_xsd_Element_data_overheidsdomein.html">overheidsdomein</a></li><li><a href="data_xsd_Element_data_overheidsdomeinen.html">overheidsdomeinen</a></li><li><a href="data_xsd_Element_data_Procedurestap.html">Procedurestap</a></li><li><a href="data_xsd_Element_data_procedurestappen.html">procedurestappen</a></li><li><a href="data_xsd_Element_data_Procedurestapref.html">Procedurestapref</a></li><li><a href="data_xsd_Element_data_Procedureverloop.html">Procedureverloop</a></li><li><a href="data_xsd_Element_data_Procedureverloopmutatie.html">Procedureverloopmutatie</a></li><li><a href="data_xsd_Element_data_publicatieblad.html">publicatieblad</a></li><li><a href="data_xsd_Element_data_publicatieIdentifier.html">publicatieIdentifier</a></li><li><a href="data_xsd_Element_data_publicatieinstructie.html">publicatieinstructie</a></li><li><a href="data_xsd_Element_data_publicatienaam.html">publicatienaam</a></li><li><a href="data_xsd_Element_data_publicatienummer.html">publicatienummer</a></li><li><a href="data_xsd_Element_data_publiceert.html">publiceert</a></li><li><a href="data_xsd_Element_data_rechtsgebied.html">rechtsgebied</a></li><li><a href="data_xsd_Element_data_rechtsgebieden.html">rechtsgebieden</a></li><li><a href="data_xsd_Element_data_RectificatieMetadata.html">RectificatieMetadata</a></li><li><a href="data_xsd_Element_data_rectificeert.html">rectificeert</a></li><li><a href="data_xsd_Element_data_RegelingMetadata.html">RegelingMetadata</a></li><li><a href="data_xsd_Element_data_RegelingVersieMetadata.html">RegelingVersieMetadata</a></li><li><a href="data_xsd_Element_data_soortBestuursorgaan.html">soortBestuursorgaan</a></li><li><a href="data_xsd_Element_data_soortKennisgeving.html">soortKennisgeving</a></li><li><a href="data_xsd_Element_data_soortProcedure.html">soortProcedure</a></li><li><a href="data_xsd_Element_data_soortPublicatie.html">soortPublicatie</a></li><li><a href="data_xsd_Element_data_soortRef.html">soortRef</a></li><li><a href="data_xsd_Element_data_soortRegeling.html">soortRegeling</a></li><li><a href="data_xsd_Element_data_soortStap.html">soortStap</a></li><li><a href="data_xsd_Element_data_soortTijdstempel.html">soortTijdstempel</a></li><li><a href="data_xsd_Element_data_soortWork.html">soortWork</a></li><li><a href="data_xsd_Element_data_Tekstelement.html">Tekstelement</a></li><li><a href="data_xsd_Element_data_TekstReferentie.html">TekstReferentie</a></li><li><a href="data_xsd_Element_data_Terugtrekkingen.html">Terugtrekkingen</a></li><li><a href="data_xsd_Element_data_TerugtrekkingInformatieobject.html">TerugtrekkingInformatieobject</a></li><li><a href="data_xsd_Element_data_TerugtrekkingIntrekking.html">TerugtrekkingIntrekking</a></li><li><a href="data_xsd_Element_data_TerugtrekkingRegeling.html">TerugtrekkingRegeling</a></li><li><a href="data_xsd_Element_data_TerugtrekkingTijdstempel.html">TerugtrekkingTijdstempel</a></li><li><a href="data_xsd_Element_data_Tijdstempel.html">Tijdstempel</a></li><li><a href="data_xsd_Element_data_Tijdstempels.html">Tijdstempels</a></li><li><a href="data_xsd_Element_data_toelichtingOp.html">toelichtingOp</a></li><li><a href="data_xsd_Element_data_Toelichtingsrelatie.html">Toelichtingsrelatie</a></li><li><a href="data_xsd_Element_data_Toelichtingsrelaties.html">Toelichtingsrelaties</a></li><li><a href="data_xsd_Element_data_uitgever.html">uitgever</a></li><li><a href="data_xsd_Element_data_UitgewisseldInstrument.html">UitgewisseldInstrument</a></li><li><a href="data_xsd_Element_data_uri.html">uri</a></li><li><a href="data_xsd_Element_data_versienummer.html">versienummer</a></li><li><a href="data_xsd_Element_data_vervangStappen.html">vervangStappen</a></li><li><a href="data_xsd_Element_data_VervlochtenVersie.html">VervlochtenVersie</a></li><li><a href="data_xsd_Element_data_verwijderStappen.html">verwijderStappen</a></li><li><a href="data_xsd_Element_data_voegStappenToe.html">voegStappenToe</a></li><li><a href="data_xsd_Element_data_voltooidOp.html">voltooidOp</a></li><li><a href="data_xsd_Element_data_voorkeursafkorting.html">voorkeursafkorting</a></li><li><a href="data_xsd_Element_data_wId.html">wId</a></li><li><a href="data_xsd_Simple_Type_data_wlSoortExtrefNotatie.html">wlSoortExtrefNotatie</a></li><li><a href="data_xsd_Element_data_WorkIdentificatie.html">WorkIdentificatie</a></li></ul></li><li><a href="cons_xsd_Main_schema_cons_xsd.html">Schema imop-consolidatie.xsd</a></li><li><a href="rsc_xsd_Main_schema_rsc_xsd.html">Schema imop-resources.xsd</a></li><li><a href="br_xsd_Main_schema_br_xsd.html">Schema imop-bedrijfsregels.xsd</a></li><li><a href="sv_xsd_Main_schema_sv_xsd.html">Schema imop-schemata.xsd</a></li><li><a href="uws_xsd_Main_schema_uws_xsd.html">Schema imop-uitwisseling.xsd</a></li></ul></li><li><a href="imop_bedrijfsregels.html">Bedrijfsregels</a></li><li><a href="imop_waardelijsten.html">Waardelijsten</a></li></ul></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+   <h1 class="title topictitle1" id="ariaid-title1">Element data:InformatieObjectMetadata</h1>
+   <div class="body">
+      <table class="table frame-all"><caption></caption><colgroup><col style="width:10.714285714285714%"><col style="width:89.28571428571429%"></colgroup><tbody class="tbody">
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Namespace</td>
+                  <td class="entry align-left colsep-1 rowsep-1">https://standaarden.overheid.nl/stop/imop/data/</td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Definitie</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="div">
+    <p class="p">Module voor de set metadata die van toepassing is op een Informatieobject.</p>
+  </div>
+  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Informatie</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="div">
+    <p class="p"><strong class="ph b">Voorbeeld</strong></p>
+    <pre class="pre codeblock"><code>
+      
+      &lt;InformatieObjectMetadata xmlns="https://standaarden.overheid.nl/stop/imop/data"&gt;
+         ...
+      &lt;/InformatieObjectMetadata&gt;
+    </code></pre>
+  </div>
+  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Informatiemodel</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <a class="xref link_ea" href="EA_EC4DE25BFB1341e6B632337DAF9C2791.html#Pkg__7A6C6B4457C74829B60CF9F7A20DDF46">Metadata Informatieobject (entiteit)</a></td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Verwijzingen</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <a class="xref link_xsd" href="data_xsd_Element_data_BesluitMetadata.html#BesluitMetadata">data:BesluitMetadata</a>, <a class="xref link_xsd" href="data_xsd_Element_data_InformatieObjectVersieMetadata.html#InformatieObjectVersieMetadata">data:InformatieObjectVersieMetadata</a>, <a class="xref link_xsd" href="data_xsd_Element_data_OfficielePublicatieMetadata.html#OfficielePublicatieMetadata">data:OfficielePublicatieMetadata</a>, <a class="xref link_xsd" href="data_xsd_Element_data_RegelingMetadata.html#RegelingMetadata">data:RegelingMetadata</a></td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Diagram</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="p">
+                        <div class="fig imagemap" id="InformatieObjectMetadata__data_xsd_Element_data_InformatieObjectMetadata"><img usemap="#d83054e117" class="image" src="img/data_xsd_Element_data_InformatieObjectMetadata.png"><map name="d83054e117" id="d83054e117"><area href="data_xsd_Attribute_Group_data_agSchemaVersie.html#agSchemaVersie" alt="Attribuutgroep: data:agSchemaVersie" title="Attribuutgroep: data:agSchemaVersie" shape="rect" coords="198,44,360,70"><area href="data_xsd_Element_data_alternatieveTitels.html#alternatieveTitels" alt="Element data:alternatieveTitels" title="Element data:alternatieveTitels" shape="rect" coords="252,92,388,117"><area href="data_xsd_Element_data_eindverantwoordelijke.html#eindverantwoordelijke" alt="Element data:eindverantwoordelijke" title="Element data:eindverantwoordelijke" shape="rect" coords="252,127,413,171"><area href="data_xsd_Element_data_formaatInformatieobject.html#formaatInformatieobject" alt="Element data:formaatInformatieobject" title="Element data:formaatInformatieobject" shape="rect" coords="252,181,420,225"><area href="data_xsd_Element_data_maker.html#maker" alt="Element data:maker" title="Element data:maker" shape="rect" coords="252,235,403,279"><area href="data_xsd_Element_data_naamInformatieObject.html#naamInformatieObject" alt="Element data:naamInformatieObject" title="Element data:naamInformatieObject" shape="rect" coords="252,289,411,333"><area href="data_xsd_Element_data_officieleTitel.html#officieleTitel" alt="Element data:officieleTitel" title="Element data:officieleTitel" shape="rect" coords="252,343,364,387"><area href="data_xsd_Element_data_opvolging.html#opvolging" alt="Element data:opvolging" title="Element data:opvolging" shape="rect" coords="252,397,353,422"><area href="data_xsd_Element_data_publicatieinstructie.html#publicatieinstructie" alt="Element data:publicatieinstructie" title="Element data:publicatieinstructie" shape="rect" coords="252,432,427,476"></map></div>
+                     </div>
+                  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Eigenschappen</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="p">
+                        <table class="table frame-all"><caption></caption><colgroup><col style="width:20%"><col style="width:80%"></colgroup><tbody class="tbody">
+                                 <tr class="row">
+                                    <td class="entry align-left colsep-1 rowsep-1">content: </td>
+                                    <td class="entry align-left colsep-1 rowsep-1">
+                                       <strong class="ph b">complex</strong>
+                                    </td>
+                                 </tr>
+                              </tbody></table>
+                     </div>
+                  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Kinderen</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <a class="xref" href="data_xsd_Element_data_alternatieveTitels.html#alternatieveTitels">Element data:alternatieveTitels</a>, <a class="xref" href="data_xsd_Element_data_eindverantwoordelijke.html#eindverantwoordelijke">Element data:eindverantwoordelijke</a>, <a class="xref" href="data_xsd_Element_data_formaatInformatieobject.html#formaatInformatieobject">Element data:formaatInformatieobject</a>, <a class="xref" href="data_xsd_Element_data_maker.html#maker">Element data:maker</a>, <a class="xref" href="data_xsd_Element_data_naamInformatieObject.html#naamInformatieObject">Element data:naamInformatieObject</a>, <a class="xref" href="data_xsd_Element_data_officieleTitel.html#officieleTitel">Element data:officieleTitel</a>, <a class="xref" href="data_xsd_Element_data_opvolging.html#opvolging">Element data:opvolging</a>, <a class="xref" href="data_xsd_Element_data_publicatieinstructie.html#publicatieinstructie">Element data:publicatieinstructie</a>
+                  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Attributen</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="p">
+                        <table class="table frame-all"><caption></caption><colgroup><col style="width:42.857142857142854%"><col style="width:42.857142857142854%"><col style="width:14.285714285714285%"></colgroup><thead class="thead">
+                                 <tr class="row">
+                                    <th class="entry align-left colsep-1 rowsep-1" id="InformatieObjectMetadata__entry__21">QName</th>
+                                    <th class="entry align-left colsep-1 rowsep-1" id="InformatieObjectMetadata__entry__22">Type</th>
+                                    <th class="entry align-left colsep-1 rowsep-1" id="InformatieObjectMetadata__entry__23">Use</th>
+                                 </tr>
+                              </thead><tbody class="tbody">
+                                 <tr class="row">
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="InformatieObjectMetadata__entry__21">schemaversie</td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="InformatieObjectMetadata__entry__22">
+                                       <a class="xref" href="data_xsd_Simple_Type_data_dtSchemaVersie.html#dtSchemaVersie">Simple Type data:dtSchemaVersie</a>
+                                    </td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="InformatieObjectMetadata__entry__23">optional</td>
+                                 </tr>
+                              </tbody></table>
+                     </div>
+                  </td>
+               </tr>
+               </tbody></table>
+   </div>
+</article></main></body></html>

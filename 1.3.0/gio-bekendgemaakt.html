@@ -1,0 +1,45 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="bekendgemaakte-gio"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Bekendgemaakte GIO</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="bekendgemaakte-gio"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a><ul><li><a href="stop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="leeswijzers.html">Leeswijzers</a><ul><li><a href="toepassing.html">Basis van STOP</a></li><li><a href="architectuur.html">Architectuur en ontwerpkeuzes</a></li><li><a href="gebruik.html">Software-ontwikkeling met STOP</a><ul><li><a href="quickstart_overzicht.html">Snelstartgids STOP-XML</a></li><li><a href="tekstmodellen.html">Modellering van tekst</a></li><li><a href="io-intro.html">Informatie-object</a></li><li><a href="gio-intro.html">Geografisch informatie-object</a><ul><li><a href="gio-onderdelen.html">Onderdelen GIO</a></li><li><a href="gio-soorten.html#soorten-gios">Soorten GIO's</a></li><li class="active"><a href="gio-bekendgemaakt.html">Bekendgemaakte GIO</a></li><li><a href="gio-handelingen.html">Werken met GIO's</a></li></ul></li><li><a href="IO_Document.html">Document als informatie-object</a></li><li><a href="naamgevingsconventie.html">Naamgevingsconventie</a></li><li><a href="context_modules.html">Tijdsafhankelijke (context)informatie</a></li><li><a href="annotaties.html">Annotaties</a></li></ul></li><li><a href="voortbouwen_op_STOP.html">Voortbouwen op STOP</a></li></ul></li><li><a href="EA_4D1D7FD517FE4d8dA9A2B905D202C92B.html">Informatiemodel</a></li><li><a href="businessrules.html">Bedrijfsregels</a></li></ul></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1">Bekendgemaakte GIO</h1><div class="body"><p class="p">Het (gewijzigde) GIO is juridisch onderdeel van het besluit en wordt met het besluit bekendgemaakt in een elektronisch publicatieblad (Staatscourant, Gemeenteblad, Provincieblad, Waterschapsblad) op  <a class="xref" href="http://www.officielebekendmakingen.nl" target="_blank">Zoeken in alle documenten | Overheid.nl &gt; Officiële bekendmakingen</a>. De bekendmaking bevat de (juridisch) authentieke versie van het besluit in PDF en van het GIO in GML-formaat.</p></div><article class="topic nested1" aria-labelledby="ariaid-title2" id="landingspagina"><h2 class="title topictitle2" id="ariaid-title2">Landingspagina</h2><div class="body"><p class="p">Een bekendgemaakte GIO heeft een eigen landingspagina. Daar wordt in de publicatie van het besluit naar verwezen. Deze pagina bevat naast een titel met de naam van het GIO (label) een interactieve kaart waar het GIO zichtbaar is zodat de gebruiker de geometrische data kan interpreteren. Het bevat ook een mogelijkheid om de geometrische data van het object te kunnen downloaden. Deze geometrische data is wat er juridisch geldt, want dat is wat het bevoegd gezag formeel heeft vastgesteld. De visuele presentatie van de geometrische data in de viewer moet wel correct zijn, maar is service-informatie en geen formeel onderdeel van het besluit.</p><figure class="fig fignone"><figcaption><span class="fig--title-label">Figure 1. </span>Besluittekst met mens-leesbaar label en verwijzingen naar een GIO in de bijlage.</figcaption><img class="image" src="img/Presentatiemodel_TekstverwijzenGIO.png" alt="img/Presentatiemodel_TekstverwijzenGIO.png"><br></figure></div></article><article class="topic nested1" aria-labelledby="ariaid-title3" id="raadplegen-gio"><h2 class="title topictitle2" id="ariaid-title3">Raadplegen GIO</h2><div class="body"><p class="p">Ook vanuit de authentieke PDF-versie van het bekendgemaakte besluit (die geen links bevat) is elke GIO te achterhalen door de JOIN-ID op <a class="xref" href="https://identifier.overheid.nl/" target="_blank">URI - Resolver</a> in te vullen. Dit is een service van de LVBB. Deze service werkt alleen voor GIO's die zijn bekendgemaakt. In onderstaande afbeelding wordt de JOIN-ID <code class="ph codeph">/join/id/regdata/mn002/2019-11-01/or_defensie_terreinen_objecten/nld@2019-11-1</code> aan de resolver aangeboden.</p><img class="image" src="img/GIO-JOINResolver.png" width="500"><br><p class="p">De resolver verwijst door naar de <a class="xref" href="https://repository.officiele-overheidspublicaties.nl/datacollecties/2019/dc-2019-141/1/html/dc-2019-141.html" target="_blank">GIO-landingspagina</a> met de inhoud van het GIO.</p></div></article><article class="topic nested1" aria-labelledby="ariaid-title4" id="openen-gio-bestand"><h2 class="title topictitle2" id="ariaid-title4">Openen GIO-bestand</h2><div class="body"><p class="p">Om een gedownloade GIO te bekijken is GIS-software of een GML-viewer voor nodig. Hoewel de inhoud van de GIO geheel voldoet aan de GML-standaard, is het niet altijd zonder meer in elke applicatie in te laden. Voor het gratis beschikbare open source softwarepakket QGIS is een <a class="xref" href="https://plugins.qgis.org/plugins/gio_import/" target="_blank">plug-in</a> beschikbaar zodat een GIO daar kan worden geopend en bekeken.</p></div></article></article></main></body></html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="modulaire-structuur"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Modulaire structuur</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="modulaire-structuur"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1">Modulaire structuur</h1><div class="body"></div><article class="topic nested1" aria-labelledby="ariaid-title2" id="modules-voor-gebruik-in-een-api"><h2 class="title topictitle2" id="ariaid-title2">Modules voor gebruik in een API</h2><div class="body"><p class="p">STOP is opgezet volgens een modulaire structuur.</p><br><img class="image" src="img/modulaire_structuur_api.png" alt="Relatie tussen STOP modules en API specificatie"><br><p class="p">De informatie die conform STOP uitgewisseld kan worden staat
+gedocumenteerd in het <a class="xref" href="EA_4D1D7FD517FE4d8dA9A2B905D202C92B.html#Pkg">Informatiemodel Officiële Publicaties</a>.
+Hierin is ook aangegeven hoe de informatie verdeeld is in modules.
+Een module is een set van bij elkaar horende informatie die steeds
+als één geheel uitgewisseld moet worden.</p><p class="p">STOP schrijft ook voor hoe de informatie in de modules als XML geserialiseerd
+moet worden. De XML schema's die de serialisatie beschrijven vormen het
+normatieve deel van STOP: het is verplicht informatie in deze vorm
+uit te wisselen. De <a class="xref" href="schema_documentatie.html">schema's</a> zijn gedocumenteerd
+waarbij ook de relatie met het informatiemodel is aangegeven.</p><p class="p">STOP schrijft niet voor hoe een STOP-gebruikend systeem de modules moet gebruiken.
+Voor elk systeem kan een API ontworpen worden die voor de verschillende services
+een eigen keuze maakt voor de uitwisseling van informatie, zolang die uitwisseling
+is opgebouwd uit de STOP-modules. Voor een API kan dus wel een keuze gemaakt worden
+welke modules voor een service aangeleverd of uitgeleverd worden, en hoe meerdere
+modules in één pakket worden samengebracht. Maar het is niet toegestaan de definitie
+van een module aan te passen en bijvoorbeeld maar de helft van de informatie in
+een API op te nemen.</p><p class="p">Om de XML samen te stellen die aangeleverd moet worden aan een systeem moet dus
+in eerste instantie naar de API specificatie gekeken worden, die voor de specificatie
+van de modules terugvalt op de specificaties van STOP. De XML die bijvoorbeeld de
+metadata van een besluit beschrijft ziet er dus in elke API hetzelfde uit, maar het
+is een API-specifieke invulling of
+die XML in een apart bestand staat, ingebed is in een XML bestand met meer informatie over
+het besluit, en of dat bestand via HTTPS gedownload wordt of in een ZIP bestand
+via ebMS verstuurd wordt.</p><p class="p">Voor software die gebruik maakt van de standaard betekent dit dat de informatie uit het
+informatiemodel Officiële Publicaties altijd op dezelfde manier geserialiseerd wordt
+ongeacht het systeem waaraan informatie geleverd of waaruit informatie betrokken wordt.
+Maar de details over welke informatie precies uitgewisseld wordt en hoe die verpakt
+wordt, is geen onderdeel van STOP.</p><p class="p">Voor een overzicht van de verschillende modules: zie de specialisaties van de abstractie
+<a class="xref" href="EA_1A45BBE5EC4F4bb2BBD7F5E701CE0479.html#Pkg__B4649197FA68449e913F625FA43F27DF">Module</a> in het informatiemodel.</p></div></article><article class="topic nested1" aria-labelledby="ariaid-title3" id="modules-horen-bij-een-expression-of-een-work"><h2 class="title topictitle2" id="ariaid-title3">Modules horen bij een expression of een work</h2><div class="body"><p class="p">STOP wordt gebruikt in juridische- en publicatieprocessen waar het gebruikelijk is om de informatieuitwisseling te baseren op versies (in <a class="xref" href="EA_188A75C61FB54d108E7659F3FE5DE8F3.html#Pkg">FRBR</a> termen: expressions) van instrumenten (besluiten, regelingen, etc). In die processen bestaat er geen centrale plaats waar alle informatie te vinden is; de collectie van beschikbare versies in een organisatie of in een systeem hangt van af van de positie in de procesketen of van de taak van het systeem. Zo beschikt het systeem officiëlebekendmakingen.nl over alle (publicaties van) besluiten van algememe strekking van alle bevoegd gezagen die digitaal bekendgemaakt zijn. Een bevoegd gezag beschikt meestal alleen over een deel ervan (de eigen besluiten), maar beschikt daarnaast nog over conceptversies van (nieuwe) besluiten die (nog) niet bekendgemaakt zijn. Een collectie wordt uitgebreid door een instrumentversie te ontvangen, waarbij alle informatie gerelateerd aan die versie in een digitaal pakketje gestopt en uitgewisseld wordt.</p><p class="p">Dit is in het ontwerp van de modules in het STOP informatiemodel terug te vinden. Modules horen in het algemeen bij een versie (expression). Omdat via STOP ook informatie uitgewisseld moet kunnen worden over de collecties waar een systeem over beschikt, zijn er ook modules die horen bij een work en het karakter hebben van een lijst met beschikbare (of bekende) expressions. De modules voor <a class="xref" href="EA_BD0B9B5F34C548eeB092538800D54713.html#Pkg">identificatie</a> van works en expressions zijn zo opgezet dat in STOP ook lijsten met works of expressions uitgewisseld kunnen worden.</p><p class="p">In deze processen worden relaties tussen instrumentversies niet als zelfstandig uit te wisselen entiteiten in een informatiemodel gezien. De collecties worden typisch opgebouwd uit een verzameling instrumentversies, waarbij relaties in de software ontstaan door creatie, ontvangst en/of analyse van de beschikbare instrumentversies. Die relaties kunnen een lokaal karakter hebben, zoals de relaties geïntroduceerd door het naar elkaar verwijzen van regelingen. Omdat een bevoegd gezag ook over concepten beschikt zal de verzameling relaties er anders uitzien (en andere relaties zullen relevant zijn) dan op voor een regelingenbank (zoals wetten.overheid.nl) waar ook relaties vanuit elders gepubliceerd materiaal relevant is. Een relatie als zelfstandige entiteit uitwisselen heeft ook weinig relevantie als niet tenminste een van de gerelateerde instrumentversies in de collectie aanwezig is.</p><br><img class="image" src="img/modulaire_structuur_relatie.png" alt="Relatie landt in twee STOP modules"><br><p class="p">Het is daarom gebruikelijk om de informatie die in een relatie besloten ligt in tweeën te knippen en elk deel op te nemen in een module bij het corresponderende eindpunt. De informatie over relaties hoort daarmee bij een versie en kan bij het uitwisselen van de versie meegenomen worden. Als de collectie in het ontvangende systeem beide eindpunten van de relatie heeft ontvangen dan beschikt het automatisch over alle informatie over de relatie. Als de collectie maar over één eindpunt beschikt, dan is temninste dat deel van de relatie informatie beschikbaar dat relevant is voor dat eindpunt.</p></div></article></article></main></body></html>

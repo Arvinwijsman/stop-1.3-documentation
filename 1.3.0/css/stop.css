@@ -1,0 +1,155 @@
+body {
+    background-color: White;
+    color: Black;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 10pt;
+    line-height: 1.4em;
+    padding: 0;
+    margin: 0;
+}
+
+th {
+    text-align: left;
+    border: 1px solid darkgrey;
+}
+
+td {
+    vertical-align: top;
+    border: 1px solid darkgrey;
+}
+
+tbody.tbody tr.row:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.LATER {
+	background-color: yellow;
+	border: 2px solid black;
+}
+
+.doorhalen {
+ text-decoration: line-through; 
+}
+
+.rss_icon {
+    height: 16px;
+}
+
+table.ea_element {
+    border: 1px solid darkgrey;
+    margin-bottom: 1em;
+}
+
+header[role="banner"] {
+    background-color: #007bc7;
+    color: #fff;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 18pt;
+    height: 60pt;
+    padding: 0;
+    margin: 0;
+	overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+    header[role="banner"] table {
+        width: 100%;
+        height: 60pt;
+    }
+        header[role="banner"] table td {
+            vertical-align: middle;
+            padding: 0 1em 0 1em;
+        }
+	header[role="banner"] th {
+		text-align: left;
+		border: 0px;
+	}
+	header[role="banner"] td {
+		vertical-align: top;
+		border: 0px;
+	}
+
+    header[role="banner"] a {
+        color: #fff;
+    }
+
+    header[role="banner"] .subtitle {
+        font-size: 10pt;
+    }
+
+    header[role="banner"] .versie {
+        font-size: 10pt;
+        text-align: right;
+    }
+
+    header[role="banner"] .search {
+        font-size: 10pt;
+        text-align: right;
+    }
+
+        header[role="banner"] .search form {
+            display: inline;
+        }
+
+        header[role="banner"] .search input {
+            display: inline;
+            vertical-align: middle;
+            margin: 0.1em 0.1em 0.1em 0;
+            padding: 0.1em;
+        }
+
+nav[role="toc"] {
+    width: 25em;
+    position: fixed;
+    z-index: 100;
+    top: 0pt;
+    left: 0;
+    margin-top: 60pt;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-size: 9pt;
+    line-height: 1.2em;
+    max-height: 80%;
+}
+
+    nav[role="toc"] ul {
+        padding-left: 1em;
+        list-style-type: none;
+    }
+    nav[role="toc"] li {
+        margin: 0.2em 0 0.2em 0;
+        list-style-type: none;
+    }
+
+    nav[role="toc"] a {
+        text-decoration: none;
+        color: #2196F3;
+        display: block;
+    }
+
+        nav[role="toc"] a:hover {
+            color: #064579;
+        }
+
+    nav[role="toc"] li.active {
+        font-weight: bolder;
+    }
+    nav[role="toc"] li.active ul {
+        font-weight: normal;
+    }
+
+
+main {
+  margin-left: 25em; /* Same width as the sidebar + left position in px */
+  margin-top: 65pt;
+  margin-right: 10em;
+  padding: 0px 10px;
+  max-width: 100em
+}
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  nav[role="toc"] {padding-top: 15px;}
+  nav[role="toc"] a {font-size: 10px;}
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="consproefversies"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>cons:Proefversies</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="consproefversies"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a><ul><li><a href="stop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="leeswijzers.html">Leeswijzers</a><ul><li><a href="toepassing.html">Basis van STOP</a></li><li><a href="architectuur.html">Architectuur en ontwerpkeuzes</a></li><li><a href="gebruik.html">Software-ontwikkeling met STOP</a><ul><li><a href="quickstart_overzicht.html">Snelstartgids STOP-XML</a><ul><li><a href="quickstart_1.html">Stap 1: Opstellen nieuwe regelingversie en GIOversie met OW data</a></li><li><a href="quickstart_2.html">Stap 2: Aanleveren Besluit</a></li><li><a href="quickstart_2a.html">Stap 2a: Optioneel: Kennisgeving bij Besluit</a></li><li><a href="quickstart_3.html">Stap 3: Consolideren na bekendmaking</a><ul><li><a href="quickstart_3_ConsolidatieIdentificatie.html">cons:ConsolidatieIdentificatie</a></li><li><a href="quickstart_3_Toestanden.html">cons:Toestanden</a></li><li class="active"><a href="quickstart_3_Proefversies.html">cons:Proefversies</a></li></ul></li></ul></li><li><a href="tekstmodellen.html">Modellering van tekst</a></li><li><a href="io-intro.html">Informatie-object</a></li><li><a href="gio-intro.html">Geografisch informatie-object</a></li><li><a href="IO_Document.html">Document als informatie-object</a></li><li><a href="naamgevingsconventie.html">Naamgevingsconventie</a></li><li><a href="context_modules.html">Tijdsafhankelijke (context)informatie</a></li><li><a href="annotaties.html">Annotaties</a></li></ul></li><li><a href="voortbouwen_op_STOP.html">Voortbouwen op STOP</a></li></ul></li><li><a href="EA_4D1D7FD517FE4d8dA9A2B905D202C92B.html">Informatiemodel</a></li><li><a href="businessrules.html">Bedrijfsregels</a></li></ul></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1">cons:Proefversies</h1><div class="body"><p class="p">De instrumentversies (zoals RegelingVersie en GIOversie) die voortvloeien uit een ontwerpbesluit treden niet in werking en kennen dus geen toestanden. De LVBB kan op basis van het ontwerpbesluit wel de instrumentversie samenstellen in een Proefversie.</p><table class="table"><caption></caption><colgroup><col><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="consproefversies__entry__1">Element</th><th class="entry" id="consproefversies__entry__2">Vulling</th><th class="entry" id="consproefversies__entry__3">Verplicht?</th></tr></thead><tbody class="tbody"><tr class="row"><td class="entry" headers="consproefversies__entry__1"><a class="xref" href="cons_xsd_Element_cons_bekendOp.html#bekendOp">bekendOp</a></td><td class="entry" headers="consproefversies__entry__2">De datum waarop eenieder kennis kon hebben van bepaalde informatie. In de meeste gevallen is dit de bekendmakingsdatum van de officiële publicatie.</td><td class="entry" headers="consproefversies__entry__3">J</td></tr><tr class="row"><td class="entry" headers="consproefversies__entry__1"><a class="xref" href="cons_xsd_Element_cons_ontvangenOp.html#ontvangenOp">ontvangenOp</a></td><td class="entry" headers="consproefversies__entry__2">De datum waarop het STOP-gebruikend systeem kennis heeft van bepaalde informatie en die informatie ook kan en mag verstrekken.</td><td class="entry" headers="consproefversies__entry__3">N</td></tr><tr class="row"><td class="entry" headers="consproefversies__entry__1"><a class="xref" href="cons_xsd_Element_cons_Proefversie.html#Proefversie">Proefversie</a></td><td class="entry" headers="consproefversies__entry__2">Een door de LVBB samengestelde proefversie van een besluit (dit kunnen er 1 of meer zijn)</td><td class="entry" headers="consproefversies__entry__3">J</td></tr><tr class="row"><td class="entry" headers="consproefversies__entry__1"><a class="xref" href="cons_xsd_Element_cons_doel.html#doel">Proefversie/gerealiseerdeDoelen/doel</a></td><td class="entry" headers="consproefversies__entry__2">Het doel wordt overgenomen uit het corresponderende ontwerpbesluit. Een Proefversie kan meerdere doelen realiseren. Zie: <a class="xref" href="quickstart_2_ConsolidatieInformatie.html">data:ConsolidatieInformatie</a></td><td class="entry" headers="consproefversies__entry__3">J</td></tr><tr class="row"><td class="entry" headers="consproefversies__entry__1"><a class="xref" href="cons_xsd_Element_cons_instrumentVersie.html#instrumentVersie">Proefversie/instrumentVersie</a></td><td class="entry" headers="consproefversies__entry__2">Zie <a class="xref" href="quickstart_1_ExpressionIdentificatieRegeling.html">data:ExpressionIdentificatie - Regeling</a> voor de FRBRExpression van een RegelingVersie. Zie <a class="xref" href="quickstart_1_ExpressionIdentificatieGIO.html">data:ExpressionIdentificatie - Informatieobject</a> voor de FRBRExpression van een informatieobjectversie.</td><td class="entry" headers="consproefversies__entry__3">J</td></tr></tbody></table></div></article></main></body></html>

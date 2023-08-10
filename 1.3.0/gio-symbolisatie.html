@@ -1,0 +1,159 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="symbolisatie"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Symbolisatie</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="symbolisatie"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a><ul><li><a href="stop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="leeswijzers.html">Leeswijzers</a><ul><li><a href="toepassing.html">Basis van STOP</a></li><li><a href="architectuur.html">Architectuur en ontwerpkeuzes</a></li><li><a href="gebruik.html">Software-ontwikkeling met STOP</a><ul><li><a href="quickstart_overzicht.html">Snelstartgids STOP-XML</a></li><li><a href="tekstmodellen.html">Modellering van tekst</a></li><li><a href="io-intro.html">Informatie-object</a></li><li><a href="gio-intro.html">Geografisch informatie-object</a><ul><li><a href="gio-onderdelen.html">Onderdelen GIO</a><ul><li><a href="gio-vaststellingscontext.html">Vaststellingscontext</a></li><li><a href="gio-join-id.html">JOIN-ID</a></li><li><a href="gio-norm.html">Norm</a></li><li><a href="gio-delen.html">Overzicht met GIO-delen</a></li><li><a href="gio-locaties.html">Locaties</a></li><li><a href="gio-juridische-borging.html">Juridische borging</a></li><li class="active"><a href="gio-symbolisatie.html">Symbolisatie</a></li></ul></li><li><a href="gio-soorten.html#soorten-gios">Soorten GIO's</a></li><li><a href="gio-bekendgemaakt.html">Bekendgemaakte GIO</a></li><li><a href="gio-handelingen.html">Werken met GIO's</a></li></ul></li><li><a href="IO_Document.html">Document als informatie-object</a></li><li><a href="naamgevingsconventie.html">Naamgevingsconventie</a></li><li><a href="context_modules.html">Tijdsafhankelijke (context)informatie</a></li><li><a href="annotaties.html">Annotaties</a></li></ul></li><li><a href="voortbouwen_op_STOP.html">Voortbouwen op STOP</a></li></ul></li><li><a href="EA_4D1D7FD517FE4d8dA9A2B905D202C92B.html">Informatiemodel</a></li><li><a href="businessrules.html">Bedrijfsregels</a></li></ul></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1">Symbolisatie</h1><div class="body"><p class="p">Is het voor de interpretatie van een GIO nuttig om een specifieke kleur in de afbeelding van de GIO te gebruiken, dan kan het bevoegd gezag (BG) symbolisatie (afbeeldingsinformatie) bijvoegen als metadata in een aparte STOP-module bij een GIO. Deze metadata bevat informatie over bijvoorbeeld de kleur die moet worden gebruikt om de geometrische data op de landingspagina van het GIO te tonen. Zo sluit de afbeelding zo veel mogelijk aan bij de afbeelding van het GIO bij de vaststelling van het GIO door het BG. Voor GIO’s met normwaarden en GIO’s met GIO-delen is symbolisatie verplicht.</p><p class="p">De afbeelding van de geometrische data in de DSO-LV-viewer is service-informatie en is geen juridisch onderdeel van het besluit. De symbolisatie moet overigens wel correct zijn.</p></div><article class="topic nested1" aria-labelledby="ariaid-title2" id="subset-se-standaard"><h2 class="title topictitle2" id="ariaid-title2">Subset SE-standaard</h2><div class="body"><p class="p">Voor de symbolisatie van een GIO gebruikt STOP een subset van de <a class="xref" href="https://www.ogc.org/standards/se" target="_blank">SE-standaard (Symbology Encoding)</a> van het Open Geospatial Consortium. Wat tot deze subset behoort wordt verder uitgelegd in het <a class="xref" href="EA_77AF770705D4439c946D8E821BC18F18.html#Pkg">Informatiemodel Symbolisatie</a>. De subset is zo gekozen dat de symbolenbibliotheek STOP/TPOD ermee kan worden afgebeeld.</p></div></article><article class="topic nested1" aria-labelledby="ariaid-title3" id="symbolenbibliotheek-stoptpod"><h2 class="title topictitle2" id="ariaid-title3">Symbolenbibliotheek STOP/TPOD</h2><div class="body"><p class="p">Vanaf de inwerkingtreding van de Omgevingswet moet voor Omgevingswetbesluiten worden gebruikgemaakt van de symbolisatie zoals beschreven in de symbolenbibliotheek van het presentatiemodel STOP/TPOD. <a class="xref" href="https://www.geonovum.nl/geo-standaarden/omgevingswet/STOPTPOD#presentatiemodel" target="_blank">Geonovum</a> beheert deze bibliotheek, die ook conformeert aan de SE-standaard.</p></div></article><article class="topic nested1" aria-labelledby="ariaid-title4" id="wat-is-symbolisatie"><h2 class="title topictitle2" id="ariaid-title4">Wat is symbolisatie?</h2><div class="body"><p class="p">Symbolisatie is een (set) regel(s) die voorschrijft hoe een geometrisch object moet worden afgebeeld. Deze objecten kunnen zijn:</p><ul class="ul"><li class="li"><p class="p"><strong class="ph b">gebieden</strong> (zoals een natuurgebied, geluidzone of woonwijk)</p></li><li class="li"><p class="p"><strong class="ph b">punten</strong> (zoals een boom, mast of meetpunt).</p></li><li class="li"><p class="p"><strong class="ph b">lijnen</strong> (zoals een spoorlijn of weg).</p></li></ul><p class="p">Een symbolisatieregel geeft aan voor welke objecten deze regel geldt en specificeert de bijbehorende afbeeldingsinformatie. De specificiteit kan men voor kwantitatieve normwaarden enigszins zelf bepalen door opgave van grotere of kleinere waardenreeksen met identieke symbolisatie. Voor GIO-delen en kwalitatieve normwaarden moet voor elk deel respectievelijk elke waarde aparte symbolisatie worden opgegeven. Het is mogelijk om een specifieke regel te maken (zoals "de locaties van groep "3" zijn geel") of juist een generiekere regel (zoals "alle gebieden zijn lichtgroen"). De laatste optie kan alleen als men het GIO als geheel symboliseert.</p></div></article><article class="topic nested1" aria-labelledby="ariaid-title5" id="onderdelen-symbolisatie"><h2 class="title topictitle2" id="ariaid-title5">Onderdelen symbolisatie</h2><div class="body"><p class="p">Een (set) symbolisatieregel(s) heeft:</p><ul class="ul"><li class="li"><p class="p">het rootelement <code class="ph codeph">FeatureTypeStyle</code>, met als kinderen</p><ul class="ul"><li class="li"><p class="p">het element <code class="ph codeph">FeatureTypeName</code>, geeft de naam van de feature type waarop de symbolisatie van toepassing is. Deze heeft in STOP altijd de waarde <code class="ph codeph">geo:Locatie</code>,</p></li><li class="li"><p class="p">het element<code class="ph codeph">SemanticTypeIdentifier</code>, geeft aan op welk element de afbeeldingsinformatie wordt toegepast. Toegestane waarden:</p><ul class="ul"><li class="li"><p class="p"><code class="ph codeph">geo:geometrie</code>: symbolisatieregel voor het hele GIO</p></li><li class="li"><p class="p"><code class="ph codeph">geo:groepID</code>: symbolisatieregels voor elk GIO-deel</p></li><li class="li"><p class="p"><code class="ph codeph">geo:kwalitatieveNormwaarde</code>: symbolisatieregels voor elke kwalitatieve normwaarde</p></li><li class="li"><p class="p"><code class="ph codeph">geo:kwantitatieveNormwaarde</code>: symbosliatieregels voor (ranges van) kwantitatieve normwaarden</p></li></ul><p class="p">De namespace prefix (<code class="ph codeph">geo:</code>) is verplicht, maar variabel en moet zijn gedeclareerd.</p></li><li class="li"><p class="p">een of meer elementen <code class="ph codeph">Rule</code> met render-instructies met voorwaarden. Elke Rule heeft een:</p><ul class="ul"><li class="li"><p class="p"><code class="ph codeph">Name</code>, die aangeeft waar de regel voor geldt.</p></li><li class="li"><p class="p"><code class="ph codeph">Description</code>, waarvan de <code class="ph codeph">Title</code> gebruikt wordt in de legenda.</p></li><li class="li"><p class="p"><code class="ph codeph">Filter</code>, die de geometrische objecten selecteert waarop de regel toegepast moet worden. In STOP worden een beperkt aantal filteropties ondersteund. Het filter kan alleen worden toegepast als het GIO normwaarden of GIO-delen heeft. Dit zijn:</p><ul class="ul"><li class="li"><p class="p"><code class="ph codeph">is gelijk aan</code>: voor GIO-delen, kwalitatieve en kwantitatieve normwaarden.</p></li><li class="li"><p class="p">voor kwantitatieve normwaarden:</p><ul class="ul"><li class="li"><p class="p"><code class="ph codeph">kleiner dan X</code>,</p></li><li class="li"><p class="p"><code class="ph codeph">tussen X en Y</code>,</p></li><li class="li"><p class="p"><code class="ph codeph">groter dan X</code>,</p></li><li class="li"><p class="p"><code class="ph codeph">groter of gelijk aan X èn kleiner dan Y</code>,</p></li></ul></li></ul></li><li class="li"><p class="p"><code class="ph codeph">Symbolizer</code>, de afbeeldingsvorm die de door het filter geselecteerde objecten moeten krijgen. Een Symbolizer-element is een:</p><ul class="ul"><li class="li"><p class="p"><code class="ph codeph">LineSymbolizer</code> voor een lijn.</p></li><li class="li"><p class="p"><code class="ph codeph">PointSymbolizer</code> voor een punt.</p></li><li class="li"><p class="p"><code class="ph codeph">PolygonSymbolizer</code> voor een gebied.</p></li><li class="li"><p class="p">Bij meerdere vormen (dus meerdere symbolizers) wordt het <em class="ph i">painters-model</em>-principe toegepast. Dit betekent dat de eerste vorm de onderste laag wordt.</p></li><li class="li"><p class="p">De symbolizer bevat opmaakinformatie via onder meer de volgende elementen:</p><ul class="ul"><li class="li"><p class="p">naam, met de symboolcode uit de <a class="xref" href="https://www.geonovum.nl/geo-standaarden/omgevingswet/STOPTPOD#presentatiemodel" target="_blank">symbolenbibliotheek</a>.</p></li><li class="li"><p class="p">opvullingskleur (<code class="ph codeph">Fill</code>),</p></li><li class="li"><p class="p">omlijningskleur (<code class="ph codeph">Stroke</code>)</p></li></ul></li></ul></li></ul></li></ul></li></ul></div></article><article class="topic nested1" aria-labelledby="ariaid-title6" id="gio-elementen-met-symbolisatie"><h2 class="title topictitle2" id="ariaid-title6">GIO-elementen met symbolisatie</h2><div class="body"><p class="p">De volgende GIO-elementen kunnen symbolisatie krijgen:</p><ul class="ul"><li class="li"><p class="p">(optioneel) het GIO als geheel, als het geen normwaarden of GIO-delen bevat.</p></li><li class="li"><p class="p">(verplicht) een groep (GIO-deel), via het element <code class="ph codeph">geo:groepID</code>.</p></li><li class="li"><p class="p">(verplicht) een (reeks) kwantitatieve normwaarden, via het element <code class="ph codeph">KwantitatieveNormwaarde</code>.</p></li><li class="li"><p class="p">(verplicht) een kwalitatieve normwaarde, via het element <code class="ph codeph">KwalitatieveNormwaarde</code>.</p></li></ul><p class="p">De legenda (verplicht bij normwaarden en GIO-delen) wordt automatisch samengesteld uit de aangeleverde symbolisatie informatie. De legenda hoeft men dus niet apart van symbolisatie te voorzien.</p><p class="p">Het is <em class="ph i">niet</em> mogelijk om een afwijkende symbolisatie te geven aan één locatie of om context-GIO's te symboliseren. Alle locaties in een GIO (of GIO-deel) zijn juridisch gelijk. Een afwijkend afbeelding van één locatie kan de indruk wekken dat dit niet het geval is. Als het juridisch nodig is om één locatie afzonderlijk af te beelden, dan wordt deze locatie in een afzonderlijke GIO of afzonderlijk GIO-deel opgenomen.</p></div></article><article class="topic nested1" aria-labelledby="ariaid-title7" id="xml-codering-van-symbolisatie"><h2 class="title topictitle2" id="ariaid-title7">XML-codering van symbolisatie</h2><div class="body"></div><article class="topic nested2" aria-labelledby="ariaid-title8" id="gio-als-geheel"><h3 class="title topictitle3" id="ariaid-title8">GIO als geheel</h3><div class="body"><p class="p">Bevat het GIO geen GIO-delen of norm, dan kan er één symbolisatie meegegeven worden voor alle locaties in het GIO.</p></div><article class="topic nested3" aria-labelledby="ariaid-title9" id="voorbeeld"><h4 class="title topictitle4" id="ariaid-title9">Voorbeeld</h4><div class="body"><p class="p">Om de symbolisatieregel te laten gelden voor het hele GIO, heeft de <code class="ph codeph">SemanticTypeIdentifier</code> de waarde <code class="ph codeph">geo:geometrie</code>. Het af te beelden object is een gebied, dus wordt de <code class="ph codeph">PolygonSymbolizer</code> gebruikt. Het <code class="ph codeph">Name</code>-element blijft leeg.</p><pre class="pre codeblock <FeatureTypeStyle&gt;"><code>  &lt;FeatureTypeName&gt;geo:Locatie&lt;/FeatureTypeName&gt;
+  &lt;SemanticTypeIdentifier&gt;geo:geometrie&lt;/SemanticTypeIdentifier&gt;
+  &lt;Rule&gt;
+    &lt;/Name&gt;  
+    &lt;/Description&gt;
+    &lt;PolygonSymbolizer&gt;
+      &lt;Fill&gt;
+        &lt;SvgParameter name="fill"&gt;#000080&lt;/SvgParameter&gt;
+      &lt;/Fill&gt;
+    &lt;/PolygonSymbolizer&gt;
+  &lt;/Rule&gt;
+&lt;/FeatureTypeStyle&gt;</code></pre><p class="p">Dit heeft het volgende resultaat:</p><img class="image" src="img/GIO-SLD-geheel.png" width="500" alt="Toepassing van symbolisatie"><br></div></article></article><article class="topic nested2" aria-labelledby="ariaid-title10" id="groep-gio-deel"><h3 class="title topictitle3" id="ariaid-title10">Groep (GIO-deel)</h3><div class="body"><p class="p">Bevat het GIO GIO-delen, dan moet elke groep symbolisatie krijgen.</p></div><article class="topic nested3" aria-labelledby="ariaid-title11" id="voorbeeld-1"><h4 class="title topictitle4" id="ariaid-title11">Voorbeeld</h4><div class="body"><p class="p">Een GIO heeft de GIO-delen <strong class="ph b">Zone1</strong> en <strong class="ph b">Zone2</strong>. Elke groep moet een eigen symbolisatie krijgen. Dit doet men door bij <code class="ph codeph">SemanticTypeIdentifier</code> als waarde <code class="ph codeph">geo:groepID</code> in te vullen. Elke groep krijgt vervolgens een eigen <code class="ph codeph">Rule</code>. In het <code class="ph codeph">Name</code>-element in de <code class="ph codeph">Rule</code> vult men de <code class="ph codeph">groepID</code> in van de betreffende groep. Vervolgens wordt met het <code class="ph codeph">Filter</code>-element alle locaties geselecteerd met een <code class="ph codeph">groepID</code>-attribuut met de waarde <code class="ph codeph">zone1</code> of <code class="ph codeph">zone2</code>. Aangezien het om  gebieden gaat, wordt de <code class="ph codeph">PolygonSymbolizer</code> gebruikt. Het <code class="ph codeph">Name</code>-element bevat een symboolcode, en <code class="ph codeph">Fill</code> en <code class="ph codeph">Stroke</code> worden gebruikt om de gebieden van vul- en belijningsopmaak te voorzien.</p><pre class="pre codeblock"><code>&lt;FeatureTypeStyle xmlns:ogc="http://www.opengis.net/ogc"&gt;
+    &lt;!-- Verbeeldingsinformatie voor een GIO zones rond Schiphol --&gt;
+    &lt;FeatureTypeName&gt;geo:Locatie&lt;/FeatureTypeName&gt;
+    &lt;SemanticTypeIdentifier&gt;geo:groepID&lt;/SemanticTypeIdentifier&gt;
+    &lt;Rule&gt;
+        &lt;Name&gt;Zone 2&lt;/Name&gt;
+        &lt;Description&gt;
+          &lt;Title&gt;Aanvliegroute&lt;/Title&gt;
+        &lt;/Description&gt;
+        &lt;ogc:Filter&gt;
+            &lt;ogc:PropertyIsEqualTo&gt;
+                &lt;ogc:PropertyName&gt;groepID&lt;/ogc:PropertyName&gt; 
+                &lt;ogc:Literal&gt;zone2&lt;/ogc:Literal&gt;
+            &lt;/ogc:PropertyIsEqualTo&gt;
+        &lt;/ogc:Filter&gt;
+        &lt;PolygonSymbolizer&gt;
+            &lt;Name&gt;vsg025&lt;/Name&gt; &lt;!-- symboolcode uit de symbolenbibliotheek --&gt;
+            &lt;Fill&gt;
+                &lt;SvgParameter name="fill"&gt;#ff0000&lt;/SvgParameter&gt;
+                &lt;SvgParameter name="fill-opacity"&gt;0.8&lt;/SvgParameter&gt;
+            &lt;/Fill&gt;
+            &lt;Stroke&gt;
+                &lt;SvgParameter name="stroke"&gt;#000001&lt;/SvgParameter&gt;
+                &lt;SvgParameter name="stroke-opacity"&gt;1&lt;/SvgParameter&gt;
+                &lt;SvgParameter name="stroke-width"&gt;1&lt;/SvgParameter&gt;
+                &lt;SvgParameter name="stroke-linejoin"&gt;round&lt;/SvgParameter&gt;
+            &lt;/Stroke&gt;
+        &lt;/PolygonSymbolizer&gt;
+    &lt;/Rule&gt;
+    &lt;Rule&gt;
+        &lt;Name&gt;Zone 1&lt;/Name&gt;
+        &lt;Description&gt;
+            &lt;Title&gt;Landingsbaan&lt;/Title&gt;
+        &lt;/Description&gt;
+        &lt;ogc:Filter&gt;
+            &lt;ogc:PropertyIsEqualTo&gt;
+                &lt;ogc:PropertyName&gt;groepID&lt;/ogc:PropertyName&gt;
+		&lt;ogc:Literal&gt;zone1&lt;/ogc:Literal&gt;
+            &lt;/ogc:PropertyIsEqualTo&gt;   
+        &lt;/ogc:Filter&gt;
+        &lt;PolygonSymbolizer&gt;
+            &lt;Name&gt;vsg026&lt;/Name&gt; &lt;!-- symboolcode uit de symbolisatiebibliotheek --&gt;
+            &lt;Fill&gt;
+                &lt;SvgParameter name="fill"&gt;#ffff00&lt;/SvgParameter&gt;
+                &lt;SvgParameter name="fill-opacity"&gt;0.8&lt;/SvgParameter&gt;
+            &lt;/Fill&gt;
+            &lt;Stroke&gt;
+                &lt;SvgParameter name="stroke"&gt;#000001&lt;/SvgParameter&gt;
+                &lt;SvgParameter name="stroke-opacity"&gt;1&lt;/SvgParameter&gt;
+                &lt;SvgParameter name="stroke-width"&gt;1&lt;/SvgParameter&gt;
+                &lt;SvgParameter name="stroke-linejoin"&gt;round&lt;/SvgParameter&gt;
+            &lt;/Stroke&gt;
+        &lt;/PolygonSymbolizer&gt;
+    &lt;/Rule&gt;
+&lt;/FeatureTypeStyle&gt;</code></pre><p class="p">Dit ziet er dan als volgt uit:
+<img class="image" src="img/GIO-SLD-delen.png" width="500" alt=""><br></p></div><article class="topic nested4" aria-labelledby="ariaid-title12" id="gio-met-normwaarden"><h5 class="title topictitle5" id="ariaid-title12">GIO met normwaarden</h5><div class="body"><p class="p">Bevat het GIO normwaarden, dan moet per normwaarde worden aangegeven hoe het GIO wordt afgebeeld.</p></div><article class="topic nested5" aria-labelledby="ariaid-title13" id="kwalitatieve-normwaarden"><h6 class="title topictitle6" id="ariaid-title13">Kwalitatieve normwaarden</h6><div class="body"><p class="p">Dit gebeurt op dezelfde wijze als bij een GIO met GIO-delen. De <code class="ph codeph">SemanticTypeIdentifier</code> is dan <code class="ph codeph">geo:kwalitatieveNormwaarde</code> en in het filter wordt  <code class="ph codeph">kwalitatieveNormwaarde</code> gebruikt.</p></div></article><article class="topic nested5" aria-labelledby="ariaid-title14" id="kwantitatieve-normwaarden"><h6 class="title topictitle6" id="ariaid-title14">Kwantitatieve normwaarden</h6><div class="body"><p class="p">Voor kwantitatieve normwaarden kan een regel voor een <strong class="ph b">reeks</strong> normwaarden worden opgegeven.</p></div><article class="topic nested6" aria-labelledby="ariaid-title15" id="voorbeeld-2"><h6 class="title topictitle6" id="ariaid-title15">Voorbeeld</h6><div class="body"><p class="p">Een GIO met een aparte symbolisatie voor:</p><ul class="ul"><li class="li"><p class="p">alle gebieden met een normwaarde onder de 10 en</p></li><li class="li"><p class="p">alle gebieden met een normwaarde tussen de 10 en 20.</p></li></ul><p class="p">Dit gebeurt op dezelfde wijze als bij een GIO met GIO-delen. De <code class="ph codeph">SemanticTypeIdentifier</code> is dan <code class="ph codeph">geo:kwantitatieveNormwaarde</code> en in het filter wordt  <code class="ph codeph">kwantitatieveNormwaarde</code> gebruikt.</p><pre class="pre codeblock xml"><code>&lt;FeatureTypeStyle&gt; 
+  &lt;!-- Verbeeldingsinformatie voor GIO met bouwhoogtes onder de 10 en tussen 10 en 20 --&gt;
+  &lt;FeatureTypeName&gt;geo:Locatie&lt;/FeatureTypeName&gt;
+  &lt;SemanticTypeIdentifier&gt;geo:kwantitatieveNormwaarde&lt;/SemanticTypeIdentifier&gt;
+  &lt;Rule&gt;
+    &lt;Name&gt;Bouwhoogte onder de 10&lt;Name&gt;
+    &lt;/Description&gt;
+    &lt;ogc:Filter&gt;
+        &lt;ogc:PropertyIsLessThan&gt;
+          &lt;ogc:PropertyName&gt;kwantitatieveNormwaarde&lt;/ogc:PropertyName&gt; 
+          &lt;ogc:Literal&gt;10&lt;/ogc:Literal&gt;
+        &lt;/ogc:PropertyIsLessThan&gt;
+     &lt;/ogc:Filter&gt;
+     &lt;PolygonSymbolizer&gt;
+       &lt;Fill&gt;
+          &lt;SvgParameter name="fill"&gt;#96ff96&lt;/SvgParameter&gt;
+       &lt;/Fill&gt;
+    &lt;/PolygonSymbolizer&gt;
+  &lt;/Rule&gt;
+  &lt;Rule&gt;
+    &lt;Name&gt;Bouwhoogte tussen de 10 en 20 (inclusief)&lt;/Name&gt;
+    &lt;/Description&gt;
+    &lt;ogc:Filter&gt;
+        &lt;ogc:PropertyIsBetween&gt;
+          &lt;ogc:PropertyName&gt;kwantitatieveNormwaarde&lt;/ogc:PropertyName&gt;
+          &lt;ogc:LowerBoundary&gt;
+            &lt;ogc:Literal&gt;10&lt;/ogc:Literal&gt;
+          &lt;/ogc:LowerBoundary&gt;
+          &lt;ogc:UpperBoundary&gt;
+            &lt;ogc:Literal&gt;20&lt;/ogc:Literal&gt;
+          &lt;/ogc:UpperBoundary&gt;
+        &lt;/ogc:PropertyIsBetween&gt;
+    &lt;/ogc:Filter&gt;
+    &lt;PolygonSymbolizer&gt;
+      &lt;Fill&gt;
+        &lt;SvgParameter name="fill"&gt;#4bff4b&lt;/SvgParameter&gt; 
+      &lt;/Fill&gt;
+    &lt;/PolygonSymbolizer&gt;
+  &lt;/Rule&gt;
+&lt;/FeatureTypeStyle&gt;</code></pre><p class="p">Dit kan er dan als volgt uitzien:
+<img class="image" src="img/KwantitatieveNormwaardenSymbolizer.png" width="500" alt=""><br></p></div></article><article class="topic nested6" aria-labelledby="ariaid-title16" id="legenda"><h6 class="title topictitle6" id="ariaid-title16">Legenda</h6><div class="body"><p class="p">Een GIO met normwaarden of GIO-delen moet altijd worden afgebeeld met een legenda. De tekst van deze legenda moet daarom worden opgenomen bij de symbolisatie, zie onderstaand voorbeeld.</p></div><article class="topic nested7" aria-labelledby="ariaid-title17" id="voorbeeld-3"><h6 class="title topictitle6" id="ariaid-title17">Voorbeeld</h6><div class="body"><p class="p">Het <code class="ph codeph">Rule</code>-element van de symbolisatie krijgt een Description-element met daarin een <code class="ph codeph">Title</code>- (verplicht) en een <code class="ph codeph">Abstract</code>-element, zie de <a class="xref" href="se_xsd_Main_schema_se_xsd.html#se.xsd">schemadocumentatie</a>.</p><pre class="pre codeblock"><code>...
+&lt;Rule&gt;
+  &lt;Description&gt;
+	&lt;Title&gt;Stiltegebied&lt;/Title&gt; &lt;!-- Tekst voor legenda --&gt;
+	&lt;Abstract&gt;Begrenzing van het stiltegebied&lt;/Abstract&gt; &lt;!-- toelichting op legenda tekst --&gt;
+  &lt;/Description&gt;
+  ...
+&lt;/Rule&gt;
+...</code></pre><figure class="fig fignone"><figcaption><span class="fig--title-label">Figure 1. </span>Voorbeeld van een GIO met normwaarden en legenda: maximale bouwhoogte op Amsterdam IJburg</figcaption><img class="image" src="img/KMIJburgBouwhoogte.png" alt="Voorbeeld van een GIO met normwaarden en legenda: maximale bouwhoogte op Amsterdam IJburg"><br></figure><p class="p">Dit voorbeeldbestand is <a class="xref" href="https://koop.gitlab.io/STOP/standaard/1.3.0/go/go.html?id=git%3Avoorbeelden/Coderingen/GIO/GIO-symbolisatie/GIO-realistisch/index.md" target="_blank">hier</a> te vinden.</p></div></article></article></article></article></article></article></article></article></main></body></html>

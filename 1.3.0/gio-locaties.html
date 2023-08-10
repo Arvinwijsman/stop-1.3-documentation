@@ -1,0 +1,68 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="locaties"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Locatie(s)</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="locaties"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a><ul><li><a href="stop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="leeswijzers.html">Leeswijzers</a><ul><li><a href="toepassing.html">Basis van STOP</a></li><li><a href="architectuur.html">Architectuur en ontwerpkeuzes</a></li><li><a href="gebruik.html">Software-ontwikkeling met STOP</a><ul><li><a href="quickstart_overzicht.html">Snelstartgids STOP-XML</a></li><li><a href="tekstmodellen.html">Modellering van tekst</a></li><li><a href="io-intro.html">Informatie-object</a></li><li><a href="gio-intro.html">Geografisch informatie-object</a><ul><li><a href="gio-onderdelen.html">Onderdelen GIO</a><ul><li><a href="gio-vaststellingscontext.html">Vaststellingscontext</a></li><li><a href="gio-join-id.html">JOIN-ID</a></li><li><a href="gio-norm.html">Norm</a></li><li><a href="gio-delen.html">Overzicht met GIO-delen</a></li><li class="active"><a href="gio-locaties.html">Locaties</a></li><li><a href="gio-juridische-borging.html">Juridische borging</a></li><li><a href="gio-symbolisatie.html">Symbolisatie</a></li></ul></li><li><a href="gio-soorten.html#soorten-gios">Soorten GIO's</a></li><li><a href="gio-bekendgemaakt.html">Bekendgemaakte GIO</a></li><li><a href="gio-handelingen.html">Werken met GIO's</a></li></ul></li><li><a href="IO_Document.html">Document als informatie-object</a></li><li><a href="naamgevingsconventie.html">Naamgevingsconventie</a></li><li><a href="context_modules.html">Tijdsafhankelijke (context)informatie</a></li><li><a href="annotaties.html">Annotaties</a></li></ul></li><li><a href="voortbouwen_op_STOP.html">Voortbouwen op STOP</a></li></ul></li><li><a href="EA_4D1D7FD517FE4d8dA9A2B905D202C92B.html">Informatiemodel</a></li><li><a href="businessrules.html">Bedrijfsregels</a></li></ul></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1">Locatie(s)</h1><div class="body"><p class="p">Een GIO bevat een of meerdere locaties. Elke locatie:</p><ul class="ul"><li class="li"><p class="p">heeft zijn eigen geometrische data. Deze data:</p><ul class="ul"><li class="li"><p class="p">komen maar één keer voor in het GIO.</p></li><li class="li"><p class="p">mogen in meerdere GIO's voorkomen.</p></li><li class="li"><p class="p">heeft een <code class="ph codeph">basisgeo:id</code> een unieke identificatie. Deze basisgeo:id blijft onveranderd als het gaat om dezelfde geometrische data in een andere GIO of in een volgende versie van dezelfde GIO.</p></li></ul></li><li class="li"><p class="p">(optioneel) heeft een <em class="ph i">naam</em>.</p></li><li class="li"><p class="p">(optioneel) heeft een <em class="ph i">normwaarde</em> of (optioneel) een <em class="ph i">GIO-deel-ID</em> (<code class="ph codeph">groepID</code>)</p></li></ul></div><article class="topic nested1" aria-labelledby="ariaid-title2" id="basisgeometrie-gml-met-coördinaten"><h2 class="title topictitle2" id="ariaid-title2">Basisgeometrie-GML met coördinaten</h2><div class="body"><p class="p">De geometrische data van een locatie is versimpelde GML-data die conformeert aan de <a class="xref" href="https://docs.geostandaarden.nl/nen3610/basisgeometrie/" target="_blank">basisgeometrie-standaard</a> van Geonovum. Deze standaard is op zijn beurt een subset van de <a class="xref" href="https://www.ogc.org/standards/gml" target="_blank">GML-standaard</a>. De basisgeometrie-GML bevat een van de volgende geometrische objecten:</p><ul class="ul"><li class="li"><p class="p">polygoon.</p></li><li class="li"><p class="p">multipolygoon.</p></li><li class="li"><p class="p">punt.</p></li><li class="li"><p class="p">lijn.</p></li><li class="li"><p class="p">puntengroep.</p></li><li class="li"><p class="p">lijnengroep.</p></li></ul><p class="p">Volgens STOP-IMOP mogen deze geometrische objecten alleen uit rechte lijnsegmenten bestaan (dus geen cirkels of bogen). Dit is vastgelegd in de <a class="xref" href="geo_xsd_Complex_Type_geo_LocatieType.html#LocatieType_geometrie">geo schemadocumentatie</a> van STOP.</p><p class="p">De GML-standaard bepaalt dat de geometrische objecten worden uitgedrukt in coördinaten. Een GIO kan daarom alleen geometrische data bevatten die zijn uitgedrukt in coördinaten. De toegestane ruimtelijke referentiesystemen hiervoor zijn:</p><ul class="ul"><li class="li"><p class="p">het <a class="xref" href="https://nl.wikipedia.org/wiki/Rijksdriehoeksco%C3%B6rdinaten" target="_blank">Rijksdriekhoekstelsel</a> of</p></li><li class="li"><p class="p">het <a class="xref" href="https://en.wikipedia.org/wiki/European_Terrestrial_Reference_System_1989" target="_blank">ETRS89-stelsel</a>.</p></li></ul></div><article class="topic nested2" aria-labelledby="ariaid-title3" id="voorbeeld---xml-fragment-van-een-locatie-met-coördinaten"><h3 class="title topictitle3" id="ariaid-title3">Voorbeeld - XML-fragment van een locatie met coördinaten</h3><div class="body"><pre class="pre codeblock"><code>      &lt;geo:locaties xmlns:geo="https://standaarden.overheid.nl/stop/imop/geo/"&gt;
+        &lt;geo:Locatie&gt;
+          &lt;geo:naam&gt;Pyrodam centrum&lt;/geo:naam&gt;
+          &lt;geo:geometrie&gt;
+            &lt;basisgeo:Geometrie xmlns:basisgeo="http://www.geostandaarden.nl/basisgeometrie/1.0"&gt;
+              &lt;basisgeo:id&gt;e80f9fdf-2df0-428f-8392-582990f55552&lt;/basisgeo:id&gt;
+              &lt;basisgeo:geometrie&gt;
+                &lt;gml:MultiSurface xmlns:gml="http://www.opengis.net/gml/3.2"
+                                   srsName="urn:ogc:def:crs:EPSG::28992"&gt;
+                  &lt;gml:surfaceMember&gt;
+                    &lt;gml:Polygon&gt;
+                      &lt;gml:exterior&gt;
+                        &lt;gml:LinearRing&gt;
+                          &lt;gml:posList&gt;230439.056 594375.806 230321.058 594344.121 230209.615 594308.066 230207.430 594266.548 230158.264 594266.548 230109.098 594254.530 230095.988 594294.955 230098.173 594379.083 229955.046 594345.214 229922.268 594468.675 229914.620 594524.396 229887.306 594653.319 229886.213 594682.819 229964.879 594795.354 230006.396 594831.409 230059.933 594836.872 230122.209 594800.817 230122.209 594800.817 230174.653 594803.002 230403.001 594827.039 230432.501 594618.357 230442.333 594562.636 230421.028 594551.983 230436.597 594503.364 230439.056 594375.806&lt;/gml:posList&gt;
+                        &lt;/gml:LinearRing&gt;
+                      &lt;/gml:exterior&gt;
+                    &lt;/gml:Polygon&gt;
+                  &lt;/gml:surfaceMember&gt;
+                &lt;/gml:MultiSurface&gt;
+              &lt;/basisgeo:geometrie&gt;
+            &lt;/basisgeo:Geometrie&gt;
+          &lt;/geo:geometrie&gt;
+        &lt;/geo:Locatie&gt;
+      &lt;/geo:locaties&gt;</code></pre></div></article><article class="topic nested2" aria-labelledby="ariaid-title4" id="zie-ook"><h3 class="title topictitle3" id="ariaid-title4">Zie ook</h3><div class="body"><p class="p"><a class="xref" href="https://koop.gitlab.io/STOP/standaard/1.3.0/go/go.html?id=git%3Avoorbeelden/Coderingen/GIO/GIO-varianten" target="_blank">Voorbeelden van GIO's</a> met verschillende typen geometrische data.</p></div></article></article><article class="topic nested1" aria-labelledby="ariaid-title5" id="normwaarden-optioneel"><h2 class="title topictitle2" id="ariaid-title5">Normwaarde(n) (optioneel)</h2><div class="body"><p class="p">Een <strong class="ph b">normwaarde</strong> is van toepassing op een locatie en is optioneel. Een normwaarde is hierbij altijd gekoppeld aan de norm van de GIO. Er zijn vier manieren om normwaarden juridisch vast te leggen, zie de beschrijving daarvan in de sectie over <a class="xref" href="gio-norm.html">normen</a>. Voor de regels voor normwaarden, zie <a class="xref" href="gio-norm.html">Uitgangspunten normen</a>.</p><p class="p">Er zijn twee soorten normwaarden:</p><ol class="ol"><li class="li"><p class="p">Kwantitatieve normwaarden.</p></li><li class="li"><p class="p">Kwalitatieve normwaarden.</p></li></ol></div><article class="topic nested2" aria-labelledby="ariaid-title6" id="kwalitatieve-normwaarde"><h3 class="title topictitle3" id="ariaid-title6">Kwalitatieve normwaarde</h3><div class="body"><p class="p">Een kwalitatieve normwaarde is een in tekst(string) uit te drukken waarde van een norm. Een kwalitatieve normwaarde met als inhoud een lege string ("") mag niet voorkomen.</p></div></article><article class="topic nested2" aria-labelledby="ariaid-title7" id="kwantitatieve-normwaarde"><h3 class="title topictitle3" id="ariaid-title7">Kwantitatieve normwaarde</h3><div class="body"><p class="p">Een kwantitatieve normwaarde is een in getallen (xs:double) uit te drukken waarde van een norm. Een kwantitatieve normwaarde kan 0 zijn, dus de waarde 0 hebben. Dat betekent niet dat de normwaarde onbepaald (null) is. Een onbepaalde waarde ondersteunt STOP niet.</p></div></article></article><article class="topic nested1" aria-labelledby="ariaid-title8" id="gio-deel-optioneel"><h2 class="title topictitle2" id="ariaid-title8">GIO-deel (optioneel)</h2><div class="body"><p class="p">Een locatie kan behoren tot een <strong class="ph b">GIO-deel</strong> (genoemd in het groepenoverzicht van het GIO). De locatie heeft dan een <em class="ph i">GIO-deel-ID</em> (<code class="ph codeph">groepID</code>) om de locatie aan het GIO-deel te koppelen. Voor informatie over het hoe en waarom van GIO-delen, zie <a class="xref" href="gio-delen.html">uitgangspunten GIO-delen(-overzicht)</a>.</p></div></article></article></main></body></html>

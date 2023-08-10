@@ -1,0 +1,499 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="nl-nl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="GeografischeContextType"><meta name="DC.language" content="nl-nl"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Complex Type gio:GeografischeContextType</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="GeografischeContextType"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a><ul><li><a href="imop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="imop_xml.html">XML-serialisatie</a></li><li><a href="uitwisselpakket.html">Uitwisselpakket</a></li><li><a href="schemata_gebruik.html">Gebruik van IMOP</a></li><li><a href="schema_documentatie.html">Schemadocumentatie</a><ul><li><a href="schema_documentatie_legenda.html">Legenda van de schemadocumentatie</a></li><li><a href="imop_modules.html">STOP-modules in IMOP</a></li><li><a href="tekst_xsd_Main_schema_tekst_xsd.html">Schema imop-tekst.xsd</a></li><li><a href="gio_xsd_Main_schema_gio_xsd.html">Schema imop-gio.xsd</a><ul><li><a href="gio_xsd_Element_gio_domein.html">domein</a></li><li><a href="gio_xsd_Element_gio_domeinObjectID.html">domeinObjectID</a></li><li><a href="gio_xsd_Simple_Type_gio_dtGroepID.html">dtGroepID</a></li><li><a href="gio_xsd_Simple_Type_gio_dtIdentifier.html">dtIdentifier</a></li><li><a href="gio_xsd_Simple_Type_gio_dtNamespace.html">dtNamespace</a></li><li><a href="gio_xsd_Simple_Type_gio_dtUUID.html">dtUUID</a></li><li><a href="gio_xsd_Element_gio_GeografischeContext.html">GeografischeContext</a></li><li class="active"><a href="gio_xsd_Complex_Type_gio_GeografischeContextType.html">GeografischeContextType</a></li><li><a href="gio_xsd_Element_gio_groepID.html">groepID</a></li><li><a href="gio_xsd_Element_gio_JuridischeBorgingVan.html">JuridischeBorgingVan</a></li><li><a href="gio_xsd_Element_gio_locatieID.html">locatieID</a></li><li><a href="gio_xsd_Element_gio_Object.html">Object</a></li></ul></li><li><a href="geo_xsd_Main_schema_geo_xsd.html">Schema imop-geo.xsd</a></li><li><a href="se_xsd_Main_schema_se_xsd.html">Schema se-FeatureStyle-imop.xsd</a></li><li><a href="ogc_xsd_Main_schema_ogc_xsd.html">Schema se-filter-imop.xsd</a></li><li><a href="data_xsd_Main_schema_data_xsd.html">Schema imop-data.xsd</a></li><li><a href="cons_xsd_Main_schema_cons_xsd.html">Schema imop-consolidatie.xsd</a></li><li><a href="rsc_xsd_Main_schema_rsc_xsd.html">Schema imop-resources.xsd</a></li><li><a href="br_xsd_Main_schema_br_xsd.html">Schema imop-bedrijfsregels.xsd</a></li><li><a href="sv_xsd_Main_schema_sv_xsd.html">Schema imop-schemata.xsd</a></li><li><a href="uws_xsd_Main_schema_uws_xsd.html">Schema imop-uitwisseling.xsd</a></li></ul></li><li><a href="imop_bedrijfsregels.html">Bedrijfsregels</a></li><li><a href="imop_waardelijsten.html">Waardelijsten</a></li></ul></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+   <h1 class="title topictitle1" id="ariaid-title1">Complex Type gio:GeografischeContextType</h1>
+   <div class="body">
+      <table class="table frame-all"><caption></caption><colgroup><col style="width:10.714285714285714%"><col style="width:89.28571428571429%"></colgroup><tbody class="tbody">
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Namespace</td>
+                  <td class="entry align-left colsep-1 rowsep-1">https://standaarden.overheid.nl/stop/imop/gio/</td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Definitie</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="div">
+    <p class="p">Dit type definieert de geografische context waarin een besluit tot het vaststellen van een
+      GIO genomen is.</p>
+  </div>
+  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Informatie</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="div">
+    <p class="p">Deze bestaat uit een verwijzing naar de achtergrond die gezien is door het bevoegd gezag ten
+      tijde van het nemen van het besluit. Let op, deze achtergrond heeft vooral een juridische
+      betekenis en de achtergrond hoeft dus niet overeen te komen met de achtergrond die getoond
+      wordt op de publicatieportalen.</p>
+  </div>
+  <div class="div">
+    <p class="p"><strong class="ph b">Beperkingen</strong></p>
+    <p class="p">Afhankelijk van de manier waarop het GIO is vastgesteld zijn de verschillende onderdelen wel
+      of niet aanwezig</p>
+  </div>
+  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Informatiemodel</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Diagram</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="p">
+                        <div class="fig imagemap" id="GeografischeContextType__gio_xsd_Complex_Type_gio_GeografischeContextType"><img usemap="#d488625e95" class="image" src="img/gio_xsd_Complex_Type_gio_GeografischeContextType.png"><map name="d488625e95" id="d488625e95"><area href="#GeografischeContextType_achtergrondVerwijzing" alt="Element gio:GeografischeContextType / gio:achtergrondVerwijzing" title="Element gio:GeografischeContextType / gio:achtergrondVerwijzing" shape="rect" coords="302,100,444,144"><area href="#GeografischeContextType_achtergrondActualiteit" alt="Element gio:GeografischeContextType / gio:achtergrondActualiteit" title="Element gio:GeografischeContextType / gio:achtergrondActualiteit" shape="rect" coords="302,154,439,198"><area href="#GeografischeContextType_contextGIOs" alt="Element gio:GeografischeContextType / gio:contextGIOs" title="Element gio:GeografischeContextType / gio:contextGIOs" shape="rect" coords="302,208,414,252"><area href="#GeografischeContextType_nauwkeurigheid" alt="Element gio:GeografischeContextType / gio:nauwkeurigheid" title="Element gio:GeografischeContextType / gio:nauwkeurigheid" shape="rect" coords="302,262,413,306"></map></div>
+                     </div>
+                  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Gebruikt door</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="p">
+                        <table class="table frame-all"><caption></caption><colgroup><col style="width:20%"><col style="width:80%"></colgroup><tbody class="tbody">
+                                 <tr class="row">
+                                    <td class="entry align-left colsep-1 rowsep-1">Element </td>
+                                    <td class="entry align-left colsep-1 rowsep-1">
+                                       <a class="xref" href="gio_xsd_Element_gio_GeografischeContext.html#GeografischeContext">Element gio:GeografischeContext</a>
+                                    </td>
+                                 </tr>
+                              </tbody></table>
+                     </div>
+                  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Kinderen</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <a class="xref" href="#GeografischeContextType_achtergrondActualiteit">Element gio:GeografischeContextType / gio:achtergrondActualiteit</a>, <a class="xref" href="#GeografischeContextType_achtergrondVerwijzing">Element gio:GeografischeContextType / gio:achtergrondVerwijzing</a>, <a class="xref" href="#GeografischeContextType_contextGIOs">Element gio:GeografischeContextType / gio:contextGIOs</a>, <a class="xref" href="#GeografischeContextType_nauwkeurigheid">Element gio:GeografischeContextType / gio:nauwkeurigheid</a>
+                  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Attributen</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="p">
+                        <table class="table frame-all"><caption></caption><colgroup><col style="width:42.857142857142854%"><col style="width:42.857142857142854%"><col style="width:14.285714285714285%"></colgroup><thead class="thead">
+                                 <tr class="row">
+                                    <th class="entry align-left colsep-1 rowsep-1" id="GeografischeContextType__entry__19">QName</th>
+                                    <th class="entry align-left colsep-1 rowsep-1" id="GeografischeContextType__entry__20">Type</th>
+                                    <th class="entry align-left colsep-1 rowsep-1" id="GeografischeContextType__entry__21">Use</th>
+                                 </tr>
+                              </thead><tbody class="tbody">
+                                 <tr class="row">
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="GeografischeContextType__entry__19">schemaversie</td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="GeografischeContextType__entry__20">xs:token</td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="GeografischeContextType__entry__21">optional</td>
+                                 </tr>
+                              </tbody></table>
+                     </div>
+                  </td>
+               </tr>
+               <tr class="row nobr-xsd:gio:GeografischeContextType">
+                  <td class="entry align-left colsep-1 rowsep-1">Beperkingen</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="p"><table class="table"><caption></caption><colgroup><col style="width:9.090909090909092%"><col style="width:90.9090909090909%"></colgroup><tbody class="tbody"><tr class="row"><td class="entry"><a class="xref link_br" href="businessrules_STOP_3000.html#Bedrijfsregels__br_STOP3070">STOP3070</a></td><td class="entry"><div class="div"><p class="p">Een vastgestelde GIO heeft een vaststellingscontext (achtergrondkaart), waarvan de versie is aangegeven.</p></div></td></tr><tr class="row"><td class="entry"><a class="xref link_br" href="businessrules_STOP_3000.html#Bedrijfsregels__br_STOP3072">STOP3072</a></td><td class="entry"><div class="div"><p class="p">ALS de nauwkeurigheid van het GIO en/of de vaststellingscontext leidt tot verplicht gebruik van de Basisregistratie Grootschalige Topografie (BGT), dan MOET als geografische context de BGT worden gebruikt.</p></div></td></tr><tr class="row"><td class="entry"><a class="xref link_br" href="businessrules_STOP_3000.html#Bedrijfsregels__br_STOP3073">STOP3073</a></td><td class="entry"><div class="div"><p class="p">De juridische nauwkeurigheid van de geometrische data in een GIO komt overeen met die van de geografische context (kaart) die voor de vaststelling is gebruikt.</p></div></td></tr><tr class="row"><td class="entry"><a class="xref link_br" href="businessrules_STOP_3000.html#Bedrijfsregels__br_STOP3074">STOP3074</a></td><td class="entry"><div class="div"><p class="p">Zijn er bij de vaststelling van een GIO ook context-GIO’s getoond, dan MOETEN deze GIO’s ook als context-GIO's opgenomen worden in het GIO.</p></div></td></tr><tr class="row"><td class="entry"><a class="xref link_br" href="businessrules_STOP_3000.html#Bedrijfsregels__br_STOP3075">STOP3075</a></td><td class="entry"><div class="div"><p class="p">Een berekende GIO bevat een nauwkeurigheidsgraad die is aangegeven in decimeters.</p></div></td></tr></tbody></table></div></td>
+               </tr>
+            </tbody></table>
+   </div>
+   <article class="topic nested1" aria-labelledby="ariaid-title2" id="GeografischeContextType_achtergrondVerwijzing">
+      <h2 class="title topictitle2" id="ariaid-title2">Element gio:GeografischeContextType / gio:achtergrondVerwijzing</h2>
+      <div class="body">
+         <table class="table frame-all"><caption></caption><colgroup><col style="width:10.714285714285714%"><col style="width:89.28571428571429%"></colgroup><tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Namespace</td>
+                     <td class="entry align-left colsep-1 rowsep-1">https://standaarden.overheid.nl/stop/imop/gio/</td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Definitie</td>
+                     <td class="entry align-left colsep-1 rowsep-1">
+                        <div class="div">
+    <p class="p">Een verwijzing naar de achtergrondkaart die getoond is bij het vaststellen van het GIO</p>
+  </div>
+  </td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Informatie</td>
+                     <td class="entry align-left colsep-1 rowsep-1">
+                        <div class="div">
+    <p class="p">Het gebeurt vaak dat de grenzen van het GIO herkenbare elementen (bijvoorbeeld een sloot) op
+      de achtergrondkaart volgt. Hiermee wordt duidelijk gemaakt dat de bedoelde grens van dat GIO
+      de sloot is zoals die ligt in het terrein en niet de (wellicht vereenvoudigde) kartografische
+      representatie van de sloot. </p>
+    <p class="p">De bedoeling van de achtergrond aanduiding is dat een mens, aan de hand van deze aanduiding de gebruikte 
+      achtergrond kan vinden indien iemand, bijv. een rechter, daarom vraagt. Om te borgen dat het GIO ten allen 
+      tijden weer getoond kan worden zoals deze getoond is ten
+      tijde van de vaststelling, moet het BG de gebruikte achtergrondkaart archiveren.</p>
+    <p class="p">Indien gekozen wordt voor TOP10NL, dan is deze archivering overbodig, omdat TOP10NL
+      tijdreisbestendig wordt uitgeleverd.</p>
+    <p class="p">Wordt een andere waarde dan TOP10NL gebruikt, dan is het BG zelf verantwoordelijk voor
+      archivering van de gebruikte achtergrond. Archivering conform de Archiefwet volstaat. </p>
+    <p class="p">Van juridisch belang is ook de <a class="xref link_xsd" href="#GeografischeContextType_achtergrondActualiteit">gio:achtergrondActualiteit</a> van de
+      achtergrondskaart.</p>
+    <p class="p">De achtergrond aanduiding is geen waardenlijst, het BG is vrij in haar keuze voor een achtergrondkaart. 
+      Om uniformiteit te bewerkstelligen is er wel een aanbeveling: </p>
+      
+    <p class="p"><strong class="ph b">Aanbeveling</strong> voor het veld achtergrondVerwijzing: Wanneer de dataset beschikbaar is
+      op het <a class="xref" href="https://www.nationaalgeoregister.nl" target="_blank">Nationaal Georegister</a>, gebruik dan het veld ‘Titel van de bron’ of 'Alternatieve
+      titel' zoals beschreven in ‘<a class="xref" href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/" target="_blank">Nederlands
+        profiel op ISO 19115 voor geografie</a>’.</p>
+    <p class="p">Deze titel is te vinden in het XML metadata bestand. Dit bestand is te vinden op de
+      betreffende kaartpagina in het <a class="xref" href="https://www.nationaalgeoregister.nl" target="_blank">Nationaal Georegister</a> (via de download/weergave knop). </p> 
+
+    <p class="p"><strong class="ph b">Voorbeelden veel gebruikte achtergrondkaart aanduidingen:</strong></p>
+    <table class="table simpletable frame-all"><caption></caption><tbody class="tbody">
+          <tr class="row">
+            <td class="entry colsep-1 rowsep-1"><p class="p">TOP10NL</p></td>
+            <td class="entry colsep-1 rowsep-1"><p class="p">Momenteel is dit enige achtergrondkaart die voldoende tijdreisbestendig wordt
+                bijgehouden;</p></td>
+          </tr>
+          <tr class="row">
+            <td class="entry colsep-1 rowsep-1"><p class="p">BGT</p></td>
+            <td class="entry colsep-1 rowsep-1">
+              <p class="p">De basisregistratie grootschalige topografie kan als achtergrondkaart gebruikt
+                worden indien TOP10NL niet nauwkeurig genoeg is</p>
+              <p class="p">BG moet archivering van de gebruikte achtergrond borgen. Archivering conform de
+                Archiefwet volstaat.</p></td>
+          </tr>
+          <tr class="row">
+            <td class="entry colsep-1 rowsep-1"><p class="p">BRT Achtergrondkaart</p></td>
+            <td class="entry colsep-1 rowsep-1">
+              <p class="p">Afgeleid van TOP10NL, te gebruiken een GIO waarbij de schaalniveau's van TOP10NL
+                niet toereikend zijn.</p>
+              <p class="p">BG moet archivering van de gebruikte achtergrond borgen. Archivering conform de
+                Archiefwet volstaat.</p></td>
+          </tr>
+          <tr class="row">
+            <td class="entry colsep-1 rowsep-1"><p class="p">BRT achtergrondkaart Pastel WMTS</p></td>
+            <td class="entry colsep-1 rowsep-1">
+              <p class="p">BRT als achtergrond gebruikt in een specifieke kleurstelling: Pastel.</p>
+              <p class="p">En ook hier moet het BG archivering van de gebruikte achtergrond borgen. Archivering conform de
+                Archiefwet volstaat.</p></td>
+          </tr>
+        </tbody></table>
+
+  </div>
+  </td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Informatiemodel</td>
+                     <td class="entry align-left colsep-1 rowsep-1">
+                        <a class="xref link_ea" href="EA_1C752EC8163240cbA9644D1CD9266E58.html#Pkg__EA026472CF9A4feeA2198820BC0D6C10">Achtergrondverwijzing (eigenschap van Geografische context)</a></td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Verwijzingen</td>
+                     <td class="entry align-left colsep-1 rowsep-1">
+                        <a class="xref link_xsd" href="#GeografischeContextType_achtergrondActualiteit">gio:achtergrondActualiteit</a></td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Diagram</td>
+                     <td class="entry align-left colsep-1 rowsep-1">
+                        <p class="p"></p>
+                     </td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Type</td>
+                     <td class="entry align-left colsep-1 rowsep-1">xs:string</td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Eigenschappen</td>
+                     <td class="entry align-left colsep-1 rowsep-1">
+                        <div class="p">
+                           <table class="table frame-all"><caption></caption><colgroup><col style="width:20%"><col style="width:80%"></colgroup><tbody class="tbody">
+                                    <tr class="row">
+                                       <td class="entry align-left colsep-1 rowsep-1">content: </td>
+                                       <td class="entry align-left colsep-1 rowsep-1">
+                                          <strong class="ph b">simple</strong>
+                                       </td>
+                                    </tr>
+                                    <tr class="row">
+                                       <td class="entry align-left colsep-1 rowsep-1">minOccurs: </td>
+                                       <td class="entry align-left colsep-1 rowsep-1">
+                                          <strong class="ph b">1</strong>
+                                       </td>
+                                    </tr>
+                                    <tr class="row">
+                                       <td class="entry align-left colsep-1 rowsep-1">maxOccurs: </td>
+                                       <td class="entry align-left colsep-1 rowsep-1">
+                                          <strong class="ph b">1</strong>
+                                       </td>
+                                    </tr>
+                                 </tbody></table>
+                        </div>
+                     </td>
+                  </tr>
+                  </tbody></table>
+      </div>
+   </article>
+   <article class="topic nested1" aria-labelledby="ariaid-title3" id="GeografischeContextType_achtergrondActualiteit">
+      <h2 class="title topictitle2" id="ariaid-title3">Element gio:GeografischeContextType / gio:achtergrondActualiteit</h2>
+      <div class="body">
+         <table class="table frame-all"><caption></caption><colgroup><col style="width:10.714285714285714%"><col style="width:89.28571428571429%"></colgroup><tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Namespace</td>
+                     <td class="entry align-left colsep-1 rowsep-1">https://standaarden.overheid.nl/stop/imop/gio/</td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Definitie</td>
+                     <td class="entry align-left colsep-1 rowsep-1">
+                        <div class="div">
+    <p class="p">Aanduiding van de actualiteit van de achtergrondkaart waar 
+      <a class="xref link_ea" href="EA_1C752EC8163240cbA9644D1CD9266E58.html#Pkg__EA026472CF9A4feeA2198820BC0D6C10">Achtergrondverwijzing (eigenschap van Geografische context)</a> naar verwijst</p>
+  </div>
+  </td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Informatie</td>
+                     <td class="entry align-left colsep-1 rowsep-1">
+                        <div class="div">
+    <p class="p"><strong class="ph b">Invulinstructie</strong></p>
+    <p class="p">Wanneer de dataset beschikbaar is op <a class="xref" href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/" target="_blank">https://docs.geostandaarden.nl/md/mdprofiel-iso19115/</a> het <a class="xref" href="https://www.nationaalgeoregister.nl" target="_blank">Nationaal
+        Georegister</a>, gebruik dan het veld ‘Datum van de bron’ zoals beschreven in ‘<a class="xref" href="https://docs.geostandaarden.nl/md/mdprofiel-iso19115/" target="_blank">
+        Nederlands profiel op ISO 19115 voor geografie</a>’.</p>
+    <p class="p">Momenteel is de enige achtergrondkaart die voldoende tijdreisbestendig wordt bijgehouden de
+      TOP10NL kaart. Indien gekozen wordt voor een andere waarde dan TOP10NL dan is het BG zelf
+      verantwoordelijk voor archivering van de gebruikte achtergrond. Archivering conform de
+      Archiefwet volstaat. </p>
+  </div>
+</td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Informatiemodel</td>
+                     <td class="entry align-left colsep-1 rowsep-1">
+                        <a class="xref link_ea" href="EA_1C752EC8163240cbA9644D1CD9266E58.html#Pkg__8189D31020464844BFCBB3EAEA614725">Achtergrond actualiteit (eigenschap van Geografische context)</a></td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Verwijzingen</td>
+                     <td class="entry align-left colsep-1 rowsep-1">
+                        <a class="xref link_xsd" href="#GeografischeContextType_achtergrondVerwijzing">gio:achtergrondVerwijzing</a></td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Diagram</td>
+                     <td class="entry align-left colsep-1 rowsep-1">
+                        <p class="p"></p>
+                     </td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Type</td>
+                     <td class="entry align-left colsep-1 rowsep-1">xs:date</td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Eigenschappen</td>
+                     <td class="entry align-left colsep-1 rowsep-1">
+                        <div class="p">
+                           <table class="table frame-all"><caption></caption><colgroup><col style="width:20%"><col style="width:80%"></colgroup><tbody class="tbody">
+                                    <tr class="row">
+                                       <td class="entry align-left colsep-1 rowsep-1">content: </td>
+                                       <td class="entry align-left colsep-1 rowsep-1">
+                                          <strong class="ph b">simple</strong>
+                                       </td>
+                                    </tr>
+                                    <tr class="row">
+                                       <td class="entry align-left colsep-1 rowsep-1">minOccurs: </td>
+                                       <td class="entry align-left colsep-1 rowsep-1">
+                                          <strong class="ph b">1</strong>
+                                       </td>
+                                    </tr>
+                                    <tr class="row">
+                                       <td class="entry align-left colsep-1 rowsep-1">maxOccurs: </td>
+                                       <td class="entry align-left colsep-1 rowsep-1">
+                                          <strong class="ph b">1</strong>
+                                       </td>
+                                    </tr>
+                                 </tbody></table>
+                        </div>
+                     </td>
+                  </tr>
+                  </tbody></table>
+      </div>
+   </article>
+   <article class="topic nested1" aria-labelledby="ariaid-title4" id="GeografischeContextType_contextGIOs">
+      <h2 class="title topictitle2" id="ariaid-title4">Element gio:GeografischeContextType / gio:contextGIOs</h2>
+      <div class="body">
+         <table class="table frame-all"><caption></caption><colgroup><col style="width:10.714285714285714%"><col style="width:89.28571428571429%"></colgroup><tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Namespace</td>
+                     <td class="entry align-left colsep-1 rowsep-1">https://standaarden.overheid.nl/stop/imop/gio/</td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Definitie</td>
+                     <td class="entry align-left colsep-1 rowsep-1">
+                        <div class="div">
+    <p class="p">een lijst van één of meer verwijzingen naar bestaande GIOs die als context gebruikt voor het
+      bepalen van een nieuwe GIO zijn gebruikt</p>
+  </div>
+  </td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Informatie</td>
+                     <td class="entry align-left colsep-1 rowsep-1">
+                        <div class="div">
+    <p class="p">In plangebieden (waar vaak nog geen actuele topografische achtergrond voorhanden is) kan
+      naast de gebruikte achtergrondskaart een bestaand GIO als context gebruikt voor het bepalen
+      van een nieuw GIO (bijvoorbeeld: er is al een besluit genomen over het spoorwegtracé en nu
+      moet er nog besloten worden over de plek van het station; als het station in een
+      weilandengebied wordt gepland is het fijn om te weten waar het spoor gaat lopen).</p>
+    <p class="p">Dit element bevat een lijst met JOIN-identificaties die getoond zijn bij het nemen van het
+      besluit over dit GIO. Het gaat hier altijd om expression identificaties.</p>
+  </div>
+</td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Informatiemodel</td>
+                     <td class="entry align-left colsep-1 rowsep-1">
+                        <a class="xref link_ea" href="EA_1C752EC8163240cbA9644D1CD9266E58.html#Pkg__1AE92A32672F4c7fACDF0FCF59B6E871">Context GIO (eigenschap van Geografische context)</a></td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Diagram</td>
+                     <td class="entry align-left colsep-1 rowsep-1">
+                        <p class="p"></p>
+                     </td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Type</td>
+                     <td class="entry align-left colsep-1 rowsep-1">xs:anyURI</td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Eigenschappen</td>
+                     <td class="entry align-left colsep-1 rowsep-1">
+                        <div class="p">
+                           <table class="table frame-all"><caption></caption><colgroup><col style="width:20%"><col style="width:80%"></colgroup><tbody class="tbody">
+                                    <tr class="row">
+                                       <td class="entry align-left colsep-1 rowsep-1">content: </td>
+                                       <td class="entry align-left colsep-1 rowsep-1">
+                                          <strong class="ph b">simple</strong>
+                                       </td>
+                                    </tr>
+                                    <tr class="row">
+                                       <td class="entry align-left colsep-1 rowsep-1">minOccurs: </td>
+                                       <td class="entry align-left colsep-1 rowsep-1">
+                                          <strong class="ph b">0</strong>
+                                       </td>
+                                    </tr>
+                                    <tr class="row">
+                                       <td class="entry align-left colsep-1 rowsep-1">maxOccurs: </td>
+                                       <td class="entry align-left colsep-1 rowsep-1">
+                                          <strong class="ph b">unbounded</strong>
+                                       </td>
+                                    </tr>
+                                 </tbody></table>
+                        </div>
+                     </td>
+                  </tr>
+                  </tbody></table>
+      </div>
+   </article>
+   <article class="topic nested1" aria-labelledby="ariaid-title5" id="GeografischeContextType_nauwkeurigheid">
+      <h2 class="title topictitle2" id="ariaid-title5">Element gio:GeografischeContextType / gio:nauwkeurigheid</h2>
+      <div class="body">
+         <table class="table frame-all"><caption></caption><colgroup><col style="width:10.714285714285714%"><col style="width:89.28571428571429%"></colgroup><tbody class="tbody">
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Namespace</td>
+                     <td class="entry align-left colsep-1 rowsep-1">https://standaarden.overheid.nl/stop/imop/gio/</td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Definitie</td>
+                     <td class="entry align-left colsep-1 rowsep-1">
+                        <div class="div">
+    <p class="p">Gerealiseerde geometrische nauwkeurigheid van de geometrie van het object ten opzichte van de
+      werkelijkheid (zoals in de achtergrond is weergegeven) uitgedrukt in decimeters.</p>
+  </div>
+  </td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Informatie</td>
+                     <td class="entry align-left colsep-1 rowsep-1">
+                        <div class="div">
+    <p class="p">Als het GIO tot stand is gekomen door een berekening (bijvoorbeeld de
+    uitkomst van een simulatie), dan is het van belang te weten met welke mate
+    van nauwkeurigheid de berekeningen zijn uitgevoerd zodat grensgevallen (huis
+    valt net wel/niet in het gebied) beter te duiden zijn.</p>
+  </div>
+</td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Informatiemodel</td>
+                     <td class="entry align-left colsep-1 rowsep-1">
+                        <a class="xref link_ea" href="EA_1C752EC8163240cbA9644D1CD9266E58.html#Pkg__AD8C3D135EB342f0AFE5FA133961826C">Nauwkeurigheid (eigenschap van Geografische context)</a></td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Diagram</td>
+                     <td class="entry align-left colsep-1 rowsep-1">
+                        <p class="p"></p>
+                     </td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Type</td>
+                     <td class="entry align-left colsep-1 rowsep-1">xs:integer</td>
+                  </tr>
+                  <tr class="row">
+                     <td class="entry align-left colsep-1 rowsep-1">Eigenschappen</td>
+                     <td class="entry align-left colsep-1 rowsep-1">
+                        <div class="p">
+                           <table class="table frame-all"><caption></caption><colgroup><col style="width:20%"><col style="width:80%"></colgroup><tbody class="tbody">
+                                    <tr class="row">
+                                       <td class="entry align-left colsep-1 rowsep-1">content: </td>
+                                       <td class="entry align-left colsep-1 rowsep-1">
+                                          <strong class="ph b">simple</strong>
+                                       </td>
+                                    </tr>
+                                    <tr class="row">
+                                       <td class="entry align-left colsep-1 rowsep-1">minOccurs: </td>
+                                       <td class="entry align-left colsep-1 rowsep-1">
+                                          <strong class="ph b">0</strong>
+                                       </td>
+                                    </tr>
+                                    <tr class="row">
+                                       <td class="entry align-left colsep-1 rowsep-1">maxOccurs: </td>
+                                       <td class="entry align-left colsep-1 rowsep-1">
+                                          <strong class="ph b">1</strong>
+                                       </td>
+                                    </tr>
+                                 </tbody></table>
+                        </div>
+                     </td>
+                  </tr>
+                  </tbody></table>
+      </div>
+   </article>
+</article></main></body></html>

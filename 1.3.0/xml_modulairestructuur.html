@@ -1,0 +1,61 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="modulaire-structuur"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Modulaire structuur</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="modulaire-structuur"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a><ul><li><a href="imop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="imop_xml.html">XML-serialisatie</a><ul><li class="active"><a href="xml_modulairestructuur.html">Modulaire structuur</a></li><li><a href="xml_documenten.html">IMOP-modules in XML-documenten</a></li><li><a href="xml_schemalocation.html">Verwijzing naar schema's</a></li><li><a href="xml_witruimte.html">Witruimte in XML</a></li></ul></li><li><a href="uitwisselpakket.html">Uitwisselpakket</a></li><li><a href="schemata_gebruik.html">Gebruik van IMOP</a></li><li><a href="schema_documentatie.html">Schemadocumentatie</a></li><li><a href="imop_bedrijfsregels.html">Bedrijfsregels</a></li><li><a href="imop_waardelijsten.html">Waardelijsten</a></li></ul></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1">Modulaire structuur</h1><div class="body"></div><article class="topic nested1" aria-labelledby="ariaid-title2" id="imop-beschrijft-modules"><h2 class="title topictitle2" id="ariaid-title2">IMOP beschrijft modules</h2><div class="body"><p class="p">De informatie die op basis van STOP uitgewisseld kan worden is ingedeeld in <a class="xref" href="EA_1A45BBE5EC4F4bb2BBD7F5E701CE0479.html#Pkg">modules</a>. Een module is een set van bij elkaar horende informatie die steeds
+als één geheel uitgewisseld moet worden. Voor een overzicht van de verschillende modules: zie de specialisaties van de abstractie <a class="xref" href="EA_1A45BBE5EC4F4bb2BBD7F5E701CE0479.html#Pkg__B4649197FA68449e913F625FA43F27DF">Module</a> in het informatiemodel. Het implementatiemodel (IMOP) beschrijft hoe elke module in XML geserialiseerd moet worden.</p></div></article><article class="topic nested1" aria-labelledby="ariaid-title3" id="imop-is-geen-api"><h2 class="title topictitle2" id="ariaid-title3">IMOP is geen API</h2><div class="body"><p class="p">IMOP schrijft <em class="ph i">niet</em> voor hoe een STOP-gebruikend systeem de modules moet gebruiken.
+Voor elk systeem kan een API ontworpen worden die voor de verschillende services
+een eigen keuze maakt voor de uitwisseling van informatie, zolang die uitwisseling
+is opgebouwd uit de STOP-modules. Voor een API kan dus wel een keuze gemaakt worden
+welke modules voor een service aangeleverd of uitgeleverd worden, en hoe meerdere
+modules in één pakket worden samengebracht. Maar het is niet toegestaan de definitie
+van een module aan te passen en bijvoorbeeld maar de helft van de informatie in
+een API op te nemen.</p><br><img class="image" src="img/modulaire_structuur_api.png" alt="Relatie tussen STOP modules en API specificatie"><br><p class="p">Om de XML samen te stellen die aangeleverd moet worden aan een systeem moet dus
+in eerste instantie naar de API-specificatie gekeken worden. Deze API valt voor de specificatie
+van de modules terug op de STOP-specificaties. De XML die bijvoorbeeld de
+metadata van een besluit beschrijft ziet er dus in elke API hetzelfde uit, maar het
+is een API-specifieke invulling of bijvoorbeeld die XML in een apart bestand staat of ingebed is in een XML-bestand met meer informatie over het besluit, oftewel het bestand via HTTPS gedownload of in een ZIP bestand via ebMS verstuurd wordt.</p><p class="p">Voor software die gebruik maakt van de standaard betekent dit dat de STOP-informatie uit het
+informatiemodel Officiële Publicaties altijd op dezelfde manier geserialiseerd wordt,
+ongeacht het systeem waaraan informatie geleverd of waaruit informatie betrokken wordt.
+Maar de details over welke informatie precies uitgewisseld wordt en hoe die verpakt
+wordt, is geen onderdeel van STOP.</p></div></article><article class="topic nested1" aria-labelledby="ariaid-title4" id="imop-kent-een-uitwisselingsformaat-voor-regelgeving"><h2 class="title topictitle2" id="ariaid-title4">IMOP kent een uitwisselingsformaat voor regelgeving</h2><div class="body"><p class="p">Voor het uitwisselen van informatie voor regelgeving definieert IMOP een <a class="xref" href="uitwisselpakket.html">uitwisselingsformaat</a> waarmee de relevante STOP-modules uitgewisseld kunnen worden. Dit is de voorgeschreven manier om een complete versie van een regeling en/of informatieobjecten met bijbehorende informatie uit te wisselen. De manier waarop de uitwisseling plaatsvindt wordt door IMOP niet voorgeschreven. Ook hier is enige vrijheid voor de STOP-implementerende systemen om API-specifieke keuzes te maken, bijvoorbeeld door de regeling en informatieobjecten apart aan te leveren.</p></div></article></article></main></body></html>

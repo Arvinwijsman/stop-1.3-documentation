@@ -1,0 +1,45 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="tijdreizen"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Tijdreizen</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="tijdreizen"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a><ul><li><a href="stop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="leeswijzers.html">Leeswijzers</a><ul><li><a href="toepassing.html">Basis van STOP</a></li><li><a href="architectuur.html">Architectuur en ontwerpkeuzes</a><ul><li class="active"><a href="tijdreizen.html">Tijdreizen</a><ul><li><a href="tijdreizen-toelichting.html">Toelichting tijdreizen</a></li><li><a href="tijdreizen-bi-temporeel-model.html">Bi-temporeel model</a></li></ul></li><li><a href="regeltekst.html">Tekststructuur en -inhoud</a></li><li><a href="functioneelpresenteren.html">Functioneel presenteren</a></li></ul></li><li><a href="gebruik.html">Software-ontwikkeling met STOP</a></li><li><a href="voortbouwen_op_STOP.html">Voortbouwen op STOP</a></li></ul></li><li><a href="EA_4D1D7FD517FE4d8dA9A2B905D202C92B.html">Informatiemodel</a></li><li><a href="businessrules.html">Bedrijfsregels</a></li></ul></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1">Tijdreizen</h1><div class="body"><p class="p">Voor juridische informatie is het niet alleen van belang wat de geldige regelingen op dit moment zijn, maar ook wat de geldige regeling op een bepaald moment in het verleden waren. Bijvoorbeeld om vast te stellen of iets wel of niet toegestaan was conform de op dat moment geldende wetgeving.</p></div><article class="topic nested1" aria-labelledby="ariaid-title2" id="verschillende-soorten-tijd-in-stop"><h2 class="title topictitle2" id="ariaid-title2">Verschillende soorten tijd in STOP</h2><div class="body"><p class="p">Omdat regelingen niet in werking hoeven te treden op het moment van bekend maken en daarnaast ook met terugwerkende kracht in werking kunnen treden, zijn er naast de geldigheid, ook andere tijdsaspecten van belang. Binnen STOP worden de volgende tijdassen onderscheiden:</p><ul class="ul"><li class="li"><p class="p">Juridisch werkend op - wanneer is iets in werking getreden? Regelgeving is in werking getreden als het juridisch gezien rechtskracht heeft gekregen.</p></li><li class="li"><p class="p">Geldig op - wanneer is iets geldig? Regelgeving is geldig als het de voorschriften bevat waar eenieder zich aan moet houden, of (beleids-)voornemens waar overheden zich op richten.</p></li><li class="li"><p class="p">Beschikbaar op - wanneer was iets beschikbaar? Informatie is beschikbaar als een systeem over de informatie beschikt en eenieder daar ook toegang toe heeft.</p></li></ul><p class="p">Aangezien niet in alle situaties regeling informatie direct ontvangen wordt op het moment dat die informatie ook publiekelijk bekend is (denk bijv. aan gerechtelijke uitspraken) valt het tijdsaspect <em class="ph i">Beschikbaar op</em> uiteen in:</p><ul class="ul"><li class="li"><p class="p">Bekend op - Wanneer is iets publiek geworden?</p></li><li class="li"><p class="p">Ontvangen op - Wanneer is deze informatie in het systeem opgenomen?</p></li></ul></div></article><article class="topic nested1" aria-labelledby="ariaid-title3" id="toelichting-tijdreizen"><h2 class="title topictitle2" id="ariaid-title3">Toelichting tijdreizen</h2><div class="body"><p class="p">Zie voor een toelichting op het gebruik en de noodzaak van de verschillende tijdassen, de <a class="xref" href="tijdreizen-toelichting.html">toelichting tijdreizen</a>.</p></div></article><article class="topic nested1" aria-labelledby="ariaid-title4" id="bi-temporeel-model"><h2 class="title topictitle2" id="ariaid-title4">Bi-temporeel model</h2><div class="body"><p class="p">Om de geldigheid van een regeling in de loop van de tijd inzichtelijk te maken, kan gebruik gemaakt worden van het zogenaamde "bi-temporele model". In dit model wordt een assenstelsel gebruikt om het tijdsaspect werkendOp uit te zetten tegen geldigOp. Zie voor een uitleg <a class="xref" href="tijdreizen-bi-temporeel-model.html">het bi-temporele model</a>.</p></div></article></article></main></body></html>

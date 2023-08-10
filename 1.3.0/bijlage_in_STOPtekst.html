@@ -1,0 +1,257 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="bijlage-in-het-stop-tekstmodel"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Bijlage in het STOP-tekstmodel</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="bijlage-in-het-stop-tekstmodel"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a><ul><li><a href="stop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="leeswijzers.html">Leeswijzers</a><ul><li><a href="toepassing.html">Basis van STOP</a></li><li><a href="architectuur.html">Architectuur en ontwerpkeuzes</a></li><li><a href="gebruik.html">Software-ontwikkeling met STOP</a><ul><li><a href="quickstart_overzicht.html">Snelstartgids STOP-XML</a></li><li><a href="tekstmodellen.html">Modellering van tekst</a><ul><li><a href="tekstpresentatie.html">Tekstpresentatie</a></li><li><a href="creatieproces-regeling-besluit.html">Maakproces regeling- en besluittekst</a></li><li><a href="samenhang-regeling-besluit.html">Samenhang van tekst in besluit en regeling</a></li><li><a href="klassiek-model.html">Het klassieke model</a></li><li><a href="compact-model.html">Het compacte model</a></li><li><a href="juncto.html">Juncto's in STOP </a></li><li><a href="bijlagen.html">Bijlagen</a><ul><li class="active"><a href="bijlage_in_STOPtekst.html">Bijlage in het STOP-tekstmodel</a></li><li><a href="bijlage_IO.html">Informatieobject als bijlage</a></li></ul></li><li><a href="tijdelijkRegeldeel.html">Tijdelijk regelingdeel</a></li><li><a href="tekstmuteren.html">Tekstmuteren</a></li></ul></li><li><a href="io-intro.html">Informatie-object</a></li><li><a href="gio-intro.html">Geografisch informatie-object</a></li><li><a href="IO_Document.html">Document als informatie-object</a></li><li><a href="naamgevingsconventie.html">Naamgevingsconventie</a></li><li><a href="context_modules.html">Tijdsafhankelijke (context)informatie</a></li><li><a href="annotaties.html">Annotaties</a></li></ul></li><li><a href="voortbouwen_op_STOP.html">Voortbouwen op STOP</a></li></ul></li><li><a href="EA_4D1D7FD517FE4d8dA9A2B905D202C92B.html">Informatiemodel</a></li><li><a href="businessrules.html">Bedrijfsregels</a></li></ul></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1">Bijlage in het STOP-tekstmodel</h1><div class="body"><p class="p">Een <a class="xref" href="bijlagen.html">bijlage</a> die uit tekst bestaat en die onderdeel is van het besluit of de regeling wordt als een van onderstaande elementen uit het STOP-tekstmodel beschouwd en gecodeerd.</p><ul class="ul"><li class="li"><p class="p"><a class="xref" href="tekst_xsd_Element_tekst_Bijlage.html#Bijlage"><code class="ph codeph">tekst:Bijlage</code></a></p></li><li class="li"><p class="p"><a class="xref" href="tekst_xsd_Element_tekst_Motivering.html#Motivering"><code class="ph codeph">tekst:Motivering</code></a></p></li><li class="li"><p class="p"><a class="xref" href="tekst_xsd_Element_tekst_Toelichting.html#Toelichting"><code class="ph codeph">tekst:Toelichting</code></a></p></li></ul></div><article class="topic nested1" aria-labelledby="ariaid-title2" id="bijlage-als-onderdeel-van-de-tekst-in-stop-xml"><h2 class="title topictitle2" id="ariaid-title2">Bijlage als onderdeel van de tekst in STOP-XML</h2><div class="body"><p class="p">De inhoud van de bijlage kan alleen betrekking hebben op het besluit, maar het kan ook onderdeel zijn van de beschreven regeling. In het tweede geval moet de bijlage geconsolideerd worden. Dit is in STOP geïmplementeerd door het XML element <a class="xref" href="tekst_xsd_Element_tekst_Bijlage.html#Bijlage">tekst:Bijlage</a> toe te staan op meerdere plaatsen binnen een tekst-module.</p></div><article class="topic nested2" aria-labelledby="ariaid-title3" id="motivering-en-toelichting"><h3 class="title topictitle3" id="ariaid-title3">Motivering en toelichting</h3><div class="body"><p class="p">Een <code class="ph codeph">tekst:Motivering</code> geeft altijd alleen redenen en extra informatie bij het besluit en wordt nooit geconsolideerd.</p><p class="p">Een <code class="ph codeph">tekst:Toelichting</code> komt in twee smaken:</p><ul class="ul"><li class="li"><p class="p">toelichtende tekst op het <strong class="ph b">besluit</strong>: De <code class="ph codeph">tekst:Toelichting</code> wordt niet geconsolideerd. De <code class="ph codeph">tekst:Toelichting</code> is direct onderdeel van het besluit</p></li><li class="li"><p class="p">toelichtende tekst op de <strong class="ph b">regeling</strong>: De <code class="ph codeph">tekst:Toelichting</code> wordt geconsolideerd. De <code class="ph codeph">tekst:Toelichting</code> is onderdeel van een <code class="ph codeph">tekst:Regeling</code> element.</p></li></ul><p class="p"><code class="ph codeph">tekst:Motivering</code> en <code class="ph codeph">tekst:Toelichting</code> kunnen ook zelf weer Bijlages bevatten. Deze bijlages worden als onlosmakelijk deel van de tekst van de Motivering/Toelichting beschouwd. De consolidatieregels voor Toelichting en Motivering gelden derhalve onverkort voor hun Bijlages.</p></div></article><article class="topic nested2" aria-labelledby="ariaid-title4" id="overige-bijlages"><h3 class="title topictitle3" id="ariaid-title4">Overige bijlages</h3><div class="body"><p class="p">De positie van <code class="ph codeph">tekst:Bijlage</code> geeft aan of de bijlage geconsolideerd wordt als onderdeel van de (nieuwe) regeling of dat de bijlage alléén bij het besluit hoort:</p><ul class="ul"><li class="li"><p class="p">een bijlage bij een besluit wordt <strong class="ph b">niet</strong> geconsolideerd; deze wordt gecodeerd als <a class="xref" href="tekst_xsd_Element_tekst_Bijlage.html#Bijlage">tekst:Bijlage</a> direct onder het top-elementr van een besluit.</p></li><li class="li"><p class="p">een bijlage bij een regeling wordt <strong class="ph b">wel</strong> geconsolideerd; deze wordt gecodeerd als <a class="xref" href="tekst_xsd_Element_tekst_Bijlage.html#Bijlage">tekst:Bijlage</a> in de elementen die een Regeling coderen</p><ul class="ul"><li class="li"><p class="p">als onderdeel van een aangeleverd Besluit binnen de elementen of als onderdeel van een geconsolideerde regeling</p><ul class="ul"><li class="li"><p class="p"><a class="xref" href="tekst_xsd_Element_tekst_RegelingKlassiek.html#RegelingKlassiek">tekst:RegelingKlassiek</a></p></li><li class="li"><p class="p"><a class="xref" href="tekst_xsd_Element_tekst_RegelingCompact.html#RegelingCompact">tekst:RegelingCompact</a></p></li><li class="li"><p class="p"><a class="xref" href="tekst_xsd_Element_tekst_RegelingVrijetekst.html#RegelingVrijetekst">tekst:RegelingVrijetekst</a></p></li><li class="li"><p class="p"><a class="xref" href="tekst_xsd_Element_tekst_RegelingTijdelijkdeel.html#RegelingTijdelijkdeel">tekst:RegelingTijdelijkdeel</a></p></li><li class="li"><p class="p"><a class="xref" href="tekst_xsd_Element_tekst_RegelingMutatie.html#RegelingMutatie">tekst:RegelingMutatie</a></p></li></ul></li></ul></li></ul><p class="p">Het is aan te raden om in de tekst van het besluit (of de door het besluit vastgestelde regeling) te verwijzen naar de relevante bijlage. In de Aanwijzingen voor de Regelgeving of STOP worden hierover echter geen regels gesteld.</p></div></article></article><article class="topic nested1" aria-labelledby="ariaid-title5" id="voorbeelden"><h2 class="title topictitle2" id="ariaid-title5">Voorbeelden</h2><div class="body"><p class="p">Hieronder voorbeelden van mogelijke coderingen</p></div><article class="topic nested2" aria-labelledby="ariaid-title6" id="voorbeeld-1-bijlages-van-een-nieuwe-regeling-en-van-een-besluit"><h3 class="title topictitle3" id="ariaid-title6">Voorbeeld 1: Bijlages van een nieuwe regeling en van een besluit</h3><div class="body"><pre class="pre codeblock"><code>  &lt;BesluitKlassiek&gt;
+    ...
+    &lt;RegelingKlassiek&gt;
+      ...
+      &lt;Bijlage&gt;
+        &lt;Kop&gt;
+          &lt;Label&gt;Bijlage&lt;/Label&gt;
+          &lt;Nummer&gt;I&lt;/Nummer&gt;
+          &lt;Opschrift&gt;fop- en schertsvuurwerk (artikel 3)&lt;/Opschrift&gt;
+        &lt;/Kop&gt;
+        &lt;Divisietekst eId="cmp_I__content_o_1"
+                       wId="mnre0000_1__cmp_I__content_o_1"&gt;
+          &lt;Inhoud&gt;
+            &lt;table eId="cmp_I__content_o_1__table_o_1"
+                    wId="mnre0000_1__cmp_I__content_o_1__table_o_1"&gt;
+              &lt;tgroup align="left"
+                       cols="5"&gt;
+                &lt;colspec colname="col1"
+                          colnum="1"/&gt;
+                &lt;colspec colname="col2"
+                          colnum="2"/&gt;
+                &lt;colspec colname="col3"
+                          colnum="3"/&gt;
+                &lt;colspec colname="col4"
+                          colnum="4"/&gt;
+                &lt;colspec colname="col5"
+                          colnum="5"/&gt;
+                &lt;thead valign="middle"&gt;
+                  &lt;row&gt;
+                    &lt;entry&gt;
+                      &lt;Al&gt;Nederlandse naam&lt;/Al&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                      &lt;Al&gt;Engelse naam&lt;/Al&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                      &lt;Al&gt;beoogde effect&lt;/Al&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                      &lt;Al&gt;categorie&lt;/Al&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                      &lt;Al&gt;maximaal toegestane gewicht aan pyrotechnische stoffen of preparaten&lt;/Al&gt;
+                    &lt;/entry&gt;
+                  &lt;/row&gt;
+                &lt;/thead&gt;
+                &lt;tbody valign="middle"&gt;
+                  &lt;row&gt;
+                    &lt;entry&gt;
+                      &lt;Al&gt;Bengaals vuur&lt;/Al&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                      &lt;Al&gt;Bengal flames&lt;/Al&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                      &lt;Al&gt;uitstoot van gekleurde vlammen&lt;/Al&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                      &lt;Al&gt;F1&lt;/Al&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                      &lt;Al&gt;20 gram pyrotechnische stoffen of preparaten&lt;/Al&gt;
+                    &lt;/entry&gt;
+                  &lt;/row&gt;
+                  &lt;row&gt;
+                    &lt;entry&gt;
+                      &lt;Al&gt;Bengaalse lucifers&lt;/Al&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                      &lt;Al&gt;Bengal matches&lt;/Al&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                      &lt;Al&gt;uitstoot van gekleurde vlammen en vonken&lt;/Al&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                      &lt;Al&gt;F1&lt;/Al&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                      &lt;Al&gt;3,0 gram pyrotechnische stoffen of preparaten&lt;/Al&gt;
+                    &lt;/entry&gt;
+                  &lt;/row&gt;
+                &lt;/tbody&gt;
+              &lt;/tgroup&gt;
+            &lt;/table&gt;
+          &lt;/Inhoud&gt;
+        &lt;/Divisietekst&gt;
+      &lt;/Bijlage&gt;
+      ...
+  &lt;/BesluitKlassiek&gt;</code></pre></div></article><article class="topic nested2" aria-labelledby="ariaid-title7" id="voorbeeld-2-bijlages-van-een-regelingmutatie-binnen-een-wijzigbijlage-en-een-bijlage-van-een-besluit"><h3 class="title topictitle3" id="ariaid-title7">Voorbeeld 2: Bijlages van een regelingmutatie binnen een <code class="ph codeph">&lt;WijzigBijlage&gt;</code> en een bijlage van een besluit:</h3><div class="body"><pre class="pre codeblock"><code>  &lt;BesluitCompact&gt;
+      ...
+      &lt;WijzigBijlage&gt;
+        &lt;Kop&gt;
+          &lt;Label&gt;Bijlage&lt;/Label&gt;
+          &lt;Nummer&gt;A&lt;/Nummer&gt;
+          &lt;Opschrift&gt;Wijziging Omgevingsplan&lt;/Opschrift&gt;
+        &lt;/Kop&gt;
+        &lt;RegelingMutatie componentnaam="wijziging"
+                          was="/akn/nl/act/gm9999/2020/REG0001/nld@2020-01-20;1"
+                          wordt="/akn/nl/act/gm9999/2020/REG0001/nld@2020-06-16;3"&gt;
+          &lt;Vervang wat="gm9999_1__cmp_A__content_o_1"&gt;
+            &lt;Wat&gt;Begrip vuurwerkverbodsgebied wordt als volgt gewijzigd:&lt;/Wat&gt;
+            &lt;Divisietekst eId="cmp_A__content_o_1"
+                           wId="gm9999_1__cmp_A__content_o_1"&gt;
+              &lt;Inhoud&gt;
+                &lt;Begrippenlijst eId="cmp_A__content_o_1__list_1"
+                                 wId="gm9999_1__cmp_A__content_o_1__list_1"&gt;
+                  &lt;Begrip eId="cmp_A__content_o_1__list_1__item_1"
+                           wId="gm9999_1__cmp_A__content_o_1__list_1__item_1"&gt;
+                    &lt;Term&gt;vuurwerkverbodsgebied&lt;/Term&gt;
+                    &lt;Definitie&gt;
+                      &lt;!-- oude definitie met verwijzing naar oude GIO. eId met inst2 toevoeging om hem uniek te maken --&gt;
+                      &lt;Al wijzigactie="verwijder"&gt; &lt;ExtIoRef eId="cmp_A__content_o_1__list_1__item_1__ref_o_1_inst2"
+                                                              ref="/join/id/regdata/gm9999/2019/gio993859238/nld@2019-12-20;1"
+                                                              wId="gm9999_1__cmp_A__content_o_1__list_1__item_1__ref_o_1"&gt;/join/id/regdata/gm9999/2019/gio993859238/nld@2019-12-20;1&lt;/ExtIoRef&gt; &lt;/Al&gt;
+                      &lt;!-- nieuwe definitie met verwijzing naar nieuwe GIO expressie--&gt;
+                      &lt;Al wijzigactie="voegtoe"&gt; &lt;ExtIoRef eId="cmp_A__content_o_1__list_1__item_1__ref_o_1"
+                                                            ref="/join/id/regdata/gm9999/2019/gio993859238/nld@2020-06-16;3"
+                                                            wId="gm9999_3__cmp_A__content_o_1__list_1__item_1__ref_o_1"&gt;/join/id/regdata/gm9999/2019/gio993859238/nld@2020-06-16;3&lt;/ExtIoRef&gt; &lt;/Al&gt;
+                    &lt;/Definitie&gt;
+                  &lt;/Begrip&gt;
+                &lt;/Begrippenlijst&gt;
+              &lt;/Inhoud&gt;
+            &lt;/Divisietekst&gt;
+          &lt;/Vervang&gt;
+        &lt;/RegelingMutatie&gt;
+      &lt;/WijzigBijlage&gt;
+      ...
+      &lt;Bijlage&gt;
+        &lt;Kop&gt;
+          &lt;Label&gt;Bijlage&lt;/Label&gt;
+          &lt;Nummer&gt;B&lt;/Nummer&gt;
+          &lt;Opschrift&gt;Milieueffectrapportage&lt;/Opschrift&gt;
+        &lt;/Kop&gt;
+        &lt;Divisietekst eId="cmp_B__content_o_1"
+                       wId="gm9999_1__cmp_B__content_o_1"&gt;
+          &lt;Inhoud&gt;
+            &lt;Al&gt; Bij dit besluit is gebruik gemaakt van de &lt;IntIoRef eId="cmp_B__content_o_1__ref_o_1"
+                                                                      ref="gm9999_1__cmp_B__content_o_1__ref_o_2"
+                                                                      wId="gm9999_1__cmp_B__content_o_1__ref_o_1"&gt;MilieuEffectRapportage 2021&lt;/IntIoRef&gt;. &lt;/Al&gt;
+            &lt;Al&gt; Dit rapport is bij dit besluit gevoegd als informatieobject &lt;ExtIoRef eId="cmp_B__content_o_1__ref_o_2"
+                                                                                        ref="/join/id/pubdata/gm9999/2021/DOC2030029/nld@2021-02-02;v1-1;def"
+                                                                                        wId="gm9999_1__cmp_B__content_o_1__ref_o_2"&gt;/join/id/pubdata/gm9999/2021/DOC2030029/nld@2021-02-02;v1-1;def&lt;/ExtIoRef&gt; &lt;/Al&gt;
+          &lt;/Inhoud&gt;
+        &lt;/Divisietekst&gt;
+      &lt;/Bijlage&gt;
+    &lt;!-- Dit is een bijlage die niet wordt geconsolideerd. --&gt;
+      ...
+  &lt;/BesluitCompact&gt;</code></pre></div></article><article class="topic nested2" aria-labelledby="ariaid-title8" id="toevoegen-van-een-bijlage-aan-een-regeling"><h3 class="title topictitle3" id="ariaid-title8">Toevoegen van een bijlage aan een regeling</h3><div class="body"><p class="p">Een bijlage kan ook via een wijzigingsbesluit aan een (geconsolideerde) regeling worden toegevoegd:</p><pre class="pre codeblock"><code>  &lt;BesluitCompact&gt;
+    ...
+       &lt;WijzigBijlage&gt;
+         &lt;Kop&gt;
+           &lt;Label&gt;Bijlage&lt;/Label&gt;
+           &lt;Nummer&gt;B&lt;/Nummer&gt;
+           &lt;Opschrift&gt;Wijziging vuurwerkverbod&lt;/Opschrift&gt;
+         &lt;/Kop&gt;
+         &lt;RegelingMutatie componentnaam="wijzigingB"
+                           was="/akn/nl/act/bgX/2020/REG0001/nld@2020-01-20;1"
+                           wordt="/akn/nl/act/bgX/2020/REG0001/nld@2020-06-16;3"&gt;
+           &lt;VoegToe context="body"
+                     positie="volgtOp"&gt;
+             &lt;Nummer&gt;A&lt;/Nummer&gt;
+             &lt;Wat&gt;Na het lichaam wordt een bijlage ingevoegd, luidende:&lt;/Wat&gt;
+             &lt;Bijlage eId="cmp_A"
+                       wId="bgX_1__cmp_A"&gt;
+               &lt;Kop&gt;
+                 &lt;Label&gt;Bijlage&lt;/Label&gt;
+                 &lt;Nummer&gt;A&lt;/Nummer&gt;
+                 &lt;Opschrift&gt;Periodes waarin vuurwerk afgestoken mag worden&lt;/Opschrift&gt;
+               &lt;/Kop&gt;
+               &lt;Divisietekst eId="cmp_A__content_o_1"
+                              wId="bgX_1__cmp_A__content_o_1"&gt;
+                 &lt;Inhoud&gt;
+                   &lt;table eId="cmp_A__content_o_1"
+                           wId="bgX_1__cmp_A__content_o_1"&gt;
+                     &lt;tgroup cols="2"
+                              align="left"&gt;
+                       &lt;colspec colname="colA"
+                                 colnum="1"/&gt;
+                       &lt;colspec colname="colB"
+                                 colnum="2"/&gt;
+                       &lt;tbody valign="middle"&gt;
+                         &lt;row&gt;
+                           &lt;entry&gt;&lt;Al&gt;28 december&lt;/Al&gt;&lt;/entry&gt;
+                           &lt;entry&gt;&lt;Al&gt;13:00-17:00&lt;/Al&gt;&lt;/entry&gt;
+                         &lt;/row&gt;
+                         &lt;row&gt;
+                           &lt;entry&gt;&lt;Al&gt;29 december&lt;/Al&gt;&lt;/entry&gt;
+                           &lt;entry&gt;&lt;Al&gt;13:00-17:00&lt;/Al&gt;&lt;/entry&gt;
+                         &lt;/row&gt;
+                         &lt;row&gt;
+                           &lt;entry&gt;&lt;Al&gt;30 december&lt;/Al&gt;&lt;/entry&gt;
+                           &lt;entry&gt;&lt;Al&gt;13:00-17:00&lt;/Al&gt;&lt;/entry&gt;
+                         &lt;/row&gt;
+                         &lt;row&gt;
+                           &lt;entry&gt;&lt;Al&gt;31 december&lt;/Al&gt;&lt;/entry&gt;
+                           &lt;entry&gt;&lt;Al&gt;22:00-00:00&lt;/Al&gt;&lt;/entry&gt;
+                         &lt;/row&gt;
+                         &lt;row&gt;
+                           &lt;entry&gt;&lt;Al&gt;1 januari&lt;/Al&gt;&lt;/entry&gt;
+                           &lt;entry&gt;&lt;Al&gt;00:00-04:00&lt;/Al&gt;&lt;/entry&gt;
+                         &lt;/row&gt;                
+                       &lt;/tbody&gt;
+                     &lt;/tgroup&gt;
+                   &lt;/table&gt;
+                 &lt;/Inhoud&gt;
+               &lt;/Divisietekst&gt;
+             &lt;/Bijlage&gt;
+           &lt;/VoegToe&gt;
+         &lt;/RegelingMutatie&gt;
+       &lt;/WijzigBijlage&gt;
+            &lt;!-- Dit is een bijlage die geconsolideerd wordt als onderdeel van de (bestaande) regeling. --&gt;
+      ...
+  &lt;/BesluitCompact&gt;</code></pre><p class="p">Een bijlage bij een (geconsolideerde) regeling kan, net als de tekst van de regeling, via een <a class="xref" href="tekst_xsd_Element_tekst_RegelingMutatie.html#RegelingMutatie">RegelingMutatie</a> gewijzigd worden.</p></div></article></article></article></main></body></html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="directe-mutatie-van-annotaties"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Directe mutatie van annotaties</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="directe-mutatie-van-annotaties"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a><ul><li><a href="stop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="leeswijzers.html">Leeswijzers</a><ul><li><a href="toepassing.html">Basis van STOP</a></li><li><a href="architectuur.html">Architectuur en ontwerpkeuzes</a></li><li><a href="gebruik.html">Software-ontwikkeling met STOP</a><ul><li><a href="quickstart_overzicht.html">Snelstartgids STOP-XML</a></li><li><a href="tekstmodellen.html">Modellering van tekst</a></li><li><a href="io-intro.html">Informatie-object</a></li><li><a href="gio-intro.html">Geografisch informatie-object</a></li><li><a href="IO_Document.html">Document als informatie-object</a></li><li><a href="naamgevingsconventie.html">Naamgevingsconventie</a></li><li><a href="context_modules.html">Tijdsafhankelijke (context)informatie</a></li><li><a href="annotaties.html">Annotaties</a><ul><li class="active"><a href="directe_mutatie.html">Directe mutatie van annotaties</a></li><li><a href="toelichting_relatie.html">Toelichtingsrelaties voor artikelsgewijze toelichting</a></li></ul></li></ul></li><li><a href="voortbouwen_op_STOP.html">Voortbouwen op STOP</a></li></ul></li><li><a href="EA_4D1D7FD517FE4d8dA9A2B905D202C92B.html">Informatiemodel</a></li><li><a href="businessrules.html">Bedrijfsregels</a></li></ul></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1">Directe mutatie van annotaties</h1><div class="body"><p class="p">Omdat een annotatie <a class="xref" href="annotaties.html">service-informatie</a> (d.w.z. geen juridische informatie) is, kent STOP een manier om een annotatie te corrigeren zonder dat daar een (officieel) besluit voor nodig is. Een annotatie is één-op-één gekoppeld aan een besluitversie (expressie). Een annotatie wijzigen door een nieuw besluit zou leiden tot een nieuwe expressie in plaats van aanpassing van de originele expressie.</p><p class="p">Om annotaties toch te kunnen wijzigen moet gebruik gemaakt worden van een <em class="ph i">directe mutatie</em>. Een directe mutatie is een aanlevering zonder besluit en deze kan gebruikt worden om annotaties toe te voegen of te wijzigen. Een annotatie wordt gewijzigd door een nieuwe vervangende versie aan te leveren.</p></div><article class="topic nested1" aria-labelledby="ariaid-title2" id="annotatie-vervangen"><h2 class="title topictitle2" id="ariaid-title2">Annotatie vervangen</h2><div class="body"><p class="p">Een initieel, tegelijk met het besluit aangeleverde annotatie, kan in zijn geheel vervangen worden. Ook als initieel geen annotatie is aangeleverd, kan deze later alsnog toegevoegd worden. Zie voorbeeld hieronder: Bij besluit 2 is geen annotatie meegeleverd. De annotatie van besluit 1 was daardoor ook van toepassing voor instrumentversie 2. Door met een directe mutatie alsnog een annotatie aan te leveren voor voor instrumentversie 2, geldt de annotatie van versie 1 niet langer voor versie 2. Bij besluit 3 blijkt foutcorrectie noodzakelijk. De met het besluit meegeleverde annotatie moet gecorrigeerd worden. Door met een directe mutatie een nieuwe vervangende annotatie bij instrumentversie 3 aan te leveren wordt de fout hersteld.</p><br><img class="image" src="img/Annotatie_correctie_vervang.png" alt="img"><br><p class="p">Het is niet mogelijk om annotaties te muteren door alleen een wijziging aan te leveren.</p><p class="p">Een annotatie wordt vervangen door het aanleveren van:</p><ul class="ul"><li class="li"><p class="p">ExpressieIdentificatie: om aan te geven op welk besluit- of regelingversie de annotatie betrekking heeft</p></li><li class="li"><p class="p">de nieuwe versie van de annotatie.</p></li></ul><p class="p">Zie voor nadere toelichting op het aanleveren van directe mutaties, de schemadocumentatie van de DirecteMutatie in het <a class="xref" href="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/">Bronhouderkoppelvlak</a>.</p></div></article><article class="topic nested1" aria-labelledby="ariaid-title3" id="verwerking-annotatie-correcties"><h2 class="title topictitle2" id="ariaid-title3">Verwerking annotatie correcties</h2><div class="body"><p class="p">De verwerking van een gecorrigeerde annotatie leidt voor een of meerdere instrumentversies tot nieuwe instanties van de annotatie:</p><ol class="ol"><li class="li"><p class="p">als het een annotatie van een regeling betreft, dan moet bepaald worden voor welke regeling-versies de annotatie aangepast moeten worden, immers één annotatie kan op meerdere versies betrekking hebben als de opvolgende versies geen 'eigen' annotatie hebben. Dus één annotatie correctie kan leiden tot meerdere regeling-versies waarvan de annotatie aangepast wordt. Heeft de opvolgende versie wel een eigen annotatie, dan hoeft alleen de annotatie van de regeling-versie waarop de annotatie betrekking heeft, aangepast te worden.</p></li><li class="li"><p class="p">als het een annotatie van een besluit betreft, dan hoeft alleen de annotatie van betreffend besluit aangepast te worden.</p></li></ol><p class="p">Omdat annotaties geen eigen tijdlijn kennen, komt een gewijzigde annotatie altijd in de plaats van de bestaande annotatie.</p></div></article><article class="topic nested1" aria-labelledby="ariaid-title4" id="ontvangstdatum-annotatie"><h2 class="title topictitle2" id="ariaid-title4">Ontvangstdatum annotatie</h2><div class="body"><p class="p">Aan de hand van de ontvangstdatum van de annotatie, die bij de uitlevering van de annotatie meegegeven moet worden, kan gesignaleerd worden dat er een correctie in de annotatie is doorgevoerd. De oorspronkelijke annotatie is niet meer relevant en zal nooit meer uitgeleverd worden. Alleen door het volgen van de audittrail zal de oorspronkelijke annotatie in geval van nood herleid kunnen worden.</p></div></article></article></main></body></html>

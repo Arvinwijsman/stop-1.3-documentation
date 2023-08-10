@@ -1,0 +1,45 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="kennisgeving"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Kennisgeving</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="kennisgeving"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a><ul><li><a href="stop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="leeswijzers.html">Leeswijzers</a><ul><li><a href="toepassing.html">Basis van STOP</a></li><li><a href="architectuur.html">Architectuur en ontwerpkeuzes</a></li><li><a href="gebruik.html">Software-ontwikkeling met STOP</a><ul><li><a href="quickstart_overzicht.html">Snelstartgids STOP-XML</a><ul><li><a href="quickstart_1.html">Stap 1: Opstellen nieuwe regelingversie en GIOversie met OW data</a></li><li><a href="quickstart_2.html">Stap 2: Aanleveren Besluit</a></li><li><a href="quickstart_2a.html">Stap 2a: Optioneel: Kennisgeving bij Besluit</a><ul><li><a href="quickstart_2a_ExpressionIdentificatieKennisgeving.html">data:ExpressionIdentificatie (kennisgeving)</a></li><li class="active"><a href="quickstart_2a_Kennisgeving.html">Kennisgeving</a></li><li><a href="quickstart_2a_KennisgevingMetadata.html">data:KennisgevingMetadata</a></li><li><a href="quickstart_2a_Procedureverloopmutatie.html">data:Procedureverloopmutatie</a></li></ul></li><li><a href="quickstart_3.html">Stap 3: Consolideren na bekendmaking</a></li></ul></li><li><a href="tekstmodellen.html">Modellering van tekst</a></li><li><a href="io-intro.html">Informatie-object</a></li><li><a href="gio-intro.html">Geografisch informatie-object</a></li><li><a href="IO_Document.html">Document als informatie-object</a></li><li><a href="naamgevingsconventie.html">Naamgevingsconventie</a></li><li><a href="context_modules.html">Tijdsafhankelijke (context)informatie</a></li><li><a href="annotaties.html">Annotaties</a></li></ul></li><li><a href="voortbouwen_op_STOP.html">Voortbouwen op STOP</a></li></ul></li><li><a href="EA_4D1D7FD517FE4d8dA9A2B905D202C92B.html">Informatiemodel</a></li><li><a href="businessrules.html">Bedrijfsregels</a></li></ul></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1">Kennisgeving</h1><div class="body"><p class="p">Een kennisgeving zoals decentrale overheden die publiceren bestaat uit een korte tekst waarin staat dat:</p><ul class="ul"><li class="li"><p class="p">een ontwerpbesluit ter inzage ligt gedurende een bepaalde periode waarin op het ontwerpbesluit gereageerd kan worden,</p></li><li class="li"><p class="p">tegen een defintief besluit bezwaar en/of beroep aantekenen mogelijk binnen een bepaalde periode.</p></li></ul><p class="p">In STOP is de <a class="xref" href="tekst_xsd_Element_tekst_Kennisgeving.html#Kennisgeving">kennisgeving</a> is een apart Work dat verwijst naar het besluit, en wordt opgebouwd volgens het <a class="xref" href="begrippenlijst_vrijetekststructuur.html#vrijetekststructuur">vrijetekstmodel</a>.</p><p class="p">De terinzagestelling kan digitaal zijn, bijvoorbeeld via officielebekendmakingen.nl, of fysiek, bijvoorbeeld door een afspraak te maken op het gemeentehuis. De bijbehorende inzagetermijn staat in de tekst van de kennisgeving en de data van de inzagetermijn worden als <a class="xref" href="quickstart_2a_Procedureverloopmutatie.html">Procedureverloopmutatie</a> aangeleverd in de stappen "begin inzagetermijn", "eind inzagetermijn", "einde bezwaartermijn", "einde beroepstermijn".</p><p class="p">De wijze waarop bezwaar of beroep ingesteld kan worden wordt in de kennisgeving in tekst toegelicht.</p></div><article class="topic nested1" aria-labelledby="ariaid-title2" id="voorbeelden"><h2 class="title topictitle2" id="ariaid-title2">Voorbeelden</h2><div class="body"><ul class="ul"><li class="li"><p class="p"><a class="xref" href="https://koop.gitlab.io/STOP/standaard/1.3.0/go/go.html?id=git%3Avoorbeelden/Besluiten%20en%20regelingen/03%20Proces%20rondom%20besluit/01%20Initieel%20ontwerpbesluit%20met%20kennisgeving/02-BG-Kennisgeving-Tekst.xml" target="_blank">Voorbeeld tekst van een kennisgeving ontwerpbesluit</a></p></li><li class="li"><p class="p"><a class="xref" href="https://koop.gitlab.io/STOP/standaard/1.3.0/go/go.html?id=git%3Avoorbeelden/Besluiten%20en%20regelingen/03%20Proces%20rondom%20besluit/05%20Scenarios%20mbt%20gerechtelijke%20macht/01%20Beroep%20mogelijk/02-BG-Kennisgeving-Tekst.xml" target="_blank">Voorbeeld tekst van een kennisgeving definitief besluit</a></p></li></ul></div></article></article></main></body></html>

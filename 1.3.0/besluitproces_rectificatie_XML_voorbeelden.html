@@ -1,0 +1,117 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="rectificatie-xml-voorbeelden"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Rectificatie XML-voorbeelden</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="rectificatie-xml-voorbeelden"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a><ul><li><a href="stop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="leeswijzers.html">Leeswijzers</a><ul><li><a href="toepassing.html">Basis van STOP</a><ul><li><a href="juridische-context.html">Juridische context STOP</a></li><li><a href="proces_overzicht.html">Hoofdlijnen van het STOP-proces</a><ul><li><a href="proces_overzicht_compleet.html">Geïntegreerd proces van bekendmaken en consolideren</a><ul><li><a href="proces_besluit_en_regeling.html">Besluit en regeling</a></li><li><a href="proces_consolidatie.html">Consolidatie van besluiten</a></li><li><a href="doel.html">Doel</a></li><li><a href="proces_tekstmodellen.html">Tekstmodellen voor (artikelgewijze) regelingen en besluiten</a></li><li><a href="proces_besluit.html">Opnemen van regelgeving in een besluit</a></li><li><a href="proces_iwt.html">Inwerkingtredingsbepaling</a></li><li><a href="proces_overgangsrecht.html">Overgangsrecht</a></li><li><a href="proces_samenloop.html">Oplossen van samenloop</a></li><li><a href="besluitproces_rectificatie.html">Rectificatie van een besluit</a><ul><li><a href="besluitproces_rectificatie_beschrijving.html">Inleiding op rectificaties</a></li><li><a href="besluitproces_rectificatie_model.html">STOP-modellering van een rectificatie</a></li><li><a href="besluitproces_rectificatie_renvooi.html">Correcties in renvooi</a></li><li><a href="besluitproces_rectificatie_annotaties.html">Annotaties in rectificaties</a></li><li><a href="besluitproces_rectificatie_scenarios.html">Rectificatiescenario's</a></li><li class="active"><a href="besluitproces_rectificatie_XML_voorbeelden.html">Rectificatie XML-voorbeelden</a></li></ul></li><li><a href="besluitproces_rechterlijkemacht.html">Beroep</a></li></ul></li></ul></li></ul></li><li><a href="architectuur.html">Architectuur en ontwerpkeuzes</a></li><li><a href="gebruik.html">Software-ontwikkeling met STOP</a></li><li><a href="voortbouwen_op_STOP.html">Voortbouwen op STOP</a></li></ul></li><li><a href="EA_4D1D7FD517FE4d8dA9A2B905D202C92B.html">Informatiemodel</a></li><li><a href="businessrules.html">Bedrijfsregels</a></li></ul></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1">Rectificatie XML-voorbeelden</h1><div class="body"><p class="p">Op deze pagina worden voorbeelden van de <a class="xref" href="besluitproces_rectificatie_model.html">STOP-modellering van rectificaties</a> in meer detail beschreven.</p></div><article class="topic nested1" aria-labelledby="ariaid-title2" id="de-rectificatie"><h2 class="title topictitle2" id="ariaid-title2">De rectificatie</h2><div class="body"><p class="p">De rectificatie bestaat uit een of meer rectificatieteksten. Eén <a class="xref" href="tekst_xsd_Element_tekst_Rectificatietekst.html#Rectificatietekst">rectificatietekst</a> bevat één of enkele Alinea's met een Kop waarin de rectificatie beschreven/toegelicht wordt en optioneel een <a class="xref" href="tekst_xsd_Element_tekst_BesluitMutatie.html#BesluitMutatie">BesluitMutatie</a> òf een <a class="xref" href="tekst_xsd_Element_tekst_RegelingMutatie.html#RegelingMutatie">RegelingMutatie</a>.</p></div><article class="topic nested2" aria-labelledby="ariaid-title3" id="besluitmutatie"><h3 class="title topictitle3" id="ariaid-title3">BesluitMutatie</h3><div class="body"><p class="p">Voorbeeld van een Rectificatietekst met een BesluitMutatie:</p><pre class="pre codeblock xml"><code>    &lt;Rectificatietekst eId="content_o_1"
+                        wId="gm9999_1__content_o_1"&gt;
+      &lt;Kop&gt;
+        &lt;Opschrift&gt;Correctie aanhef&lt;/Opschrift&gt;
+      &lt;/Kop&gt;
+      &lt;Al&gt;In de bekendmaking van het Besluit tot het instellen van het Vuurwerkverbod, is in de
+        Aanhef niet de juiste datum en een onjuist nummer van het voorstel genoemd waarop het
+        besluit gebaseerd is.&lt;/Al&gt;
+      &lt;BesluitMutatie componentnaam="rectifcatiebesluit"
+                       was="/akn/nl/bill/gm9999/2020/B2020-00013/nld@2020-01-19;1"
+                       wordt="/akn/nl/bill/gm9999/2020/B2020-00013/nld@2020-01-18;1a"&gt;
+        &lt;Vervang wat="formula_1"&gt;
+          &lt;Wat&gt;De tekst van de Aanhef wordt op de aangegeven wijze gecorrigeerd:&lt;/Wat&gt;
+          &lt;Aanhef eId="formula_1"
+                   wId="formula_1"&gt;
+            &lt;Al&gt;De raad van de gemeente Pyrodam&lt;/Al&gt;
+            &lt;Al&gt;gelezen het voorstel van burgemeester en wethouders van &lt;VerwijderdeTekst&gt;2 januari
+              2020, nr. 2020-01&lt;/VerwijderdeTekst&gt;&lt;NieuweTekst&gt;6 januari 2020, nr.
+              2020-03&lt;/NieuweTekst&gt;;&lt;/Al&gt;
+            &lt;Al&gt;Gelet op &lt;ExtRef ref="https://wetten.overheid.nl/jci1.3:c:BWBR0005416&amp;amp;titeldeel=III&amp;amp;hoofdstuk=IX&amp;amp;artikel=149"
+                                  soort="URL"&gt;Gemeentewet, art. 149&lt;/ExtRef&gt;.&lt;/Al&gt;
+            &lt;Al&gt;besluit:&lt;/Al&gt;
+          &lt;/Aanhef&gt;
+        &lt;/Vervang&gt;
+      &lt;/BesluitMutatie&gt;
+    &lt;/Rectificatietekst&gt;</code></pre><p class="p">De <a class="xref" href="tekst_xsd_Element_tekst_BesluitMutatie.html#BesluitMutatie">BesluitMutatie</a> bevat de wijzigingen ten opzichte van de originele besluittekst in renvooi.</p></div></article><article class="topic nested2" aria-labelledby="ariaid-title4" id="regelingmutatie"><h3 class="title topictitle3" id="ariaid-title4">RegelingMutatie</h3><div class="body"><p class="p">Voorbeeld van een Rectificatietekst met een RegelingMutatie:</p><pre class="pre codeblock xml"><code>    
+    &lt;Rectificatietekst eId="content_o_4"
+                        wId="gm9999_1__content_o_4"&gt;
+      &lt;Kop&gt;
+        &lt;Opschrift&gt;Correctie bijlage&lt;/Opschrift&gt;
+      &lt;/Kop&gt;
+      &lt;Al&gt;Bovendien is in "Bijlage A Vaststelling Vuurwerkverordening" niet de juiste versie van het
+        vuurwerkverbodsgebied opgenomen.&lt;/Al&gt;
+      &lt;RegelingMutatie componentnaam="rectificatieregeling"
+                        was="/akn/nl/act/gm9999/2020/REG0001/nld@2020-01-19;1"
+                        wordt="/akn/nl/act/gm9999/2020/REG0001/nld@2020-01-20;1a"&gt;
+        &lt;!-- RENVOOI ten opzichte van de resulterende regeling van het te rectificeren besluit --&gt;
+        &lt;Vervang wat="gm9999_1__cmp_A__content_o_4__list_1"&gt;
+          &lt;Nummer&gt;A&lt;/Nummer&gt;
+          &lt;Wat&gt;De tekst van Bijlage I wordt als volgt gecorrigeerd&lt;/Wat&gt;
+          &lt;Bijlage eId="cmp_A"
+                    wId="gm9999_1__cmp_A"&gt;
+            &lt;Kop&gt;
+              &lt;Label&gt;Bijlage&lt;/Label&gt;
+              &lt;Nummer&gt;I&lt;/Nummer&gt;
+              &lt;Opschrift&gt;Overzicht Informatieobjecten&lt;/Opschrift&gt;
+            &lt;/Kop&gt;
+            &lt;Divisietekst eId="cmp_A__content_o_4"
+                           wId="gm9999_1__cmp_A__content_o_4"&gt;
+              &lt;Inhoud&gt;
+                &lt;Begrippenlijst eId="cmp_A__content_o_4__list_1"
+                                 wId="gm9999_1__cmp_A__content_o_4__list_1"&gt;
+                  &lt;Begrip eId="cmp_A__content_o_4__list_1__item_1"
+                           wId="gm9999_1__cmp_A__content_o_4__list_1__item_1"&gt;
+                    &lt;Term&gt;vuurwerkverbodsgebied&lt;/Term&gt;
+                    &lt;Definitie&gt;
+                      &lt;Al wijzigactie="verwijder"&gt;&lt;ExtIoRef eId="cmp_A__content_o_4__list_1__item_1__ref_o_1_inst2"
+                                                             ref="/join/id/regdata/gm9999/2019/gio993859238/nld@2019-12-20;1"
+                                                             wId="gm9999_1a__cmp_A__content_o_4__list_1__item_1__ref_o_1"&gt;/join/id/regdata/gm9999/2019/gio993859238/nld@2019-12-20;1&lt;/ExtIoRef&gt;&lt;/Al&gt;
+                      &lt;Al wijzigactie="voegtoe"&gt;&lt;ExtIoRef eId="cmp_A__content_o_4__list_1__item_1__ref_o_1"
+                                                           ref="/join/id/regdata/gm9999/2019/gio993859238/nld@2019-12-20;1a"
+                                                           wId="gm9999_1__cmp_A__content_o_4__list_1__item_1__ref_o_1"&gt;/join/id/regdata/gm9999/2019/gio993859238/nld@2019-12-20;1a&lt;/ExtIoRef&gt;&lt;/Al&gt;
+                    &lt;/Definitie&gt;
+                  &lt;/Begrip&gt;
+                &lt;/Begrippenlijst&gt;
+              &lt;/Inhoud&gt;
+            &lt;/Divisietekst&gt;
+          &lt;/Bijlage&gt;
+        &lt;/Vervang&gt;
+      &lt;/RegelingMutatie&gt;
+    &lt;/Rectificatietekst&gt;
+  &lt;/Lichaam&gt;
+&lt;/Rectificatie&gt;</code></pre><p class="p">De <a class="xref" href="tekst_xsd_Element_tekst_RegelingMutatie.html#RegelingMutatie">RegelingMutatie</a> bevat correcties op de regelingmutaties uit het besluit. Deze worden opgenomen als een nieuwe RegelingMutatie in Renvooi met als was-versie de door de publicatie van het besluit ontstane geconsolideerde regeling-versie.</p><p class="p">Een rectificatie bevat één of meerdere rectificatieteksten. Eén rectificatietekst bevat òf een besluitMutatie òf een RegelingMutatie.</p></div></article></article><article class="topic nested1" aria-labelledby="ariaid-title5" id="pyrodam"><h2 class="title topictitle2" id="ariaid-title5">Pyrodam</h2><div class="body"><p class="p">Zie voor verdere toelichting de beschrijving van het "Pyrodam" <a class="xref" href="https://koop.gitlab.io/STOP/standaard/1.3.0/go/go.html?id=git%3Avoorbeelden/Besluiten%20en%20regelingen/03%20Proces%20rondom%20besluit/03%20Rectificatie%20besluit/index.md" target="_blank">rectificatie-voorbeeld</a>.</p></div></article><article class="topic nested1" aria-labelledby="ariaid-title6" id="staande-praktijk"><h2 class="title topictitle2" id="ariaid-title6">Staande praktijk</h2><div class="body"><p class="p">Om te tonen hoe rectificaties uit de staande praktijk in STOP aangeleverd zouden moeten worden, zijn als voorbeeld enkele rectificaties in een aantal <a class="xref" href="https://koop.gitlab.io/STOP/standaard/1.3.0/go/go.html?id=git%3Avoorbeelden/Besluiten%20en%20regelingen/03%20Proces%20rondom%20besluit/03a%20Rectificaties%20staande%20praktijk/index.md" target="_blank">rectificatie-scenario's</a> uitgewerkt.</p></div></article></article></main></body></html>

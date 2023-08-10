@@ -1,0 +1,87 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="witruimte-in-xml"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Witruimte in XML</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="witruimte-in-xml"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a><ul><li><a href="imop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="imop_xml.html">XML-serialisatie</a><ul><li><a href="xml_modulairestructuur.html">Modulaire structuur</a></li><li><a href="xml_documenten.html">IMOP-modules in XML-documenten</a></li><li><a href="xml_schemalocation.html">Verwijzing naar schema's</a></li><li class="active"><a href="xml_witruimte.html">Witruimte in XML</a></li></ul></li><li><a href="uitwisselpakket.html">Uitwisselpakket</a></li><li><a href="schemata_gebruik.html">Gebruik van IMOP</a></li><li><a href="schema_documentatie.html">Schemadocumentatie</a></li><li><a href="imop_bedrijfsregels.html">Bedrijfsregels</a></li><li><a href="imop_waardelijsten.html">Waardelijsten</a></li></ul></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1">Witruimte in XML</h1><div class="body"></div><article class="topic nested1" aria-labelledby="ariaid-title2" id="mixed-content-in-xml"><h2 class="title topictitle2" id="ariaid-title2">Mixed content in XML</h2><div class="body"><p class="p">IMOP gebruikt XML zowel voor het doorgeven van gegevens als voor tekst.</p><ul class="ul"><li class="li"><p class="p">Bij XML voor gegevens is witruimte tussen de XML-elementen niet relevant en  wordt daarom genegeerd.</p></li><li class="li"><p class="p">Bij XML voor tekst is dat anders: witruimte heeft daar wel degelijk een betekenis.</p></li></ul><p class="p">De tekst-bevattende elementen zijn te herkennen in de XML-schema's en in de documentatie daarvan aan:</p><pre class="pre codeblock"><code>`mixed = "true"`&#xD;</code></pre><p class="p">Dat geeft aan dat de inhoud van het XML-element als <em class="ph i">mixed content</em> beschouwd moet worden: tekst met daarbinnen weer ("inline") XML-tags. Zo kan bijvoorbeeld het <a class="xref" href="tekst_xsd_Element_tekst_Al.html#Al"><code class="ph codeph">Al</code></a>) element naast tekst ook het <a class="xref" href="tekst_xsd_Element_tekst_i.html#i"><code class="ph codeph">i</code></a>- en <a class="xref" href="tekst_xsd_Element_tekst_sub.html#sub"><code class="ph codeph">sub</code></a>-element bevatten.</p><p class="p">De eigenschap dat een XML-element mixed content is, wordt expliciet aangegeven in een schema. Als het attribuut <code class="ph codeph">mixed</code> ontbreekt, dan is er geen sprake van mixed content en is witruimte tussen de XML-elementen niet van belang.</p><p class="p">In mixed content zijn (net als in het HTML DOM model) spaties en regeleinden betekenisvol. Dus</p><pre class="pre codeblock"><code>&lt;i&gt;V&lt;/i&gt;&lt;b&gt;H&lt;/b&gt;</code></pre><p class="p">staat in mixed mode voor <code class="ph codeph">VH</code>, en</p><pre class="pre codeblock"><code>&lt;i&gt;V&lt;/i&gt; &lt;b&gt;H&lt;/b&gt;</code></pre><p class="p">(met spatie) voor <code class="ph codeph">V H</code> (<em class="ph i">met spatie tussen V en H</em>).</p><p class="p">Bij gebruik van XML voor het uitwisselen van gegevens wordt er wel voor gekozen om de XML via "pretty-print" of met inspringen (<em class="ph i">indent</em>) op te stellen zodat het voor mensen beter te lezen is. Voor de mixed content elementen mag de software daarbij geen relevante witruimte zoals spaties of regeleinden toevoegen, want dan verandert de inhoud van het element. Omdat alleen in het XML-schema te zien is welke elementen het mixed content model gebruiken, zal software die geen gebruik maakt van het schema bij pretty-print/indent niet in staat zijn om een dergelijke pretty-print uit te voeren. Bij gebruik van STOP-tekstmodules in een XML-document wordt daarom geadviseerd geen pretty-print of indent toe te passen. Tekstmodules zijn gecodeerd in de namespace <code class="ph codeph">https://standaarden.overheid.nl/stop/imop/tekst/</code> gedefinieerd door <a class="xref" href="tekst_xsd_Main_schema_tekst_xsd.html#tekst.xsd">imop-tekst.xsd</a>.</p></div></article><article class="topic nested1" aria-labelledby="ariaid-title3" id="imop-elementen-voor-witruimte"><h2 class="title topictitle2" id="ariaid-title3">IMOP-elementen voor witruimte</h2><div class="body"><p class="p">Spaties en regeleinden in de XML resulteren in spaties in de tekst. Het maakt daarbij niet uit of er in de XML één of meerdere opeenvolgende spaties staan: deze worden bij weergave van de tekst getoond als een enkele spatie. Om witruimte aan te brengen tussen tekstonderdelen kent IMOP speciale elementen.</p></div><article class="topic nested2" aria-labelledby="ariaid-title4" id="witruimte-verdeling-in-een-inhoud"><h3 class="title topictitle3" id="ariaid-title4">Witruimte-verdeling in een <a class="xref" href="tekst_xsd_Element_tekst_Inhoud.html#Inhoud">Inhoud</a></h3><div class="body"><p class="p">Tussen Alinea's, Lijsten, afbeeldingen en tabellen is de verwachting dat een witregel wordt geplaatst wanneer de tekst in een element Inhoud is geplaatst.</p><p class="p">Voorbeeld XML:</p><pre class="pre codeblock"><code>    &lt;Inhoud&gt;
+        &lt;Al&gt;Eerste alinea&lt;/Al&gt;
+        &lt;Al&gt;Tweede alinea&lt;/Al&gt;
+        &lt;Lijst&gt;
+            &lt;Li&gt;
+                &lt;Linummer&gt;-&lt;/Linummer&gt;
+                &lt;Al&gt;Eerste lijst-item&lt;/Al&gt;
+            &lt;/Li&gt;
+            &lt;Li&gt;
+                &lt;Linummer&gt;-&lt;/Linummer&gt;
+                &lt;Al&gt;Tweede lijst-item&lt;/Al&gt;
+            &lt;/Li&gt;
+        &lt;/Lijst&gt;
+    &lt;/Inhoud&gt;</code></pre><p class="p">Eenvoudig voorbeeld van de weergave:</p><pre class="pre codeblock"><code>    Eerste alinea
+
+    Tweede alinea
+
+    - Eerste lijst-item
+    - Tweede lijst-item</code></pre></div></article><article class="topic nested2" aria-labelledby="ariaid-title5" id="geen-witruimte-in-een-groep"><h3 class="title topictitle3" id="ariaid-title5">Geen witruimte in een <a class="xref" href="tekst_xsd_Element_tekst_Groep.html#Groep">Groep</a></h3><div class="body"><p class="p">Wanneer de tekst wordt geplaatst binnen een element <code class="ph codeph">Groep</code>, zal tussen de elementen geen extra wit worden gegeven en kan de tekst aaneengesloten worden getoond.</p><p class="p">Voorbeeld XML:</p><pre class="pre codeblock"><code>    &lt;Inhoud&gt;
+        &lt;Groep&gt;
+            &lt;Al&gt;Eerste alinea&lt;/Al&gt;
+            &lt;Al&gt;Tweede alinea&lt;/Al&gt;
+            &lt;Lijst&gt;
+                &lt;Li&gt;
+                    &lt;Linummer&gt;-&lt;/Linummer&gt;
+                    &lt;Al&gt;Eerste lijst-item&lt;/Al&gt;
+                &lt;/Li&gt;
+                &lt;Li&gt;
+                    &lt;Linummer&gt;-&lt;/Linummer&gt;
+                    &lt;Al&gt;Tweede lijst-item&lt;/Al&gt;
+                &lt;/Li&gt;
+            &lt;/Lijst&gt;
+        &lt;/Groep&gt;
+        &lt;Al&gt;Derde alinea&lt;/Al&gt;
+    &lt;/Inhoud&gt;</code></pre><p class="p">Voorbeeld van de weergave:</p><pre class="pre codeblock"><code>    Eerste alinea
+    Tweede alinea
+    - Eerste lijst-item
+    - Tweede lijst-item
+
+    Derde alinea</code></pre></div></article><article class="topic nested2" aria-labelledby="ariaid-title6" id="regelovergang-binnen-een-alinea"><h3 class="title topictitle3" id="ariaid-title6">Regelovergang binnen een alinea</h3><div class="body"><p class="p">Wanneer binnen een alinea een tekst op een nieuwe regel moet beginnen kan een element <a class="xref" href="tekst_xsd_Element_tekst_br.html#br">br</a> worden gebruikt om een deel van de tekst op een nieuwe regel te beginnen. Het achter elkaar plaatsen van meer dan 1 <code class="ph codeph">br</code>-element om extra witruimte tussen tekstblokken is niet toegestaan (zie ook <a class="xref" href="tekstpresentatie.html#witruimte">tekstpresenteren</a>); het scheiden van tekstblokken met witruimte kan alleen met een alinea.</p><p class="p">Voorbeeld XML:</p><pre class="pre codeblock"><code>    &lt;Inhoud&gt;
+        &lt;Al&gt;De eerste zin.&lt;br/&gt;De tweede zin.&lt;/Al&gt;
+    &lt;Inhoud&gt;</code></pre><p class="p">Voorbeeld van de weergave:</p><pre class="pre codeblock"><code>    De eerste zin.
+    De tweede zin.</code></pre></div></article></article></article></main></body></html>

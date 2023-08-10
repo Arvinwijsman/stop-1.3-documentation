@@ -1,0 +1,45 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="xml-serialisatie"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>XML-serialisatie</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="xml-serialisatie"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a><ul><li><a href="imop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li class="active"><a href="imop_xml.html">XML-serialisatie</a><ul><li><a href="xml_modulairestructuur.html">Modulaire structuur</a></li><li><a href="xml_documenten.html">IMOP-modules in XML-documenten</a></li><li><a href="xml_schemalocation.html">Verwijzing naar schema's</a></li><li><a href="xml_witruimte.html">Witruimte in XML</a></li></ul></li><li><a href="uitwisselpakket.html">Uitwisselpakket</a></li><li><a href="schemata_gebruik.html">Gebruik van IMOP</a></li><li><a href="schema_documentatie.html">Schemadocumentatie</a></li><li><a href="imop_bedrijfsregels.html">Bedrijfsregels</a></li><li><a href="imop_waardelijsten.html">Waardelijsten</a></li></ul></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1">XML-serialisatie</h1><div class="body"><p class="p">IMOP schrijft voor dat STOP-informatie wordt uitgewisseld in de vorm van XML-documenten. In deze sectie wordt ingegaan op de wijze waarop dat plaats moet vinden.</p><dl class="dl"><dt class="dt dlterm"><a class="xref" href="xml_modulairestructuur.html">Modulaire structuur</a></dt><dd class="dd"><p class="p">IMOP schrijft niet de XML-documenten als zodanig voor, maar IMOP-modules (XML-fragmenten) die in de documenten kunnen voorkomen. Hierdoor ontstaat er voor systemen die STOP implementeren ruimte om naar eigen inzicht een API te ontwerpen die van IMOP-modules gebruikt maakt.</p></dd><dt class="dt dlterm"><a class="xref" href="xml_documenten.html">IMOP-modules in XML-documenten</a></dt><dd class="dd"><p class="p">IMOP stelt wel eisen aan de manier waarop de IMOP-modules in XML-documenten zijn opgenomen.</p></dd><dt class="dt dlterm"><a class="xref" href="xml_schemalocation.html">Verwijzing naar schema's</a></dt><dd class="dd"><p class="p">In een XML-document kan verwezen worden naar de vindplaats van de schema's die gebruikt zijn om de XML te maken. In IMOP is dit optioneel. IMOP raadt een manier om XML-documenten te valideren. Als het gebruikt wordt, is het advies om naar de internet-locaties van de schema's te verwijzen.</p></dd><dt class="dt dlterm"><a class="xref" href="xml_witruimte.html">Witruimte in XML</a></dt><dd class="dd"><p class="p">IMOP gebruikt XML zowel voor het doorgeven van gegevens als voor tekst. Bij XML voor gegevens is witruimte tussen de XML elementen niet belangrijk: het wordt genegeerd. Bij XML voor tekst is dat anders: witruimte heeft daar wel degelijk een betekenis.</p></dd></dl></div></article></main></body></html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="nl-nl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="Waarde"><meta name="DC.language" content="nl-nl"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Element rsc:Waarde</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="Waarde"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a><ul><li><a href="imop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="imop_xml.html">XML-serialisatie</a></li><li><a href="uitwisselpakket.html">Uitwisselpakket</a></li><li><a href="schemata_gebruik.html">Gebruik van IMOP</a></li><li><a href="schema_documentatie.html">Schemadocumentatie</a><ul><li><a href="schema_documentatie_legenda.html">Legenda van de schemadocumentatie</a></li><li><a href="imop_modules.html">STOP-modules in IMOP</a></li><li><a href="tekst_xsd_Main_schema_tekst_xsd.html">Schema imop-tekst.xsd</a></li><li><a href="gio_xsd_Main_schema_gio_xsd.html">Schema imop-gio.xsd</a></li><li><a href="geo_xsd_Main_schema_geo_xsd.html">Schema imop-geo.xsd</a></li><li><a href="se_xsd_Main_schema_se_xsd.html">Schema se-FeatureStyle-imop.xsd</a></li><li><a href="ogc_xsd_Main_schema_ogc_xsd.html">Schema se-filter-imop.xsd</a></li><li><a href="data_xsd_Main_schema_data_xsd.html">Schema imop-data.xsd</a></li><li><a href="cons_xsd_Main_schema_cons_xsd.html">Schema imop-consolidatie.xsd</a></li><li><a href="rsc_xsd_Main_schema_rsc_xsd.html">Schema imop-resources.xsd</a><ul><li><a href="rsc_xsd_Attribute_Group_rsc_agSchemaVersie.html">agSchemaVersie</a></li><li><a href="rsc_xsd_Element_rsc_beschrijving.html">beschrijving</a></li><li><a href="rsc_xsd_Simple_Type_rsc_dtResourceRef.html">dtResourceRef</a></li><li><a href="rsc_xsd_Simple_Type_rsc_dtSchemaVersie.html">dtSchemaVersie</a></li><li><a href="rsc_xsd_Element_rsc_eindverantwoordelijke.html">eindverantwoordelijke</a></li><li><a href="rsc_xsd_Element_rsc_geldigTot.html">geldigTot</a></li><li><a href="rsc_xsd_Element_rsc_geldigVanaf.html">geldigVanaf</a></li><li><a href="rsc_xsd_Element_rsc_heeftVindplaats.html">heeftVindplaats</a></li><li><a href="rsc_xsd_Element_rsc_id.html">id</a></li><li><a href="rsc_xsd_Element_rsc_label.html">label</a></li><li><a href="rsc_xsd_Element_rsc_uitbreidbaar.html">uitbreidbaar</a></li><li><a href="rsc_xsd_Element_rsc_url.html">url</a></li><li><a href="rsc_xsd_Element_rsc_versie.html">versie</a></li><li><a href="rsc_xsd_Element_rsc_Vindplaats.html">Vindplaats</a></li><li><a href="rsc_xsd_Element_rsc_vindplaatsen.html">vindplaatsen</a></li><li class="active"><a href="rsc_xsd_Element_rsc_Waarde.html">Waarde</a></li><li><a href="rsc_xsd_Element_rsc_Waardelijst.html">Waardelijst</a></li><li><a href="rsc_xsd_Element_rsc_WaardelijstInfo.html">WaardelijstInfo</a></li></ul></li><li><a href="br_xsd_Main_schema_br_xsd.html">Schema imop-bedrijfsregels.xsd</a></li><li><a href="sv_xsd_Main_schema_sv_xsd.html">Schema imop-schemata.xsd</a></li><li><a href="uws_xsd_Main_schema_uws_xsd.html">Schema imop-uitwisseling.xsd</a></li></ul></li><li><a href="imop_bedrijfsregels.html">Bedrijfsregels</a></li><li><a href="imop_waardelijsten.html">Waardelijsten</a></li></ul></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+   <h1 class="title topictitle1" id="ariaid-title1">Element rsc:Waarde</h1>
+   <div class="body">
+      <table class="table frame-all"><caption></caption><colgroup><col style="width:10.714285714285714%"><col style="width:89.28571428571429%"></colgroup><tbody class="tbody">
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Namespace</td>
+                  <td class="entry align-left colsep-1 rowsep-1">https://standaarden.overheid.nl/stop/imop/resources/</td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Definitie</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="div">
+    <p class="p">Eén van de waarden opgenomen in een waardelijst. Een waarde wordt beschreven met een id, een
+      label en andere optionele eigenschappen.</p>
+    <p class="p">Een waarde is een <a class="xref link_im" href="__informatiemodel_index_resource.html#resource">resource</a> met
+      extra eigenschappen die alleen relevant zijn binnen de context van <a class="xref link_im" href="__informatiemodel_index_waardelijst.html#waardelijst">Waardelijsten</a>.</p>
+  </div>
+  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Informatie</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="div">
+    <p class="p"><strong class="ph b">Voorbeeld</strong></p>
+    <pre class="pre codeblock"><code>
+  &lt;Waarde&gt;
+    &lt;id&gt;/tooi/def/concept/c_e79db34a&lt;/id&gt;
+    &lt;label&gt;milieubelasting&lt;/label&gt;
+  &lt;/Waarde&gt;</code></pre>
+  </div>
+</td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Informatiemodel</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <a class="xref link_ea" href="EA_B23DD48A67B642f69DDB45E1663593C4.html#Pkg__7B768F0061C3400eA80CB1FA12466E3E">Waarde (entiteit)</a></td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Diagram</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="p">
+                        <div class="fig imagemap" id="Waarde__rsc_xsd_Element_rsc_Waarde"><img usemap="#d198727e103" class="image" src="img/rsc_xsd_Element_rsc_Waarde.png"><map name="d198727e103" id="d198727e103"><area href="rsc_xsd_Element_rsc_id.html#id" alt="Element rsc:id" title="Element rsc:id" shape="rect" coords="239,2,394,46"><area href="rsc_xsd_Element_rsc_label.html#label" alt="Element rsc:label" title="Element rsc:label" shape="rect" coords="239,56,343,100"><area href="rsc_xsd_Element_rsc_beschrijving.html#beschrijving" alt="Element rsc:beschrijving" title="Element rsc:beschrijving" shape="rect" coords="239,110,347,154"><area href="rsc_xsd_Element_rsc_vindplaatsen.html#vindplaatsen" alt="Element rsc:vindplaatsen" title="Element rsc:vindplaatsen" shape="rect" coords="239,164,350,189"><area href="rsc_xsd_Element_rsc_eindverantwoordelijke.html#eindverantwoordelijke" alt="Element rsc:eindverantwoordelijke" title="Element rsc:eindverantwoordelijke" shape="rect" coords="239,199,395,243"><area href="rsc_xsd_Element_rsc_geldigVanaf.html#geldigVanaf" alt="Element rsc:geldigVanaf" title="Element rsc:geldigVanaf" shape="rect" coords="168,253,276,297"><area href="rsc_xsd_Element_rsc_geldigTot.html#geldigTot" alt="Element rsc:geldigTot" title="Element rsc:geldigTot" shape="rect" coords="168,307,267,351"></map></div>
+                     </div>
+                  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Eigenschappen</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="p">
+                        <table class="table frame-all"><caption></caption><colgroup><col style="width:20%"><col style="width:80%"></colgroup><tbody class="tbody">
+                                 <tr class="row">
+                                    <td class="entry align-left colsep-1 rowsep-1">content: </td>
+                                    <td class="entry align-left colsep-1 rowsep-1">
+                                       <strong class="ph b">complex</strong>
+                                    </td>
+                                 </tr>
+                              </tbody></table>
+                     </div>
+                  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Gebruikt door</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="p">
+                        <table class="table frame-all"><caption></caption><colgroup><col style="width:20%"><col style="width:80%"></colgroup><tbody class="tbody">
+                                 <tr class="row">
+                                    <td class="entry align-left colsep-1 rowsep-1">Element </td>
+                                    <td class="entry align-left colsep-1 rowsep-1">
+                                       <a class="xref" href="rsc_xsd_Element_rsc_Waardelijst.html#Waardelijst">Element rsc:Waardelijst</a>
+                                    </td>
+                                 </tr>
+                              </tbody></table>
+                     </div>
+                  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Kinderen</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <a class="xref" href="rsc_xsd_Element_rsc_beschrijving.html#beschrijving">Element rsc:beschrijving</a>, <a class="xref" href="rsc_xsd_Element_rsc_eindverantwoordelijke.html#eindverantwoordelijke">Element rsc:eindverantwoordelijke</a>, <a class="xref" href="rsc_xsd_Element_rsc_geldigTot.html#geldigTot">Element rsc:geldigTot</a>, <a class="xref" href="rsc_xsd_Element_rsc_geldigVanaf.html#geldigVanaf">Element rsc:geldigVanaf</a>, <a class="xref" href="rsc_xsd_Element_rsc_id.html#id">Element rsc:id</a>, <a class="xref" href="rsc_xsd_Element_rsc_label.html#label">Element rsc:label</a>, <a class="xref" href="rsc_xsd_Element_rsc_vindplaatsen.html#vindplaatsen">Element rsc:vindplaatsen</a>
+                  </td>
+               </tr>
+               </tbody></table>
+   </div>
+</article></main></body></html>

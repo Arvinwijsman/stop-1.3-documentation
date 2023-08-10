@@ -1,0 +1,557 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="nl-nl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="Pkg"><meta name="DC.language" content="nl-nl"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>GML bestand</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="Pkg"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a><ul><li><a href="stop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="leeswijzers.html">Leeswijzers</a></li><li><a href="EA_4D1D7FD517FE4d8dA9A2B905D202C92B.html">Informatiemodel</a><ul><li><a href="EA_9E187217A693458593B4BC483B77322B.html">Legenda van de diagrammen</a></li><li><a href="EA_068BE3F17D2D41a8AA2E39A355337401.html">Toepassingsgebied</a></li><li><a href="EA_BEA65540863F4cedAE03E4C3D0A29EAA.html">Algemeen</a></li><li><a href="EA_A1BBB86A635B4bf6B2FCECD1CFE6A3C9.html">Besluiten en regelgeving</a><ul><li><a href="EA_212F1874134F41cc9EFE006ABEA7DC38.html">Regeling en regelingversie</a></li><li><a href="EA_ED1B61D3297C4ae6BD9A4FDB6BDF83F9.html">Informatieobject en informatieobjectversie</a><ul><li><a href="EA_EC4DE25BFB1341e6B632337DAF9C2791.html">Metadata</a></li><li><a href="EA_6E7EDCDFD326478298707D8E6F0610BA.html">Status gerechtelijke procedure</a></li><li><a href="EA_4B8D0B2D93B743069F927FD0F26A99DE.html">Geo-informatieobject</a><ul><li class="active"><a href="EA_1C752EC8163240cbA9644D1CD9266E58.html">GML bestand</a></li><li><a href="EA_77AF770705D4439c946D8E821BC18F18.html">Symbolisatie</a></li><li><a href="EA_44F1995C792B4434829942718BB589BA.html">Juridisch geborgde bronobjecten</a></li></ul></li><li><a href="EA_8FBBC5C6DF3B4508B429D11845BACA21.html">PDF-document</a></li></ul></li><li><a href="EA_587A8F5146CD44d9AB6EA1BEE8573352.html">Besluit en besluitversie</a></li><li><a href="EA_DBE8BF553C524b71BB84CFF11C7660CB.html">Revisies</a></li></ul></li><li><a href="EA_E0EFE05F9FBB45c6AB2493B9FF9037EC.html">Officiële publicaties</a></li><li><a href="EA_81311E5C8AD34b35B153B21B50080288.html">Consolidatie van regelgeving</a></li></ul></li><li><a href="businessrules.html">Bedrijfsregels</a></li></ul></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title topictitle1" id="ariaid-title1">GML bestand</h1>
+  <div class="body">
+      <div class="div">
+    <p class="p">De geometrische informatie van een Geografisch Informatieobject, wordt vastgelegd in een GML bestand, conform de GML standaard. 
+    </p>
+  </div>
+<figure class="fig fignone ea_diagram" id="Pkg__74230A14E697469584FCD609C9F23FE4">
+<div class="p"><div class="fig imagemap"><img usemap="#d447305e24" class="image zoomable" src="img/EA_74230A14E697469584FCD609C9F23FE4.png"><map name="d447305e24" id="d447305e24"><area href="#Pkg__C3F72527750248c4A17203A5A09AAA6F" alt="GeometryPropertyType (entiteit)" title="GeometryPropertyType (entiteit)" shape="rect" coords="1027,13,1183,61"><area href="#Pkg__005977661DC342bf88BA8E5C21CC5096" alt="AbstractFeatureType (entiteit)" title="AbstractFeatureType (entiteit)" shape="rect" coords="574,13,730,61"><area href="#Pkg__1B1D108A52034885BA79F3992DDCDD47" alt="Geo-informatieobject vaststelling (entiteit)" title="Geo-informatieobject vaststelling (entiteit)" shape="rect" coords="369,87,574,165"><area href="#Pkg__A04E528498994d24B88888F7EE8331FE" alt="Normwaarde (entiteit)" title="Normwaarde (entiteit)" shape="rect" coords="931,499,1105,587"><area href="#Pkg__0795C256C5B748679546C1FB2611E0CD" alt="Norm informatie (entiteit)" title="Norm informatie (entiteit)" shape="rect" coords="532,499,705,615"><area href="#Pkg__40128C62CE244fda94AA749C54107FDE" alt="GIO deel (entiteit)" title="GIO deel (entiteit)" shape="rect" coords="926,368,1099,437"><area href="#Pkg__285A0B7F28A44b96A469DDF34A8CCB3A" alt="GIO delen (entiteit)" title="GIO delen (entiteit)" shape="rect" coords="527,347,700,409"><area href="#Pkg__383CB7CFCD2443839724BF005941D5AA" alt="Groep (entiteit)" title="Groep (entiteit)" shape="rect" coords="754,368,873,450"><area href="#Pkg__4BE8928CF3864ce9B7D207D63EC4E43A" alt="Geografische context (entiteit)" title="Geografische context (entiteit)" shape="rect" coords="464,650,691,778"><area href="#Pkg__7C5BE984FA2D4a0b8BCD816E8FF23677" alt="Locatie (entiteit)" title="Locatie (entiteit)" shape="rect" coords="1001,217,1225,302"><area href="#Pkg__D75450C54CA2412d9F53EFAE6E50002C" alt="Geo-informatieobject versie (entiteit)" title="Geo-informatieobject versie (entiteit)" shape="rect" coords="464,193,684,302"><area href="#Pkg__6C7EE7D2D0E74278A2AC7849C09A35E1" alt="Vaststellingscontext (entiteit)" title="Vaststellingscontext (entiteit)" shape="rect" coords="130,691,261,736"><area href="#Pkg__B1B26CAAC98145e3A3EB2D7E673524DA" alt="Informatieobjectinhoud (entiteit)" title="Informatieobjectinhoud (entiteit)" shape="rect" coords="126,221,280,274"><area href="#Pkg__5CE37AD33BBB4307B5983F00E49E985B" alt="Informatieobjectversie (entiteit)" title="Informatieobjectversie (entiteit)" shape="rect" coords="13,87,168,140"></map></div></div>
+</figure>
+<section class="section ea_elementen"><h2 class="title sectiontitle">Elementen</h2>
+            
+            <table class="table ea_element" id="Pkg__005977661DC342bf88BA8E5C21CC5096"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__005977661DC342bf88BA8E5C21CC5096__entry__1" colspan="4">AbstractFeatureType</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row">
+                        <td class="entry ea_doc_titel" headers="Pkg__005977661DC342bf88BA8E5C21CC5096__entry__1">Beschrijving</td>
+                        <td class="entry ea_element_beschrijving" headers="Pkg__005977661DC342bf88BA8E5C21CC5096__entry__1" colspan="3"><div class="div">
+    <p class="p">AbstractFeatureType is een extensie van
+      AbstractGMLType</p>
+  </div>
+</td>
+                    </tr>
+                    <tr class="row">
+                            <td class="entry ea_genspec_titel" headers="Pkg__005977661DC342bf88BA8E5C21CC5096__entry__1">Generalisatie van</td>
+                            <td class="entry ea_genspec_lijst" headers="Pkg__005977661DC342bf88BA8E5C21CC5096__entry__1" colspan="3"><a class="xref ea_genspec_direct link_ea" href="#Pkg__1B1D108A52034885BA79F3992DDCDD47">Geo-informatieobject vaststelling (entiteit)</a>, <a class="xref ea_genspec_direct link_ea" href="#Pkg__D75450C54CA2412d9F53EFAE6E50002C">Geo-informatieobject versie (entiteit)</a>, <a class="xref ea_genspec_direct link_ea" href="#Pkg__7C5BE984FA2D4a0b8BCD816E8FF23677">Locatie (entiteit)</a></td>
+                        </tr>
+                    </tbody></table>
+            <table class="table ea_element" id="Pkg__40128C62CE244fda94AA749C54107FDE"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__40128C62CE244fda94AA749C54107FDE__entry__1" colspan="4">GIO deel</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row">
+                        <td class="entry ea_doc_titel" headers="Pkg__40128C62CE244fda94AA749C54107FDE__entry__1">Beschrijving</td>
+                        <td class="entry ea_element_beschrijving" headers="Pkg__40128C62CE244fda94AA749C54107FDE__entry__1" colspan="3"><div class="div">
+    <p class="p">Een locatiegroep, aanduiding bij een Locatie tot welke locatiegroep/GIO-deel deze Locatie behoort. 
+    </p>
+  </div>
+</td>
+                    </tr>
+                    <tr class="row">
+                            <td class="entry ea_eltpackages_titel" headers="Pkg__40128C62CE244fda94AA749C54107FDE__entry__1">Zie ook</td>
+                            <td class="entry ea_eltpackages_lijst" headers="Pkg__40128C62CE244fda94AA749C54107FDE__entry__1" colspan="3"><a class="xref link_ea" href="EA_44F1995C792B4434829942718BB589BA.html#Pkg">Juridisch geborgde bronobjecten (onderwerp)</a>, <a class="xref link_ea" href="EA_77AF770705D4439c946D8E821BC18F18.html#Pkg">Symbolisatie (onderwerp)</a></td>
+                        </tr>
+                    <tr class="row ea_attribuut_header">
+                            <td class="entry" headers="Pkg__40128C62CE244fda94AA749C54107FDE__entry__1"><strong class="ph b">Eigenschappen</strong></td>
+                            <td class="entry" headers="Pkg__40128C62CE244fda94AA749C54107FDE__entry__1"><strong class="ph b">Type</strong></td>
+                            <td class="entry" headers="Pkg__40128C62CE244fda94AA749C54107FDE__entry__1"><strong class="ph b">Kardinaliteit</strong></td>
+                            <td class="entry" headers="Pkg__40128C62CE244fda94AA749C54107FDE__entry__1"><strong class="ph b">Beschrijving</strong></td>
+                        </tr>
+                        <tr class="row ea_attribuut" id="Pkg__45A5BF9C67A34c63BD34330CCE4AC0D7">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__40128C62CE244fda94AA749C54107FDE__entry__1">Groep ID</td>
+                            <td class="entry" headers="Pkg__40128C62CE244fda94AA749C54107FDE__entry__1">string</td>
+                            <td class="entry" headers="Pkg__40128C62CE244fda94AA749C54107FDE__entry__1">1..1</td>
+                            <td class="entry" headers="Pkg__40128C62CE244fda94AA749C54107FDE__entry__1">
+                                </td>
+                         </tr>
+                    </tbody></table>
+            <table class="table ea_element" id="Pkg__285A0B7F28A44b96A469DDF34A8CCB3A"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__285A0B7F28A44b96A469DDF34A8CCB3A__entry__1" colspan="4">GIO delen</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row">
+                        <td class="entry ea_doc_titel" headers="Pkg__285A0B7F28A44b96A469DDF34A8CCB3A__entry__1">Beschrijving</td>
+                        <td class="entry ea_element_beschrijving" headers="Pkg__285A0B7F28A44b96A469DDF34A8CCB3A__entry__1" colspan="3"><div class="div">
+    <p class="p">Container omvat de lijst van voorkomende locatiegroepen(GIO-delen) in deze GIO.</p>
+  </div>
+</td>
+                    </tr>
+                    <tr class="row">
+                            <td class="entry ea_eltpackages_titel" headers="Pkg__285A0B7F28A44b96A469DDF34A8CCB3A__entry__1">Zie ook</td>
+                            <td class="entry ea_eltpackages_lijst" headers="Pkg__285A0B7F28A44b96A469DDF34A8CCB3A__entry__1" colspan="3"><a class="xref link_ea" href="EA_77AF770705D4439c946D8E821BC18F18.html#Pkg">Symbolisatie (onderwerp)</a></td>
+                        </tr>
+                    <tr class="row ea_attribuut_header">
+                            <td class="entry" headers="Pkg__285A0B7F28A44b96A469DDF34A8CCB3A__entry__1"><strong class="ph b">Eigenschappen</strong></td>
+                            <td class="entry" headers="Pkg__285A0B7F28A44b96A469DDF34A8CCB3A__entry__1"><strong class="ph b">Type</strong></td>
+                            <td class="entry" headers="Pkg__285A0B7F28A44b96A469DDF34A8CCB3A__entry__1"><strong class="ph b">Kardinaliteit</strong></td>
+                            <td class="entry" headers="Pkg__285A0B7F28A44b96A469DDF34A8CCB3A__entry__1"><strong class="ph b">Beschrijving</strong></td>
+                        </tr>
+                        <tr class="row ea_attribuut" id="Pkg__A47B81FD947743208B04A9C3C6A5F257">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__285A0B7F28A44b96A469DDF34A8CCB3A__entry__1">Groepen</td>
+                            <td class="entry" headers="Pkg__285A0B7F28A44b96A469DDF34A8CCB3A__entry__1"><a class="xref link_ea" href="#Pkg__383CB7CFCD2443839724BF005941D5AA">Groep (entiteit)</a></td>
+                            <td class="entry" headers="Pkg__285A0B7F28A44b96A469DDF34A8CCB3A__entry__1">1..1</td>
+                            <td class="entry" headers="Pkg__285A0B7F28A44b96A469DDF34A8CCB3A__entry__1">
+                                </td>
+                         </tr>
+                    </tbody></table>
+            <table class="table ea_element" id="Pkg__1B1D108A52034885BA79F3992DDCDD47"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__1B1D108A52034885BA79F3992DDCDD47__entry__1" colspan="4">Geo-informatieobject vaststelling</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row noimlinks-ea:{1B1D108A-5203-4885-BA79-F3992DDCDD47}">
+                        <td class="entry ea_doc_titel" headers="Pkg__1B1D108A52034885BA79F3992DDCDD47__entry__1">Implementatie</td>
+                        <td class="entry ea_relatedlinks_lijst" headers="Pkg__1B1D108A52034885BA79F3992DDCDD47__entry__1" colspan="3"><a class="xref link_xsd" href="geo_xsd_Complex_Type_geo_GeoInformatieObjectVaststellingType.html#GeoInformatieObjectVaststellingType">complexType geo:GeoInformatieObjectVaststellingType</a>, <a class="xref link_xsd" href="gio_xsd_Element_gio_GeografischeContext.html#GeografischeContext">gio:GeografischeContext</a></td>
+                    </tr>
+                        <tr class="row">
+                            <td class="entry ea_genspec_titel" headers="Pkg__1B1D108A52034885BA79F3992DDCDD47__entry__1">Specialisatie van</td>
+                            <td class="entry ea_genspec_lijst" headers="Pkg__1B1D108A52034885BA79F3992DDCDD47__entry__1" colspan="3"><a class="xref ea_genspec_direct link_ea" href="#Pkg__005977661DC342bf88BA8E5C21CC5096">AbstractFeatureType (entiteit)</a>, <a class="xref ea_genspec_direct link_ea" href="EA_1A45BBE5EC4F4bb2BBD7F5E701CE0479.html#Pkg__B4649197FA68449e913F625FA43F27DF">Module (entiteit)</a></td>
+                        </tr>
+                    <tr class="row ea_attribuut_header">
+                            <td class="entry" headers="Pkg__1B1D108A52034885BA79F3992DDCDD47__entry__1"><strong class="ph b">Eigenschappen</strong></td>
+                            <td class="entry" headers="Pkg__1B1D108A52034885BA79F3992DDCDD47__entry__1"><strong class="ph b">Type</strong></td>
+                            <td class="entry" headers="Pkg__1B1D108A52034885BA79F3992DDCDD47__entry__1"><strong class="ph b">Kardinaliteit</strong></td>
+                            <td class="entry" headers="Pkg__1B1D108A52034885BA79F3992DDCDD47__entry__1"><strong class="ph b">Beschrijving</strong></td>
+                        </tr>
+                        <tr class="row ea_attribuut" id="Pkg__B4F50DE6D2034294B09B78186258B719">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__1B1D108A52034885BA79F3992DDCDD47__entry__1">Was</td>
+                            <td class="entry" headers="Pkg__1B1D108A52034885BA79F3992DDCDD47__entry__1"><a class="xref link_ea" href="EA_BD0B9B5F34C548eeB092538800D54713.html#Pkg__8DBA840974F643be8EEACBBB4954F8DD">STOP identificatie (entiteit)</a></td>
+                            <td class="entry" headers="Pkg__1B1D108A52034885BA79F3992DDCDD47__entry__1">0..1</td>
+                            <td class="entry" headers="Pkg__1B1D108A52034885BA79F3992DDCDD47__entry__1">
+                                </td>
+                         </tr>
+                    </tbody></table>
+            <table class="table ea_element" id="Pkg__D75450C54CA2412d9F53EFAE6E50002C"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__D75450C54CA2412d9F53EFAE6E50002C__entry__1" colspan="4">Geo-informatieobject versie</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row noimlinks-ea:{D75450C5-4CA2-412d-9F53-EFAE6E50002C}">
+                        <td class="entry ea_doc_titel" headers="Pkg__D75450C54CA2412d9F53EFAE6E50002C__entry__1">Implementatie</td>
+                        <td class="entry ea_relatedlinks_lijst" headers="Pkg__D75450C54CA2412d9F53EFAE6E50002C__entry__1" colspan="3"><a class="xref link_xsd" href="geo_xsd_Element_geo_GeoInformatieObjectVersie.html#GeoInformatieObjectVersie">geo:GeoInformatieObjectVersie</a>, <a class="xref link_xsd" href="geo_xsd_Complex_Type_geo_GeoInformatieObjectVersieType.html#GeoInformatieObjectVersieType">complexType geo:GeoInformatieObjectVersieType</a></td>
+                    </tr>
+                        <tr class="row">
+                            <td class="entry ea_genspec_titel" headers="Pkg__D75450C54CA2412d9F53EFAE6E50002C__entry__1">Specialisatie van</td>
+                            <td class="entry ea_genspec_lijst" headers="Pkg__D75450C54CA2412d9F53EFAE6E50002C__entry__1" colspan="3"><a class="xref ea_genspec_direct link_ea" href="#Pkg__005977661DC342bf88BA8E5C21CC5096">AbstractFeatureType (entiteit)</a>, <a class="xref ea_genspec_direct link_ea" href="#Pkg__B1B26CAAC98145e3A3EB2D7E673524DA">Informatieobjectinhoud (entiteit)</a>, <a class="xref ea_genspec_direct link_ea" href="EA_1A45BBE5EC4F4bb2BBD7F5E701CE0479.html#Pkg__B4649197FA68449e913F625FA43F27DF">Module (entiteit)</a></td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry ea_eltpackages_titel" headers="Pkg__D75450C54CA2412d9F53EFAE6E50002C__entry__1">Zie ook</td>
+                            <td class="entry ea_eltpackages_lijst" headers="Pkg__D75450C54CA2412d9F53EFAE6E50002C__entry__1" colspan="3"><a class="xref link_ea" href="EA_44F1995C792B4434829942718BB589BA.html#Pkg">Juridisch geborgde bronobjecten (onderwerp)</a>, <a class="xref link_ea" href="EA_77AF770705D4439c946D8E821BC18F18.html#Pkg">Symbolisatie (onderwerp)</a></td>
+                        </tr>
+                    <tr class="row ea_attribuut_header">
+                            <td class="entry" headers="Pkg__D75450C54CA2412d9F53EFAE6E50002C__entry__1"><strong class="ph b">Eigenschappen</strong></td>
+                            <td class="entry" headers="Pkg__D75450C54CA2412d9F53EFAE6E50002C__entry__1"><strong class="ph b">Type</strong></td>
+                            <td class="entry" headers="Pkg__D75450C54CA2412d9F53EFAE6E50002C__entry__1"><strong class="ph b">Kardinaliteit</strong></td>
+                            <td class="entry" headers="Pkg__D75450C54CA2412d9F53EFAE6E50002C__entry__1"><strong class="ph b">Beschrijving</strong></td>
+                        </tr>
+                        <tr class="row ea_attribuut" id="Pkg__E8B2719787514d049BD08CDB3F0AAE37">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__D75450C54CA2412d9F53EFAE6E50002C__entry__1">FRBRWork</td>
+                            <td class="entry" headers="Pkg__D75450C54CA2412d9F53EFAE6E50002C__entry__1"><a class="xref link_ea" href="EA_BD0B9B5F34C548eeB092538800D54713.html#Pkg__8DBA840974F643be8EEACBBB4954F8DD">STOP identificatie (entiteit)</a></td>
+                            <td class="entry" headers="Pkg__D75450C54CA2412d9F53EFAE6E50002C__entry__1">1..1</td>
+                            <td class="entry" headers="Pkg__D75450C54CA2412d9F53EFAE6E50002C__entry__1">
+                                </td>
+                         </tr>
+                        <tr class="row ea_attribuut" id="Pkg__92D0D2D84DA544c38FB972D106E6FAD4">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__D75450C54CA2412d9F53EFAE6E50002C__entry__1">FRBRExpression</td>
+                            <td class="entry" headers="Pkg__D75450C54CA2412d9F53EFAE6E50002C__entry__1"><a class="xref link_ea" href="EA_BD0B9B5F34C548eeB092538800D54713.html#Pkg__8DBA840974F643be8EEACBBB4954F8DD">STOP identificatie (entiteit)</a></td>
+                            <td class="entry" headers="Pkg__D75450C54CA2412d9F53EFAE6E50002C__entry__1">1..1</td>
+                            <td class="entry" headers="Pkg__D75450C54CA2412d9F53EFAE6E50002C__entry__1">
+                                </td>
+                         </tr>
+                        <tr class="row ea_attribuut" id="Pkg__BF73AD6B385A4b458621F7B314BB3671">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__D75450C54CA2412d9F53EFAE6E50002C__entry__1">Locaties</td>
+                            <td class="entry" headers="Pkg__D75450C54CA2412d9F53EFAE6E50002C__entry__1"><a class="xref link_ea" href="#Pkg__7C5BE984FA2D4a0b8BCD816E8FF23677">Locatie (entiteit)</a></td>
+                            <td class="entry" headers="Pkg__D75450C54CA2412d9F53EFAE6E50002C__entry__1">1..*</td>
+                            <td class="entry" headers="Pkg__D75450C54CA2412d9F53EFAE6E50002C__entry__1">
+                                </td>
+                         </tr>
+                    </tbody></table>
+            <table class="table ea_element" id="Pkg__4BE8928CF3864ce9B7D207D63EC4E43A"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__4BE8928CF3864ce9B7D207D63EC4E43A__entry__1" colspan="4">Geografische context</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row">
+                        <td class="entry ea_doc_titel" headers="Pkg__4BE8928CF3864ce9B7D207D63EC4E43A__entry__1">Definitie</td>
+                        <td class="entry ea_element_beschrijving" headers="Pkg__4BE8928CF3864ce9B7D207D63EC4E43A__entry__1" colspan="3"><div class="div">
+    <p class="p">STOP-module waarin de geografische context waarin
+      een besluit tot het vaststellen van een GIO genomen is wordt vastgelegd.</p>
+  </div>
+  </td>
+                    </tr>
+                    <tr class="row noimlinks-ea:{4BE8928C-F386-4ce9-B7D2-07D63EC4E43A}">
+                        <td class="entry ea_doc_titel" headers="Pkg__4BE8928CF3864ce9B7D207D63EC4E43A__entry__1">Implementatie</td>
+                        <td class="entry ea_relatedlinks_lijst" headers="Pkg__4BE8928CF3864ce9B7D207D63EC4E43A__entry__1" colspan="3"><a class="xref link_xsd" href="gio_xsd_Element_gio_GeografischeContext.html#GeografischeContext">gio:GeografischeContext</a>, <a class="xref link_xsd" href="geo_xsd_Complex_Type_geo_GeoInformatieObjectVaststellingType.html#GeoInformatieObjectVaststellingType_context">geo:context</a></td>
+                    </tr>
+                        <tr class="row">
+                            <td class="entry ea_genspec_titel" headers="Pkg__4BE8928CF3864ce9B7D207D63EC4E43A__entry__1">Specialisatie van</td>
+                            <td class="entry ea_genspec_lijst" headers="Pkg__4BE8928CF3864ce9B7D207D63EC4E43A__entry__1" colspan="3"><a class="xref ea_genspec_direct link_ea" href="EA_1A45BBE5EC4F4bb2BBD7F5E701CE0479.html#Pkg__B4649197FA68449e913F625FA43F27DF">Module (entiteit)</a>, <a class="xref ea_genspec_direct link_ea" href="#Pkg__6C7EE7D2D0E74278A2AC7849C09A35E1">Vaststellingscontext (entiteit)</a></td>
+                        </tr>
+                    <tr class="row ea_attribuut_header">
+                            <td class="entry" headers="Pkg__4BE8928CF3864ce9B7D207D63EC4E43A__entry__1"><strong class="ph b">Eigenschappen</strong></td>
+                            <td class="entry" headers="Pkg__4BE8928CF3864ce9B7D207D63EC4E43A__entry__1"><strong class="ph b">Type</strong></td>
+                            <td class="entry" headers="Pkg__4BE8928CF3864ce9B7D207D63EC4E43A__entry__1"><strong class="ph b">Kardinaliteit</strong></td>
+                            <td class="entry" headers="Pkg__4BE8928CF3864ce9B7D207D63EC4E43A__entry__1"><strong class="ph b">Beschrijving</strong></td>
+                        </tr>
+                        <tr class="row ea_attribuut" id="Pkg__EA026472CF9A4feeA2198820BC0D6C10">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__4BE8928CF3864ce9B7D207D63EC4E43A__entry__1">Achtergrondverwijzing</td>
+                            <td class="entry" headers="Pkg__4BE8928CF3864ce9B7D207D63EC4E43A__entry__1">string</td>
+                            <td class="entry" headers="Pkg__4BE8928CF3864ce9B7D207D63EC4E43A__entry__1">1..1</td>
+                            <td class="entry" headers="Pkg__4BE8928CF3864ce9B7D207D63EC4E43A__entry__1">
+                                <div class="div"><div class="div">
+    <p class="p">Een verwijzing naar de achtergrondkaart die getoond is bij het vaststellen van het GIO</p>
+  </div>
+  </div>
+                                <div class="div noimlinks-ea:{EA026472-CF9A-4fee-A219-8820BC0D6C10}">
+                                    <p class="p ea_relatedlinks_titel"><p class="lines">Implementatie:</p>
+                                    <a class="xref link_xsd" href="gio_xsd_Complex_Type_gio_GeografischeContextType.html#GeografischeContextType_achtergrondVerwijzing">gio:achtergrondVerwijzing</a></p>
+                                </div>
+                                </td>
+                         </tr>
+                        <tr class="row ea_attribuut" id="Pkg__8189D31020464844BFCBB3EAEA614725">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__4BE8928CF3864ce9B7D207D63EC4E43A__entry__1">Achtergrond actualiteit</td>
+                            <td class="entry" headers="Pkg__4BE8928CF3864ce9B7D207D63EC4E43A__entry__1">date</td>
+                            <td class="entry" headers="Pkg__4BE8928CF3864ce9B7D207D63EC4E43A__entry__1">1..1</td>
+                            <td class="entry" headers="Pkg__4BE8928CF3864ce9B7D207D63EC4E43A__entry__1">
+                                <div class="div"><div class="div">
+    <p class="p">Aanduiding van de actualiteit van de achtergrondkaart waar 
+      <a class="xref link_ea" href="#Pkg__EA026472CF9A4feeA2198820BC0D6C10">Achtergrondverwijzing (eigenschap van Geografische context)</a> naar verwijst</p>
+  </div>
+  </div>
+                                <div class="div noimlinks-ea:{8189D310-2046-4844-BFCB-B3EAEA614725}">
+                                    <p class="p ea_relatedlinks_titel"><p class="lines">Implementatie:</p>
+                                    <a class="xref link_xsd" href="gio_xsd_Complex_Type_gio_GeografischeContextType.html#GeografischeContextType_achtergrondActualiteit">gio:achtergrondActualiteit</a></p>
+                                </div>
+                                </td>
+                         </tr>
+                        <tr class="row ea_attribuut" id="Pkg__AD8C3D135EB342f0AFE5FA133961826C">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__4BE8928CF3864ce9B7D207D63EC4E43A__entry__1">Nauwkeurigheid</td>
+                            <td class="entry" headers="Pkg__4BE8928CF3864ce9B7D207D63EC4E43A__entry__1">int</td>
+                            <td class="entry" headers="Pkg__4BE8928CF3864ce9B7D207D63EC4E43A__entry__1">0..1</td>
+                            <td class="entry" headers="Pkg__4BE8928CF3864ce9B7D207D63EC4E43A__entry__1">
+                                <div class="div"><div class="div">
+    <p class="p">Gerealiseerde geometrische nauwkeurigheid van de geometrie van het object ten opzichte van de
+      werkelijkheid (zoals in de achtergrond is weergegeven) uitgedrukt in decimeters.</p>
+  </div>
+  </div>
+                                <div class="div noimlinks-ea:{AD8C3D13-5EB3-42f0-AFE5-FA133961826C}">
+                                    <p class="p ea_relatedlinks_titel"><p class="lines">Implementatie:</p>
+                                    <a class="xref link_xsd" href="gio_xsd_Complex_Type_gio_GeografischeContextType.html#GeografischeContextType_nauwkeurigheid">gio:nauwkeurigheid</a></p>
+                                </div>
+                                </td>
+                         </tr>
+                        <tr class="row ea_attribuut" id="Pkg__1AE92A32672F4c7fACDF0FCF59B6E871">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__4BE8928CF3864ce9B7D207D63EC4E43A__entry__1">Context GIO</td>
+                            <td class="entry" headers="Pkg__4BE8928CF3864ce9B7D207D63EC4E43A__entry__1"><a class="xref link_ea" href="EA_BD0B9B5F34C548eeB092538800D54713.html#Pkg__8DBA840974F643be8EEACBBB4954F8DD">STOP identificatie (entiteit)</a></td>
+                            <td class="entry" headers="Pkg__4BE8928CF3864ce9B7D207D63EC4E43A__entry__1">0..*</td>
+                            <td class="entry" headers="Pkg__4BE8928CF3864ce9B7D207D63EC4E43A__entry__1">
+                                <div class="div"><div class="div">
+    <p class="p">een lijst van één of meer verwijzingen naar bestaande GIOs die als context gebruikt voor het
+      bepalen van een nieuwe GIO zijn gebruikt</p>
+  </div>
+  </div>
+                                <div class="div noimlinks-ea:{1AE92A32-672F-4c7f-ACDF-0FCF59B6E871}">
+                                    <p class="p ea_relatedlinks_titel"><p class="lines">Implementatie:</p>
+                                    <a class="xref link_xsd" href="gio_xsd_Complex_Type_gio_GeografischeContextType.html#GeografischeContextType_contextGIOs">gio:contextGIOs</a></p>
+                                </div>
+                                </td>
+                         </tr>
+                    </tbody></table>
+            <table class="table ea_element" id="Pkg__C3F72527750248c4A17203A5A09AAA6F"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__C3F72527750248c4A17203A5A09AAA6F__entry__1" colspan="4">GeometryPropertyType</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row">
+                        <td class="entry ea_doc_titel" headers="Pkg__C3F72527750248c4A17203A5A09AAA6F__entry__1">Beschrijving</td>
+                        <td class="entry ea_element_beschrijving" headers="Pkg__C3F72527750248c4A17203A5A09AAA6F__entry__1" colspan="3"><div class="div">
+    <p class="p">Geometrie van de Locatie. Zie <a class="xref link_ea" href="#Pkg__352F0954204143e6979FB84C4D33A16B">Geometrie (eigenschap van Locatie)</a>
+    </p>
+  </div>
+</td>
+                    </tr>
+                    </tbody></table>
+            <table class="table ea_element" id="Pkg__383CB7CFCD2443839724BF005941D5AA"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__383CB7CFCD2443839724BF005941D5AA__entry__1" colspan="4">Groep</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row">
+                        <td class="entry ea_doc_titel" headers="Pkg__383CB7CFCD2443839724BF005941D5AA__entry__1">Beschrijving</td>
+                        <td class="entry ea_element_beschrijving" headers="Pkg__383CB7CFCD2443839724BF005941D5AA__entry__1" colspan="3"><div class="div">
+  <p class="p">Definitie van een locatiegroep binnen een GIO. Koppelt het groepID aan het label van deze groep.</p>
+  </div>
+</td>
+                    </tr>
+                    <tr class="row noimlinks-ea:{383CB7CF-CD24-4383-9724-BF005941D5AA}">
+                        <td class="entry ea_doc_titel" headers="Pkg__383CB7CFCD2443839724BF005941D5AA__entry__1">Implementatie</td>
+                        <td class="entry ea_relatedlinks_lijst" headers="Pkg__383CB7CFCD2443839724BF005941D5AA__entry__1" colspan="3"><a class="xref link_xsd" href="geo_xsd_Element_geo_Groep.html#Groep">geo:Groep</a>, <a class="xref link_xsd" href="geo_xsd_Complex_Type_geo_GroepType.html#GroepType">complexType geo:GroepType</a></td>
+                    </tr>
+                        <tr class="row">
+                            <td class="entry ea_eltpackages_titel" headers="Pkg__383CB7CFCD2443839724BF005941D5AA__entry__1">Zie ook</td>
+                            <td class="entry ea_eltpackages_lijst" headers="Pkg__383CB7CFCD2443839724BF005941D5AA__entry__1" colspan="3"><a class="xref link_ea" href="EA_44F1995C792B4434829942718BB589BA.html#Pkg">Juridisch geborgde bronobjecten (onderwerp)</a>, <a class="xref link_ea" href="EA_77AF770705D4439c946D8E821BC18F18.html#Pkg">Symbolisatie (onderwerp)</a></td>
+                        </tr>
+                    <tr class="row ea_attribuut_header">
+                            <td class="entry" headers="Pkg__383CB7CFCD2443839724BF005941D5AA__entry__1"><strong class="ph b">Eigenschappen</strong></td>
+                            <td class="entry" headers="Pkg__383CB7CFCD2443839724BF005941D5AA__entry__1"><strong class="ph b">Type</strong></td>
+                            <td class="entry" headers="Pkg__383CB7CFCD2443839724BF005941D5AA__entry__1"><strong class="ph b">Kardinaliteit</strong></td>
+                            <td class="entry" headers="Pkg__383CB7CFCD2443839724BF005941D5AA__entry__1"><strong class="ph b">Beschrijving</strong></td>
+                        </tr>
+                        <tr class="row ea_attribuut" id="Pkg__BEE0299D913A4e508F46D61CBC939820">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__383CB7CFCD2443839724BF005941D5AA__entry__1">ID</td>
+                            <td class="entry" headers="Pkg__383CB7CFCD2443839724BF005941D5AA__entry__1">string</td>
+                            <td class="entry" headers="Pkg__383CB7CFCD2443839724BF005941D5AA__entry__1">1..1</td>
+                            <td class="entry" headers="Pkg__383CB7CFCD2443839724BF005941D5AA__entry__1">
+                                <div class="div"><div class="div">
+  <p class="p">Identificatie van de locatiegroep, komt terug bij elke Locatie die tot deze groep behoort.</p>
+  </div>
+</div>
+                                </td>
+                         </tr>
+                        <tr class="row ea_attribuut" id="Pkg__F401F32175C146bcB269387804687646">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__383CB7CFCD2443839724BF005941D5AA__entry__1">Label</td>
+                            <td class="entry" headers="Pkg__383CB7CFCD2443839724BF005941D5AA__entry__1">string</td>
+                            <td class="entry" headers="Pkg__383CB7CFCD2443839724BF005941D5AA__entry__1">1..1</td>
+                            <td class="entry" headers="Pkg__383CB7CFCD2443839724BF005941D5AA__entry__1">
+                                <div class="div"><div class="div">
+  <p class="p">Naam van de locatiegroep</p>
+  </div>
+
+</div>
+                                </td>
+                         </tr>
+                    </tbody></table>
+            <table class="table ea_element" id="Pkg__B1B26CAAC98145e3A3EB2D7E673524DA"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__B1B26CAAC98145e3A3EB2D7E673524DA__entry__1" colspan="4">Informatieobjectinhoud</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row">
+                            <td class="entry ea_genspec_titel" headers="Pkg__B1B26CAAC98145e3A3EB2D7E673524DA__entry__1">Generalisatie van</td>
+                            <td class="entry ea_genspec_lijst" headers="Pkg__B1B26CAAC98145e3A3EB2D7E673524DA__entry__1" colspan="3"><a class="xref ea_genspec_direct link_ea" href="#Pkg__D75450C54CA2412d9F53EFAE6E50002C">Geo-informatieobject versie (entiteit)</a>, <a class="xref ea_genspec_direct link_ea" href="EA_8FBBC5C6DF3B4508B429D11845BACA21.html#Pkg__40A96FF8306945c5869F384BE8C69F95">PDF document (entiteit)</a></td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry ea_eltpackages_titel" headers="Pkg__B1B26CAAC98145e3A3EB2D7E673524DA__entry__1">Zie ook</td>
+                            <td class="entry ea_eltpackages_lijst" headers="Pkg__B1B26CAAC98145e3A3EB2D7E673524DA__entry__1" colspan="3"><a class="xref link_ea" href="EA_4B8D0B2D93B743069F927FD0F26A99DE.html#Pkg">Geo-informatieobject (onderwerp)</a>, <a class="xref ea_eltpackages_default link_ea" href="EA_ED1B61D3297C4ae6BD9A4FDB6BDF83F9.html#Pkg">Informatieobject en informatieobjectversie (onderwerp)</a>, <a class="xref link_ea" href="EA_44F1995C792B4434829942718BB589BA.html#Pkg">Juridisch geborgde bronobjecten (onderwerp)</a>, <a class="xref link_ea" href="EA_8FBBC5C6DF3B4508B429D11845BACA21.html#Pkg">PDF-document (onderwerp)</a>, <a class="xref link_ea" href="EA_DBE8BF553C524b71BB84CFF11C7660CB.html#Pkg">Revisies (onderwerp)</a></td>
+                        </tr>
+                    </tbody></table>
+            <table class="table ea_element" id="Pkg__5CE37AD33BBB4307B5983F00E49E985B"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__5CE37AD33BBB4307B5983F00E49E985B__entry__1" colspan="4">Informatieobjectversie</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row">
+                        <td class="entry ea_doc_titel" headers="Pkg__5CE37AD33BBB4307B5983F00E49E985B__entry__1">Definitie</td>
+                        <td class="entry ea_element_beschrijving" headers="Pkg__5CE37AD33BBB4307B5983F00E49E985B__entry__1" colspan="3"><div class="div">
+    <p class="p">Een versie van een <a class="xref link_ea" href="EA_ED1B61D3297C4ae6BD9A4FDB6BDF83F9.html#Pkg__1DD171612BB8497aAE52786726F6C717">Informatieobject (entiteit)</a></p>
+  </div>
+  </td>
+                    </tr>
+                    <tr class="row">
+                            <td class="entry ea_genspec_titel" headers="Pkg__5CE37AD33BBB4307B5983F00E49E985B__entry__1">Specialisatie van</td>
+                            <td class="entry ea_genspec_lijst" headers="Pkg__5CE37AD33BBB4307B5983F00E49E985B__entry__1" colspan="3"><a class="xref link_ea" href="EA_188A75C61FB54d108E7659F3FE5DE8F3.html#Pkg__F689C5A0EC9B4b3491F3558906741DB8">Expression (entiteit)</a>, <a class="xref ea_genspec_direct link_ea" href="EA_1A45BBE5EC4F4bb2BBD7F5E701CE0479.html#Pkg__21707A82A7DD486b9D7CA5921A07CEE5">Instrumentversie (entiteit)</a></td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry ea_eltpackages_titel" headers="Pkg__5CE37AD33BBB4307B5983F00E49E985B__entry__1">Zie ook</td>
+                            <td class="entry ea_eltpackages_lijst" headers="Pkg__5CE37AD33BBB4307B5983F00E49E985B__entry__1" colspan="3"><a class="xref ea_eltpackages_default link_ea" href="EA_587A8F5146CD44d9AB6EA1BEE8573352.html#Pkg">Besluit en besluitversie (onderwerp)</a>, <a class="xref link_ea" href="EA_5E740899BABE47d1B62053A402064B33.html#Pkg">Consolidatie-informatie (onderwerp)</a>, <a class="xref link_ea" href="EA_4B8D0B2D93B743069F927FD0F26A99DE.html#Pkg">Geo-informatieobject (onderwerp)</a>, <a class="xref link_ea" href="EA_ED1B61D3297C4ae6BD9A4FDB6BDF83F9.html#Pkg">Informatieobject en informatieobjectversie (onderwerp)</a>, <a class="xref link_ea" href="EA_44F1995C792B4434829942718BB589BA.html#Pkg">Juridisch geborgde bronobjecten (onderwerp)</a>, <a class="xref link_ea" href="EA_E071E43092384cd394D942ECD77D959F.html#Pkg">Metadata (onderwerp)</a>, <a class="xref link_ea" href="EA_EC4DE25BFB1341e6B632337DAF9C2791.html#Pkg">Metadata (onderwerp)</a>, <a class="xref link_ea" href="EA_E0EFE05F9FBB45c6AB2493B9FF9037EC.html#Pkg">Officiële publicaties (onderwerp)</a>, <a class="xref link_ea" href="EA_8FBBC5C6DF3B4508B429D11845BACA21.html#Pkg">PDF-document (onderwerp)</a>, <a class="xref link_ea" href="EA_CE0701FE9A054073B11E9531BE7681D4.html#Pkg">Rectificatie (onderwerp)</a>, <a class="xref link_ea" href="EA_212F1874134F41cc9EFE006ABEA7DC38.html#Pkg">Regeling en regelingversie (onderwerp)</a>, <a class="xref link_ea" href="EA_DBE8BF553C524b71BB84CFF11C7660CB.html#Pkg">Revisies (onderwerp)</a>, <a class="xref link_ea" href="EA_3FF7ADD14171420c8FCACC6A218F2EB8.html#Pkg">Toelichtingrelaties voor een besluit (onderwerp)</a>, <a class="xref link_ea" href="EA_B74D0961A1F64c1fA9A122647C63A625.html#Pkg">Toelichtingrelaties voor een regeling (onderwerp)</a></td>
+                        </tr>
+                    </tbody></table>
+            <table class="table ea_element" id="Pkg__7C5BE984FA2D4a0b8BCD816E8FF23677"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__7C5BE984FA2D4a0b8BCD816E8FF23677__entry__1" colspan="4">Locatie</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row">
+                        <td class="entry ea_doc_titel" headers="Pkg__7C5BE984FA2D4a0b8BCD816E8FF23677__entry__1">Beschrijving</td>
+                        <td class="entry ea_element_beschrijving" headers="Pkg__7C5BE984FA2D4a0b8BCD816E8FF23677__entry__1" colspan="3"><div class="div">
+  <p class="p">Geometrie in het GIO.</p>
+  </div>
+</td>
+                    </tr>
+                    <tr class="row noimlinks-ea:{7C5BE984-FA2D-4a0b-8BCD-816E8FF23677}">
+                        <td class="entry ea_doc_titel" headers="Pkg__7C5BE984FA2D4a0b8BCD816E8FF23677__entry__1">Implementatie</td>
+                        <td class="entry ea_relatedlinks_lijst" headers="Pkg__7C5BE984FA2D4a0b8BCD816E8FF23677__entry__1" colspan="3"><a class="xref link_xsd" href="geo_xsd_Element_geo_Locatie.html#Locatie">geo:Locatie</a>, <a class="xref link_xsd" href="geo_xsd_Complex_Type_geo_LocatieType.html#LocatieType">complexType geo:LocatieType</a></td>
+                    </tr>
+                        <tr class="row">
+                            <td class="entry ea_genspec_titel" headers="Pkg__7C5BE984FA2D4a0b8BCD816E8FF23677__entry__1">Specialisatie van</td>
+                            <td class="entry ea_genspec_lijst" headers="Pkg__7C5BE984FA2D4a0b8BCD816E8FF23677__entry__1" colspan="3"><a class="xref ea_genspec_direct link_ea" href="#Pkg__005977661DC342bf88BA8E5C21CC5096">AbstractFeatureType (entiteit)</a></td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry ea_eltpackages_titel" headers="Pkg__7C5BE984FA2D4a0b8BCD816E8FF23677__entry__1">Zie ook</td>
+                            <td class="entry ea_eltpackages_lijst" headers="Pkg__7C5BE984FA2D4a0b8BCD816E8FF23677__entry__1" colspan="3"><a class="xref link_ea" href="EA_44F1995C792B4434829942718BB589BA.html#Pkg">Juridisch geborgde bronobjecten (onderwerp)</a>, <a class="xref link_ea" href="EA_77AF770705D4439c946D8E821BC18F18.html#Pkg">Symbolisatie (onderwerp)</a></td>
+                        </tr>
+                    <tr class="row ea_attribuut_header">
+                            <td class="entry" headers="Pkg__7C5BE984FA2D4a0b8BCD816E8FF23677__entry__1"><strong class="ph b">Eigenschappen</strong></td>
+                            <td class="entry" headers="Pkg__7C5BE984FA2D4a0b8BCD816E8FF23677__entry__1"><strong class="ph b">Type</strong></td>
+                            <td class="entry" headers="Pkg__7C5BE984FA2D4a0b8BCD816E8FF23677__entry__1"><strong class="ph b">Kardinaliteit</strong></td>
+                            <td class="entry" headers="Pkg__7C5BE984FA2D4a0b8BCD816E8FF23677__entry__1"><strong class="ph b">Beschrijving</strong></td>
+                        </tr>
+                        <tr class="row ea_attribuut" id="Pkg__FF0541A227984020ABD115A88D8E2A4E">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__7C5BE984FA2D4a0b8BCD816E8FF23677__entry__1">Naam</td>
+                            <td class="entry" headers="Pkg__7C5BE984FA2D4a0b8BCD816E8FF23677__entry__1">string</td>
+                            <td class="entry" headers="Pkg__7C5BE984FA2D4a0b8BCD816E8FF23677__entry__1">1..1</td>
+                            <td class="entry" headers="Pkg__7C5BE984FA2D4a0b8BCD816E8FF23677__entry__1">
+                                </td>
+                         </tr>
+                        <tr class="row ea_attribuut" id="Pkg__352F0954204143e6979FB84C4D33A16B">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__7C5BE984FA2D4a0b8BCD816E8FF23677__entry__1">Geometrie</td>
+                            <td class="entry" headers="Pkg__7C5BE984FA2D4a0b8BCD816E8FF23677__entry__1"><a class="xref link_ea" href="#Pkg__C3F72527750248c4A17203A5A09AAA6F">GeometryPropertyType (entiteit)</a></td>
+                            <td class="entry" headers="Pkg__7C5BE984FA2D4a0b8BCD816E8FF23677__entry__1">1..1</td>
+                            <td class="entry" headers="Pkg__7C5BE984FA2D4a0b8BCD816E8FF23677__entry__1">
+                                </td>
+                         </tr>
+                    </tbody></table>
+            <table class="table ea_element" id="Pkg__0795C256C5B748679546C1FB2611E0CD"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__0795C256C5B748679546C1FB2611E0CD__entry__1" colspan="4">Norm informatie</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row ea_attribuut_header">
+                            <td class="entry" headers="Pkg__0795C256C5B748679546C1FB2611E0CD__entry__1"><strong class="ph b">Eigenschappen</strong></td>
+                            <td class="entry" headers="Pkg__0795C256C5B748679546C1FB2611E0CD__entry__1"><strong class="ph b">Type</strong></td>
+                            <td class="entry" headers="Pkg__0795C256C5B748679546C1FB2611E0CD__entry__1"><strong class="ph b">Kardinaliteit</strong></td>
+                            <td class="entry" headers="Pkg__0795C256C5B748679546C1FB2611E0CD__entry__1"><strong class="ph b">Beschrijving</strong></td>
+                        </tr>
+                        <tr class="row ea_attribuut" id="Pkg__3C65895407E94653A794F062981EFD46">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__0795C256C5B748679546C1FB2611E0CD__entry__1">Norm ID</td>
+                            <td class="entry" headers="Pkg__0795C256C5B748679546C1FB2611E0CD__entry__1">string</td>
+                            <td class="entry" headers="Pkg__0795C256C5B748679546C1FB2611E0CD__entry__1">1..1</td>
+                            <td class="entry" headers="Pkg__0795C256C5B748679546C1FB2611E0CD__entry__1">
+                                </td>
+                         </tr>
+                        <tr class="row ea_attribuut" id="Pkg__639339E979C24ea3A08EB4233EB613C9">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__0795C256C5B748679546C1FB2611E0CD__entry__1">Norm label</td>
+                            <td class="entry" headers="Pkg__0795C256C5B748679546C1FB2611E0CD__entry__1">string</td>
+                            <td class="entry" headers="Pkg__0795C256C5B748679546C1FB2611E0CD__entry__1">1..1</td>
+                            <td class="entry" headers="Pkg__0795C256C5B748679546C1FB2611E0CD__entry__1">
+                                </td>
+                         </tr>
+                        <tr class="row ea_attribuut" id="Pkg__1743C389A5F7456d9611F1D3CB695DD2">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__0795C256C5B748679546C1FB2611E0CD__entry__1">Eenheid ID</td>
+                            <td class="entry" headers="Pkg__0795C256C5B748679546C1FB2611E0CD__entry__1">string</td>
+                            <td class="entry" headers="Pkg__0795C256C5B748679546C1FB2611E0CD__entry__1">0..1</td>
+                            <td class="entry" headers="Pkg__0795C256C5B748679546C1FB2611E0CD__entry__1">
+                                </td>
+                         </tr>
+                        <tr class="row ea_attribuut" id="Pkg__658A62F5DB2C4379A5299A85B1655DA0">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__0795C256C5B748679546C1FB2611E0CD__entry__1">Eenheid label</td>
+                            <td class="entry" headers="Pkg__0795C256C5B748679546C1FB2611E0CD__entry__1">string</td>
+                            <td class="entry" headers="Pkg__0795C256C5B748679546C1FB2611E0CD__entry__1">0..1</td>
+                            <td class="entry" headers="Pkg__0795C256C5B748679546C1FB2611E0CD__entry__1">
+                                </td>
+                         </tr>
+                    </tbody></table>
+            <table class="table ea_element" id="Pkg__A04E528498994d24B88888F7EE8331FE"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__A04E528498994d24B88888F7EE8331FE__entry__1" colspan="4">Normwaarde</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row">
+                        <td class="entry ea_doc_titel" headers="Pkg__A04E528498994d24B88888F7EE8331FE__entry__1">Beschrijving</td>
+                        <td class="entry ea_element_beschrijving" headers="Pkg__A04E528498994d24B88888F7EE8331FE__entry__1" colspan="3"><div class="div">
+  <p class="p">Van toepassing zijnde normwaarde op bijbehorende Locatie.
+  </p>
+  </div>
+</td>
+                    </tr>
+                    <tr class="row">
+                            <td class="entry ea_eltpackages_titel" headers="Pkg__A04E528498994d24B88888F7EE8331FE__entry__1">Zie ook</td>
+                            <td class="entry ea_eltpackages_lijst" headers="Pkg__A04E528498994d24B88888F7EE8331FE__entry__1" colspan="3"><a class="xref link_ea" href="EA_77AF770705D4439c946D8E821BC18F18.html#Pkg">Symbolisatie (onderwerp)</a></td>
+                        </tr>
+                    <tr class="row ea_attribuut_header">
+                            <td class="entry" headers="Pkg__A04E528498994d24B88888F7EE8331FE__entry__1"><strong class="ph b">Eigenschappen</strong></td>
+                            <td class="entry" headers="Pkg__A04E528498994d24B88888F7EE8331FE__entry__1"><strong class="ph b">Type</strong></td>
+                            <td class="entry" headers="Pkg__A04E528498994d24B88888F7EE8331FE__entry__1"><strong class="ph b">Kardinaliteit</strong></td>
+                            <td class="entry" headers="Pkg__A04E528498994d24B88888F7EE8331FE__entry__1"><strong class="ph b">Beschrijving</strong></td>
+                        </tr>
+                        <tr class="row ea_attribuut" id="Pkg__181C84F082654099BF7C97B36847AE4F">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__A04E528498994d24B88888F7EE8331FE__entry__1">Kwalitatief</td>
+                            <td class="entry" headers="Pkg__A04E528498994d24B88888F7EE8331FE__entry__1">string</td>
+                            <td class="entry" headers="Pkg__A04E528498994d24B88888F7EE8331FE__entry__1">0..1</td>
+                            <td class="entry" headers="Pkg__A04E528498994d24B88888F7EE8331FE__entry__1">
+                                </td>
+                         </tr>
+                        <tr class="row ea_attribuut" id="Pkg__FDEC02D1B1FA4275BB7B066CC338810B">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__A04E528498994d24B88888F7EE8331FE__entry__1">Kwantitatief</td>
+                            <td class="entry" headers="Pkg__A04E528498994d24B88888F7EE8331FE__entry__1">double</td>
+                            <td class="entry" headers="Pkg__A04E528498994d24B88888F7EE8331FE__entry__1">0..1</td>
+                            <td class="entry" headers="Pkg__A04E528498994d24B88888F7EE8331FE__entry__1">
+                                </td>
+                         </tr>
+                    </tbody></table>
+            <table class="table ea_element" id="Pkg__6C7EE7D2D0E74278A2AC7849C09A35E1"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__6C7EE7D2D0E74278A2AC7849C09A35E1__entry__1" colspan="4">Vaststellingscontext</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row">
+                        <td class="entry ea_doc_titel" headers="Pkg__6C7EE7D2D0E74278A2AC7849C09A35E1__entry__1">Beschrijving</td>
+                        <td class="entry ea_element_beschrijving" headers="Pkg__6C7EE7D2D0E74278A2AC7849C09A35E1__entry__1" colspan="3"><div class="div">
+    <p class="p">
+      Informatie die gebruikt is/wordt bij de vaststelling van een besluit om te constateren dat de informatie in het informatieobject
+      overeenkomt met hetgeen besloten wordt. Relevant als een <a class="xref link_ea" href="#Pkg__5CE37AD33BBB4307B5983F00E49E985B">versie</a> van een
+      <a class="xref link_im" href="__informatiemodel_index_juridischInformatieobject.html#juridischInformatieobject">juridisch informatieobject</a>
+      onderdeel is van een besluit en met het besluit bekendgemaakt wordt.
+    </p>
+    <p class="p">
+      Als een informatieobject informatie bevat die niet direct door eenieder te duiden is, zal de correctheid daarvan worden beoordeeld
+      door het te vergelijken met andere informatie. De geometrische afbakening van een gebied wordt bijvoorbeeld gegeven door coördinaten
+      waarvan de waarden in het algemeen nietszeggend zijn; pas door ze te vergelijken met coördinaten van andere (bekende) objecten of
+      gebieden kan de correctheid vastgesteld worden. De vergelijking met andere coördinaten vindt meestal plaats door een gebied over
+      een achtergrondkaart te projecten. De achtergrondkaart vormt dan de vaststellingscontext van het gebied.
+    </p>
+  </div>
+
+</td>
+                    </tr>
+                    <tr class="row">
+                            <td class="entry ea_genspec_titel" headers="Pkg__6C7EE7D2D0E74278A2AC7849C09A35E1__entry__1">Generalisatie van</td>
+                            <td class="entry ea_genspec_lijst" headers="Pkg__6C7EE7D2D0E74278A2AC7849C09A35E1__entry__1" colspan="3"><a class="xref ea_genspec_direct link_ea" href="#Pkg__4BE8928CF3864ce9B7D207D63EC4E43A">Geografische context (entiteit)</a></td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry ea_eltpackages_titel" headers="Pkg__6C7EE7D2D0E74278A2AC7849C09A35E1__entry__1">Zie ook</td>
+                            <td class="entry ea_eltpackages_lijst" headers="Pkg__6C7EE7D2D0E74278A2AC7849C09A35E1__entry__1" colspan="3"><a class="xref link_ea" href="EA_4B8D0B2D93B743069F927FD0F26A99DE.html#Pkg">Geo-informatieobject (onderwerp)</a>, <a class="xref ea_eltpackages_default link_ea" href="EA_ED1B61D3297C4ae6BD9A4FDB6BDF83F9.html#Pkg">Informatieobject en informatieobjectversie (onderwerp)</a></td>
+                        </tr>
+                    </tbody></table>
+        </section>
+  </div>
+</article></main></body></html>

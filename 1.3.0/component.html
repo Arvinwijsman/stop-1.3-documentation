@@ -1,0 +1,55 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="componenten-en-verwijzen-naar-componenten"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Componenten en verwijzen naar componenten</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="componenten-en-verwijzen-naar-componenten"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1">Componenten en verwijzen naar componenten</h1><div class="body"><p class="p">Een besluit kan een nieuwe regeling introduceren of een bestaande regeling muteren; hierbij worden de mutaties opgenomen in de tekst van het besluit. Om te voorkomen dat binnen de tekst van besluit en mutatie-eenheid dezelfde <a class="xref" href="eid_wid.html">eIds en wIds</a> voorkomen, worden de mutatie-eenheden gemarkeerd als <code class="ph codeph">AKN-component</code>. In de XML-implementatie is een mutatie-eenheid gecodeerd binnen de <a class="xref" href="tekst_xsd_Element_tekst_WijzigBijlage.html#WijzigBijlage">tekst:WijzigBijlage</a> of <a class="xref" href="tekst_xsd_Element_tekst_Rectificatietekst.html#Rectificatietekst">tekst:Rectificatietekst</a> als</p><ul class="ul"><li class="li"><p class="p"><a class="xref" href="tekst_xsd_Element_tekst_RegelingCompact.html#RegelingCompact">tekst:RegelingCompact</a></p></li><li class="li"><p class="p"><a class="xref" href="tekst_xsd_Element_tekst_RegelingKlassiek.html#RegelingKlassiek">tekst:RegelingKlassiek</a></p></li><li class="li"><p class="p"><a class="xref" href="tekst_xsd_Element_tekst_RegelingVrijetekst.html#RegelingVrijetekst">tekst:RegelingVrijetekst</a></p></li><li class="li"><p class="p"><a class="xref" href="tekst_xsd_Element_tekst_RegelingMutatie.html#RegelingMutatie">tekst:RegelingMutatie</a></p></li><li class="li"><p class="p"><a class="xref" href="tekst_xsd_Element_tekst_BesluitMutatie.html#BesluitMutatie">tekst:BesluitMutatie</a></p></li></ul><p class="p">Deze elementen kennen het attribuut <code class="ph codeph">componentnaam</code>; zie <a class="xref" href="tekst_xsd_Attribute_Group_tekst_agComponentNieuweRegeling.html#agComponentNieuweRegeling"><code class="ph codeph">tekst:agComponentNieuweRegeling</code></a> en <a class="xref" href="tekst_xsd_Attribute_Group_tekst_agComponentMutatie.html#agComponentMutatie"><code class="ph codeph">tekst:agComponentMutatie</code></a>.</p><p class="p">Om de artikelen in de nieuwe of gemuteerde regeling uniek te kunnen identificeren vanuit buiten de regeling, bijvoorbeeld vanuit het besluit, wordt de waarde van dit attribuut <code class="ph codeph">componentnaam</code> in de verwijzing gebruikt.</p></div><article class="topic nested1" aria-labelledby="ariaid-title2" id="beperkingen-aan-componentnaam"><h2 class="title topictitle2" id="ariaid-title2">Beperkingen aan componentnaam</h2><div class="body"><p class="p">De volgende restricties gelden voor <code class="ph codeph">@componentnaam</code>:</p><ul class="ul"><li class="li"><p class="p">Componentnamen bevatten uitsluitend kleine letters, hoofdletters, cijfers (0-9) en underscore <code class="ph codeph">'_'</code> als scheidingsteken. De restrictie op het gebruik van tekens in de componentnaam impliceert dat spaties en geaccentueerde tekens (bijvoorbeeld á, ö of é) niet mogen worden gebruikt.</p></li><li class="li"><p class="p">Componentnamen die worden opgegeven moeten uniek zijn binnen het geleverde besluit en altijd dezelfde schrijfwijze hebben zonder variatie in gebruik van hoofdletters. De varianten <code class="ph codeph">Omgevingsplan_v2020</code> en <code class="ph codeph">omgevingsplan_v2020</code> in hetzelfde besluit worden dus niet als uniek aangemerkt.</p></li><li class="li"><p class="p">Alhoewel er geen limiet is aan de lengte van de componentnaam, adviseert STOP om een korte onderscheidende componentnaam te kiezen, bijvoorbeeld door het opnemen van dossiernummer of afkorting op de naam in de componentnaam.</p></li></ul></div></article><article class="topic nested1" aria-labelledby="ariaid-title3" id="verwijzen-naar-eid-binnen-een-component"><h2 class="title topictitle2" id="ariaid-title3">Verwijzen naar @eId binnen een component</h2><div class="body"><p class="p">Om te kunnen verwijzen naar een element in een component van buiten dat component, wordt de volgende opbouw gebruikt</p><pre class="pre codeblock"><code>!componentnaam#eId</code></pre><p class="p">Hierbij geldt:</p><ul class="ul"><li class="li"><p class="p"><code class="ph codeph">!</code> vóór de componentnaam</p></li><li class="li"><p class="p">de waarde van <code class="ph codeph">@componentnaam</code> van de mutatie-eenheid</p></li><li class="li"><p class="p"><code class="ph codeph">#</code> als scheidingsteken</p></li><li class="li"><p class="p">de waarde van <code class="ph codeph">@eId</code> die verwijst naar het desbetreffende element</p></li></ul></div></article><article class="topic nested1" aria-labelledby="ariaid-title4" id="voorbeelden"><h2 class="title topictitle2" id="ariaid-title4">Voorbeelden</h2><div class="body"><p class="p">Om vanuit <a class="xref" href="data_xsd_Element_data_BeoogdInformatieobject.html#BeoogdInformatieobject"><code class="ph codeph">data:BeoogdInformatieobject</code></a> te kunnen verwijzen naar de <a class="xref" href="tekst_xsd_Element_tekst_ExtIoRef.html#ExtIoRef"><code class="ph codeph">tekst:ExtIoRef</code></a> in een regelingmutatie met componentnaam <code class="ph codeph">regeling</code>:</p><pre class="pre codeblock"><code>&lt;BeoogdInformatieobject xmlns="https://standaarden.overheid.nl/stop/imop/data/"&gt;
+  &lt;doelen&gt;
+    &lt;doel&gt;/join/id/proces/gm9999/2020/InstellingOmgevingsplan&lt;/doel&gt;
+  &lt;/doelen&gt;
+  &lt;instrumentVersie&gt;/join/id/regdata/gm9999/2019/gio993859238/nld@2019-12-20;1&lt;/instrumentVersie&gt;
+  &lt;eId&gt;!regeling#cmp_A__content_o_1__list_1__item_1__ref_o_1&lt;/eId&gt;
+&lt;/BeoogdInformatieobject&gt;</code></pre><p class="p">Om vanuit <a class="xref" href="cons_xsd_Element_cons_Bladwijzer.html#Bladwijzer"><code class="ph codeph">cons:Bladwijzer</code></a> te kunnen verwijzen naar artikel 1 van de componentnaam <code class="ph codeph">regeling</code> die in besluit <code class="ph codeph">gmb-2020-87904</code> is gepubliceerd op officielebekendmakingen.nl:</p><pre class="pre codeblock"><code>&lt;Bladwijzer xmlns="https://standaarden.overheid.nl/stop/imop/consolidatie/"&gt;
+  &lt;relevantVoor&gt;inhoud&lt;/relevantVoor&gt;
+  &lt;url&gt;https://www.officielebekendmakingen.nl/gmb-2020-87904!regeling#art_1&lt;/url&gt;
+&lt;/Bladwijzer&gt;
+</code></pre></div></article></article></main></body></html>

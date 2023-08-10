@@ -1,0 +1,45 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="concept_bg1_hd4_gqb"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Uniforme openbare voorbereidingsprocedure in STOP</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="concept_bg1_hd4_gqb"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a><ul><li><a href="stop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="leeswijzers.html">Leeswijzers</a><ul><li><a href="toepassing.html">Basis van STOP</a><ul><li><a href="juridische-context.html">Juridische context STOP</a><ul><li><a href="juridische-uitgangspunten.html#juridische-uitgangspunten">Juridische uitgangspunten</a></li><li><a href="verwerking-juridische-uitgangspunten-STOP.html">Opname juridische uitgangspunten in STOP</a><ul><li><a href="wijzigingen-ow.html">Belangrijkste wijzigingen van de Omgevingswet </a></li><li><a href="stop-besluit.html">Besluit volgens STOP</a></li><li><a href="stop-regeling.html">Regeling volgens STOP</a></li><li><a href="stop-bijlage.html">Bijlage bij een STOP-besluit</a></li><li><a href="werkingsgebieden-stop.html">Werkingsgebieden van regels in STOP</a></li><li><a href="vaststellen-wijzigen-gio.html">Vaststellen en wijzigen van GIO's</a></li><li><a href="juridische-verankering-stop.html">Juridische verankering van STOP</a></li><li><a href="wijzigingsbesluit-renvooiweergave.html">Het maken van een wijzigingsbesluit in renvooiweergave</a></li><li><a href="directe-mutatie.html">Directe mutatie</a></li><li><a href="rectificatie.html">Rectificatie</a></li><li><a href="effectgebieden.html">Effectgebieden</a></li><li><a href="tijdelijk-regelingdeel.html">Tijdelijk regelingdeel</a></li><li><a href="pons.html">Pons in STOP </a></li><li class="active"><a href="uniforme-voorbereiding-besluit-stop.html">Uniforme openbare voorbereidingsprocedure in STOP  </a></li><li><a href="verwerking-bezwaar.html">Verwerken van bezwaar tegen een STOP-besluit</a></li><li><a href="verwerking-beroep.html">Verwerken van beroep tegen een STOP-besluit</a></li><li><a href="authentieke-bron.html">Authentieke bron</a></li></ul></li></ul></li><li><a href="proces_overzicht.html">Hoofdlijnen van het STOP-proces</a></li></ul></li><li><a href="architectuur.html">Architectuur en ontwerpkeuzes</a></li><li><a href="gebruik.html">Software-ontwikkeling met STOP</a></li><li><a href="voortbouwen_op_STOP.html">Voortbouwen op STOP</a></li></ul></li><li><a href="EA_4D1D7FD517FE4d8dA9A2B905D202C92B.html">Informatiemodel</a></li><li><a href="businessrules.html">Bedrijfsregels</a></li></ul></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1"><strong class="ph b">Uniforme openbare voorbereidingsprocedure in STOP</strong> </h1><div class="body"><p class="p">Op de meeste besluiten die via de LVBB door STOP zullen worden bekendgemaakt is de <a class="xref" href="juridische-uitgangspunten.html#uniforme-openbare-voorbereidingsprocedure">Uniforme Openbare Voorbereidingsprocedure (afd. 3.4 Awb)</a> van toepassing.</p><p class="p">Dit betekent dat een besluit de volgende stappen doorloopt:</p><ol class="ol"><li class="li"><p class="p"><strong class="ph b">Bekendmaking van een ontwerpbesluit</strong>, dat wil zeggen een besluit met de status ‘ontwerp’. Dit is bijvoorbeeld een ontwerp-omgevingsverordening van een provincie. Deze kan via de Viewer Regels op de Kaart in DSO-LV ter beschikking worden gesteld, dit is voldoende om te voldoen aan de verplichting tot ter inzagelegging op grond van de Algemene wet bestuursrecht.</p></li><li class="li"><p class="p"><strong class="ph b">Verwerking van zienswijzen</strong>. Belanghebbenden kunnen zienswijzen indienen bij het bestuursorgaan op de door het bestuursorgaan aangegeven wijze. Het bestuursorgaan moet deze zienswijzen verwerken in de definitieve versie van het besluit. Dit is een intern proces van het bestuursorgaan en leidt niet tot handelingen die door STOP worden ondersteund.</p></li><li class="li"><p class="p"><strong class="ph b">Vaststelling en bekendmaking definitief besluit</strong>. Het bestuursorgaan stelt vervolgens een definitieve versie van het besluit vast, in dit voorbeeld dus de definitieve omgevingsverordening, en maakt deze bekend via de LVBB. In de toelichting bij het definitieve besluit moet worden ingegaan op hoe is omgegaan met de binnengekomen zienswijzen. De definitieve versie van het besluit behelst vaststelling van een nieuwe versie van de regeling met de status ‘definitief’. Hierbij hoeft niet door middel van mutaties precies te worden aangegeven wat er gewijzigd is ten opzichte van het ontwerp. Dat is ook niet nodig, want de hele definitieve versie staat open voor beroep.</p></li></ol></div></article></main></body></html>

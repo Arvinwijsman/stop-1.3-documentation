@@ -1,0 +1,102 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="nl-nl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="Pkg"><meta name="DC.language" content="nl-nl"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Algemeen</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="Pkg"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a><ul><li><a href="stop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="leeswijzers.html">Leeswijzers</a></li><li><a href="EA_4D1D7FD517FE4d8dA9A2B905D202C92B.html">Informatiemodel</a><ul><li><a href="EA_9E187217A693458593B4BC483B77322B.html">Legenda van de diagrammen</a></li><li><a href="EA_068BE3F17D2D41a8AA2E39A355337401.html">Toepassingsgebied</a></li><li class="active"><a href="EA_BEA65540863F4cedAE03E4C3D0A29EAA.html">Algemeen</a><ul><li><a href="EA_188A75C61FB54d108E7659F3FE5DE8F3.html">Het FRBR model</a></li><li><a href="EA_BD0B9B5F34C548eeB092538800D54713.html">Identificatie</a></li><li><a href="EA_1A45BBE5EC4F4bb2BBD7F5E701CE0479.html">Instrument en instrumentversies</a></li><li><a href="EA_F557E4DB59344ae894555F646FE2631E.html">Implementatie en versionering</a></li><li><a href="EA_59E55D5894754481B3D9890DD60CD071.html">Tekstmodellering</a></li><li><a href="EA_61016E983B974885A6CEF61D9C34F3C3.html">Objectgericht modelleren en muteren</a></li><li><a href="EA_E15D6EFB90DE4277A46E39F7FE5EFFCC.html">Begrippen en waardelijsten</a></li></ul></li><li><a href="EA_A1BBB86A635B4bf6B2FCECD1CFE6A3C9.html">Besluiten en regelgeving</a></li><li><a href="EA_E0EFE05F9FBB45c6AB2493B9FF9037EC.html">Officiële publicaties</a></li><li><a href="EA_81311E5C8AD34b35B153B21B50080288.html">Consolidatie van regelgeving</a></li></ul></li><li><a href="businessrules.html">Bedrijfsregels</a></li></ul></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title topictitle1" id="ariaid-title1">Algemeen</h1>
+  <div class="body">
+      <div class="div">
+    <div class="p">
+      Dit deel van het informatiemodel bevat een beschrijving van de
+      basiselementen van het informatiemodel en het basisontwerp dat gebruikt wordt voor de modellering
+      van publicaties en bronnen.
+      Het gaat in op:
+      <ul class="ul">
+        <li class="li">
+          Het <a class="xref link_ea" href="EA_188A75C61FB54d108E7659F3FE5DE8F3.html#Pkg">FRBR model</a> is het basisontwerp voor 
+          de modellering van elke publicatie of bron.
+        </li>
+        <li class="li">
+          De <a class="xref link_ea" href="EA_BD0B9B5F34C548eeB092538800D54713.html#Pkg">identificatie</a> beschrijft de manier
+          waarop de entiteiten uit het FRBR model in de STOP standaard geïdentificeerd worden.
+        </li>
+        <li class="li">
+          <a class="xref link_ea" href="EA_1A45BBE5EC4F4bb2BBD7F5E701CE0479.html#Pkg">Instrument en instrumentversies</a> geeft 
+          de algemene structuur van een publicatie of bron in STOP volgens het FRBR model, de modulaire
+          opbouw daarvan en de samenhang met de implementatie.
+        </li>
+        <li class="li">
+          <a class="xref link_ea" href="EA_1A45BBE5EC4F4bb2BBD7F5E701CE0479.html#Pkg">Modules en revisies</a> geeft 
+          inzicht in de manier waarop omgegaan wordt met versies van een module die al dan niet
+          dezelfde juridische inhoud hebben.
+        </li>
+        <li class="li">
+          <a class="xref link_ea" href="EA_59E55D5894754481B3D9890DD60CD071.html#Pkg">Tekstmodellering</a>: een belangrijk
+          onderdeel van de standaard is de modellering van teksten. Voor de verschillende toepassingen
+          zijn gespecialiseerde tekstmodellen beschikbaar. De opbouw van de modellen volgt een aantal 
+          vaste patronen die in deze sectie worden toegelicht.
+        </li>
+        <li class="li">
+          <a class="xref link_ea" href="EA_61016E983B974885A6CEF61D9C34F3C3.html#Pkg">Objectgericht modelleren en muteren</a>
+          beschrijft de ontwerpprincipes die binnen de standaard worden toegepast voor (tekst)modellen
+          die als integrale module gebruikt worden, maar ook in een vorm waarbij het verschil tussen versies
+          uitgewisseld wordt. De standaard hanteert steeds dezelfde systematiek om het verschil
+          te beschrijven waarbij het verschil zelfstandig (in renvooi) te presenteren is, maar ook 
+          gedetailleerd genoeg is om de integrale versie af te leiden (muteren).
+        </li>
+        <li class="li">
+          <a class="xref link_ea" href="EA_E15D6EFB90DE4277A46E39F7FE5EFFCC.html#Pkg">Begrippen en waardelijsten</a>
+          beschrijft hoe de standaard omgaat met waardelijsten die uit een externe bron komen en 
+          geen deel uitmaken van de implementatie van het informatiemodel. De standaard voorziet
+          in een brug naar een linked data model voor de waardelijsten. Dezelfde aanpak wordt 
+          gevolgd voor de modellering van begrippen die in de bronnen en publicaties voorkomen.
+        </li>
+      </ul>
+     </div>
+    <p class="p"><strong class="ph b">Algemene afspraken</strong></p>
+    <p class="p"><em class="ph i">Einddatum:</em> Binnen de STOP standaard is een einddatum altijd een TOT-datum: de datum waarop 
+      iets eindigt en niet langer geldig of van toepassing is. Een einddatum is dus NIET de datum waarop 
+      iets voor het laatst geldig of van toepassing is.</p>
+  </div>
+</div>
+</article></main></body></html>

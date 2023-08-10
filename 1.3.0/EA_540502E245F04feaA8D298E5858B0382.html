@@ -1,0 +1,146 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="nl-nl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="Pkg"><meta name="DC.language" content="nl-nl"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Vrijetekststructuur</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="Pkg"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a><ul><li><a href="stop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="leeswijzers.html">Leeswijzers</a></li><li><a href="EA_4D1D7FD517FE4d8dA9A2B905D202C92B.html">Informatiemodel</a><ul><li><a href="EA_9E187217A693458593B4BC483B77322B.html">Legenda van de diagrammen</a></li><li><a href="EA_068BE3F17D2D41a8AA2E39A355337401.html">Toepassingsgebied</a></li><li><a href="EA_BEA65540863F4cedAE03E4C3D0A29EAA.html">Algemeen</a></li><li><a href="EA_A1BBB86A635B4bf6B2FCECD1CFE6A3C9.html">Besluiten en regelgeving</a><ul><li><a href="EA_212F1874134F41cc9EFE006ABEA7DC38.html">Regeling en regelingversie</a><ul><li><a href="EA_EC0E326D36954e38824C5898BB506C1F.html">Regelingtekst</a><ul><li><a href="EA_73A4EA5DA9F84384A96B71880F695FC6.html">Artikelstructuur</a></li><li class="active"><a href="EA_540502E245F04feaA8D298E5858B0382.html">Vrijetekststructuur</a></li></ul></li><li><a href="EA_93CB8E590C2B43829E3E007614134DE4.html">Metadata</a></li><li><a href="EA_B74D0961A1F64c1fA9A122647C63A625.html">Toelichtingrelaties voor een regeling</a></li><li><a href="EA_C0439F1B47B549bf95F43D2318161D9B.html">Status gerechtelijke procedure</a></li></ul></li><li><a href="EA_ED1B61D3297C4ae6BD9A4FDB6BDF83F9.html">Informatieobject en informatieobjectversie</a></li><li><a href="EA_587A8F5146CD44d9AB6EA1BEE8573352.html">Besluit en besluitversie</a></li><li><a href="EA_DBE8BF553C524b71BB84CFF11C7660CB.html">Revisies</a></li></ul></li><li><a href="EA_E0EFE05F9FBB45c6AB2493B9FF9037EC.html">Officiële publicaties</a></li><li><a href="EA_81311E5C8AD34b35B153B21B50080288.html">Consolidatie van regelgeving</a></li></ul></li><li><a href="businessrules.html">Bedrijfsregels</a></li></ul></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title topictitle1" id="ariaid-title1">Vrijetekststructuur</h1>
+  <div class="body">
+      <figure class="fig fignone ea_diagram" id="Pkg__8160AC50D12548a7B68A24A57267C3D1">
+<div class="p"><div class="fig imagemap"><img usemap="#d419267e18" class="image zoomable" src="img/EA_8160AC50D12548a7B68A24A57267C3D1.png"><map name="d419267e18" id="d419267e18"><area href="#Pkg__0C9C170A37E84dee8E29F5DFFBC6C692" alt="Bijlage bij regeling (entiteit)" title="Bijlage bij regeling (entiteit)" shape="rect" coords="94,210,229,254"><area href="#Pkg__3C3AC70B35FF48189DC6546375959568" alt="Lichaam (entiteit)" title="Lichaam (entiteit)" shape="rect" coords="94,148,229,192"><area href="#Pkg__F15CD250F20A48b5B0E0FDD8964BF466" alt="Regelingopschrift (entiteit)" title="Regelingopschrift (entiteit)" shape="rect" coords="94,86,229,130"><area href="#Pkg__76FCEBC0378A44599E1B27FDE41B06EA" alt="Regeling met vrijetekststructuur (entiteit)" title="Regeling met vrijetekststructuur (entiteit)" shape="rect" coords="13,13,213,67"></map></div></div>
+</figure>
+<section class="section ea_elementen"><h2 class="title sectiontitle">Elementen</h2>
+            
+            <table class="table ea_element" id="Pkg__0C9C170A37E84dee8E29F5DFFBC6C692"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__0C9C170A37E84dee8E29F5DFFBC6C692__entry__1" colspan="4">Bijlage bij regeling</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row">
+                        <td class="entry ea_doc_titel" headers="Pkg__0C9C170A37E84dee8E29F5DFFBC6C692__entry__1">Definitie</td>
+                        <td class="entry ea_element_beschrijving" headers="Pkg__0C9C170A37E84dee8E29F5DFFBC6C692__entry__1" colspan="3"><div class="div">
+    <p class="p">De <code class="ph codeph">Bijlage</code> bevat een in volgens STOP gecodeerde bijlage als onderdeel van
+      een regeling of een besluit zoals beschreven in <a class="xref" href="bijlage_in_STOPtekst.html">Bijlage in het STOP-tekstmodel</a>.</p>
+  </div>
+  </td>
+                    </tr>
+                    <tr class="row noimlinks-ea:{0C9C170A-37E8-4dee-8E29-F5DFFBC6C692}">
+                        <td class="entry ea_doc_titel" headers="Pkg__0C9C170A37E84dee8E29F5DFFBC6C692__entry__1">Implementatie</td>
+                        <td class="entry ea_relatedlinks_lijst" headers="Pkg__0C9C170A37E84dee8E29F5DFFBC6C692__entry__1" colspan="3"><a class="xref link_xsd" href="tekst_xsd_Element_tekst_Bijlage.html#Bijlage">tekst:Bijlage</a></td>
+                    </tr>
+                        <tr class="row">
+                            <td class="entry ea_genspec_titel" headers="Pkg__0C9C170A37E84dee8E29F5DFFBC6C692__entry__1">Specialisatie van</td>
+                            <td class="entry ea_genspec_lijst" headers="Pkg__0C9C170A37E84dee8E29F5DFFBC6C692__entry__1" colspan="3"><a class="xref link_ea" href="EA_C966BB1FF80841f6A587C16FB89171B2.html#Pkg__EF18971E33DC40a8AA70859A6304B3DC">Objectversie (entiteit)</a>, <a class="xref link_ea" href="EA_215C5F7818F84a2285EDBC1EFD681020.html#Pkg__D04DDED556684cedB91A0ABCD15FD584">Structuurelement (entiteit)</a>, <a class="xref link_ea" href="EA_215C5F7818F84a2285EDBC1EFD681020.html#Pkg__0EE1394205F246a787CB4EEB96B2FFB6">Tekstelement (entiteit)</a>, <a class="xref ea_genspec_direct link_ea" href="EA_EBCC9FE084674d9d9EE24FB92A8CEA01.html#Pkg__1E5C51D47A5C4dc3916D013EC309EB6A">Vrijetekststructuur (entiteit)</a></td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry ea_eltpackages_titel" headers="Pkg__0C9C170A37E84dee8E29F5DFFBC6C692__entry__1">Zie ook</td>
+                            <td class="entry ea_eltpackages_lijst" headers="Pkg__0C9C170A37E84dee8E29F5DFFBC6C692__entry__1" colspan="3"><a class="xref ea_eltpackages_default link_ea" href="EA_73A4EA5DA9F84384A96B71880F695FC6.html#Pkg">Artikelstructuur (onderwerp)</a>, <a class="xref link_ea" href="EA_0B0A2D36B8F4476289BC46A863548D6B.html#Pkg">Besluittekst (onderwerp)</a></td>
+                        </tr>
+                    </tbody></table>
+            <table class="table ea_element" id="Pkg__3C3AC70B35FF48189DC6546375959568"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__3C3AC70B35FF48189DC6546375959568__entry__1" colspan="4">Lichaam</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row">
+                            <td class="entry ea_genspec_titel" headers="Pkg__3C3AC70B35FF48189DC6546375959568__entry__1">Specialisatie van</td>
+                            <td class="entry ea_genspec_lijst" headers="Pkg__3C3AC70B35FF48189DC6546375959568__entry__1" colspan="3"><a class="xref link_ea" href="EA_C966BB1FF80841f6A587C16FB89171B2.html#Pkg__EF18971E33DC40a8AA70859A6304B3DC">Objectversie (entiteit)</a>, <a class="xref link_ea" href="EA_215C5F7818F84a2285EDBC1EFD681020.html#Pkg__D04DDED556684cedB91A0ABCD15FD584">Structuurelement (entiteit)</a>, <a class="xref link_ea" href="EA_215C5F7818F84a2285EDBC1EFD681020.html#Pkg__0EE1394205F246a787CB4EEB96B2FFB6">Tekstelement (entiteit)</a>, <a class="xref ea_genspec_direct link_ea" href="EA_EBCC9FE084674d9d9EE24FB92A8CEA01.html#Pkg__1E5C51D47A5C4dc3916D013EC309EB6A">Vrijetekststructuur (entiteit)</a></td>
+                        </tr>
+                    </tbody></table>
+            <table class="table ea_element" id="Pkg__76FCEBC0378A44599E1B27FDE41B06EA"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__76FCEBC0378A44599E1B27FDE41B06EA__entry__1" colspan="4">Regeling met vrijetekststructuur</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row">
+                        <td class="entry ea_doc_titel" headers="Pkg__76FCEBC0378A44599E1B27FDE41B06EA__entry__1">Definitie</td>
+                        <td class="entry ea_element_beschrijving" headers="Pkg__76FCEBC0378A44599E1B27FDE41B06EA__entry__1" colspan="3"><div class="div">
+      <p class="p">Het tekstonderdeel <code class="keyword markupname xmlelement">&lt;tekst:RegelingVrijetekst&gt;</code> is het root-element voor
+      regelingen met een vrije tekststructuur.</p>
+   </div>
+   </td>
+                    </tr>
+                    <tr class="row noimlinks-ea:{76FCEBC0-378A-4459-9E1B-27FDE41B06EA}">
+                        <td class="entry ea_doc_titel" headers="Pkg__76FCEBC0378A44599E1B27FDE41B06EA__entry__1">Implementatie</td>
+                        <td class="entry ea_relatedlinks_lijst" headers="Pkg__76FCEBC0378A44599E1B27FDE41B06EA__entry__1" colspan="3"><a class="xref link_xsd" href="tekst_xsd_Element_tekst_RegelingVrijetekst.html#RegelingVrijetekst">tekst:RegelingVrijetekst</a></td>
+                    </tr>
+                        <tr class="row">
+                            <td class="entry ea_genspec_titel" headers="Pkg__76FCEBC0378A44599E1B27FDE41B06EA__entry__1">Specialisatie van</td>
+                            <td class="entry ea_genspec_lijst" headers="Pkg__76FCEBC0378A44599E1B27FDE41B06EA__entry__1" colspan="3"><a class="xref link_ea" href="EA_1A45BBE5EC4F4bb2BBD7F5E701CE0479.html#Pkg__B4649197FA68449e913F625FA43F27DF">Module (entiteit)</a>, <a class="xref ea_genspec_direct link_ea" href="EA_EC0E326D36954e38824C5898BB506C1F.html#Pkg__AAD3DB3CCAF2490eAC6AAFB4F481DFA6">Regeling (tekst) (entiteit)</a></td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry ea_eltpackages_titel" headers="Pkg__76FCEBC0378A44599E1B27FDE41B06EA__entry__1">Zie ook</td>
+                            <td class="entry ea_eltpackages_lijst" headers="Pkg__76FCEBC0378A44599E1B27FDE41B06EA__entry__1" colspan="3"><a class="xref link_ea" href="EA_0B0A2D36B8F4476289BC46A863548D6B.html#Pkg">Besluittekst (onderwerp)</a>, <a class="xref ea_eltpackages_default link_ea" href="EA_EC0E326D36954e38824C5898BB506C1F.html#Pkg">Regelingtekst (onderwerp)</a></td>
+                        </tr>
+                    </tbody></table>
+            <table class="table ea_element" id="Pkg__F15CD250F20A48b5B0E0FDD8964BF466"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__F15CD250F20A48b5B0E0FDD8964BF466__entry__1" colspan="4">Regelingopschrift</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row">
+                        <td class="entry ea_doc_titel" headers="Pkg__F15CD250F20A48b5B0E0FDD8964BF466__entry__1">Definitie</td>
+                        <td class="entry ea_element_beschrijving" headers="Pkg__F15CD250F20A48b5B0E0FDD8964BF466__entry__1" colspan="3"><div class="div">
+    <p class="p">Het element <code class="keyword markupname xmlelement">&lt;tekst:RegelingOpschrift&gt;</code> bevat de intitulé (officiële
+      titel) van een regeling, zie de <a class="xref" href="https://wetten.overheid.nl/BWBR0005730/2018-01-01#Hoofdstuk4_Paragraaf4.1" target="_blank">Aanwijzingen voor de regelgeving aanwijzing § 4.1</a>.</p>
+    <p class="p"> Om de STOP-tekstmodellen zo gelijk als mogelijk te houden, wordt de officiële titel van
+      andere STOP-documenten zoals besluiten, kennisgevingen en rectificaties ook als
+      <code class="keyword markupname xmlelement">&lt;RegelingOpschrift&gt;</code> gemodelleerd.</p>
+  </div>
+  </td>
+                    </tr>
+                    <tr class="row noimlinks-ea:{F15CD250-F20A-48b5-B0E0-FDD8964BF466}">
+                        <td class="entry ea_doc_titel" headers="Pkg__F15CD250F20A48b5B0E0FDD8964BF466__entry__1">Implementatie</td>
+                        <td class="entry ea_relatedlinks_lijst" headers="Pkg__F15CD250F20A48b5B0E0FDD8964BF466__entry__1" colspan="3"><a class="xref link_xsd" href="tekst_xsd_Element_tekst_RegelingOpschrift.html#RegelingOpschrift">tekst:RegelingOpschrift</a></td>
+                    </tr>
+                        <tr class="row">
+                            <td class="entry ea_genspec_titel" headers="Pkg__F15CD250F20A48b5B0E0FDD8964BF466__entry__1">Specialisatie van</td>
+                            <td class="entry ea_genspec_lijst" headers="Pkg__F15CD250F20A48b5B0E0FDD8964BF466__entry__1" colspan="3"><a class="xref ea_genspec_direct link_ea" href="EA_215C5F7818F84a2285EDBC1EFD681020.html#Pkg__EFB61EDA65E44c5fA6E13F44D4B2BC84">Inhoud-element (entiteit)</a>, <a class="xref link_ea" href="EA_215C5F7818F84a2285EDBC1EFD681020.html#Pkg__0EE1394205F246a787CB4EEB96B2FFB6">Tekstelement (entiteit)</a></td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry ea_eltpackages_titel" headers="Pkg__F15CD250F20A48b5B0E0FDD8964BF466__entry__1">Zie ook</td>
+                            <td class="entry ea_eltpackages_lijst" headers="Pkg__F15CD250F20A48b5B0E0FDD8964BF466__entry__1" colspan="3"><a class="xref ea_eltpackages_default link_ea" href="EA_73A4EA5DA9F84384A96B71880F695FC6.html#Pkg">Artikelstructuur (onderwerp)</a>, <a class="xref link_ea" href="EA_0B0A2D36B8F4476289BC46A863548D6B.html#Pkg">Besluittekst (onderwerp)</a></td>
+                        </tr>
+                    </tbody></table>
+        </section>
+  </div>
+</article></main></body></html>

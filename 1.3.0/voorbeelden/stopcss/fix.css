@@ -1,0 +1,358 @@
+#broodtekst h1,
+#broodtekst h2,
+#broodtekst h3,
+#broodtekst h4,
+#broodtekst h5,
+#broodtekst h6 {
+    float: none;
+    width: auto;
+    color: #154273;
+}
+
+#broodtekst h5,
+#broodtekst h6 {
+    font-size: 1em;
+}
+
+#broodtekst .list-custom__itembullet {
+    left: 0 !important;
+}
+
+#broodtekst ol,
+#broodtekst ul {
+    padding-left: 1em;
+}
+
+#broodtekst ul.list-custom,
+#broodtekst ol.list-custom {
+    padding-left: 0;
+}
+
+#broodtekst ol li {
+    float: none;
+    width: auto;
+}
+
+#broodtekst ol:not(.list-custom) li {
+    padding-left: 1em;
+}
+
+table.meta-table {
+    font-size: 16px;
+    border: 0;
+    margin: 0;
+    width: auto;
+    min-width: auto;
+}
+
+table.meta-table th,
+table.meta-table td {
+    border: 0;
+    padding: 0 40px 0 0;
+}
+
+#broodtekst table {
+    font-size: 16px;
+    border-collapse: collapse !important;
+    border-spacing: 0 !important;
+    table-layout: auto;
+}
+
+#broodtekst .footnotes a {
+    word-break: break-word;
+}
+
+sup, sub {
+    white-space: nowrap;
+}
+
+p img.valign {
+    display: inline
+}
+
+
+/* 
+* LET-OP: Hieronder aanpassingen i.v.m. demo renvooi 
+*/
+tr.table__rowheading td del,
+tr.table__rowheading td ins {
+    color: #333;
+}
+
+td > del,
+td > ins,
+figure > del,
+figure > ins,
+li > ins,
+li > del,
+ol > ins,
+ol > del,
+ul > ins,
+ul > del,
+div > del,
+div > ins {
+    padding: 0;
+}
+
+del table.table--striped tbody tr:nth-child(odd) td,
+del table.table--striped tbody tr:nth-child(odd):not(.table__rowheading) th,
+del .table.table--striped tbody tr:nth-child(odd) td,
+del .table.table--striped tbody tr:nth-child(odd):not(.table__rowheading) th {
+    background: none;
+}
+ins table.table--striped tbody tr:nth-child(odd) td,
+ins table.table--striped tbody tr:nth-child(odd):not(.table__rowheading) th,
+ins .table.table--striped tbody tr:nth-child(odd) td,
+ins .table.table--striped tbody tr:nth-child(odd):not(.table__rowheading) th {
+    background: none;
+}
+
+tr.ins.table__rowheading,
+ins table > thead > tr.table__rowheading > th,
+ins table > thead > tr.table__rowheading > td {
+    border: 5px solid #e3fcec !important;
+    padding: 3px !important;
+    text-decoration: underline;
+}
+
+tr.del.table__rowheading,
+del table > thead > tr.table__rowheading > th,
+del table > thead > tr.table__rowheading > td {
+    border: 5px solid #fce3e3 !important;
+    padding: 3px !important;
+    text-decoration: line-through;
+}
+
+ins > div,
+div > ins > p,
+div > ins caption,
+ins figcaption,
+div > ins .notTable,
+div > ins .table__no_rowheading,
+ins span,
+td > ins *,
+li > ins *,
+ol > ins *,
+ul > ins *,
+.table__no_rowheading td.ins,
+ins tfoot *,
+tr.ins.table__no_rowheading {
+    background: #e3fcec;
+    text-decoration: underline;
+}
+
+del > div,
+div > del > p,
+div > del caption,
+del figcaption,
+div > del .notTable,
+div > del .table__no_rowheading,
+del span,
+td > del *,
+li > del *,
+ol > del *,
+ul > del *,
+.table__no_rowheading td.del,
+del tfoot *,
+tr.del.table__no_rowheading {
+    background: #fce3e3;
+    text-decoration: line-through;
+}
+
+.legacy ins img {
+    border: 5px solid #e3fcec;
+}
+
+.legacy del img {
+    border: 5px solid #fce3e3;
+}
+
+#broodtekst dl dd:after {
+    display: none;
+}
+
+[data-element="Bijlage"] {
+    margin-bottom: 40px;
+}
+
+aside .inhoudsopgave ul li a {
+    padding-right: 1em;
+}
+
+.groep {
+    margin-bottom: 1em;
+    padding-bottom: 6px;
+}
+
+.groep > p {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#broodtekst.hideDiff ins,
+#broodtekst.hideDiff ins * {
+    background: none;
+}
+
+#broodtekst.hideDiff del {
+    display: none;
+}
+
+#broodtekst.hideDiff ins > img {
+    border: none;
+}
+
+#broodtekst.hideDiff .table__rowheading--lvl1 td ins,
+#broodtekst.hideDiff .table__rowheading--lvl1 th ins,
+#broodtekst.hideDiff ins .table__rowheading--lvl1 td,
+#broodtekst.hideDiff ins .table__rowheading--lvl1 th {
+    color: #fff;
+}
+
+.legacy figure > del > img {
+    position: relative;
+    overflow: hidden;
+}
+
+.legacy figure > del > img:before, .legacy figure > del > img:after {
+    position: absolute;
+    content: '';
+    background: red;
+    display: block;
+    width: 100%;
+    height: 30px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.legacy figure > del > img:after {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+/*ins::before,
+ins::after,
+del::before, 
+del::after {
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+del::before {
+  content: " [begin verwijderd, ] ";
+}
+
+del::after {
+  content: " [einde verwijderd, ] ";
+}
+
+ins::before {
+  content: " [begin toegevoegd, ] ";
+}
+
+ins::after {
+  content: " [einde toegevoegd, ] ";
+}
+*/
+
+.alert {
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.legacy img {
+    max-width: calc(100% - 2em);
+}
+
+.alert-default,
+.legacy div[data-element='WijzigBijlage'] div.wijzig-lid {
+    background: #eeeeee;
+}
+
+.legacy .wat {
+    padding-bottom: 3px;
+    line-height: 1em;
+}
+
+.legacy .wat p {
+    line-height: 1em;
+    margin-bottom: 6px
+}
+
+ol.footnotes {
+    list-style-type: none;
+}
+
+ol.footnotes sup {
+    vertical-align: top;
+    margin-right: 10px;
+}
+
+/* to remove on P */
+@font-face {
+    font-family: "rijksoverheidSans";
+    src: url("fonts/ROsanswebtextregular.eot?");
+    src: url("fonts/ROsanswebtextregular.eot?#iefix") format("embedded-opentype"), url("fonts/ROsanswebtextregular.ttf") format("truetype"), url("fonts/ROsanswebtextregular.woff") format("woff");
+    font-style: normal;
+    font-weight: normal
+}
+
+@font-face {
+    font-family: "rijksoverheidSans";
+    src: url("fonts/ROsanswebtextitalic.eot?");
+    src: url("fonts/ROsanswebtextitalic.eot?#iefix") format("embedded-opentype"), url("fonts/ROsanswebtextitalic.ttf") format("truetype"), url("fonts/ROsanswebtextitalic.woff") format("woff");
+    font-style: italic;
+    font-weight: normal
+}
+
+@font-face {
+    font-family: "rijksoverheidSans";
+    src: url("fonts/ROsanswebtextbold.eot?");
+    src: url("fonts/ROsanswebtextbold.eot?#iefix") format("embedded-opentype"), url("fonts/ROsanswebtextbold.ttf") format("truetype"), url("fonts/ROsanswebtextbold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "rijksoverheidSerif";
+    src: url("fonts/ROserifwebregular.eot?");
+    src: url("fonts/ROserifwebregular.eot?#iefix") format("embedded-opentype"), url("fonts/ROserifwebregular.ttf") format("truetype"), url("fonts/ROserifwebregular.woff") format("woff");
+    font-style: normal;
+    font-weight: normal
+}
+
+@font-face {
+    font-family: "rijksoverheidSerif";
+    src: url("fonts/ROserifwebitalic.eot?");
+    src: url("fonts/ROserifwebitalic.eot?#iefix") format("embedded-opentype"), url("fonts/ROserifwebitalic.ttf") format("truetype"), url("fonts/ROserifwebitalic.woff") format("woff");
+    font-style: italic;
+    font-weight: normal
+}
+
+@font-face {
+    font-family: "rijksoverheidSerif";
+    src: url("fonts/ROserifwebbold.eot?");
+    src: url("fonts/ROserifwebbold.eot?#iefix") format("embedded-opentype"), url("fonts/ROserifwebbold.ttf") format("truetype"), url("fonts/ROserifwebbold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal
+}

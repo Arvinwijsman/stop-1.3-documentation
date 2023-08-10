@@ -1,0 +1,32 @@
+<html>
+<head>
+    <script type="text/javascript">
+        var to = new URL(window.location.href).searchParams.get("to");
+        html = 'Geen documentatie locatie aanwezig voor ' + to;
+        function VoegRepositoryToe(elements) {
+            if (!to) {
+                return;
+            }
+            for (var i = 0; i < elements.length; i++) {
+                var elt = elements[i];
+                if (to === elt.Prefix) {
+                    var baseUrl = elt.Url;
+                    if (!baseUrl) {
+                        return;
+                    }
+                    var link = baseUrl + "go/go.html?id=" + new URL(window.location.href).searchParams.get("id");
+                    html = 'U wordt doorverwezen naar <a href="' + link + '">de ' + to + ' documentatie</a>...';
+                    document.write('<meta http-equiv = "refresh" content = "0; url = ' + link + '"/>');
+                }
+            }
+        }
+    </script>
+    <script type="text/javascript" src="goto.js">
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+        document.write(html);
+    </script>
+</body>
+</html>

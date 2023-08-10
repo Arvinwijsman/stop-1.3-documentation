@@ -1,0 +1,45 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="presentatie-van-wijzigingsbesluiten"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Presentatie van wijzigingsbesluiten</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="presentatie-van-wijzigingsbesluiten"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1">Presentatie van wijzigingsbesluiten</h1><div class="body"><p class="p">Een <a class="xref" href="proces_besluit_en_regeling.html">besluit</a> kan de vaststelling van een initieel besluit (een eerste versie van een regeling) betreffen of een wijziging van het initiële besluit of regeling. Het laatste zal veelvuldig voorkomen bij met name omgevingsplannen, omgevingsverordeningen en waterschapsverordeningen. Bij een vaststelling van een besluit geldt dat het bevoegd gezag het hele besluit en de bijbehorende geografische informatieobjecten heeft bekeken en over ieder onderdeel daarvan heeft besloten. Bij een wijzigingsbesluit heeft het bevoegd gezag alleen een besluit genomen over het deel van de tekst en/of geografische informatieobjecten dat daadwerkelijk wijzigt. Er is bij een wijzigingsbesluit door het bevoegd gezag geen besluit genomen over de niet gewijzigde onderdelen van de regeling. Een wijzigingsbesluit dient daarom in mensleesbare vorm datgene te tonen wat door het besluit verandert in de <a class="xref" href="proces_consolidatie.html">geconsolideerde</a> versie.</p></div><article class="topic nested1" aria-labelledby="ariaid-title2" id="methodiek-voor-presentatie-van-wijzigingen"><h2 class="title topictitle2" id="ariaid-title2">Methodiek voor presentatie van wijzigingen</h2><div class="body"><p class="p">Een besluit geeft aan welke nieuwe of gewijzigde regels worden vastgesteld. Een wijzigingsbesluit en de bekendmaking ervan, bevat daarom alleen tekstonderdelen (bijvoorbeeld artikelen) en informatieobjecten die wijzigen. De duiding van de wijzigingen binnen de regels, inclusief verwijzing naar informatieobjecten, worden expliciet meegeleverd in het besluit en het uitgangspunt is dat de wijzigingen in <a class="xref" href="bepalen_wijzigingen_renvooi.html">renvooiweergave</a> worden gepresenteerd.</p></div></article><article class="topic nested1" aria-labelledby="ariaid-title3" id="wijzigingen-in-tekst-presenteren"><h2 class="title topictitle2" id="ariaid-title3">Wijzigingen in tekst presenteren</h2><div class="body"><p class="p">Voor het automatisch verwerken van wijzigingen is het werken met wijzigingsinstructies (bijvoorbeeld: In alinea 3 wordt ‘10’ vervangen door ‘12’) niet langer hanteerbaar, want dit vergt een menselijke interpretatie. Het wijzigingsbesluit via STOP kent dan ook geen wijzigingsinstructies, maar geeft de verschillen aan. Het besluit bevat de te wijzigen objecten/tekstonderdelen, en ook expliciet welke tekst is gewijzigd. De verschillen worden hiermee meegeleverd. Bijvoorbeeld: “De maximum bouwhoogte is <code class="ph codeph">&lt;oud&gt;</code>10m<code class="ph codeph">&lt;/oud&gt;</code> <code class="ph codeph">&lt;nieuw&gt;</code>12m<code class="ph codeph">&lt;/nieuw&gt;</code>.</p><p class="p">De verschillen tussen de oude en de nieuwe versie worden aangegeven in een <a class="xref" href="bepalen_wijzigingen_renvooi.html">renvooiweergave</a>: Een renvooiweergave zorgt ervoor dat de verschillen expliciet worden weergegeven doordat zowel de oude versie als de nieuwe versie én de verschillen visueel worden weergegeven. Onderstaande figuur bevat een voorbeeld van een tekst in renvooiweergave.</p><img class="image" src="img/Presentatiemodel_Renvooiweergave.png" width="500"><br><p class="p"><em class="ph i">Voorbeeld van een tekst in renvooiweergave</em></p><p class="p">Ook bij de renvooiweergave wordt de systematiek van <a class="xref" href="Presentatiemodel.html#Functioneel-presenteren">functioneel presenteren</a> gehanteerd: het presentatiemodel schrijft voor dat het wijzigingsbesluit de oude en de nieuwe versie inzichtelijk moet maken door ze gecombineerd te presenteren en dat ook de verschillen visueel moeten worden geduid. De symboliek (kleuren, font, grootte, arcering etc) worden echter in stylesheets buiten het besluit gedefinieerd. In bovenstaand voorbeeld wordt de tekst die niet wijzigt, in de renvooiweergave, zonder markering weergegeven. De tekst uit de oude versie wordt rood gemarkeerd en doorgehaald. De nieuwe tekst wordt eraan toegevoegd en groen gemarkeerd.</p><p class="p">De renvooiweergave is meestal in een aparte bijlage opgenomen waarnaar verwezen wordt vanuit een wijzigartikel, bijvoorbeeld:</p><p class="p"><em class="ph i">Het omgevingsplan wordt gewijzigd zoals in bijlage A is aangegeven.</em></p><p class="p">In bijlage A wordt de tekst van de onderdelen die wijzigen in de renvooiweergave, zoals in het wijzigingsartikel is beschreven, gepresenteerd.</p><img class="image" src="img/Presentatiemodel_ConceptueleWeergaveWijzigingsbesluit_geenGIOmutatie.png" width="500"><br><p class="p"><em class="ph i">Conceptuele weergave van een wijzigingsbesluit</em></p><p class="p">De applicatie die de renvooiweergave toont moet ook een uitleg geven wat de weergave betekent; in dit geval dat groen nieuwe tekst aanduidt en rood vervallen tekst.</p><p class="p"><a class="xref" href="tekstmuteren.html">Tekstmuteren</a> beschrijft nu waar en hoe tekst mutaties in STOP toegepast kunnen worden, <a class="xref" href="bepalen_wijzigingen_renvooi.html">Bepalen van Wijzigingen en Renvooi</a> gaat daarna dieper in op de precieze werking van Renvooi.</p></div></article></article></main></body></html>

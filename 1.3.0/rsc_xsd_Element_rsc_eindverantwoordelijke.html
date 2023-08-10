@@ -1,0 +1,133 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="nl-nl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="eindverantwoordelijke"><meta name="DC.language" content="nl-nl"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Element rsc:eindverantwoordelijke</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="eindverantwoordelijke"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a><ul><li><a href="imop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="imop_xml.html">XML-serialisatie</a></li><li><a href="uitwisselpakket.html">Uitwisselpakket</a></li><li><a href="schemata_gebruik.html">Gebruik van IMOP</a></li><li><a href="schema_documentatie.html">Schemadocumentatie</a><ul><li><a href="schema_documentatie_legenda.html">Legenda van de schemadocumentatie</a></li><li><a href="imop_modules.html">STOP-modules in IMOP</a></li><li><a href="tekst_xsd_Main_schema_tekst_xsd.html">Schema imop-tekst.xsd</a></li><li><a href="gio_xsd_Main_schema_gio_xsd.html">Schema imop-gio.xsd</a></li><li><a href="geo_xsd_Main_schema_geo_xsd.html">Schema imop-geo.xsd</a></li><li><a href="se_xsd_Main_schema_se_xsd.html">Schema se-FeatureStyle-imop.xsd</a></li><li><a href="ogc_xsd_Main_schema_ogc_xsd.html">Schema se-filter-imop.xsd</a></li><li><a href="data_xsd_Main_schema_data_xsd.html">Schema imop-data.xsd</a></li><li><a href="cons_xsd_Main_schema_cons_xsd.html">Schema imop-consolidatie.xsd</a></li><li><a href="rsc_xsd_Main_schema_rsc_xsd.html">Schema imop-resources.xsd</a><ul><li><a href="rsc_xsd_Attribute_Group_rsc_agSchemaVersie.html">agSchemaVersie</a></li><li><a href="rsc_xsd_Element_rsc_beschrijving.html">beschrijving</a></li><li><a href="rsc_xsd_Simple_Type_rsc_dtResourceRef.html">dtResourceRef</a></li><li><a href="rsc_xsd_Simple_Type_rsc_dtSchemaVersie.html">dtSchemaVersie</a></li><li class="active"><a href="rsc_xsd_Element_rsc_eindverantwoordelijke.html">eindverantwoordelijke</a></li><li><a href="rsc_xsd_Element_rsc_geldigTot.html">geldigTot</a></li><li><a href="rsc_xsd_Element_rsc_geldigVanaf.html">geldigVanaf</a></li><li><a href="rsc_xsd_Element_rsc_heeftVindplaats.html">heeftVindplaats</a></li><li><a href="rsc_xsd_Element_rsc_id.html">id</a></li><li><a href="rsc_xsd_Element_rsc_label.html">label</a></li><li><a href="rsc_xsd_Element_rsc_uitbreidbaar.html">uitbreidbaar</a></li><li><a href="rsc_xsd_Element_rsc_url.html">url</a></li><li><a href="rsc_xsd_Element_rsc_versie.html">versie</a></li><li><a href="rsc_xsd_Element_rsc_Vindplaats.html">Vindplaats</a></li><li><a href="rsc_xsd_Element_rsc_vindplaatsen.html">vindplaatsen</a></li><li><a href="rsc_xsd_Element_rsc_Waarde.html">Waarde</a></li><li><a href="rsc_xsd_Element_rsc_Waardelijst.html">Waardelijst</a></li><li><a href="rsc_xsd_Element_rsc_WaardelijstInfo.html">WaardelijstInfo</a></li></ul></li><li><a href="br_xsd_Main_schema_br_xsd.html">Schema imop-bedrijfsregels.xsd</a></li><li><a href="sv_xsd_Main_schema_sv_xsd.html">Schema imop-schemata.xsd</a></li><li><a href="uws_xsd_Main_schema_uws_xsd.html">Schema imop-uitwisseling.xsd</a></li></ul></li><li><a href="imop_bedrijfsregels.html">Bedrijfsregels</a></li><li><a href="imop_waardelijsten.html">Waardelijsten</a></li></ul></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+   <h1 class="title topictitle1" id="ariaid-title1">Element rsc:eindverantwoordelijke</h1>
+   <div class="body">
+      <table class="table frame-all"><caption></caption><colgroup><col style="width:10.714285714285714%"><col style="width:89.28571428571429%"></colgroup><tbody class="tbody">
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Namespace</td>
+                  <td class="entry align-left colsep-1 rowsep-1">https://standaarden.overheid.nl/stop/imop/resources/</td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Definitie</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="div">
+    <p class="p">De Organisatie die de wettelijke verantwoordelijkheid draagt voor de inhoud (strekking) van
+      de tekst, het informatieobject of de resource.</p>
+  </div>
+  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Informatie</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="div">
+    <p class="p"><strong class="ph b">Beperkingen</strong></p>
+    <p class="p">Zie <a class="xref link_xsd" href="data_xsd_Element_data_maker.html#maker">meta:maker</a> voor de
+      beperkingen aan de waarde.</p>
+  </div>
+  <div class="div">
+    <p class="p"><strong class="ph b">Voorbeeld</strong></p>
+    <pre class="pre codeblock"><code>
+      &lt;eindverantwoordelijke&gt;/join/id/stop/gemeente/gm0000&lt;/eindverantwoordelijke&gt;</code></pre>
+  </div>
+  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Informatiemodel</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <a class="xref link_ea" href="EA_C0DF21A3FC7A4ff2A7A7FEF848B6260F.html#Pkg__032E7246CC1B4f14B6C676D3D1D8C72A">Eindverantwoordelijke (eigenschap van Resource vindplaats)</a>, <a class="xref link_ea" href="EA_E071E43092384cd394D942ECD77D959F.html#Pkg__12E9C93321004636932C3E3A21318D92">Eindverantwoordelijke (eigenschap van Metadata besluit)</a>, <a class="xref link_ea" href="EA_EC4DE25BFB1341e6B632337DAF9C2791.html#Pkg__CC7F8BBF3D624e5cAB5BEEC5D1588695">Eindverantwoordelijke (eigenschap van Metadata Informatieobject)</a>, <a class="xref link_ea" href="EA_93CB8E590C2B43829E3E007614134DE4.html#Pkg__61751351948A4d379897CB74C380657C">Eindverantwoordelijke (eigenschap van Metadata regeling)</a>, <a class="xref link_ea" href="EA_C0DF21A3FC7A4ff2A7A7FEF848B6260F.html#Pkg__BE2BBB7420474b9e846722955618897C">Eindverantwoordelijke (eigenschap van Resource specificatie)</a>, <a class="xref link_ea" href="EA_233F9A157B1F4d11A41DBE8FC3424244.html#Pkg__AAFBEEB85E854397AB4A97307C5F2BCA">Eindverantwoordelijke (eigenschap van Metadata kennisgeving)</a>, <a class="xref link_ea" href="EA_CE0701FE9A054073B11E9531BE7681D4.html#Pkg__80EF95EC1DB54bd18AD63CCBC9090649">Eindverantwoordelijke (eigenschap van Metadata rectificatie)</a></td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Verwijzingen</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <a class="xref link_xsd" href="data_xsd_Element_data_eindverantwoordelijke.html#eindverantwoordelijke">data:eindverantwoordelijke</a></td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Diagram</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="p">
+                        <div class="fig imagemap" id="eindverantwoordelijke__rsc_xsd_Element_rsc_eindverantwoordelijke"><img usemap="#d311647e144" class="image" src="img/rsc_xsd_Element_rsc_eindverantwoordelijke.png"><map name="d311647e144" id="d311647e144"><area href="rsc_xsd_Simple_Type_rsc_dtResourceRef.html#dtResourceRef" alt="Simple Type rsc:dtResourceRef" title="Simple Type rsc:dtResourceRef" shape="rect" coords="183,9,330,35"></map></div>
+                     </div>
+                  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Type</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <a class="xref" href="rsc_xsd_Simple_Type_rsc_dtResourceRef.html#dtResourceRef">Simple Type rsc:dtResourceRef</a>
+                  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Eigenschappen</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="p">
+                        <table class="table frame-all"><caption></caption><colgroup><col style="width:20%"><col style="width:80%"></colgroup><tbody class="tbody">
+                                 <tr class="row">
+                                    <td class="entry align-left colsep-1 rowsep-1">content: </td>
+                                    <td class="entry align-left colsep-1 rowsep-1">
+                                       <strong class="ph b">simple</strong>
+                                    </td>
+                                 </tr>
+                              </tbody></table>
+                     </div>
+                  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Gebruikt door</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="p">
+                        <table class="table frame-all"><caption></caption><colgroup><col style="width:20%"><col style="width:80%"></colgroup><tbody class="tbody">
+                                 <tr class="row">
+                                    <td class="entry align-left colsep-1 rowsep-1">Elements </td>
+                                    <td class="entry align-left colsep-1 rowsep-1">
+                                       <a class="xref" href="rsc_xsd_Element_rsc_Vindplaats.html#Vindplaats">Element rsc:Vindplaats</a>, <a class="xref" href="rsc_xsd_Element_rsc_Waarde.html#Waarde">Element rsc:Waarde</a>, <a class="xref" href="rsc_xsd_Element_rsc_WaardelijstInfo.html#WaardelijstInfo">Element rsc:WaardelijstInfo</a>
+                                    </td>
+                                 </tr>
+                              </tbody></table>
+                     </div>
+                  </td>
+               </tr>
+               </tbody></table>
+   </div>
+</article></main></body></html>

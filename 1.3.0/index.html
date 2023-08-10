@@ -1,0 +1,47 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="introductie"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Introductie</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="introductie"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li class="active"><a href="index.html">Introductie</a><ul><li><a href="ondersteuning.html">Ondersteuning</a></li><li><a href="wijzigingsbericht.html">Wijzigingsbericht </a></li></ul></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1">Introductie</h1><div class="body"><p class="p">Dit is de documentatie van versie 1.3.0 van de Standaard Officiële Publicaties die is gepubliceerd op 07-01-2022.</p></div><article class="topic nested1" aria-labelledby="ariaid-title2" id="documentatie"><h2 class="title topictitle2" id="ariaid-title2">Documentatie</h2><div class="body"><p class="p">De documentatie bestaat uit de <a class="xref" href="stop_index.html">Standaard Officiële Publicaties (STOP)</a> zelf en de implementatie van de standaard in het <a class="xref" href="imop_index.html">Implementatiemodel Officiële Publicaties (IMOP)</a> in XML. Met daarnaast een korte toelichting <a class="xref" href="over_stop.html">over de standaard</a> en de <a class="xref" href="begrippenlijst.html">begrippenlijst</a>.</p></div><article class="topic nested2" aria-labelledby="ariaid-title3" id="standaard-officiële-publicaties"><h3 class="title topictitle3" id="ariaid-title3">Standaard Officiële Publicaties</h3><div class="body"><p class="p">Beschrijft de standaard in tekst en als informatiemodel:</p><dl class="dl"><dt class="dt dlterm"><a class="xref" href="stop_wijzigingsoverzicht.html">Wijzigingsoverzicht STOP</a></dt><dd class="dd"><p class="p">Bevat een overzicht van de wijzigingen in de STOP-standaard en de documentatie ten opzichte van eerdere STOP-versies.</p></dd><dt class="dt dlterm"><a class="xref" href="leeswijzers.html">Leeswijzers</a></dt><dd class="dd"><p class="p">Een beschrijving per onderwerp uit de standaard, waarin aangeven is welke delen van het informatiemodel en/of de technische documentatie op dat onderwerp betrekking hebben, of hoe de standaard toegepast kan worden.</p></dd><dt class="dt dlterm"><a class="xref" href="EA_4D1D7FD517FE4d8dA9A2B905D202C92B.html#Pkg">Informatiemodel</a></dt><dd class="dd"><p class="p">Een beschrijving van de informatie die onderdeel is van de standaard.
+Een export van het model is te vinden op <a class="xref" href="https://koop.gitlab.io/STOP/standaard/1.3.0/go/go.html?id=git%3Auml" target="_blank">Gitlab</a>.</p></dd><dt class="dt dlterm"><a class="xref" href="businessrules.html">Bedrijfsregels</a></dt><dd class="dd"><p class="p">Opsomming van de bedrijfsregels die van toepassing zijn binnen de standaard.</p></dd></dl></div></article><article class="topic nested2" aria-labelledby="ariaid-title4" id="implementatiemodel-officiële-publicaties"><h3 class="title topictitle3" id="ariaid-title4">Implementatiemodel Officiële Publicaties</h3><div class="body"><p class="p">Beschrijving van de standaard in XML-schema's en Schematrons</p><dl class="dl"><dt class="dt dlterm"><a class="xref" href="imop_wijzigingsoverzicht.html">Wijzigingsoverzicht IMOP</a></dt><dd class="dd"><p class="p">Bevat een overzicht van de wijzigingen in het implementatiemodel: de XML schema's en de schematrons ten opzichte van eerdere versies.</p></dd><dt class="dt dlterm"><a class="xref" href="imop_xml.html">XML-serialisatie</a></dt><dd class="dd"><p class="p">Beschrijft de wijze waarop STOP informatie in XML-documenten wordt uitgewisseld.</p></dd><dt class="dt dlterm"><a class="xref" href="uitwisselpakket.html">Uitwisselpakket</a></dt><dd class="dd"><p class="p">IMOP kent een manier om STOP-modules op een standaard manier te verpakken in een gecomprimeerd bestand.</p></dd><dt class="dt dlterm"><a class="xref" href="schemata_gebruik.html">Gebruik van IMOP</a></dt><dd class="dd"><p class="p">Toelichting op het toepassen van de XML-schema's en schematrons</p></dd><dt class="dt dlterm"><a class="xref" href="schema_documentatie.html">Schemadocumentatie</a></dt><dd class="dd"><p class="p">De documentatie van de technische implementatie van de standaard in XML schema's.
+De schema's zelf zijn te vinden op <a class="xref" href="https://koop.gitlab.io/STOP/standaard/1.3.0/go/go.html?id=git%3Aschema" target="_blank">Gitlab</a>.</p></dd></dl><p class="p">Daarnaast zijn beschikbaar op Gitlab <a class="xref" href="https://koop.gitlab.io/STOP/standaard/1.3.0/go/go.html?id=git%3Awaardelijsten" target="_blank">Waardelijsten</a> en implementatie <a class="xref" href="https://koop.gitlab.io/STOP/standaard/1.3.0/go/go.html?id=git%3Avoorbeelden" target="_blank">Voorbeelden</a>.</p></div></article></article><article class="topic nested1" aria-labelledby="ariaid-title5" id="relatie-met-lvbb"><h2 class="title topictitle2" id="ariaid-title5">Relatie met LVBB</h2><div class="body"><p class="p">STOP wordt gebruikt door de Landelijke Voorziening Bekendmaken en Beschikbaarstellen (LVBB). Het bronhouderkoppelvlak van de LVBB is <a class="xref" href="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/">elders</a> gedocumenteerd. Het bronhouderkoppelvlak houdt ook rekening met domein-specifieke afspraken en informatie die gebruikt maakt van STOP maar die in andere standaarden is vastgelegd:</p><ul class="ul"><li class="li"><p class="p"><a class="xref" href="https://www.geonovum.nl/geo-standaarden/omgevingswet/STOPTPOD#TPOD" target="_blank">Toepassingsprofielen Omgevingsdocumenten</a> beschrijven de toepassing van STOP voor Omgevingswet-besluiten en -regelingen.</p></li><li class="li"><p class="p"><a class="xref" href="https://www.geonovum.nl/geo-standaarden/omgevingswet/STOPTPOD#TPOD" target="_blank">Informatiemodel Omgevingswet</a> beschrijft de uitwisseling van domein-specifieke informatie uit de Toepassingsprofielen Omgevingsdocumenten ten behoeve van het <a class="xref" href="https://aandeslagmetdeomgevingswet.nl/digitaal-stelsel/" target="_blank">DSO-LV</a>.</p></li></ul></div></article><article class="topic nested1" aria-labelledby="ariaid-title6" id="ondersteuning"><h2 class="title topictitle2" id="ariaid-title6">Ondersteuning</h2><div class="body"><p class="p">Een beschrijving van de manier waarop de standaard ondersteund wordt is te vinden bij <a class="xref" href="ondersteuning.html">Ondersteuning</a>.</p></div></article></article></main></body></html>

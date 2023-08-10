@@ -1,0 +1,58 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="schematrons"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Schematrons</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="schematrons"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a><ul><li><a href="imop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="imop_xml.html">XML-serialisatie</a></li><li><a href="uitwisselpakket.html">Uitwisselpakket</a></li><li><a href="schemata_gebruik.html">Gebruik van IMOP</a><ul><li><a href="schemata_gebruik_url.html">IMOP op het internet</a></li><li><a href="schemata_gebruik_lokaal.html">IMOP lokaal gebruiken</a></li><li><a href="schemata_gebruik_versionering.html">Versionering van modules</a></li><li class="active"><a href="schemata_gebruik_schematrons.html">Schematrons</a></li><li><a href="schemata_gebruik_transformaties.html">Transformaties</a></li></ul></li><li><a href="schema_documentatie.html">Schemadocumentatie</a></li><li><a href="imop_bedrijfsregels.html">Bedrijfsregels</a></li><li><a href="imop_waardelijsten.html">Waardelijsten</a></li></ul></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1">Schematrons</h1><div class="body"></div><article class="topic nested1" aria-labelledby="ariaid-title2" id="schematrons-in-imop"><h2 class="title topictitle2" id="ariaid-title2">Schematrons in IMOP</h2><div class="body"><p class="p">Een <a class="xref" href="https://schematron.com/" target="_blank">schematron</a> is een standaard manier om in het XML-domein bedrijfsregels vast te leggen. Uitgebreidere XML-georiënteerde software kan een schematron direct uitvoeren. In IMOP worden de bedrijfsregels die betrekking hebben op een enkele IMOP-module en die aan de hand van alleen de informatie in de module te controleren zijn, zoveel mogelijk in schematrons vastgelegd.</p><p class="p">Niet alle XML-gerelateerde software kan schematrons uitvoeren. Als dat niet het geval is, dan kan een schematron worden omgezet in een <a class="xref" href="https://www.w3.org/TR/xslt20/" target="_blank">XSLT versie 2.0</a>-transformatie volgens een <a class="xref" href="https://github.com/Schematron/schematron" target="_blank">standaard procedé</a>. Als service worden bij IMOP de <a class="xref" href="https://koop.gitlab.io/STOP/standaard/1.3.0/go/go.html?id=git%3Aservice/schematron_xslt" target="_blank">XSLT2-transformaties</a> uitgeleverd die geschikt zijn voor de Saxon XSLT engine. De XSLT2-vertalingen zijn getest met</p><ul class="ul"><li class="li"><p class="p"><a class="xref" href="https://www.saxonica.com/download/download_page.xml" target="_blank">Saxon Home Edition</a> (aldaar vermeld als de Saxon HE editie), een <a class="xref" href="https://www.saxonica.com/support/opensource.xml" target="_blank">open source</a> XSLT/XQuery-implementatie, en met</p></li><li class="li"><p class="p"><a class="xref" href="https://www.marklogic.com/product/marklogic-database-overview/" target="_blank">MarkLogic</a>.</p></li></ul><p class="p">De schematrons die gebruikt kunnen worden om de XML-serialisatie van een IMOP-module te valideren zijn vastgelegd in het <a class="xref" href="schemata_gebruik_versionering.html">versieoverzicht</a>. Dat overzicht verwijst naar de schematrons met de juiste URL. De bestandsnaam voor een schematron is te herkennen aan de <code class="ph codeph">.sch</code> extensie. De XSLT2-vertaling van de schematron is beschikbaar via een URL die uit de schematron-URL verkregen wordt door de <code class="ph codeph">.sch</code> extensie te vervangen door <code class="ph codeph">.xslt</code>.</p></div></article><article class="topic nested1" aria-labelledby="ariaid-title3" id="uitkomst-van-een-schematron"><h2 class="title topictitle2" id="ariaid-title3">Uitkomst van een schematron</h2><div class="body"><p class="p">De schematrons moeten toegepast worden op elk (geheel) <a class="xref" href="xml_documenten.html">XML-document</a> dat de IMOP-module bevat. Dus niet alleen als het XML-element het rootelement van het XML-document is, maar ook als het XML-element op een andere positie in het document voorkomt.</p><p class="p">De validatie van een XML-document via schematrons kan pas gedaan worden nadat is vastgesteld dat het XML-document valide is ten opzichte van de XML-schema's. De foutmeldingen uit XML-schema-validatie zijn afhankelijk van de gebruikte XML-parser en worden niet door STOP voorgeschreven.</p><p class="p">Als de XML-serialisatie niet aan de bedrijfsregels voldoet, dan resulteert het uitvoeren van een schematron in één of meer JSON-objecten, gescheiden door komma's (en met een komma aan het einde). Door de laatste komma weg te halen en <code class="ph codeph">[ ]</code> er omheen te zetten ontstaat een valide JSON object-array. Voorbeeld van de uitkomst van een schematron:</p><pre class="pre codeblock json"><code>  {
+    "code": "STOP0005",
+    "melding": "De alinea voor element Divisietekst met id content_o_1 bevat geen tekst. Verwijder de lege alinea",
+    "ernst": "fout"
+    "element": "Divisietekst",
+    "eId": "content_o_1"
+  },
+  {
+    "code": "STOP1000", 
+    "melding": "De identifier /join/id/proces/pv30/2020/Instelling.Verordening bevat een punt. Dit is niet toegestaan. Verwijder de punt.",
+    "ernst": "fout"
+    "ID": "/join/id/proces/pv30/2020/Instelling.Verordening"
+  },
+</code></pre><p class="p">Elk JSON-object in de validatieoutput heeft een veld <code class="ph codeph">code</code>. Deze codes met de bijbehorend meldingen zijn opgesomd op het overzicht van de <a class="xref" href="businessrules.html">bedrijfsregels</a>. De <code class="ph codeph">ernst</code> geeft aan of het om een <code class="ph codeph">fout</code>, <code class="ph codeph">waarschuwing</code> of <code class="ph codeph">informatief</code> gaat. De <code class="ph codeph">melding</code> geeft een mensleesbare beschrijving die overeenkomt met de melding als beschreven in de bijbehorende bedrijfsregel en waarbij eventuele parameters zijn ingevuld. De overige attributen van het JSON-object betreft de parameters zoals ze in de melding verwerkt zijn.</p></div></article><article class="topic nested1" aria-labelledby="ariaid-title4" id="meldingen-met-ernst--ontraden"><h2 class="title topictitle2" id="ariaid-title4">Meldingen met ernst = <code class="ph codeph">ontraden</code></h2><div class="body"><p class="p">De <code class="ph codeph">ernst</code> kan ook <code class="ph codeph">ontraden</code> zijn. Op deze manier waarschuwt IMOP dat een deel van de XML-serialisatie een model volgt dat in een volgende versie van de standaard zal komen te vervallen. Er zal binnen deze versie van STOP ook al een alternatief model geboden worden. Het is aan te raden bij het inbouwen van deze versie van IMOP in software al om te schakelen naar het alternatieve model.</p></div></article></article></main></body></html>

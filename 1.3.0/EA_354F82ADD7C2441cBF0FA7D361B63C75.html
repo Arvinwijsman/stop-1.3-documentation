@@ -1,0 +1,459 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="nl-nl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="Pkg"><meta name="DC.language" content="nl-nl"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Proefversies voor een besluit</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="Pkg"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a><ul><li><a href="stop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="leeswijzers.html">Leeswijzers</a></li><li><a href="EA_4D1D7FD517FE4d8dA9A2B905D202C92B.html">Informatiemodel</a><ul><li><a href="EA_9E187217A693458593B4BC483B77322B.html">Legenda van de diagrammen</a></li><li><a href="EA_068BE3F17D2D41a8AA2E39A355337401.html">Toepassingsgebied</a></li><li><a href="EA_BEA65540863F4cedAE03E4C3D0A29EAA.html">Algemeen</a></li><li><a href="EA_A1BBB86A635B4bf6B2FCECD1CFE6A3C9.html">Besluiten en regelgeving</a></li><li><a href="EA_E0EFE05F9FBB45c6AB2493B9FF9037EC.html">Officiële publicaties</a></li><li><a href="EA_81311E5C8AD34b35B153B21B50080288.html">Consolidatie van regelgeving</a><ul><li><a href="EA_F798EBB99D38431f9884C8D2E7DA0B6B.html">Juridische verantwoording</a></li><li><a href="EA_06EBFA9D4CAD4ff29AFBE17665E06C18.html">Actuele consolidatie informatie</a></li><li><a href="EA_AFAF97EA251247c9B2CC7B9922384BF8.html">Consolidatie van een instrument</a></li><li><a href="EA_21F155BFDF91485e9CC1901FE5B5A024.html">Toestanden</a></li><li class="active"><a href="EA_354F82ADD7C2441cBF0FA7D361B63C75.html">Proefversies voor een besluit</a></li></ul></li></ul></li><li><a href="businessrules.html">Bedrijfsregels</a></li></ul></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title topictitle1" id="ariaid-title1">Proefversies voor een besluit</h1>
+  <div class="body">
+      <div class="div">
+    <p class="p">Voor elk besluit dat wijzigingen in regelgeving beschrijft kan een overzicht 
+    gemaakt worden van de regelgeving zoals die zou zijn als de wijzigingen in de bekende regelgeving
+    wordt doorgevoerd. In STOP worden de uitkomsten daarvan proefconsolidaties genoemd.</p>
+  </div>
+  <div class="div">
+    <p class="p">Een besluit beschrijft initiële regelgeving, of regelgeving die al in werking zijnde 
+    regelingen of informatieobjecten wijzigt. Het is mogelijk om daarvan proefversies te maken. 
+    Een proefversie is het antwoord op de vraag: hoe zou de geconsolideerde regelgeving eruit zien
+    als het besluit in werking zou treden? STOP kent daarvoor een module 
+    <a class="xref link_ea" href="#Pkg__AC57A2D747F34eb1927EE0E8BFFB47B6">Proefversies</a>
+    die vooral bedoeld is voor niet-definitieve (zoals ontwerp-)besluiten waarvan 
+    nooit de datum van inwerkingtreding bekend is.</p>
+  </div>
+<figure class="fig fignone ea_diagram" id="Pkg__1E9FB8268B0A40b2A507C9A8CFB873A5">
+<div class="p"><div class="fig imagemap"><img usemap="#d390990e34" class="image zoomable" src="img/EA_1E9FB8268B0A40b2A507C9A8CFB873A5.png"><map name="d390990e34" id="d390990e34"><area href="#Pkg__242F0CD5E62E407aB90DD26FB083443F" alt="Procedureverloop (entiteit)" title="Procedureverloop (entiteit)" shape="rect" coords="157,221,411,274"><area href="#Pkg__617D6910A0FA4342A8933103A63054D6" alt="Procedurestap (entiteit)" title="Procedurestap (entiteit)" shape="rect" coords="298,287,517,403"><area href="#Pkg__63D800160E03495fBB8E7A09E59065FD" alt="Besluit (entiteit)" title="Besluit (entiteit)" shape="rect" coords="13,13,144,66"><area href="#Pkg__63DA0B997B154bff930F9F7FFC7ACF23" alt="Work identificatie (entiteit)" title="Work identificatie (entiteit)" shape="rect" coords="157,79,398,176"><area href="#Pkg__19B3029E339244c395ACF38D267148E2" alt="Proefversie (entiteit)" title="Proefversie (entiteit)" shape="rect" coords="298,501,594,579"><area href="#Pkg__AC57A2D747F34eb1927EE0E8BFFB47B6" alt="Proefversies (entiteit)" title="Proefversies (entiteit)" shape="rect" coords="157,421,373,482"></map></div></div>
+</figure>
+<div class="div">
+    <p class="p">
+      De module is een <a class="xref" href="context_modules.html">context module</a>
+      bij het besluit als <a class="xref link_ea" href="EA_188A75C61FB54d108E7659F3FE5DE8F3.html#Pkg__AB6FDC32D3F3474eBBE7438305EB0E26">work</a>.
+      Er is niet voor gekozen om de proefversies voor een specifieke versie van het besluit te beschrijven,
+      omdat nieuwe versies van een besluit veelal ontstaan door aanpassing van andere onderdelen dan de
+      beschrijving van de nieuwe regelgeving, zoals aanpassing van toelichtingen.
+    </p><p class="p">
+      Het type besluit (consultatie/voorontwerp, ontwerp, definitief besluit) is aan de 
+      <a class="xref link_ea" href="EA_E071E43092384cd394D942ECD77D959F.html#Pkg__C2CAFBB270E04cfe939C31C5B6120777">Soort procedure</a>
+      te herkennen; dit is gekoppeld aan het work en wijzigt nooit. Het <a class="xref link_ea" href="#Pkg__242F0CD5E62E407aB90DD26FB083443F">Procedureverloop</a>
+      is een geconsolideerde versie van het procedureverloop zoals samengesteld uit de informatie meegeleverd met het besluit, waarin 
+      alleen de stappen zijn overgehouden die relevant zijn voor de proefversie. Bij een ontwerpbesluit gaat het dan om stappen 
+      als het moment van ter inzage legging, of het einde van de reactietermijn.
+    </p>
+    <p class="p">
+      De uitkomst kan proefversies van meerdere regelingen en/of informatieobjecten bevatten. Voor 
+      elk daarvan kunnen meerdere proefversies aanwezig zijn als een besluit 
+      <a class="xref" href="proces_besluit.html#gefaseerd">wijzigingen geassocieerd met meerdere doelen</a>() bevat,
+      zoals aangegeven in de <a class="xref link_ea" href="EA_5E740899BABE47d1B62053A402064B33.html#Pkg__E480ACE31F414f8aB3CF2309232EB934">consolidatie-informatie</a> bij het besluit. 
+      Voor elk van de versies is een <a class="xref link_ea" href="#Pkg__19B3029E339244c395ACF38D267148E2">proefversie</a> 
+      beschikbaar die beschrijft welke wijzigingen van regelgeving 
+      (via <a class="xref link_ea" href="#Pkg__BB3BC09B5B854d4b83F9AA78795A23CB">gerealiseerde doelen</a>) in de versie 
+      zijn opgenomen. De gerealiseerde doelen bevat naast een of meer doelen uit de consolidatie-informatie voor het besluit 
+      ook doelen die al in werking zijn getreden en/of, als het besluit voortbouwt op andere (definitieve of niet-definitieve) 
+      besluiten zonder datum inwerkingtreding, doelen geassocieerd met nieuwe regelgeving uit die besluiten.
+    </p>
+  </div>
+<section class="section ea_elementen"><h2 class="title sectiontitle">Elementen</h2>
+            
+            <table class="table ea_element" id="Pkg__63D800160E03495fBB8E7A09E59065FD"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__63D800160E03495fBB8E7A09E59065FD__entry__1" colspan="4">Besluit</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row">
+                        <td class="entry ea_doc_titel" headers="Pkg__63D800160E03495fBB8E7A09E59065FD__entry__1">Definitie</td>
+                        <td class="entry ea_element_beschrijving" headers="Pkg__63D800160E03495fBB8E7A09E59065FD__entry__1" colspan="3"><div class="div">
+    <p class="p">Een <a class="xref link_def" href="begrippenlijst_besluit.html#besluit">Besluit</a> beschrijft de vaststelling of wijziging van (de geldigheid
+      van) een regeling of informatieobject.</p>
+  </div>
+  </td>
+                    </tr>
+                    <tr class="row">
+                            <td class="entry ea_genspec_titel" headers="Pkg__63D800160E03495fBB8E7A09E59065FD__entry__1">Specialisatie van</td>
+                            <td class="entry ea_genspec_lijst" headers="Pkg__63D800160E03495fBB8E7A09E59065FD__entry__1" colspan="3"><a class="xref ea_genspec_direct link_ea" href="EA_1A45BBE5EC4F4bb2BBD7F5E701CE0479.html#Pkg__A96006311DE447558E50900C7FCA768F">Instrument (entiteit)</a>, <a class="xref link_ea" href="EA_188A75C61FB54d108E7659F3FE5DE8F3.html#Pkg__AB6FDC32D3F3474eBBE7438305EB0E26">Work (entiteit)</a></td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry ea_genspec_titel" headers="Pkg__63D800160E03495fBB8E7A09E59065FD__entry__1">Generalisatie van</td>
+                            <td class="entry ea_genspec_lijst" headers="Pkg__63D800160E03495fBB8E7A09E59065FD__entry__1" colspan="3"><a class="xref ea_genspec_direct link_ea" href="EA_E071E43092384cd394D942ECD77D959F.html#Pkg__B999F481659D4a16B0FA58168E747404">Ontwerpbesluit (entiteit)</a></td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry ea_eltpackages_titel" headers="Pkg__63D800160E03495fBB8E7A09E59065FD__entry__1">Zie ook</td>
+                            <td class="entry ea_eltpackages_lijst" headers="Pkg__63D800160E03495fBB8E7A09E59065FD__entry__1" colspan="3"><a class="xref link_ea" href="EA_9E3070BB712E49abA6B12A4A13ACACFC.html#Pkg">Besluit (onderwerp)</a>, <a class="xref ea_eltpackages_default link_ea" href="EA_587A8F5146CD44d9AB6EA1BEE8573352.html#Pkg">Besluit en besluitversie (onderwerp)</a>, <a class="xref link_ea" href="EA_5E740899BABE47d1B62053A402064B33.html#Pkg">Consolidatie-informatie (onderwerp)</a>, <a class="xref link_ea" href="EA_ED1B61D3297C4ae6BD9A4FDB6BDF83F9.html#Pkg">Informatieobject en informatieobjectversie (onderwerp)</a>, <a class="xref link_ea" href="EA_E071E43092384cd394D942ECD77D959F.html#Pkg">Metadata (onderwerp)</a>, <a class="xref link_ea" href="EA_85DA3D0FDE4F4d4a9F848DDFAC3591B4.html#Pkg">Procedureverloop (onderwerp)</a>, <a class="xref link_ea" href="EA_3FF7ADD14171420c8FCACC6A218F2EB8.html#Pkg">Toelichtingrelaties voor een besluit (onderwerp)</a>, <a class="xref link_ea" href="EA_068BE3F17D2D41a8AA2E39A355337401.html#Pkg">Toepassingsgebied (onderwerp)</a></td>
+                        </tr>
+                    </tbody></table>
+            <table class="table ea_element" id="Pkg__617D6910A0FA4342A8933103A63054D6"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__617D6910A0FA4342A8933103A63054D6__entry__1" colspan="4">Procedurestap</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row">
+                        <td class="entry ea_doc_titel" headers="Pkg__617D6910A0FA4342A8933103A63054D6__entry__1">Definitie</td>
+                        <td class="entry ea_element_beschrijving" headers="Pkg__617D6910A0FA4342A8933103A63054D6__entry__1" colspan="3"><div class="div">
+    <p class="p">Een stap in de Procedure die het BG doorloopt in het opstellen van een BesluitVersie
+      teneinde een bepaalde mijlpaal (eind van een Procedure) te bereiken. Een stap leidt typisch
+      tot een nieuwe "documentversie" met een bepaalde status.</p>
+    <p class="p">Een <em class="ph i">Procedurestap</em> is één van de stappen in de Procedureverloop
+      die het BG doorloopt in het opstellen van een BesluitVersie teneinde een bepaalde mijlpaal te
+      bereiken. Een stap leidt typisch tot een nieuwe "documentversie" met een bepaalde status.</p>
+    <p class="p">Stappen hebben een soortStap met een beperkte waardelijst. Daarnaast heeft een stap een datum
+      van voltooiing (voltooidOp en een optionele actor: diegene die de stap uitgevoerd heeft.</p>
+  </div>
+  </td>
+                    </tr>
+                    <tr class="row noimlinks-ea:{617D6910-A0FA-4342-A893-3103A63054D6}">
+                        <td class="entry ea_doc_titel" headers="Pkg__617D6910A0FA4342A8933103A63054D6__entry__1">Implementatie</td>
+                        <td class="entry ea_relatedlinks_lijst" headers="Pkg__617D6910A0FA4342A8933103A63054D6__entry__1" colspan="3"><a class="xref link_xsd" href="data_xsd_Element_data_Procedurestap.html#Procedurestap">data:Procedurestap</a>, <a class="xref link_xsd" href="data_xsd_Element_data_vervangStappen.html#vervangStappen_Procedurestap">data:Procedurestap</a></td>
+                    </tr>
+                        <tr class="row">
+                            <td class="entry ea_eltpackages_titel" headers="Pkg__617D6910A0FA4342A8933103A63054D6__entry__1">Zie ook</td>
+                            <td class="entry ea_eltpackages_lijst" headers="Pkg__617D6910A0FA4342A8933103A63054D6__entry__1" colspan="3"><a class="xref link_ea" href="EA_9E3070BB712E49abA6B12A4A13ACACFC.html#Pkg">Besluit (onderwerp)</a>, <a class="xref link_ea" href="EA_6F626A7721A945129ABCF6085A59317C.html#Pkg">Kennisgeving beroepstermijn (onderwerp)</a>, <a class="xref link_ea" href="EA_D6553DD612514d47B485B8890655C54B.html#Pkg">Kennisgeving bezwaartermijn (onderwerp)</a>, <a class="xref link_ea" href="EA_43A3A4F3DBCF4826AE4236DC2658D610.html#Pkg">Kennisgeving terinzagelegging (onderwerp)</a>, <a class="xref link_ea" href="EA_7241F98319CA4d528F48C6E9D740F4E3.html#Pkg">Kennisgeving uitspraak rechter (onderwerp)</a>, <a class="xref ea_eltpackages_default link_ea" href="EA_85DA3D0FDE4F4d4a9F848DDFAC3591B4.html#Pkg">Procedureverloop (onderwerp)</a></td>
+                        </tr>
+                    <tr class="row ea_attribuut_header">
+                            <td class="entry" headers="Pkg__617D6910A0FA4342A8933103A63054D6__entry__1"><strong class="ph b">Eigenschappen</strong></td>
+                            <td class="entry" headers="Pkg__617D6910A0FA4342A8933103A63054D6__entry__1"><strong class="ph b">Type</strong></td>
+                            <td class="entry" headers="Pkg__617D6910A0FA4342A8933103A63054D6__entry__1"><strong class="ph b">Kardinaliteit</strong></td>
+                            <td class="entry" headers="Pkg__617D6910A0FA4342A8933103A63054D6__entry__1"><strong class="ph b">Beschrijving</strong></td>
+                        </tr>
+                        <tr class="row ea_attribuut" id="Pkg__ADD10EEE15D34adb99F9DD3449B77B64">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__617D6910A0FA4342A8933103A63054D6__entry__1">Stap</td>
+                            <td class="entry" headers="Pkg__617D6910A0FA4342A8933103A63054D6__entry__1"><a class="xref link_ea" href="EA_C0DF21A3FC7A4ff2A7A7FEF848B6260F.html#Pkg__FC69356B7FA242f399A03759691AD897">Resource identificatie (entiteit)</a></td>
+                            <td class="entry" headers="Pkg__617D6910A0FA4342A8933103A63054D6__entry__1">1..1</td>
+                            <td class="entry" headers="Pkg__617D6910A0FA4342A8933103A63054D6__entry__1">
+                                <div class="div"><div class="div">
+      <p class="p">de typering van één van de stappen binnen een procedure.</p>
+     <p class="p">Sommige stapsoorten geven belangrijke informatie die traditioneel als metadata van
+       publicaties wordt gezien, zoals bijvoorbeeld </p>
+     <ul class="ul">
+       <li class="li">datum ondertekening</li>
+       <li class="li">datum publicatie</li>
+     </ul>
+   </div>
+   </div>
+                                <div class="div"><div class="div">
+    <p class="p">Typering van de stap uit de procedure. Het betreft waarden uit de waardelijst die overeenkomt met de procedure
+    die het besluit doorloopt, zoals aangegeven met <a class="xref link_ea" href="EA_E071E43092384cd394D942ECD77D959F.html#Pkg__C2CAFBB270E04cfe939C31C5B6120777">Soort procedure (eigenschap van Metadata besluit)</a> in de metadata van het besluit.
+    </p>
+    <p class="p">
+      Van elk type stap kan er hooguit één in het procedureverloop voorkomen. Voor het muteren van het procedureverloop
+      is de Stap daarom de unieke identificatie van een procedurestap.
+    </p>
+  </div>
+</div>
+                                <div class="div noimlinks-ea:{ADD10EEE-15D3-4adb-99F9-DD3449B77B64}">
+                                    <p class="p ea_relatedlinks_titel"><p class="lines">Implementatie:</p>
+                                    <a class="xref link_xsd" href="data_xsd_Element_data_soortStap.html#soortStap">data:soortStap</a></p>
+                                </div>
+                                </td>
+                         </tr>
+                        <tr class="row ea_attribuut" id="Pkg__B3C0A9014AEE4eadA9EE6C161E1DF931">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__617D6910A0FA4342A8933103A63054D6__entry__1">Voltooid op</td>
+                            <td class="entry" headers="Pkg__617D6910A0FA4342A8933103A63054D6__entry__1">date</td>
+                            <td class="entry" headers="Pkg__617D6910A0FA4342A8933103A63054D6__entry__1">1..1</td>
+                            <td class="entry" headers="Pkg__617D6910A0FA4342A8933103A63054D6__entry__1">
+                                <div class="div"><div class="div">
+    <p class="p">de datum waarop de procedurestap in het Procedureverloop door de actor is genomen.</p>
+  </div>
+  </div>
+                                <div class="div noimlinks-ea:{B3C0A901-4AEE-4ead-A9EE-6C161E1DF931}">
+                                    <p class="p ea_relatedlinks_titel"><p class="lines">Implementatie:</p>
+                                    <a class="xref link_xsd" href="data_xsd_Element_data_voltooidOp.html#voltooidOp">data:voltooidOp</a></p>
+                                </div>
+                                </td>
+                         </tr>
+                        <tr class="row ea_attribuut" id="Pkg__26FDC4315D6C426e9EAC4184FE56F602">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__617D6910A0FA4342A8933103A63054D6__entry__1">Actor</td>
+                            <td class="entry" headers="Pkg__617D6910A0FA4342A8933103A63054D6__entry__1"><a class="xref link_ea" href="EA_C0DF21A3FC7A4ff2A7A7FEF848B6260F.html#Pkg__FC69356B7FA242f399A03759691AD897">Resource identificatie (entiteit)</a></td>
+                            <td class="entry" headers="Pkg__617D6910A0FA4342A8933103A63054D6__entry__1">0..1</td>
+                            <td class="entry" headers="Pkg__617D6910A0FA4342A8933103A63054D6__entry__1">
+                                <div class="div"><div class="div">
+    <p class="p">De organisatie (zoals een Openbaar Lichaam) die verantwoordelijk is voor de uitgevoerde
+      <a class="xref link_im" href="__informatiemodel_index_Procedurestap.html#Procedurestap">Procedurestap</a></p>
+  </div>
+  </div>
+                                <div class="div noimlinks-ea:{26FDC431-5D6C-426e-9EAC-4184FE56F602}">
+                                    <p class="p ea_relatedlinks_titel"><p class="lines">Implementatie:</p>
+                                    <a class="xref link_xsd" href="data_xsd_Element_data_actor.html#actor">data:actor</a></p>
+                                </div>
+                                </td>
+                         </tr>
+                        <tr class="row ea_attribuut" id="Pkg__3A384521EF264dafA3DF3AEF19D2950C">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__617D6910A0FA4342A8933103A63054D6__entry__1">Meer informatie</td>
+                            <td class="entry" headers="Pkg__617D6910A0FA4342A8933103A63054D6__entry__1">URL</td>
+                            <td class="entry" headers="Pkg__617D6910A0FA4342A8933103A63054D6__entry__1">0..1</td>
+                            <td class="entry" headers="Pkg__617D6910A0FA4342A8933103A63054D6__entry__1">
+                                <div class="div"><div class="div">
+    <p class="p">Een verwijzing naar een plaats op internet waar meer informatie te vinden is in verband met deze stap.</p>
+  </div>
+  </div>
+                                <div class="div"><div class="div">
+    <p class="p">Link naar de BG-website waar meer informatie te vinden is over de juridische status van het besluit. Dit is niet de URL van de bekendmaking.</p>
+  </div>
+</div>
+                                <div class="div noimlinks-ea:{3A384521-EF26-4daf-A3DF-3AEF19D2950C}">
+                                    <p class="p ea_relatedlinks_titel"><p class="lines">Implementatie:</p>
+                                    <a class="xref link_xsd" href="cons_xsd_Element_cons_meerInformatie.html#meerInformatie">cons:meerInformatie</a></p>
+                                </div>
+                                </td>
+                         </tr>
+                    </tbody></table>
+            <table class="table ea_element" id="Pkg__242F0CD5E62E407aB90DD26FB083443F"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__242F0CD5E62E407aB90DD26FB083443F__entry__1" colspan="4">Procedureverloop</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row">
+                        <td class="entry ea_doc_titel" headers="Pkg__242F0CD5E62E407aB90DD26FB083443F__entry__1">Definitie</td>
+                        <td class="entry ea_element_beschrijving" headers="Pkg__242F0CD5E62E407aB90DD26FB083443F__entry__1" colspan="3"><div class="div">
+    <p class="p">Het procedureverloop geeft weer welke stappen genomen zijn in de levensloop van een besluit,
+      te beginnen met de vaststelling van het besluit. Het gaat daarbij zowel om stappen vóór
+      publicatie van het besluit, zoals de ondertekening, als erná, zoals intrekking of vernietiging
+      door een uitspraak van een rechter.</p>
+    <p class="p">Het procedureverloop heeft alleen betrekking op de procedure zoals die in de Algemene Wet
+      Bestuursrecht is beschreven. Andere processen die waarvan het resultaat mogelijk effect heeft
+      op de levensloop van een besluit (zoals de beroepsprocedure bij een rechter) worden niet in
+      het procedureverloop vastgelegd, totdat bekend is wat het effect is op de inhoud van de
+      geconsolideerde regelgeving die op basis van het besluit wordt samengesteld. </p>
+  </div>
+  </td>
+                    </tr>
+                    <tr class="row noimlinks-ea:{242F0CD5-E62E-407a-B90D-D26FB083443F}">
+                        <td class="entry ea_doc_titel" headers="Pkg__242F0CD5E62E407aB90DD26FB083443F__entry__1">Implementatie</td>
+                        <td class="entry ea_relatedlinks_lijst" headers="Pkg__242F0CD5E62E407aB90DD26FB083443F__entry__1" colspan="3"><a class="xref link_xsd" href="data_xsd_Element_data_Procedureverloop.html#Procedureverloop">data:Procedureverloop</a></td>
+                    </tr>
+                        <tr class="row">
+                            <td class="entry ea_genspec_titel" headers="Pkg__242F0CD5E62E407aB90DD26FB083443F__entry__1">Specialisatie van</td>
+                            <td class="entry ea_genspec_lijst" headers="Pkg__242F0CD5E62E407aB90DD26FB083443F__entry__1" colspan="3"><a class="xref ea_genspec_direct link_ea" href="EA_1A45BBE5EC4F4bb2BBD7F5E701CE0479.html#Pkg__6E006EB7C4644e1993AD8CB36F94E660">Context informatie (entiteit)</a>, <a class="xref link_ea" href="EA_1A45BBE5EC4F4bb2BBD7F5E701CE0479.html#Pkg__B4649197FA68449e913F625FA43F27DF">Module (entiteit)</a></td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry ea_eltpackages_titel" headers="Pkg__242F0CD5E62E407aB90DD26FB083443F__entry__1">Zie ook</td>
+                            <td class="entry ea_eltpackages_lijst" headers="Pkg__242F0CD5E62E407aB90DD26FB083443F__entry__1" colspan="3"><a class="xref link_ea" href="EA_9E3070BB712E49abA6B12A4A13ACACFC.html#Pkg">Besluit (onderwerp)</a>, <a class="xref ea_eltpackages_default link_ea" href="EA_85DA3D0FDE4F4d4a9F848DDFAC3591B4.html#Pkg">Procedureverloop (onderwerp)</a></td>
+                        </tr>
+                    </tbody></table>
+            <table class="table ea_element" id="Pkg__19B3029E339244c395ACF38D267148E2"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__19B3029E339244c395ACF38D267148E2__entry__1" colspan="4">Proefversie</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row">
+                        <td class="entry ea_doc_titel" headers="Pkg__19B3029E339244c395ACF38D267148E2__entry__1">Definitie</td>
+                        <td class="entry ea_element_beschrijving" headers="Pkg__19B3029E339244c395ACF38D267148E2__entry__1" colspan="3"><div class="div">
+    <p class="p">Een proefversie is de "versie van de regeling" zoals de LVBB die kan maken vanuit de reeds
+      bekende "was"-versie van de Regeling met daarin de mutaties zoals die in een aangeleverde
+      (ontwerp)besluit in renvooi zijn beschreven. </p>
+    <p class="p">In STOP is de proefversie gemodelleerd als de uitkomst van een "proefconsolidatie" van het
+      (ontwerp)besluit, waarbij proefconsolidatie wordt opgevat als: "Hoe zou de regelgeving
+      (regelingen/informatieobjecten) eruit zien als het (ontwerp)besluit in werking zou treden,
+      waarbij alleen rekening gehouden wordt met die eerder bekendgemaakte definitieve besluiten en
+      eventueel andere ontwerpbesluiten waar dit (ontwerp)besluit op gebaseerd is".</p>
+  </div>
+  </td>
+                    </tr>
+                    <tr class="row">
+                        <td class="entry ea_doc_titel" headers="Pkg__19B3029E339244c395ACF38D267148E2__entry__1">Beschrijving</td>
+                        <td class="entry ea_element_beschrijving" headers="Pkg__19B3029E339244c395ACF38D267148E2__entry__1" colspan="3"><div class="div">
+    <p class="p">Door de proefversie te beschouwen als een "proefconsolidatie" kan er nooit sprake zijn van
+      samenloop; precies de regelingversies en informatieobject-versies die in het besluit zijn
+      beschreven worden "als proef geconsolideerd". De (ontwerp)besluiten waarvan niet duidelijk is
+      hoe ze samenhangen met het ter proef aangeboden (ontwerp)besluit worden genegeerd. Met andere
+      woorden: de proefversie is de <a class="xref link_ea" href="EA_1F41E8E7749D4f44A0873F2F6C3E7B91.html#Pkg__2B687BCB082E49d39F83146A76403DEC">"wordt"</a> van de regelingmutaties van één (ontwerp)besluit.</p>
+    <p class="p">Om duidelijk het onderscheid te maken met een proefconsolidatie van een regeling ("Hoe luidt
+      een regeling als <strong class="ph b">alle</strong> bekendgemaakte besluiten in werking zouden treden") is gekozen
+      voor de naam <em class="ph i">proefversie</em>. De proefconsolidatie wordt niet aangeleverd door het BG, maar
+      door LVBB samengesteld omdat de LVBB nu eenmaal voor eenieder (proef)consolidaties
+      uitvoert.</p>
+    <p class="p">De proefversie is een expression van het work van hetzelfde regeling-work waar ook de
+      geconsolideerde regeling voor gemaakt wordt. Dit regeling-work is bekend bij en
+      geïdentificeerd door het BG. </p>
+    <p class="p">Eén besluit kan leiden tot meer dan één proefversie, één voor elke regelingversie (of
+      informatieobjectversie) die wordt genoemd in de "was" binnen de besluittekst beschreven
+      mutaties. Er zijn meerdere proefversies per regeling mogelijk. </p>
+  </div>
+</td>
+                    </tr>
+                    <tr class="row noimlinks-ea:{19B3029E-3392-44c3-95AC-F38D267148E2}">
+                        <td class="entry ea_doc_titel" headers="Pkg__19B3029E339244c395ACF38D267148E2__entry__1">Implementatie</td>
+                        <td class="entry ea_relatedlinks_lijst" headers="Pkg__19B3029E339244c395ACF38D267148E2__entry__1" colspan="3"><a class="xref link_xsd" href="cons_xsd_Element_cons_Proefversie.html#Proefversie">cons:Proefversie</a></td>
+                    </tr>
+                    <tr class="row ea_attribuut_header">
+                            <td class="entry" headers="Pkg__19B3029E339244c395ACF38D267148E2__entry__1"><strong class="ph b">Eigenschappen</strong></td>
+                            <td class="entry" headers="Pkg__19B3029E339244c395ACF38D267148E2__entry__1"><strong class="ph b">Type</strong></td>
+                            <td class="entry" headers="Pkg__19B3029E339244c395ACF38D267148E2__entry__1"><strong class="ph b">Kardinaliteit</strong></td>
+                            <td class="entry" headers="Pkg__19B3029E339244c395ACF38D267148E2__entry__1"><strong class="ph b">Beschrijving</strong></td>
+                        </tr>
+                        <tr class="row ea_attribuut" id="Pkg__BB3BC09B5B854d4b83F9AA78795A23CB">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__19B3029E339244c395ACF38D267148E2__entry__1">Gerealiseerde doelen</td>
+                            <td class="entry" headers="Pkg__19B3029E339244c395ACF38D267148E2__entry__1"><a class="xref link_ea" href="EA_BD0B9B5F34C548eeB092538800D54713.html#Pkg__8DBA840974F643be8EEACBBB4954F8DD">STOP identificatie (entiteit)</a></td>
+                            <td class="entry" headers="Pkg__19B3029E339244c395ACF38D267148E2__entry__1">1..*</td>
+                            <td class="entry" headers="Pkg__19B3029E339244c395ACF38D267148E2__entry__1">
+                                <div class="div"><div class="div">
+    <p class="p">De lijst van gerealiseerde doelen die geassocieerd zijn met alle wijzigingen in regelgeving
+      die tot de Toestanden of Proefversies aanleiding gegeven hebben.</p>
+  </div>
+  </div>
+                                <div class="div noimlinks-ea:{BB3BC09B-5B85-4d4b-83F9-AA78795A23CB}">
+                                    <p class="p ea_relatedlinks_titel"><p class="lines">Implementatie:</p>
+                                    <a class="xref link_xsd" href="cons_xsd_Element_cons_gerealiseerdeDoelen.html#gerealiseerdeDoelen">cons:gerealiseerdeDoelen</a></p>
+                                </div>
+                                </td>
+                         </tr>
+                        <tr class="row ea_attribuut" id="Pkg__322208E16BAE4417A77EEAAF2CEE242B">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__19B3029E339244c395ACF38D267148E2__entry__1">Instrumentversie</td>
+                            <td class="entry" headers="Pkg__19B3029E339244c395ACF38D267148E2__entry__1"><a class="xref link_ea" href="EA_BD0B9B5F34C548eeB092538800D54713.html#Pkg__8DBA840974F643be8EEACBBB4954F8DD">STOP identificatie (entiteit)</a></td>
+                            <td class="entry" headers="Pkg__19B3029E339244c395ACF38D267148E2__entry__1">1..1</td>
+                            <td class="entry" headers="Pkg__19B3029E339244c395ACF38D267148E2__entry__1">
+                                <div class="div"><div class="div">
+    <p class="p">De identificatie van de FRBR-expression van de instrumentversie (zoals door de bronhouder
+      gegeven is) die opgesteld is/wordt voor de opgegeven doelen.</p>
+  </div>
+  </div>
+                                <div class="div noimlinks-ea:{322208E1-6BAE-4417-A77E-EAAF2CEE242B}">
+                                    <p class="p ea_relatedlinks_titel"><p class="lines">Implementatie:</p>
+                                    <a class="xref link_xsd" href="data_xsd_Element_data_instrumentVersie.html#instrumentVersie">data:instrumentVersie</a>, <a class="xref link_xsd" href="cons_xsd_Element_cons_instrumentVersie.html#instrumentVersie">cons:instrumentVersie</a></p>
+                                </div>
+                                </td>
+                         </tr>
+                    </tbody></table>
+            <table class="table ea_element" id="Pkg__AC57A2D747F34eb1927EE0E8BFFB47B6"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__AC57A2D747F34eb1927EE0E8BFFB47B6__entry__1" colspan="4">Proefversies</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row">
+                        <td class="entry ea_doc_titel" headers="Pkg__AC57A2D747F34eb1927EE0E8BFFB47B6__entry__1">Definitie</td>
+                        <td class="entry ea_element_beschrijving" headers="Pkg__AC57A2D747F34eb1927EE0E8BFFB47B6__entry__1" colspan="3"><div class="div">
+    <p class="p">Een overzicht van de instrumentversies die resulteren als de wijzigingen uit het besluit
+      doorgevoerd worden.</p>
+  </div>
+  </td>
+                    </tr>
+                    <tr class="row noimlinks-ea:{AC57A2D7-47F3-4eb1-927E-E0E8BFFB47B6}">
+                        <td class="entry ea_doc_titel" headers="Pkg__AC57A2D747F34eb1927EE0E8BFFB47B6__entry__1">Implementatie</td>
+                        <td class="entry ea_relatedlinks_lijst" headers="Pkg__AC57A2D747F34eb1927EE0E8BFFB47B6__entry__1" colspan="3"><a class="xref link_xsd" href="cons_xsd_Element_cons_Proefversies.html#Proefversies">cons:Proefversies</a></td>
+                    </tr>
+                        <tr class="row">
+                            <td class="entry ea_genspec_titel" headers="Pkg__AC57A2D747F34eb1927EE0E8BFFB47B6__entry__1">Specialisatie van</td>
+                            <td class="entry ea_genspec_lijst" headers="Pkg__AC57A2D747F34eb1927EE0E8BFFB47B6__entry__1" colspan="3"><a class="xref ea_genspec_direct link_ea" href="EA_1A45BBE5EC4F4bb2BBD7F5E701CE0479.html#Pkg__6E006EB7C4644e1993AD8CB36F94E660">Context informatie (entiteit)</a>, <a class="xref link_ea" href="EA_1A45BBE5EC4F4bb2BBD7F5E701CE0479.html#Pkg__B4649197FA68449e913F625FA43F27DF">Module (entiteit)</a></td>
+                        </tr>
+                    </tbody></table>
+            <table class="table ea_element" id="Pkg__63DA0B997B154bff930F9F7FFC7ACF23"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__63DA0B997B154bff930F9F7FFC7ACF23__entry__1" colspan="4">Work identificatie</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row">
+                        <td class="entry ea_doc_titel" headers="Pkg__63DA0B997B154bff930F9F7FFC7ACF23__entry__1">Definitie</td>
+                        <td class="entry ea_element_beschrijving" headers="Pkg__63DA0B997B154bff930F9F7FFC7ACF23__entry__1" colspan="3"><div class="div">
+    <p class="p">De onderdelen die samen een door het BG opgesteld work uniek identificeren</p>
+  </div>
+  </td>
+                    </tr>
+                    <tr class="row noimlinks-ea:{63DA0B99-7B15-4bff-930F-9F7FFC7ACF23}">
+                        <td class="entry ea_doc_titel" headers="Pkg__63DA0B997B154bff930F9F7FFC7ACF23__entry__1">Implementatie</td>
+                        <td class="entry ea_relatedlinks_lijst" headers="Pkg__63DA0B997B154bff930F9F7FFC7ACF23__entry__1" colspan="3"><a class="xref link_xsd" href="data_xsd_Element_data_WorkIdentificatie.html#WorkIdentificatie">data:WorkIdentificatie</a></td>
+                    </tr>
+                        <tr class="row">
+                            <td class="entry ea_genspec_titel" headers="Pkg__63DA0B997B154bff930F9F7FFC7ACF23__entry__1">Specialisatie van</td>
+                            <td class="entry ea_genspec_lijst" headers="Pkg__63DA0B997B154bff930F9F7FFC7ACF23__entry__1" colspan="3"><a class="xref ea_genspec_direct link_ea" href="EA_1A45BBE5EC4F4bb2BBD7F5E701CE0479.html#Pkg__B4649197FA68449e913F625FA43F27DF">Module (entiteit)</a></td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry ea_eltpackages_titel" headers="Pkg__63DA0B997B154bff930F9F7FFC7ACF23__entry__1">Zie ook</td>
+                            <td class="entry ea_eltpackages_lijst" headers="Pkg__63DA0B997B154bff930F9F7FFC7ACF23__entry__1" colspan="3"><a class="xref ea_eltpackages_default link_ea" href="EA_BD0B9B5F34C548eeB092538800D54713.html#Pkg">Identificatie (onderwerp)</a>, <a class="xref link_ea" href="EA_F798EBB99D38431f9884C8D2E7DA0B6B.html#Pkg">Juridische verantwoording (onderwerp)</a>, <a class="xref link_ea" href="EA_21F155BFDF91485e9CC1901FE5B5A024.html#Pkg">Toestanden (onderwerp)</a></td>
+                        </tr>
+                    <tr class="row ea_attribuut_header">
+                            <td class="entry" headers="Pkg__63DA0B997B154bff930F9F7FFC7ACF23__entry__1"><strong class="ph b">Eigenschappen</strong></td>
+                            <td class="entry" headers="Pkg__63DA0B997B154bff930F9F7FFC7ACF23__entry__1"><strong class="ph b">Type</strong></td>
+                            <td class="entry" headers="Pkg__63DA0B997B154bff930F9F7FFC7ACF23__entry__1"><strong class="ph b">Kardinaliteit</strong></td>
+                            <td class="entry" headers="Pkg__63DA0B997B154bff930F9F7FFC7ACF23__entry__1"><strong class="ph b">Beschrijving</strong></td>
+                        </tr>
+                        <tr class="row ea_attribuut" id="Pkg__CDE8E76B6DD94002B8AEEB36E2EC6DFD">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__63DA0B997B154bff930F9F7FFC7ACF23__entry__1">FRBRWork</td>
+                            <td class="entry" headers="Pkg__63DA0B997B154bff930F9F7FFC7ACF23__entry__1"><a class="xref link_ea" href="EA_BD0B9B5F34C548eeB092538800D54713.html#Pkg__8DBA840974F643be8EEACBBB4954F8DD">STOP identificatie (entiteit)</a></td>
+                            <td class="entry" headers="Pkg__63DA0B997B154bff930F9F7FFC7ACF23__entry__1">1..1</td>
+                            <td class="entry" headers="Pkg__63DA0B997B154bff930F9F7FFC7ACF23__entry__1">
+                                <div class="div"><div class="div">
+    <p class="p">De IRI van een <a class="xref link_ea" href="#Pkg__63DA0B997B154bff930F9F7FFC7ACF23">Work</a> volgens de
+        <a class="xref link_doc" href="naamgevingsconventie.html">naamgevingsconventie</a>.</p>
+  </div>
+  </div>
+                                <div class="div noimlinks-ea:{CDE8E76B-6DD9-4002-B8AE-EB36E2EC6DFD}">
+                                    <p class="p ea_relatedlinks_titel"><p class="lines">Implementatie:</p>
+                                    <a class="xref link_xsd" href="data_xsd_Element_data_FRBRWork.html#FRBRWork">data:FRBRWork</a>, <a class="xref link_xsd" href="cons_xsd_Element_cons_FRBRWork.html#FRBRWork">cons:FRBRWork</a></p>
+                                </div>
+                                </td>
+                         </tr>
+                        <tr class="row ea_attribuut" id="Pkg__DE68768525194c3c84B7C8C40001E165">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__63DA0B997B154bff930F9F7FFC7ACF23__entry__1">Worktype</td>
+                            <td class="entry" headers="Pkg__63DA0B997B154bff930F9F7FFC7ACF23__entry__1"><a class="xref link_ea" href="EA_C0DF21A3FC7A4ff2A7A7FEF848B6260F.html#Pkg__FC69356B7FA242f399A03759691AD897">Resource identificatie (entiteit)</a></td>
+                            <td class="entry" headers="Pkg__63DA0B997B154bff930F9F7FFC7ACF23__entry__1">1..1</td>
+                            <td class="entry" headers="Pkg__63DA0B997B154bff930F9F7FFC7ACF23__entry__1">
+                                <div class="div"><div class="div">
+      <p class="p">de typering van één FRBR Work.</p>
+   </div>
+   </div>
+                                <div class="div"><div class="div">
+    <p class="p">Waardelijst worktype</p>
+  </div>
+</div>
+                                <div class="div noimlinks-ea:{DE687685-2519-4c3c-84B7-C8C40001E165}">
+                                    <p class="p ea_relatedlinks_titel"><p class="lines">Implementatie:</p>
+                                    <a class="xref link_xsd" href="data_xsd_Element_data_soortWork.html#soortWork">data:soortWork</a></p>
+                                </div>
+                                </td>
+                         </tr>
+                        <tr class="row ea_attribuut" id="Pkg__C3242A3EB16C43c9B15FB83DF97333CD">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__63DA0B997B154bff930F9F7FFC7ACF23__entry__1">Is tijdelijk deel van</td>
+                            <td class="entry" headers="Pkg__63DA0B997B154bff930F9F7FFC7ACF23__entry__1"><a class="xref link_ea" href="#Pkg__63DA0B997B154bff930F9F7FFC7ACF23">Work identificatie (entiteit)</a></td>
+                            <td class="entry" headers="Pkg__63DA0B997B154bff930F9F7FFC7ACF23__entry__1">0..1</td>
+                            <td class="entry" headers="Pkg__63DA0B997B154bff930F9F7FFC7ACF23__entry__1">
+                                <div class="div"><div class="div">
+    <p class="p">De relatie vanuit een "tijdelijk regelingdeel" naar de door het BG opgestelde regeling waar
+      het een tijdelijk deel van is.</p>
+  </div>
+  </div>
+                                <div class="div noimlinks-ea:{C3242A3E-B16C-43c9-B15F-B83DF97333CD}">
+                                    <p class="p ea_relatedlinks_titel"><p class="lines">Implementatie:</p>
+                                    <a class="xref link_xsd" href="data_xsd_Element_data_isTijdelijkDeelVan.html#isTijdelijkDeelVan">data:isTijdelijkDeelVan</a></p>
+                                </div>
+                                </td>
+                         </tr>
+                    </tbody></table>
+        </section>
+  </div>
+</article></main></body></html>

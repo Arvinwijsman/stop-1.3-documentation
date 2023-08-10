@@ -1,0 +1,45 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="bi-temporeel-model"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Bi-temporeel model</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="bi-temporeel-model"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a><ul><li><a href="stop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="leeswijzers.html">Leeswijzers</a><ul><li><a href="toepassing.html">Basis van STOP</a></li><li><a href="architectuur.html">Architectuur en ontwerpkeuzes</a><ul><li><a href="tijdreizen.html">Tijdreizen</a><ul><li><a href="tijdreizen-toelichting.html">Toelichting tijdreizen</a></li><li class="active"><a href="tijdreizen-bi-temporeel-model.html">Bi-temporeel model</a></li></ul></li><li><a href="regeltekst.html">Tekststructuur en -inhoud</a></li><li><a href="functioneelpresenteren.html">Functioneel presenteren</a></li></ul></li><li><a href="gebruik.html">Software-ontwikkeling met STOP</a></li><li><a href="voortbouwen_op_STOP.html">Voortbouwen op STOP</a></li></ul></li><li><a href="EA_4D1D7FD517FE4d8dA9A2B905D202C92B.html">Informatiemodel</a></li><li><a href="businessrules.html">Bedrijfsregels</a></li></ul></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1">Bi-temporeel model</h1><div class="body"><p class="p">Om inzichtelijk te maken wat de geldigheid van de Toestanden van een regeling waren in de loop van de tijd, kan gebruik gemaakt worden van het zogenaamde "bi-temporele model". De werking van dit model wordt uitgelegd aan de hand van een voorbeeld.</p><p class="p">Stel een nieuwe regeling wordt geldig op 1 februari 2020. De geldigheid van de Toestand van de regeling kan in een eenvoudig diagram tegen de tijd worden getekend:</p><br><img class="image" src="img/toestand1-tijd.png" alt="geldigheid initiele regeling"><br><p class="p">Op het moment van bekendmaken van de regeling met inwerkingtreding is de geldigheid in principe oneindig. In het diagram is dat afgebeeld middels een gestippeld einde aan "het balkje".</p><p class="p">Stel dat op 1 maart 2020 na bekendmaking van een wijzigingsbesluit een gewijzigde regelingversie geldig wordt en in werking treedt. Er ontstaat een nieuwe Toestand @2020-01-03.  In het diagram tegen de tijd is deze tweede Toestand van de Regeling een nieuwe blokje met een "open einde". Het eerste blokje van Toestand 1 wordt afgesloten:</p><br><img class="image" src="img/toestand2-tijd.png" alt="geldigheid na wijziging"><br><p class="p">Door het ontstaan van Toestand 2 krijgt Toestand 1 twee geldigheidsperiodes:</p><ul class="ul"><li class="li"><p class="p">De eerste periode waarin het balkje een 'open einde' heeft. Deze periode heeft een werking van 2020-02-01 tot 2020-03-01. In deze periode start de geldigheid op 2020-02-01 en heeft de geldigheid geen einddatum. In de context van tijdreizen is dit de periode waarin de tijdreiziger niet weet dat er een wijzigingsbesluit gaat komen. Deze periode "duurt tot" 2020-03-01. Met andere woorden: als een tijdreiziger terug gaat naar deze periode en vraagt naar de Toestand van de regeling, is het antwoord dat de regeling Toestand oneindig geldig is.</p></li><li class="li"><p class="p">De tweede periode waarin het balkje een 'gesloten einde' heeft gekregen. Deze periode heeft een werking die start op 2020-02-01 en een geldigheid van 2020-02-01 tot 2020-03-01. In de context van tijdreizen is dit de periode waarin de tijdreiziger wél weet dat er een wijzigingsbesluit is genomen. Dit besluit geeft de geldigheid van Toestand 1 een einddatum van 2020-03-01. Met andere woorden: als een tijdreiziger terug gaat naar deze periode en vraagt naar de Toestand van de regeling, is het antwoord dat de regeling Toestand geldig is tot 1 maart 2020.</p></li></ul><p class="p">Bovenstaand voorbeeld kan ook weergegeven worden in het "bi-temporele model" waarin de geldigheid wordt afgezet tegen de inwerkingtreding:</p><br><img class="image" src="img/bi-temporeel2.png" alt="assen bi-temporeel model"><br><p class="p">In het bi-temporele model ziet de regeling er initieel dan als volgt uit:</p><br><img class="image" src="img/toestand1-geldigheid.png" alt="bi-temporele weergaver initiele regeling"><br><p class="p">Op het moment van publicatie is de startdatum van geldigheid en juridisch werking gelijk: 1 februari 2020. De einddatum van geldigheid en werking is onbekend, dus de periodes zijn in principe langs beide assen oneindig, opnieuw afgebeeld middels een stippellijn.</p><p class="p">Op het moment dat op 1 maart 2020 de gewijzigde regelingversie geldig wordt en in werking treedt, ziet het bi-temporele model er zo uit:</p><br><img class="image" src="img/toestand2-geldigheid.png" alt="bi-temporele weergave gewijzigde regeling"><br><p class="p">Een tijdreis naar de periode tussen 1 februari 2020 en 1 maart 2020 op de werkendOp tijd-as levert als antwoord één toestand onbeperkt geldig is op de geldigOp tijd-as.</p><p class="p">Bij het tijdreizen naar een datum na 1 maart 2020 op de werkendOp tijd-as, is zichtbaar op de geldigOp tijd-as dat de eerste toestand geldig is tot 1 maart 2020 en dat daarna Toestand 2 onbeperkt geldig wordt.</p><br><img class="image" src="img/toestand3-tijdreizen.png"><br><p class="p">Een eventueel volgende wijziging van de regeling zou leiden tot een 'derde laag' in het diagram.</p></div></article></main></body></html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="nl-nl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="geo.xsd"><meta name="DC.language" content="nl-nl"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Schema imop-geo.xsd</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="geo.xsd"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a><ul><li><a href="imop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="imop_xml.html">XML-serialisatie</a></li><li><a href="uitwisselpakket.html">Uitwisselpakket</a></li><li><a href="schemata_gebruik.html">Gebruik van IMOP</a></li><li><a href="schema_documentatie.html">Schemadocumentatie</a><ul><li><a href="schema_documentatie_legenda.html">Legenda van de schemadocumentatie</a></li><li><a href="imop_modules.html">STOP-modules in IMOP</a></li><li><a href="tekst_xsd_Main_schema_tekst_xsd.html">Schema imop-tekst.xsd</a></li><li><a href="gio_xsd_Main_schema_gio_xsd.html">Schema imop-gio.xsd</a></li><li class="active"><a href="geo_xsd_Main_schema_geo_xsd.html">Schema imop-geo.xsd</a><ul><li><a href="geo_xsd_Simple_Type_geo_dtGroepID.html">dtGroepID</a></li><li><a href="geo_xsd_Element_geo_GeoInformatieObjectVaststelling.html">GeoInformatieObjectVaststelling</a></li><li><a href="geo_xsd_Complex_Type_geo_GeoInformatieObjectVaststellingType.html">GeoInformatieObjectVaststellingType</a></li><li><a href="geo_xsd_Element_geo_GeoInformatieObjectVersie.html">GeoInformatieObjectVersie</a></li><li><a href="geo_xsd_Complex_Type_geo_GeoInformatieObjectVersieType.html">GeoInformatieObjectVersieType</a></li><li><a href="geo_xsd_Element_geo_Groep.html">Groep</a></li><li><a href="geo_xsd_Element_geo_groepID.html">groepID</a></li><li><a href="geo_xsd_Complex_Type_geo_GroepType.html">GroepType</a></li><li><a href="geo_xsd_Element_geo_Locatie.html">Locatie</a></li><li><a href="geo_xsd_Complex_Type_geo_LocatieType.html">LocatieType</a></li></ul></li><li><a href="se_xsd_Main_schema_se_xsd.html">Schema se-FeatureStyle-imop.xsd</a></li><li><a href="ogc_xsd_Main_schema_ogc_xsd.html">Schema se-filter-imop.xsd</a></li><li><a href="data_xsd_Main_schema_data_xsd.html">Schema imop-data.xsd</a></li><li><a href="cons_xsd_Main_schema_cons_xsd.html">Schema imop-consolidatie.xsd</a></li><li><a href="rsc_xsd_Main_schema_rsc_xsd.html">Schema imop-resources.xsd</a></li><li><a href="br_xsd_Main_schema_br_xsd.html">Schema imop-bedrijfsregels.xsd</a></li><li><a href="sv_xsd_Main_schema_sv_xsd.html">Schema imop-schemata.xsd</a></li><li><a href="uws_xsd_Main_schema_uws_xsd.html">Schema imop-uitwisseling.xsd</a></li></ul></li><li><a href="imop_bedrijfsregels.html">Bedrijfsregels</a></li><li><a href="imop_waardelijsten.html">Waardelijsten</a></li></ul></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+   <h1 class="title topictitle1" id="ariaid-title1">Schema imop-geo.xsd</h1>
+   <div class="body">
+      <table class="table frame-all"><caption></caption><colgroup><col style="width:10.714285714285714%"><col style="width:89.28571428571429%"></colgroup><tbody class="tbody">
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Namespace</td>
+                  <td class="entry align-left colsep-1 rowsep-1">https://standaarden.overheid.nl/stop/imop/geo/</td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Definitie</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="div">
+    <p class="p">Schema voor het serialiseren van geometrie binnen een Geo-Informatieobejct in de STOP-standaard.</p>
+  </div>
+  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Informatie</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="div">
+    <p class="p">Versie 1.3.0, documentatie up to date tot 07-01-2022.</p>
+  </div>
+  <div class="div">
+    <p class="p"><strong class="ph b">Beschrijving</strong></p>
+    <p class="p">Dit schema is een <a class="xref" href="https://www.ogc.org/standards/gml" target="_blank">GML Applicatieschema</a> voor het serialiseren van geometrieën en aan de 
+      geometrie gerelateerde informatie in een GIO. Zie voor toelichting de <a class="xref" href="gio-intro.html">GIO
+      documentatie</a> en het <a class="xref" href="EA_1C752EC8163240cbA9644D1CD9266E58.html#Pkg">Informatiemodel</a> van een Geografisch
+      informatie-object. Zie voor beperkingen aan dit schema de relevante <a class="xref" href="businessrules_geo_GeoInformatieObjectVersie.html#Bedrijfsregels">bedrijfsregels</a>.</p>
+    <p class="p"><strong class="ph b">Openen met QGIS</strong></p>
+    <p class="p">Bestanden die voldoen aan dit schema kunnen (na het aanpassen van de configuratie) worden
+      geopend in <a class="xref" href="https://www.qgis.org" target="_blank">QGIS</a>.
+      Instructies voor deze aanpassing zijn te vinden bij <a class="xref" href="https://github.com/Geonovum/xml_xslt/tree/master/GIO_gml" target="_blank">Geonovum</a>, of als <a class="xref" href="https://plugins.qgis.org/plugins/gio_import/" target="_blank">Qgis-plugin</a>.</p>
+    <p class="p"><strong class="ph b">Externe schema's</strong></p>
+    <p class="p">Voor de implementatie wordt gebruik gemaakt van externe schema's:</p>
+    <ul class="ul">
+      <li class="li">Het door Geonovum beheerde schema <a class="xref" href="https://docs.geostandaarden.nl/nen3610/basisgeometrie/" target="_blank">basisgeometrie versie 1.0</a> (XSD gepubliceerd op <a class="xref" href="https://register.geostandaarden.nl/gmlapplicatieschema/basisgeometrie/1.0.0/basisgeometrie.xsd" target="_blank">https://register.geostandaarden.nl</a>),</li>
+      <li class="li">en <a class="xref" href="https://www.ogc.org/standards/gml" target="_blank">GML
+        3.2.2</a> geïmporteerd door <code class="ph codeph">basisgeometrie.xsd</code>.</li>
+    </ul>
+    <p class="p"><strong class="ph b">GML 3.2.2</strong></p>
+    <p class="p">Schema <code class="ph codeph">imop-geo.xsd</code> v1.3.0 importeert
+      <code class="ph codeph">basisgeometrie.xsd</code> versie <strong class="ph b">1.0</strong> die op zijn beurt de GML-schemas v
+      <strong class="ph b">3.2.2</strong> importeert.</p>
+    <p class="p"><a class="xref" href="https://portal.opengeospatial.org/files/%3Fartifact_id%3D74183%26version%3D2" target="_blank">07-036r1_Geography_Markup_Language_3.2.2_corrigendum.pdf</a> stelt van
+      GML3.2.2: </p>
+    <p class="p"><cite class="cite">This (3.2.2) version is a corrigendum to GML 3.2.1 (ISO 19136:2007).</cite></p>
+    <p class="p">Dit betekent dat </p>
+    <p class="p"><cite class="cite">All GML 3.2 instance documents that are valid against the GML 3.2.1
+      schema are also valid against the GML 3.2.2 schema. [...] Note that the use of “3.2.1” in the
+      URL is unchanged since this version (3.2.2) is a corrigendum and the corrected schema replaces
+      the GML 3.2.1 schema. Previous versions of the GML 3.2.1 schema are available at
+      http://schemas.opengis.net/gml/gml-3_2_1.zip. </cite></p>
+    <p class="p">Met andere woorden: De GML-schema's voor
+      versie `<code class="ph codeph">3.2.2</code>` zijn beschikbaar in folders die gelabeld zijn als `<code class="ph codeph">3.2.1</code>`. </p>
+  </div>
+  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Informatiemodel</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Eigenschappen</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="p">
+                        <table class="table frame-all"><caption></caption><colgroup><col style="width:20%"><col style="width:80%"></colgroup><tbody class="tbody">
+                                 <tr class="row">
+                                    <td class="entry align-left colsep-1 rowsep-1">versie: </td>
+                                    <td class="entry align-left colsep-1 rowsep-1">
+                                       <strong class="ph b">1.3.0</strong>
+                                    </td>
+                                 </tr>
+                              </tbody></table>
+                     </div>
+                  </td>
+               </tr>
+               </tbody></table>
+   </div>
+</article></main></body></html>

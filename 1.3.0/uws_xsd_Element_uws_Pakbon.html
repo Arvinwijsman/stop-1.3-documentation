@@ -1,0 +1,139 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="nl-nl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="Pakbon"><meta name="DC.language" content="nl-nl"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Element uws:Pakbon</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="Pakbon"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a><ul><li><a href="imop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="imop_xml.html">XML-serialisatie</a></li><li><a href="uitwisselpakket.html">Uitwisselpakket</a></li><li><a href="schemata_gebruik.html">Gebruik van IMOP</a></li><li><a href="schema_documentatie.html">Schemadocumentatie</a><ul><li><a href="schema_documentatie_legenda.html">Legenda van de schemadocumentatie</a></li><li><a href="imop_modules.html">STOP-modules in IMOP</a></li><li><a href="tekst_xsd_Main_schema_tekst_xsd.html">Schema imop-tekst.xsd</a></li><li><a href="gio_xsd_Main_schema_gio_xsd.html">Schema imop-gio.xsd</a></li><li><a href="geo_xsd_Main_schema_geo_xsd.html">Schema imop-geo.xsd</a></li><li><a href="se_xsd_Main_schema_se_xsd.html">Schema se-FeatureStyle-imop.xsd</a></li><li><a href="ogc_xsd_Main_schema_ogc_xsd.html">Schema se-filter-imop.xsd</a></li><li><a href="data_xsd_Main_schema_data_xsd.html">Schema imop-data.xsd</a></li><li><a href="cons_xsd_Main_schema_cons_xsd.html">Schema imop-consolidatie.xsd</a></li><li><a href="rsc_xsd_Main_schema_rsc_xsd.html">Schema imop-resources.xsd</a></li><li><a href="br_xsd_Main_schema_br_xsd.html">Schema imop-bedrijfsregels.xsd</a></li><li><a href="sv_xsd_Main_schema_sv_xsd.html">Schema imop-schemata.xsd</a></li><li><a href="uws_xsd_Main_schema_uws_xsd.html">Schema imop-uitwisseling.xsd</a><ul><li><a href="uws_xsd_Attribute_Group_uws_agSchemaVersie.html">agSchemaVersie</a></li><li><a href="uws_xsd_Element_uws_Bestand.html">Bestand</a></li><li><a href="uws_xsd_Element_uws_bestandsnaam.html">bestandsnaam</a></li><li><a href="uws_xsd_Element_uws_Component.html">Component</a></li><li><a href="uws_xsd_Simple_Type_uws_dtDoelidentificatie.html">dtDoelidentificatie</a></li><li><a href="uws_xsd_Simple_Type_uws_dtNamespace.html">dtNamespace</a></li><li><a href="uws_xsd_Simple_Type_uws_dtSchemaVersie.html">dtSchemaVersie</a></li><li><a href="uws_xsd_Simple_Type_uws_dtSTOPidentificatie.html">dtSTOPidentificatie</a></li><li><a href="uws_xsd_Simple_Type_uws_dtWaardeRef.html">dtWaardeRef</a></li><li><a href="uws_xsd_Element_uws_FRBRExpression.html">FRBRExpression</a></li><li><a href="uws_xsd_Element_uws_FRBRWork.html">FRBRWork</a></li><li><a href="uws_xsd_Element_uws_heeftBestand.html">heeftBestand</a></li><li><a href="uws_xsd_Element_uws_heeftModule.html">heeftModule</a></li><li><a href="uws_xsd_Element_uws_localName.html">localName</a></li><li><a href="uws_xsd_Element_uws_mediatype.html">mediatype</a></li><li><a href="uws_xsd_Element_uws_Module.html">Module</a></li><li><a href="uws_xsd_Element_uws_namespace.html">namespace</a></li><li class="active"><a href="uws_xsd_Element_uws_Pakbon.html">Pakbon</a></li><li><a href="uws_xsd_Element_uws_schemaversie.html">schemaversie</a></li><li><a href="uws_xsd_Element_uws_soortWork.html">soortWork</a></li></ul></li></ul></li><li><a href="imop_bedrijfsregels.html">Bedrijfsregels</a></li><li><a href="imop_waardelijsten.html">Waardelijsten</a></li></ul></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+   <h1 class="title topictitle1" id="ariaid-title1">Element uws:Pakbon</h1>
+   <div class="body">
+      <table class="table frame-all"><caption></caption><colgroup><col style="width:10.714285714285714%"><col style="width:89.28571428571429%"></colgroup><tbody class="tbody">
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Namespace</td>
+                  <td class="entry align-left colsep-1 rowsep-1">https://standaarden.overheid.nl/stop/imop/uitwisseling/</td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Definitie</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="div">
+    <p class="p">De Pakbon beschrijft de complete inhoud van een uitwisselpakket</p>
+  </div>
+  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Informatie</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="div">
+    <p class="p"><strong class="ph b">Beperkingen</strong></p>
+    <ul class="ul">
+      <li class="li">Alle STOP- Modules binnen één Pakbon hebben hetzelfde <a class="xref link_xsd" href="uws_xsd_Element_uws_schemaversie.html#schemaversie">schemaversie</a>.</li>
+    </ul>
+  </div>
+  <div class="div">
+    <p class="p"><strong class="ph b">Voorbeeld</strong></p>
+    <p class="p">Zie <a class="xref" href="uitwisselpakket.html">leeswijzer "Uitwisselpakket"</a>.</p>
+  </div>
+</td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Informatiemodel</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Diagram</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="p">
+                        <div class="fig imagemap" id="Pakbon__uws_xsd_Element_uws_Pakbon"><img usemap="#d89780e110" class="image" src="img/uws_xsd_Element_uws_Pakbon.png"><map name="d89780e110" id="d89780e110"><area href="uws_xsd_Attribute_Group_uws_agSchemaVersie.html#agSchemaVersie" alt="Attribuutgroep: uws:agSchemaVersie" title="Attribuutgroep: uws:agSchemaVersie" shape="rect" coords="111,44,274,70"><area href="uws_xsd_Element_uws_Component.html#Component" alt="Element uws:Component" title="Element uws:Component" shape="rect" coords="186,96,296,121"></map></div>
+                     </div>
+                  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Eigenschappen</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="p">
+                        <table class="table frame-all"><caption></caption><colgroup><col style="width:20%"><col style="width:80%"></colgroup><tbody class="tbody">
+                                 <tr class="row">
+                                    <td class="entry align-left colsep-1 rowsep-1">content: </td>
+                                    <td class="entry align-left colsep-1 rowsep-1">
+                                       <strong class="ph b">complex</strong>
+                                    </td>
+                                 </tr>
+                              </tbody></table>
+                     </div>
+                  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Kinderen</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <a class="xref" href="uws_xsd_Element_uws_Component.html#Component">Element uws:Component</a>
+                  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Attributen</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="p">
+                        <table class="table frame-all"><caption></caption><colgroup><col style="width:42.857142857142854%"><col style="width:42.857142857142854%"><col style="width:14.285714285714285%"></colgroup><thead class="thead">
+                                 <tr class="row">
+                                    <th class="entry align-left colsep-1 rowsep-1" id="Pakbon__entry__19">QName</th>
+                                    <th class="entry align-left colsep-1 rowsep-1" id="Pakbon__entry__20">Type</th>
+                                    <th class="entry align-left colsep-1 rowsep-1" id="Pakbon__entry__21">Use</th>
+                                 </tr>
+                              </thead><tbody class="tbody">
+                                 <tr class="row">
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="Pakbon__entry__19">schemaversie</td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="Pakbon__entry__20">
+                                       <a class="xref" href="uws_xsd_Simple_Type_uws_dtSchemaVersie.html#dtSchemaVersie">Simple Type uws:dtSchemaVersie</a>
+                                    </td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="Pakbon__entry__21">required</td>
+                                 </tr>
+                              </tbody></table>
+                     </div>
+                  </td>
+               </tr>
+               <tr class="row nobr-xsd:uws:Pakbon">
+                  <td class="entry align-left colsep-1 rowsep-1">Beperkingen</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="p"><table class="table"><caption></caption><colgroup><col style="width:9.090909090909092%"><col style="width:90.9090909090909%"></colgroup><tbody class="tbody"><tr class="row"><td class="entry"><a class="xref link_br" href="businessrules_STOP_1200.html#Bedrijfsregels__br_STOP1201">STOP1201</a></td><td class="entry"><div class="div"><p class="p">Elk in het uitwisselpakket opgenomen bestand MOET aangeroepen worden door </p> <ol class="ol"> <li class="li">de STOP-pakbon,</li> <li class="li">een andersoortig manifest volgens een andere standaard of </li> <li class="li">aangeroepen worden door een in het uitwisselpakket aanwezig bestand.</li> </ol> <p class="p">Anders geformuleerd: er mogen geen "ongebruikte" bestanden in het pakket opgenomen zijn.</p></div></td></tr><tr class="row"><td class="entry"><a class="xref link_br" href="businessrules_STOP_1200.html#Bedrijfsregels__br_STOP1202">STOP1202</a></td><td class="entry"><div class="div"><p class="p">Elk bestand dat middels de bestandsnaam aangeroepen wordt door één van onderstaande bestanden MOET aanwezig zijn in het uitwisselpakket. </p> <ol class="ol"> <li class="li">de STOP-pakbon</li> <li class="li">een andersoortig manifest volgens een andere standaard of</li> <li class="li">een ander bestand dat in het uitwisselpakket aanwezig is</li> </ol> <p class="p"></p> <p class="p">Anders geformuleerd: Elk aangeroepen bestand moet aanwezig zijn, een pakket moet compleet zijn.</p></div></td></tr><tr class="row"><td class="entry"><a class="xref link_br" href="businessrules_STOP_1200.html#Bedrijfsregels__br_STOP1213">STOP1213</a></td><td class="entry"><div class="div"><p class="p"> Bij gebruik van het uitwisselpakket voor het uitwisselen van een (nieuwe) versie van een of meer regelingen MOET het uitwisselpakket één versie van een (set van samenhangende) regeling(en) met één versie van de bijbehorende informatieobjecten bevatten. De versie van de regelingen/informatieobjecten mogen alleen over meerdere uitwisselpakketten verdeeld worden als die via een (download)service in samenhang verkregen kunnen worden. </p></div></td></tr><tr class="row"><td class="entry"><a class="xref link_br" href="businessrules_STOP_1200.html#Bedrijfsregels__br_STOP1216">STOP1216</a></td><td class="entry"><div class="div"><p class="p"> Bij gebruik van het uitwisselpakket voor het uitwisselen van een (nieuwe) versie van een of meer regelingen MOET de pakbon in het uitwisselpakket een component Versieinformatie bevatten. </p></div></td></tr></tbody></table></div></td>
+               </tr>
+            </tbody></table>
+   </div>
+</article></main></body></html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="nl-nl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="Pkg"><meta name="DC.language" content="nl-nl"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Samenhang rectificatie en besluit</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="Pkg"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a><ul><li><a href="stop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="leeswijzers.html">Leeswijzers</a></li><li><a href="EA_4D1D7FD517FE4d8dA9A2B905D202C92B.html">Informatiemodel</a><ul><li><a href="EA_9E187217A693458593B4BC483B77322B.html">Legenda van de diagrammen</a></li><li><a href="EA_068BE3F17D2D41a8AA2E39A355337401.html">Toepassingsgebied</a></li><li><a href="EA_BEA65540863F4cedAE03E4C3D0A29EAA.html">Algemeen</a></li><li><a href="EA_A1BBB86A635B4bf6B2FCECD1CFE6A3C9.html">Besluiten en regelgeving</a></li><li><a href="EA_E0EFE05F9FBB45c6AB2493B9FF9037EC.html">Officiële publicaties</a><ul><li><a href="EA_E8EDA73EF3B842a9AB27E3B3E23B1470.html">Officiële-publicatieversie</a></li><li><a href="EA_E1701B69B6724fc794010A6BB8B18B1A.html">Versies van bevoegd gezag</a><ul><li><a href="EA_9E3070BB712E49abA6B12A4A13ACACFC.html">Besluit</a></li><li><a href="EA_233F9A157B1F4d11A41DBE8FC3424244.html">Kennisgeving</a></li><li><a href="EA_CE0701FE9A054073B11E9531BE7681D4.html">Rectificatie</a><ul><li><a href="EA_62A76AC7435E4bdcA0D6CFFD7AAF6C0D.html">Tekstmodel</a></li><li><a href="EA_20C6AD7B533C47229DD18F1212EF2E30.html">Correctie van consolidatie-informatie</a></li><li class="active"><a href="EA_26DBCABF8AF641238FE1827DB1B5E0D2.html">Samenhang rectificatie en besluit</a></li></ul></li></ul></li></ul></li><li><a href="EA_81311E5C8AD34b35B153B21B50080288.html">Consolidatie van regelgeving</a></li></ul></li><li><a href="businessrules.html">Bedrijfsregels</a></li></ul></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title topictitle1" id="ariaid-title1">Samenhang rectificatie en besluit</h1>
+  <div class="body">
+      <div class="div">
+    <p class="p">Een <a class="xref link_ea" href="EA_CE0701FE9A054073B11E9531BE7681D4.html#Pkg">rectificatie</a> geeft aan
+      hoe een eerdere publicatie van een besluit gecorrigeerd moet worden om tot het vastgestelde
+      besluit te komen. De rectificatie is in STOP gemodelleerd zodat van een rectificatie een
+      officiële publicatie gemaakt kan worden. Waar de rectificatie geconsolideerde regelgeving
+      raakt, moet de correctie daarvan via consolidatie-informatie worden meegegeven. </p>
+    <p class="p">Het model voor de rectificatie is er <strong class="ph b">niet</strong> op gericht om geautomatiseerd de tekst van
+      het vastgestelde besluit af te leiden. Net als bij de publicatie van een besluit is het
+      belangrijkste om aan te geven wat de verschillen met de eerdere publicatie zijn. Als daarvoor
+      (net als bij wijzigingsbesluiten) een renvooiweergave voor gebruikt zou worden, dan zou er
+      soms renvooi-op-renvooi nodig zijn: een wijziging van regelgeving (in renvooi getoond in de
+      eerdere publicatie) zou gecorrigeerd moeten worden via renvooi.</p>
+    <p class="p">STOP heeft daarom gekozen voor een minder complex oplossing: in de rectificaties zijn de
+      correcties in regelgeving in renvooi weergeven ten opzichte van de <em class="ph i">regelingversies die
+      resulteren uit de wijzigingen in de eerdere publicatie</em>. Voor correcties in de overige
+      tekst van het besluit mag renvooiweergave gebruikt worden, maar de correcties mogen ook
+      tekstueel beschreven zijn.</p>
+    <p class="p"> In de consolidatie-informatie van de rectificatie worden alleen die elementen (tijdstempels,
+      beoogde regelgeving, intrekkingen) opgenomen die middels de rectificatie gecorrigeerd worden.
+    </p>
+    <p class="p">Het onderstaande diagram toont een besluit waarop twee opeenvolgende rectificaties worden gemaakt. De pijlen geven weer hoe te aangeleverde modules gerelateerd zijn aan eerder aangeleverde modules, welke modules uit de eerste  rectificatie ontstaan en hoe de tweede rectificatie daarop ingrijpt. </p>
+  </div>
+<figure class="fig fignone ea_diagram" id="Pkg__1C5117239E054a7882A5A589E4E02DF3"><figcaption><span class="fig--title-label">Figuur 1. </span>Samenhang met besluit</figcaption>
+<img class="image zoomable" src="img/EA_1C5117239E054a7882A5A589E4E02DF3.png">
+</figure>
+</div>
+</article></main></body></html>

@@ -1,0 +1,373 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="nl-nl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="Pkg"><meta name="DC.language" content="nl-nl"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Status gerechtelijke procedure</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="Pkg"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a><ul><li><a href="stop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="leeswijzers.html">Leeswijzers</a></li><li><a href="EA_4D1D7FD517FE4d8dA9A2B905D202C92B.html">Informatiemodel</a><ul><li><a href="EA_9E187217A693458593B4BC483B77322B.html">Legenda van de diagrammen</a></li><li><a href="EA_068BE3F17D2D41a8AA2E39A355337401.html">Toepassingsgebied</a></li><li><a href="EA_BEA65540863F4cedAE03E4C3D0A29EAA.html">Algemeen</a></li><li><a href="EA_A1BBB86A635B4bf6B2FCECD1CFE6A3C9.html">Besluiten en regelgeving</a><ul><li><a href="EA_212F1874134F41cc9EFE006ABEA7DC38.html">Regeling en regelingversie</a></li><li><a href="EA_ED1B61D3297C4ae6BD9A4FDB6BDF83F9.html">Informatieobject en informatieobjectversie</a><ul><li><a href="EA_EC4DE25BFB1341e6B632337DAF9C2791.html">Metadata</a></li><li class="active"><a href="EA_6E7EDCDFD326478298707D8E6F0610BA.html">Status gerechtelijke procedure</a></li><li><a href="EA_4B8D0B2D93B743069F927FD0F26A99DE.html">Geo-informatieobject</a></li><li><a href="EA_8FBBC5C6DF3B4508B429D11845BACA21.html">PDF-document</a></li></ul></li><li><a href="EA_587A8F5146CD44d9AB6EA1BEE8573352.html">Besluit en besluitversie</a></li><li><a href="EA_DBE8BF553C524b71BB84CFF11C7660CB.html">Revisies</a></li></ul></li><li><a href="EA_E0EFE05F9FBB45c6AB2493B9FF9037EC.html">Officiële publicaties</a></li><li><a href="EA_81311E5C8AD34b35B153B21B50080288.html">Consolidatie van regelgeving</a></li></ul></li><li><a href="businessrules.html">Bedrijfsregels</a></li></ul></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title topictitle1" id="ariaid-title1">Status gerechtelijke procedure</h1>
+  <div class="body">
+      <div class="div">
+    <p class="p">De gerechtelijke procedure status is een contextmodule bij een (uitgeleverd)
+    informatieobject. De status van de gerechtelijke procedure geeft de status van het
+    besluit weer dat deze versie van het informatieobject heeft ingesteld.  </p>
+    <p class="p"> Een besluit is onherroepelijk vanaf een bepaalde datum. Ontbreekt deze datum
+    of ligt de datum in de toekomst, dan is het besluit wat het informatieobject heeft
+    ingesteld nog niet onherroepelijk en kan een uitspraak van de rechter
+    het informatieobject nog wijzigen.</p>
+  </div>
+<figure class="fig fignone ea_diagram" id="Pkg__7414CB74CE3744a98E3FA748F61FF72A">
+<div class="p"><div class="fig imagemap"><img usemap="#d222617e27" class="image zoomable" src="img/EA_7414CB74CE3744a98E3FA748F61FF72A.png"><map name="d222617e27" id="d222617e27"><area href="#Pkg__926D05B0DFEB46f7B313D3CDE0336A11" alt="Publicatie van juridische bron (entiteit)" title="Publicatie van juridische bron (entiteit)" shape="rect" coords="577,134,870,302"><area href="#Pkg__9FE19215EB8E49da8CA5353D0E5359F0" alt="Besluitstatus (entiteit)" title="Besluitstatus (entiteit)" shape="rect" coords="168,98,487,235"><area href="#Pkg__2F904AAEEDB24d0c9D44B765150A6034" alt="Gerechterlijke procedure status (entiteit)" title="Gerechterlijke procedure status (entiteit)" shape="rect" coords="13,13,204,67"></map></div></div>
+</figure>
+<section class="section ea_elementen"><h2 class="title sectiontitle">Elementen</h2>
+            
+            <table class="table ea_element" id="Pkg__9FE19215EB8E49da8CA5353D0E5359F0"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__9FE19215EB8E49da8CA5353D0E5359F0__entry__1" colspan="4">Besluitstatus</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row">
+                        <td class="entry ea_doc_titel" headers="Pkg__9FE19215EB8E49da8CA5353D0E5359F0__entry__1">Definitie</td>
+                        <td class="entry ea_element_beschrijving" headers="Pkg__9FE19215EB8E49da8CA5353D0E5359F0__entry__1" colspan="3"><div class="div">
+    <p class="p">
+      De status van een besluit met het oog op een eventuele gerechtelijke procedure. In de standaard wordt niet
+      elke gerechtelijke procedure afzonderlijk gevolgd; alleen het effect van alle procedures tesamen is van belang.</p>
+  </div>
+  </td>
+                    </tr>
+                    <tr class="row noimlinks-ea:{9FE19215-EB8E-49da-8CA5-353D0E5359F0}">
+                        <td class="entry ea_doc_titel" headers="Pkg__9FE19215EB8E49da8CA5353D0E5359F0__entry__1">Implementatie</td>
+                        <td class="entry ea_relatedlinks_lijst" headers="Pkg__9FE19215EB8E49da8CA5353D0E5359F0__entry__1" colspan="3"><a class="xref link_xsd" href="cons_xsd_Element_cons_BesluitStatus.html#BesluitStatus">cons:BesluitStatus</a></td>
+                    </tr>
+                        <tr class="row">
+                            <td class="entry ea_eltpackages_titel" headers="Pkg__9FE19215EB8E49da8CA5353D0E5359F0__entry__1">Zie ook</td>
+                            <td class="entry ea_eltpackages_lijst" headers="Pkg__9FE19215EB8E49da8CA5353D0E5359F0__entry__1" colspan="3"><a class="xref ea_eltpackages_default link_ea" href="EA_C0439F1B47B549bf95F43D2318161D9B.html#Pkg">Status gerechtelijke procedure (onderwerp)</a></td>
+                        </tr>
+                    <tr class="row ea_attribuut_header">
+                            <td class="entry" headers="Pkg__9FE19215EB8E49da8CA5353D0E5359F0__entry__1"><strong class="ph b">Eigenschappen</strong></td>
+                            <td class="entry" headers="Pkg__9FE19215EB8E49da8CA5353D0E5359F0__entry__1"><strong class="ph b">Type</strong></td>
+                            <td class="entry" headers="Pkg__9FE19215EB8E49da8CA5353D0E5359F0__entry__1"><strong class="ph b">Kardinaliteit</strong></td>
+                            <td class="entry" headers="Pkg__9FE19215EB8E49da8CA5353D0E5359F0__entry__1"><strong class="ph b">Beschrijving</strong></td>
+                        </tr>
+                        <tr class="row ea_attribuut" id="Pkg__278B55E58EEB4fb6A41DAEE6C1832CE8">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__9FE19215EB8E49da8CA5353D0E5359F0__entry__1">FRBRWork</td>
+                            <td class="entry" headers="Pkg__9FE19215EB8E49da8CA5353D0E5359F0__entry__1"><a class="xref link_ea" href="EA_BD0B9B5F34C548eeB092538800D54713.html#Pkg__8DBA840974F643be8EEACBBB4954F8DD">STOP identificatie (entiteit)</a></td>
+                            <td class="entry" headers="Pkg__9FE19215EB8E49da8CA5353D0E5359F0__entry__1">1..1</td>
+                            <td class="entry" headers="Pkg__9FE19215EB8E49da8CA5353D0E5359F0__entry__1">
+                                <div class="div"><div class="div">
+    <p class="p">De work-identificatie van het besluit</p>
+  </div>
+</div>
+                                </td>
+                         </tr>
+                        <tr class="row ea_attribuut" id="Pkg__B842329251F640cb937C1606BA17C96E">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__9FE19215EB8E49da8CA5353D0E5359F0__entry__1">Onherroepelijk vanaf</td>
+                            <td class="entry" headers="Pkg__9FE19215EB8E49da8CA5353D0E5359F0__entry__1">date</td>
+                            <td class="entry" headers="Pkg__9FE19215EB8E49da8CA5353D0E5359F0__entry__1">0..1</td>
+                            <td class="entry" headers="Pkg__9FE19215EB8E49da8CA5353D0E5359F0__entry__1">
+                                <div class="div"><div class="div">
+    <p class="p">
+      De eerste datum waarop het besluit onherroepelijk is geworden en waartegen dus geen gerechtelijke procedure meer gestart kan worden.
+      Als deze datum niet gegeven is, dan is het besluit nog niet onherroepelijk en lopen er nog een of meer gerechtelijke procedures.</p>
+  </div>
+  </div>
+                                <div class="div noimlinks-ea:{B8423292-51F6-40cb-937C-1606BA17C96E}">
+                                    <p class="p ea_relatedlinks_titel"><p class="lines">Implementatie:</p>
+                                    <a class="xref link_xsd" href="cons_xsd_Element_cons_onherroepelijkVanaf.html#onherroepelijkVanaf">cons:onherroepelijkVanaf</a></p>
+                                </div>
+                                </td>
+                         </tr>
+                        <tr class="row ea_attribuut" id="Pkg__A6A44FFE2F27462aA34A4A5FB7B7F589">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__9FE19215EB8E49da8CA5353D0E5359F0__entry__1">Geschorst</td>
+                            <td class="entry" headers="Pkg__9FE19215EB8E49da8CA5353D0E5359F0__entry__1">boolean</td>
+                            <td class="entry" headers="Pkg__9FE19215EB8E49da8CA5353D0E5359F0__entry__1">1..1</td>
+                            <td class="entry" headers="Pkg__9FE19215EB8E49da8CA5353D0E5359F0__entry__1">
+                                <div class="div"><div class="div">
+    <p class="p">
+      Geeft aan dat er een of meer gerechtelijke procedures lopen, en dat in tenminste een ervan het besluit door de rechter gedeeltelijk of geheel is geschorst.</p>
+  </div>
+  </div>
+                                <div class="div noimlinks-ea:{A6A44FFE-2F27-462a-A34A-4A5FB7B7F589}">
+                                    <p class="p ea_relatedlinks_titel"><p class="lines">Implementatie:</p>
+                                    <a class="xref link_xsd" href="cons_xsd_Element_cons_geschorst.html#geschorst">cons:geschorst</a></p>
+                                </div>
+                                </td>
+                         </tr>
+                        <tr class="row ea_attribuut" id="Pkg__7D03A90438E54dd6A9251D1E4FD28845">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__9FE19215EB8E49da8CA5353D0E5359F0__entry__1">Gepubliceerd in</td>
+                            <td class="entry" headers="Pkg__9FE19215EB8E49da8CA5353D0E5359F0__entry__1"><a class="xref link_ea" href="#Pkg__926D05B0DFEB46f7B313D3CDE0336A11">Publicatie van juridische bron (entiteit)</a></td>
+                            <td class="entry" headers="Pkg__9FE19215EB8E49da8CA5353D0E5359F0__entry__1">1..1</td>
+                            <td class="entry" headers="Pkg__9FE19215EB8E49da8CA5353D0E5359F0__entry__1">
+                                <div class="div"><div class="div">
+    <p class="p">
+      De officiële publicatie waarin een besluit is bekendgemaakt, met daaraan gerelateerd eventuele rectificaties.</p>
+  </div>
+  </div>
+                                <div class="div noimlinks-ea:{7D03A904-38E5-4dd6-A925-1D1E4FD28845}">
+                                    <p class="p ea_relatedlinks_titel"><p class="lines">Implementatie:</p>
+                                    <a class="xref link_xsd" href="cons_xsd_Element_cons_gepubliceerdIn.html#gepubliceerdIn">cons:gepubliceerdIn</a></p>
+                                </div>
+                                </td>
+                         </tr>
+                        <tr class="row ea_attribuut" id="Pkg__6839281BCAC24a97ADC6E9510C9B1263">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__9FE19215EB8E49da8CA5353D0E5359F0__entry__1">Meer informatie</td>
+                            <td class="entry" headers="Pkg__9FE19215EB8E49da8CA5353D0E5359F0__entry__1">URL</td>
+                            <td class="entry" headers="Pkg__9FE19215EB8E49da8CA5353D0E5359F0__entry__1">0..*</td>
+                            <td class="entry" headers="Pkg__9FE19215EB8E49da8CA5353D0E5359F0__entry__1">
+                                <div class="div"><div class="div">
+    <p class="p">Een verwijzing naar een plaats op internet waar meer informatie te vinden is in verband met deze stap.</p>
+  </div>
+  </div>
+                                <div class="div noimlinks-ea:{6839281B-CAC2-4a97-ADC6-E9510C9B1263}">
+                                    <p class="p ea_relatedlinks_titel"><p class="lines">Implementatie:</p>
+                                    <a class="xref link_xsd" href="cons_xsd_Element_cons_meerInformatie.html#meerInformatie">cons:meerInformatie</a></p>
+                                </div>
+                                </td>
+                         </tr>
+                        <tr class="row ea_attribuut" id="Pkg__2A443B59825148e88FBCB835C68548EB">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__9FE19215EB8E49da8CA5353D0E5359F0__entry__1">wId</td>
+                            <td class="entry" headers="Pkg__9FE19215EB8E49da8CA5353D0E5359F0__entry__1">string</td>
+                            <td class="entry" headers="Pkg__9FE19215EB8E49da8CA5353D0E5359F0__entry__1">0..*</td>
+                            <td class="entry" headers="Pkg__9FE19215EB8E49da8CA5353D0E5359F0__entry__1">
+                                <div class="div"><div class="div">
+    <p class="p">Een verwijzing naar een tekstelement op basis van het <em class="ph i"><a class="xref link_def" href="begrippenlijst_wId.html#wId">wId</a></em>. Hierbij wordt verwezen naar
+	de inhoud van een tekstelement en niet zozeer de positie van een element in de tekst.</p>
+  </div>
+  </div>
+                                <div class="div"><div class="div">
+    <p class="p"> Het gaat om een tekstelement waarvan de juridische inhoud is gewijzigd door het
+      gepubliceerde besluit (of een rectificatie daarvan). Hoe bepaald kan worden of een
+      tekstelement juridisch gewijzigd is staat beschreven in de <a class="xref" href="juridische_wijziging_tekstelement.html">bepaling juridische tekstwijziging</a>. </p>
+  </div>
+</div>
+                                <div class="div noimlinks-ea:{2A443B59-8251-48e8-8FBC-B835C68548EB}">
+                                    <p class="p ea_relatedlinks_titel"><p class="lines">Implementatie:</p>
+                                    <a class="xref link_xsd" href="cons_xsd_Element_cons_wId.html#wId">cons:wId</a>, <a class="xref link_xsd" href="data_xsd_Element_data_wId.html#wId">data:wId</a></p>
+                                </div>
+                                </td>
+                         </tr>
+                    </tbody></table>
+            <table class="table ea_element" id="Pkg__2F904AAEEDB24d0c9D44B765150A6034"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__2F904AAEEDB24d0c9D44B765150A6034__entry__1" colspan="4">Gerechterlijke procedure status</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row">
+                        <td class="entry ea_doc_titel" headers="Pkg__2F904AAEEDB24d0c9D44B765150A6034__entry__1">Definitie</td>
+                        <td class="entry ea_element_beschrijving" headers="Pkg__2F904AAEEDB24d0c9D44B765150A6034__entry__1" colspan="3"><div class="div">
+    <p class="p">
+      Een context module die de samenvatting weergeeft van de status van een regeling of (consolideerbaar) informatieobject
+      dat het gevolg is van gerechtelijke procedures. In de standaard wordt niet
+      elke gerechtelijke procedure afzonderlijk gevolgd; alleen het effect van alle procedures tesamen is van belang.
+    </p>
+  </div>
+  </td>
+                    </tr>
+                    <tr class="row noimlinks-ea:{2F904AAE-EDB2-4d0c-9D44-B765150A6034}">
+                        <td class="entry ea_doc_titel" headers="Pkg__2F904AAEEDB24d0c9D44B765150A6034__entry__1">Implementatie</td>
+                        <td class="entry ea_relatedlinks_lijst" headers="Pkg__2F904AAEEDB24d0c9D44B765150A6034__entry__1" colspan="3"><a class="xref link_xsd" href="cons_xsd_Element_cons_GerechtelijkeProcedureStatus.html#GerechtelijkeProcedureStatus">cons:GerechtelijkeProcedureStatus</a></td>
+                    </tr>
+                        <tr class="row">
+                            <td class="entry ea_genspec_titel" headers="Pkg__2F904AAEEDB24d0c9D44B765150A6034__entry__1">Specialisatie van</td>
+                            <td class="entry ea_genspec_lijst" headers="Pkg__2F904AAEEDB24d0c9D44B765150A6034__entry__1" colspan="3"><a class="xref ea_genspec_direct link_ea" href="EA_1A45BBE5EC4F4bb2BBD7F5E701CE0479.html#Pkg__6E006EB7C4644e1993AD8CB36F94E660">Context informatie (entiteit)</a>, <a class="xref link_ea" href="EA_1A45BBE5EC4F4bb2BBD7F5E701CE0479.html#Pkg__B4649197FA68449e913F625FA43F27DF">Module (entiteit)</a></td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry ea_eltpackages_titel" headers="Pkg__2F904AAEEDB24d0c9D44B765150A6034__entry__1">Zie ook</td>
+                            <td class="entry ea_eltpackages_lijst" headers="Pkg__2F904AAEEDB24d0c9D44B765150A6034__entry__1" colspan="3"><a class="xref ea_eltpackages_default link_ea" href="EA_C0439F1B47B549bf95F43D2318161D9B.html#Pkg">Status gerechtelijke procedure (onderwerp)</a></td>
+                        </tr>
+                    </tbody></table>
+            <table class="table ea_element" id="Pkg__926D05B0DFEB46f7B313D3CDE0336A11"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__926D05B0DFEB46f7B313D3CDE0336A11__entry__1" colspan="4">Publicatie van juridische bron</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row">
+                        <td class="entry ea_doc_titel" headers="Pkg__926D05B0DFEB46f7B313D3CDE0336A11__entry__1">Definitie</td>
+                        <td class="entry ea_element_beschrijving" headers="Pkg__926D05B0DFEB46f7B313D3CDE0336A11__entry__1" colspan="3"><div class="div">
+    <p class="p">De publicatie van een juridische bron waarop de consolidatie is gebaseerd, of van een bron
+      die een rol heeft gespeeld in het besluitvormingsproces om te komen tot het geconsolideerde
+      instrument. Het kan gaan om de bekendmaking van een besluit, rectificatie, ter inzage legging
+      of kennisgeving van een ontwerpbesluit, etc. </p>
+  </div>
+  </td>
+                    </tr>
+                    <tr class="row noimlinks-ea:{926D05B0-DFEB-46f7-B313-D3CDE0336A11}">
+                        <td class="entry ea_doc_titel" headers="Pkg__926D05B0DFEB46f7B313D3CDE0336A11__entry__1">Implementatie</td>
+                        <td class="entry ea_relatedlinks_lijst" headers="Pkg__926D05B0DFEB46f7B313D3CDE0336A11__entry__1" colspan="3"><a class="xref link_xsd" href="cons_xsd_Element_cons_JuridischeBronpublicatie.html#JuridischeBronpublicatie">cons:JuridischeBronpublicatie</a></td>
+                    </tr>
+                        <tr class="row">
+                            <td class="entry ea_eltpackages_titel" headers="Pkg__926D05B0DFEB46f7B313D3CDE0336A11__entry__1">Zie ook</td>
+                            <td class="entry ea_eltpackages_lijst" headers="Pkg__926D05B0DFEB46f7B313D3CDE0336A11__entry__1" colspan="3"><a class="xref ea_eltpackages_default link_ea" href="EA_F798EBB99D38431f9884C8D2E7DA0B6B.html#Pkg">Juridische verantwoording (onderwerp)</a>, <a class="xref link_ea" href="EA_C0439F1B47B549bf95F43D2318161D9B.html#Pkg">Status gerechtelijke procedure (onderwerp)</a></td>
+                        </tr>
+                    <tr class="row ea_attribuut_header">
+                            <td class="entry" headers="Pkg__926D05B0DFEB46f7B313D3CDE0336A11__entry__1"><strong class="ph b">Eigenschappen</strong></td>
+                            <td class="entry" headers="Pkg__926D05B0DFEB46f7B313D3CDE0336A11__entry__1"><strong class="ph b">Type</strong></td>
+                            <td class="entry" headers="Pkg__926D05B0DFEB46f7B313D3CDE0336A11__entry__1"><strong class="ph b">Kardinaliteit</strong></td>
+                            <td class="entry" headers="Pkg__926D05B0DFEB46f7B313D3CDE0336A11__entry__1"><strong class="ph b">Beschrijving</strong></td>
+                        </tr>
+                        <tr class="row ea_attribuut" id="Pkg__F5B3137F0EBD482b8FD487849C473327">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__926D05B0DFEB46f7B313D3CDE0336A11__entry__1">Url</td>
+                            <td class="entry" headers="Pkg__926D05B0DFEB46f7B313D3CDE0336A11__entry__1">string</td>
+                            <td class="entry" headers="Pkg__926D05B0DFEB46f7B313D3CDE0336A11__entry__1">1..1</td>
+                            <td class="entry" headers="Pkg__926D05B0DFEB46f7B313D3CDE0336A11__entry__1">
+                                <div class="div"><div class="div">
+    <p class="p">Een URL die wijst naar het relevante deel van de publicatie.</p>
+    <p class="p">Er kan ook verwijzen worden naar een onderdeel van de jurische bron middels een "fragment
+      identifier"</p>
+  </div>
+  </div>
+                                <div class="div"><div class="div">
+    <p class="p">De URL waar de publicatie is terug te vinden.</p>
+  </div>
+</div>
+                                <div class="div noimlinks-ea:{F5B3137F-0EBD-482b-8FD4-87849C473327}">
+                                    <p class="p ea_relatedlinks_titel"><p class="lines">Implementatie:</p>
+                                    <a class="xref link_xsd" href="cons_xsd_Element_cons_url.html#url">cons:url</a></p>
+                                </div>
+                                </td>
+                         </tr>
+                        <tr class="row ea_attribuut" id="Pkg__107092F83AF24c92AB5EC48AE4DD2DF3">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__926D05B0DFEB46f7B313D3CDE0336A11__entry__1">Publicatiedatum</td>
+                            <td class="entry" headers="Pkg__926D05B0DFEB46f7B313D3CDE0336A11__entry__1">date</td>
+                            <td class="entry" headers="Pkg__926D05B0DFEB46f7B313D3CDE0336A11__entry__1">1..1</td>
+                            <td class="entry" headers="Pkg__926D05B0DFEB46f7B313D3CDE0336A11__entry__1">
+                                <div class="div"><div class="div">
+      <p class="p">De datum en tijd waarop een publicatie op <a class="xref" href="https://www.officielebekendmakingen.nl/" target="_blank">officielebekendmakingen.nl</a> is verschenen.</p>
+   </div>
+   </div>
+                                <div class="div"><div class="div">
+    <p class="p">De datum waarop de publicatie is verschenen. Dit wordt overgenomen van de 
+    <a class="xref link_ea" href="EA_E8EDA73EF3B842a9AB27E3B3E23B1470.html#Pkg__142F5AAA19B34c1eA4626184D1521806">Gepubliceerd op (eigenschap van Metadata officiële publicatie versie)</a> uit de metadata van de versie van de publicatie.
+  </p>
+  </div>
+</div>
+                                <div class="div noimlinks-ea:{107092F8-3AF2-4c92-AB5E-C48AE4DD2DF3}">
+                                    <p class="p ea_relatedlinks_titel"><p class="lines">Implementatie:</p>
+                                    <a class="xref link_xsd" href="data_xsd_Element_data_gepubliceerdOp.html#gepubliceerdOp">data:gepubliceerdOp</a>, <a class="xref link_xsd" href="cons_xsd_Element_cons_gepubliceerdOp.html#gepubliceerdOp">cons:gepubliceerdOp</a></p>
+                                </div>
+                                </td>
+                         </tr>
+                        <tr class="row ea_attribuut" id="Pkg__BC9BEBAE051B4e6fAA2A9C4A206A0C64">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__926D05B0DFEB46f7B313D3CDE0336A11__entry__1">Publicatienaam</td>
+                            <td class="entry" headers="Pkg__926D05B0DFEB46f7B313D3CDE0336A11__entry__1">string</td>
+                            <td class="entry" headers="Pkg__926D05B0DFEB46f7B313D3CDE0336A11__entry__1">1..1</td>
+                            <td class="entry" headers="Pkg__926D05B0DFEB46f7B313D3CDE0336A11__entry__1">
+                                <div class="div"><div class="div">
+    <p class="p">De identificatie van de publicatie. Dit is een verkorte weergave van de <a class="xref link_im" href="__informatiemodel_index_publicatienaam.html#publicatienaam">Publicatienaam</a>, te lezen voor kenners van de verwijzingsystematiek, die gebruikt
+      kan worden om aan de publicatie te refereren. De publicatie-identifier wordt ook gebruikt als
+      het laatste deel van de AKN Work-identificatie van de Officiële Publicatie.</p>
+    <ul class="ul">
+      <li class="li">In de metadata op <a class="xref" href="https://www.officielebekendmakingen.nl/" target="_blank">officielebekendmakingen.nl</a> heet deze "overheidop.identifier". </li>
+      <li class="li">Deze identifier wordt ook gebruikt in de URL van een publicatie op <a class="xref" href="https://www.officielebekendmakingen.nl/" target="_blank">officielebekendmakingen.nl</a>, zoals bijvoorbeeld <code class="ph codeph">stb-2020-262</code> in
+        <code class="ph codeph">https://zoek.officielebekendmakingen.nl/stb-2020-262.html</code>. </li>
+    </ul>
+  </div>
+  </div>
+                                <div class="div"><div class="div">
+    <p class="p">De publicatienaam wordt overgenomen van de <a class="xref link_ea" href="EA_E8EDA73EF3B842a9AB27E3B3E23B1470.html#Pkg__896D6E0E5A034f01B3405BC3437E3BCF">publicatienaam</a>
+    uit de metadata van de publicatie.</p>
+  </div>
+</div>
+                                <div class="div noimlinks-ea:{BC9BEBAE-051B-4e6f-AA2A-9C4A206A0C64}">
+                                    <p class="p ea_relatedlinks_titel"><p class="lines">Implementatie:</p>
+                                    <a class="xref link_xsd" href="data_xsd_Element_data_publicatieIdentifier.html#publicatieIdentifier">data:publicatieIdentifier</a>, <a class="xref link_xsd" href="cons_xsd_Element_cons_publicatieIdentifier.html#publicatieIdentifier">cons:publicatieIdentifier</a></p>
+                                </div>
+                                </td>
+                         </tr>
+                        <tr class="row ea_attribuut" id="Pkg__016A44C1CD0E40c3A745D792C5C90126">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__926D05B0DFEB46f7B313D3CDE0336A11__entry__1">Publicatie-identifier</td>
+                            <td class="entry" headers="Pkg__926D05B0DFEB46f7B313D3CDE0336A11__entry__1">string</td>
+                            <td class="entry" headers="Pkg__926D05B0DFEB46f7B313D3CDE0336A11__entry__1">1..1</td>
+                            <td class="entry" headers="Pkg__926D05B0DFEB46f7B313D3CDE0336A11__entry__1">
+                                <div class="div"><div class="div">
+    <p class="p">
+      De publicatie-identifier wordt overgenomen van de <a class="xref link_ea" href="EA_E8EDA73EF3B842a9AB27E3B3E23B1470.html#Pkg__8A2F0805A89E415987E012DBB445E702">publicatie-identifier</a>
+      uit de metadata van de publicatie.
+    </p>
+
+  </div>
+</div>
+                                </td>
+                         </tr>
+                        <tr class="row ea_attribuut" id="Pkg__A1F9CBDA072F4b92AC5B1EE468C0F8AE">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__926D05B0DFEB46f7B313D3CDE0336A11__entry__1">Soort gepubliceerd work</td>
+                            <td class="entry" headers="Pkg__926D05B0DFEB46f7B313D3CDE0336A11__entry__1"><a class="xref link_ea" href="EA_C0DF21A3FC7A4ff2A7A7FEF848B6260F.html#Pkg__FC69356B7FA242f399A03759691AD897">Resource identificatie (entiteit)</a></td>
+                            <td class="entry" headers="Pkg__926D05B0DFEB46f7B313D3CDE0336A11__entry__1">1..1</td>
+                            <td class="entry" headers="Pkg__926D05B0DFEB46f7B313D3CDE0336A11__entry__1">
+                                <div class="div"><div class="div">
+    <p class="p">De identificatie van het soort work (de juridische bron) die is gepubliceerd. In het geval van een
+      bekendmaking van een besluit verwijst het soort work dus naar een besluit en niet naar de
+      bekendmaking.</p>
+  </div>
+  </div>
+                                <div class="div noimlinks-ea:{A1F9CBDA-072F-4b92-AC5B-1EE468C0F8AE}">
+                                    <p class="p ea_relatedlinks_titel"><p class="lines">Implementatie:</p>
+                                    <a class="xref link_xsd" href="cons_xsd_Element_cons_soortGepubliceerdWork.html#soortGepubliceerdWork">cons:soortGepubliceerdWork</a></p>
+                                </div>
+                                </td>
+                         </tr>
+                        <tr class="row ea_attribuut" id="Pkg__E6800CCA9FE344bf8EBA856A310EC5C8">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__926D05B0DFEB46f7B313D3CDE0336A11__entry__1">Datum ondertekening</td>
+                            <td class="entry" headers="Pkg__926D05B0DFEB46f7B313D3CDE0336A11__entry__1">date</td>
+                            <td class="entry" headers="Pkg__926D05B0DFEB46f7B313D3CDE0336A11__entry__1">0..1</td>
+                            <td class="entry" headers="Pkg__926D05B0DFEB46f7B313D3CDE0336A11__entry__1">
+                                <div class="div"><div class="div">
+    <p class="p">de datum waarop het gepubliceerde besluit is ondertekend.</p>
+    <p class="p">In OWMS4 heet deze datum <a class="xref" href="https://standaarden.overheid.nl/owms/4.0/doc/eigenschappen/dcterms.issued" target="_blank">dcterms.issued</a></p>
+  </div>
+  </div>
+                                <div class="div"><div class="div">
+    <p class="p">De datum van ondertekening van de versie van de juridische bron die in deze publicatie wordt gepubliceerd.
+    De datum is niet altijd gegeven omdat niet elk soort juridische bron ondertekend hoeft te worden.
+  De waarde is gelijk aan <a class="xref link_ea" href="EA_9E3070BB712E49abA6B12A4A13ACACFC.html#Pkg__8753FA9FD8A143a5A306BC523E1CC00B">Ondertekend op (eigenschap van Metadata bekendgemaakt besluit)</a> uit de metadata van de officiële publicatie.
+  </p>
+  </div>
+</div>
+                                <div class="div noimlinks-ea:{E6800CCA-9FE3-44bf-8EBA-856A310EC5C8}">
+                                    <p class="p ea_relatedlinks_titel"><p class="lines">Implementatie:</p>
+                                    <a class="xref link_xsd" href="data_xsd_Element_data_ondertekendOp.html#ondertekendOp">data:ondertekendOp</a>, <a class="xref link_xsd" href="cons_xsd_Element_cons_ondertekendOp.html#ondertekendOp">cons:ondertekendOp</a></p>
+                                </div>
+                                </td>
+                         </tr>
+                    </tbody></table>
+        </section>
+  </div>
+</article></main></body></html>

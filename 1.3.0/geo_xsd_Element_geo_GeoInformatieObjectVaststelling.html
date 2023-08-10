@@ -1,0 +1,185 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="nl-nl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="GeoInformatieObjectVaststelling"><meta name="DC.language" content="nl-nl"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Element geo:GeoInformatieObjectVaststelling</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="GeoInformatieObjectVaststelling"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a><ul><li><a href="imop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="imop_xml.html">XML-serialisatie</a></li><li><a href="uitwisselpakket.html">Uitwisselpakket</a></li><li><a href="schemata_gebruik.html">Gebruik van IMOP</a></li><li><a href="schema_documentatie.html">Schemadocumentatie</a><ul><li><a href="schema_documentatie_legenda.html">Legenda van de schemadocumentatie</a></li><li><a href="imop_modules.html">STOP-modules in IMOP</a></li><li><a href="tekst_xsd_Main_schema_tekst_xsd.html">Schema imop-tekst.xsd</a></li><li><a href="gio_xsd_Main_schema_gio_xsd.html">Schema imop-gio.xsd</a></li><li><a href="geo_xsd_Main_schema_geo_xsd.html">Schema imop-geo.xsd</a><ul><li><a href="geo_xsd_Simple_Type_geo_dtGroepID.html">dtGroepID</a></li><li class="active"><a href="geo_xsd_Element_geo_GeoInformatieObjectVaststelling.html">GeoInformatieObjectVaststelling</a></li><li><a href="geo_xsd_Complex_Type_geo_GeoInformatieObjectVaststellingType.html">GeoInformatieObjectVaststellingType</a></li><li><a href="geo_xsd_Element_geo_GeoInformatieObjectVersie.html">GeoInformatieObjectVersie</a></li><li><a href="geo_xsd_Complex_Type_geo_GeoInformatieObjectVersieType.html">GeoInformatieObjectVersieType</a></li><li><a href="geo_xsd_Element_geo_Groep.html">Groep</a></li><li><a href="geo_xsd_Element_geo_groepID.html">groepID</a></li><li><a href="geo_xsd_Complex_Type_geo_GroepType.html">GroepType</a></li><li><a href="geo_xsd_Element_geo_Locatie.html">Locatie</a></li><li><a href="geo_xsd_Complex_Type_geo_LocatieType.html">LocatieType</a></li></ul></li><li><a href="se_xsd_Main_schema_se_xsd.html">Schema se-FeatureStyle-imop.xsd</a></li><li><a href="ogc_xsd_Main_schema_ogc_xsd.html">Schema se-filter-imop.xsd</a></li><li><a href="data_xsd_Main_schema_data_xsd.html">Schema imop-data.xsd</a></li><li><a href="cons_xsd_Main_schema_cons_xsd.html">Schema imop-consolidatie.xsd</a></li><li><a href="rsc_xsd_Main_schema_rsc_xsd.html">Schema imop-resources.xsd</a></li><li><a href="br_xsd_Main_schema_br_xsd.html">Schema imop-bedrijfsregels.xsd</a></li><li><a href="sv_xsd_Main_schema_sv_xsd.html">Schema imop-schemata.xsd</a></li><li><a href="uws_xsd_Main_schema_uws_xsd.html">Schema imop-uitwisseling.xsd</a></li></ul></li><li><a href="imop_bedrijfsregels.html">Bedrijfsregels</a></li><li><a href="imop_waardelijsten.html">Waardelijsten</a></li></ul></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+   <h1 class="title topictitle1" id="ariaid-title1">Element geo:GeoInformatieObjectVaststelling</h1>
+   <div class="body">
+      <table class="table frame-all"><caption></caption><colgroup><col style="width:10.714285714285714%"><col style="width:89.28571428571429%"></colgroup><tbody class="tbody">
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Namespace</td>
+                  <td class="entry align-left colsep-1 rowsep-1">https://standaarden.overheid.nl/stop/imop/geo/</td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Definitie</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="div">
+    <p class="p">Root element voor de vaststelling van een GIO met <a class="xref link_xsd" href="geo_xsd_Complex_Type_geo_GeoInformatieObjectVaststellingType.html#GeoInformatieObjectVaststellingType">complexType geo:GeoInformatieObjectVaststellingType</a>
+    </p>
+  </div>
+  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Informatie</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="div">
+    <p class="p">Element tag voor Locatie de inhoud is beschreven in: <a class="xref link_xsd" href="geo_xsd_Complex_Type_geo_GeoInformatieObjectVaststellingType.html#GeoInformatieObjectVaststellingType">complexType geo:GeoInformatieObjectVaststellingType</a></p>
+  </div>
+  <div class="div">
+    <p class="p"><strong class="ph b">Attributen</strong></p>
+    <ol class="ol">
+      <li class="li"><strong class="ph b"><code class="keyword markupname xmlatt">@schemaversie</code></strong>: bevat het versienummer van het STOP-XML-schemas
+        waaraan de XML-instantie voldoet. Zie ook <a class="xref link_xsd" href="tekst_xsd_Attribute_Group_tekst_agSchemaVersie.html#agSchemaVersie">attribuutgroep tekst:agSchemaVersie</a>.</li>
+    </ol>
+  </div>
+  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Informatiemodel</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Verwijzingen</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <a class="xref link_xsd" href="geo_xsd_Complex_Type_geo_GeoInformatieObjectVaststellingType.html#GeoInformatieObjectVaststellingType">complexType geo:GeoInformatieObjectVaststellingType</a></td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Diagram</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="p">
+                        <div class="fig imagemap" id="GeoInformatieObjectVaststelling__geo_xsd_Element_geo_GeoInformatieObjectVaststelling"><img usemap="#d402030e125" class="image" src="img/geo_xsd_Element_geo_GeoInformatieObjectVaststelling.png"><map name="d402030e125" id="d402030e125"><area href="http://www.ogc.org/standards/gml" target="_blank" alt="id (http://www.opengis.net/gml/3.2)" title="id (http://www.opengis.net/gml/3.2)" shape="rect" coords="346,178,423,203"><area href="http://www.ogc.org/standards/gml" target="_blank" alt="metaDataProperty (http://www.opengis.net/gml/3.2)" title="metaDataProperty (http://www.opengis.net/gml/3.2)" shape="rect" coords="509,264,645,289"><area href="http://www.ogc.org/standards/gml" target="_blank" alt="description (http://www.opengis.net/gml/3.2)" title="description (http://www.opengis.net/gml/3.2)" shape="rect" coords="509,299,612,324"><area href="http://www.ogc.org/standards/gml" target="_blank" alt="descriptionReference (http://www.opengis.net/gml/3.2)" title="descriptionReference (http://www.opengis.net/gml/3.2)" shape="rect" coords="509,334,663,359"><area href="http://www.ogc.org/standards/gml" target="_blank" alt="identifier (http://www.opengis.net/gml/3.2)" title="identifier (http://www.opengis.net/gml/3.2)" shape="rect" coords="509,369,600,394"><area href="http://www.ogc.org/standards/gml" target="_blank" alt="name (http://www.opengis.net/gml/3.2)" title="name (http://www.opengis.net/gml/3.2)" shape="rect" coords="509,404,585,429"><area href="http://www.ogc.org/standards/gml" target="_blank" alt="StandardObjectProperties (http://www.opengis.net/gml/3.2)" title="StandardObjectProperties (http://www.opengis.net/gml/3.2)" shape="rect" coords="406,223,604,249"><area href="http://www.ogc.org/standards/gml" target="_blank" alt="AbstractGMLType (http://www.opengis.net/gml/3.2)" title="AbstractGMLType (http://www.opengis.net/gml/3.2)" shape="rect" coords="321,102,564,124"><area href="http://www.ogc.org/standards/gml" target="_blank" alt="boundedBy (http://www.opengis.net/gml/3.2)" title="boundedBy (http://www.opengis.net/gml/3.2)" shape="rect" coords="389,453,494,478"><area href="http://www.ogc.org/standards/gml" target="_blank" alt="location (http://www.opengis.net/gml/3.2)" title="location (http://www.opengis.net/gml/3.2)" shape="rect" coords="389,488,476,513"><area href="http://www.ogc.org/standards/gml" target="_blank" alt="AbstractFeatureType (http://www.opengis.net/gml/3.2)" title="AbstractFeatureType (http://www.opengis.net/gml/3.2)" shape="rect" coords="307,62,565,84"><area href="geo_xsd_Complex_Type_geo_GeoInformatieObjectVaststellingType.html#GeoInformatieObjectVaststellingType_context" alt="Element geo:GeoInformatieObjectVaststellingType / geo:context" title="Element geo:GeoInformatieObjectVaststellingType / geo:context" shape="rect" coords="375,630,442,655"><area href="geo_xsd_Complex_Type_geo_GeoInformatieObjectVaststellingType.html#GeoInformatieObjectVaststellingType_vastgesteldeVersie" alt="Element geo:GeoInformatieObjectVaststellingType / geo:vastgesteldeVersie" title="Element geo:GeoInformatieObjectVaststellingType / geo:vastgesteldeVersie" shape="rect" coords="375,665,500,690"><area href="geo_xsd_Complex_Type_geo_GeoInformatieObjectVaststellingType.html#GeoInformatieObjectVaststellingType_wasID" alt="Element geo:GeoInformatieObjectVaststellingType / geo:wasID" title="Element geo:GeoInformatieObjectVaststellingType / geo:wasID" shape="rect" coords="375,700,487,744"><area href="geo_xsd_Complex_Type_geo_GeoInformatieObjectVaststellingType.html#GeoInformatieObjectVaststellingType" alt="Complex Type geo:GeoInformatieObjectVaststellingType" title="Complex Type geo:GeoInformatieObjectVaststellingType" shape="rect" coords="293,3,543,44"></map></div>
+                     </div>
+                  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Type</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <a class="xref" href="geo_xsd_Complex_Type_geo_GeoInformatieObjectVaststellingType.html#GeoInformatieObjectVaststellingType">Complex Type geo:GeoInformatieObjectVaststellingType</a>
+                  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Type hierarchy</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <ul class="ul">
+                        <li class="li">
+                           <p class="p">
+                              <a class="xref" href="http://www.ogc.org/standards/gml" target="_blank">AbstractGMLType (http://www.opengis.net/gml/3.2)</a>
+                           </p>
+                           <ul class="ul">
+                              <li class="li">
+                                 <p class="p">
+                                    <a class="xref" href="http://www.ogc.org/standards/gml" target="_blank">AbstractFeatureType (http://www.opengis.net/gml/3.2)</a>
+                                 </p>
+                                 <ul class="ul">
+                                    <li class="li">
+                                       <p class="p">
+                                          <a class="xref" href="geo_xsd_Complex_Type_geo_GeoInformatieObjectVaststellingType.html#GeoInformatieObjectVaststellingType">Complex Type geo:GeoInformatieObjectVaststellingType</a>
+                                       </p>
+                                    </li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Eigenschappen</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="p">
+                        <table class="table frame-all"><caption></caption><colgroup><col style="width:20%"><col style="width:80%"></colgroup><tbody class="tbody">
+                                 <tr class="row">
+                                    <td class="entry align-left colsep-1 rowsep-1">content: </td>
+                                    <td class="entry align-left colsep-1 rowsep-1">
+                                       <strong class="ph b">complex</strong>
+                                    </td>
+                                 </tr>
+                              </tbody></table>
+                     </div>
+                  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Kinderen</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <a class="xref" href="geo_xsd_Complex_Type_geo_GeoInformatieObjectVaststellingType.html#GeoInformatieObjectVaststellingType_context">Element geo:GeoInformatieObjectVaststellingType / geo:context</a>, <a class="xref" href="geo_xsd_Complex_Type_geo_GeoInformatieObjectVaststellingType.html#GeoInformatieObjectVaststellingType_vastgesteldeVersie">Element geo:GeoInformatieObjectVaststellingType / geo:vastgesteldeVersie</a>, <a class="xref" href="geo_xsd_Complex_Type_geo_GeoInformatieObjectVaststellingType.html#GeoInformatieObjectVaststellingType_wasID">Element geo:GeoInformatieObjectVaststellingType / geo:wasID</a>, <a class="xref" href="http://www.ogc.org/standards/gml" target="_blank">boundedBy (http://www.opengis.net/gml/3.2)</a>, <a class="xref" href="http://www.ogc.org/standards/gml" target="_blank">description (http://www.opengis.net/gml/3.2)</a>, <a class="xref" href="http://www.ogc.org/standards/gml" target="_blank">descriptionReference (http://www.opengis.net/gml/3.2)</a>, <a class="xref" href="http://www.ogc.org/standards/gml" target="_blank">identifier (http://www.opengis.net/gml/3.2)</a>, <a class="xref" href="http://www.ogc.org/standards/gml" target="_blank">location (http://www.opengis.net/gml/3.2)</a>, <a class="xref" href="http://www.ogc.org/standards/gml" target="_blank">metaDataProperty (http://www.opengis.net/gml/3.2)</a>, <a class="xref" href="http://www.ogc.org/standards/gml" target="_blank">name (http://www.opengis.net/gml/3.2)</a>
+                  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Attributen</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="p">
+                        <table class="table frame-all"><caption></caption><colgroup><col style="width:42.857142857142854%"><col style="width:42.857142857142854%"><col style="width:14.285714285714285%"></colgroup><thead class="thead">
+                                 <tr class="row">
+                                    <th class="entry align-left colsep-1 rowsep-1" id="GeoInformatieObjectVaststelling__entry__25">QName</th>
+                                    <th class="entry align-left colsep-1 rowsep-1" id="GeoInformatieObjectVaststelling__entry__26">Type</th>
+                                    <th class="entry align-left colsep-1 rowsep-1" id="GeoInformatieObjectVaststelling__entry__27">Use</th>
+                                 </tr>
+                              </thead><tbody class="tbody">
+                                 <tr class="row">
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="GeoInformatieObjectVaststelling__entry__25">
+                                       <a class="xref" href="http://www.ogc.org/standards/gml" target="_blank">id (http://www.opengis.net/gml/3.2)</a>
+                                    </td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="GeoInformatieObjectVaststelling__entry__26">ID</td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="GeoInformatieObjectVaststelling__entry__27">optional</td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="GeoInformatieObjectVaststelling__entry__25 GeoInformatieObjectVaststelling__entry__26 GeoInformatieObjectVaststelling__entry__27" colspan="3">The attribute gml:id supports provision of a handle for the XML element representing a GML Object. Its use is mandatory for all GML objects. It is of XML type ID, so is constrained to be unique in the XML document within which it occurs.</td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="GeoInformatieObjectVaststelling__entry__25">schemaversie</td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="GeoInformatieObjectVaststelling__entry__26">xs:token</td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="GeoInformatieObjectVaststelling__entry__27">required</td>
+                                 </tr>
+                              </tbody></table>
+                     </div>
+                  </td>
+               </tr>
+               <tr class="row nobr-xsd:geo:GeoInformatieObjectVaststelling">
+                  <td class="entry align-left colsep-1 rowsep-1">Beperkingen</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="p"><table class="table"><caption></caption><colgroup><col style="width:9.090909090909092%"><col style="width:90.9090909090909%"></colgroup><tbody class="tbody"><tr class="row"><td class="entry"><a class="xref link_br" href="businessrules_STOP_3000.html#Bedrijfsregels__br_STOP3090">STOP3090</a></td><td class="entry"><div class="div"><p class="p">De optionele gml elementen (gml:metaDataProperty, gml:description, gml:descriptionReference, gml:identifier, gml:name, gml:boundedBy, gml:location en gml:PriorityLocation) van gml:AbstractFeatureType MOGEN NIET voorkomen in de GIO elementen geo:GeoInformatieObjectVaststelling, geo:GeoInformatieObjectVersie en geo:Locatie .</p></div></td></tr></tbody></table></div></td>
+               </tr>
+            </tbody></table>
+   </div>
+</article></main></body></html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="verwerken-mogelijkheid-beroep"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Verwerken mogelijkheid beroep</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="verwerken-mogelijkheid-beroep"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a><ul><li><a href="stop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="leeswijzers.html">Leeswijzers</a><ul><li><a href="toepassing.html">Basis van STOP</a><ul><li><a href="juridische-context.html">Juridische context STOP</a></li><li><a href="proces_overzicht.html">Hoofdlijnen van het STOP-proces</a><ul><li><a href="proces_overzicht_compleet.html">Geïntegreerd proces van bekendmaken en consolideren</a><ul><li><a href="proces_besluit_en_regeling.html">Besluit en regeling</a></li><li><a href="proces_consolidatie.html">Consolidatie van besluiten</a></li><li><a href="doel.html">Doel</a></li><li><a href="proces_tekstmodellen.html">Tekstmodellen voor (artikelgewijze) regelingen en besluiten</a></li><li><a href="proces_besluit.html">Opnemen van regelgeving in een besluit</a></li><li><a href="proces_iwt.html">Inwerkingtredingsbepaling</a></li><li><a href="proces_overgangsrecht.html">Overgangsrecht</a></li><li><a href="proces_samenloop.html">Oplossen van samenloop</a></li><li><a href="besluitproces_rectificatie.html">Rectificatie van een besluit</a></li><li><a href="besluitproces_rechterlijkemacht.html">Beroep</a><ul><li><a href="besluitproces_rechterlijkemacht_achtergrond.html">Over beroep</a></li><li><a href="besluitproces_rechterlijkemacht_herroepelijkheidbesluit.html">Herroepelijkheid</a></li><li><a href="besluitproces_rechterlijke_macht_beroep_en_geconsolideerde_regelgeving.html">Beroep en geconsolideerde regeling</a></li><li><a href="besluitproces_rechterlijke_macht_omgaan_met_beroep.html">Verwerken beroep</a><ul><li class="active"><a href="besluitproces_rechterlijke_macht_beroep_mogelijk.html">Verwerken mogelijkheid beroep</a></li><li><a href="besluitproces_rechterlijke_macht_verwerken_beroep.html">Verwerken beroep ingesteld</a></li><li><a href="besluitproces_rechterlijke_macht_verwerken_schorsing.html">Verwerken schorsing</a></li><li><a href="besluitproces_rechterlijke_macht_verwerken_opheffen_schorsing.html">Verwerken schorsing opgeheven</a></li><li><a href="besluitproces_rechterlijkemacht_scenarios.html">Verwerken uitspraak beroep</a></li></ul></li></ul></li></ul></li></ul></li></ul></li><li><a href="architectuur.html">Architectuur en ontwerpkeuzes</a></li><li><a href="gebruik.html">Software-ontwikkeling met STOP</a></li><li><a href="voortbouwen_op_STOP.html">Voortbouwen op STOP</a></li></ul></li><li><a href="EA_4D1D7FD517FE4d8dA9A2B905D202C92B.html">Informatiemodel</a></li><li><a href="businessrules.html">Bedrijfsregels</a></li></ul></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1">Verwerken mogelijkheid beroep</h1><div class="body"><p class="p">Om aan te geven dat er tegen een besluit beroep mogelijk is, doet het BG het volgende tijdens de opstelfase van het besluit:</p></div><article class="topic nested1" aria-labelledby="ariaid-title2" id="1-stel-een-kennisgeving-op"><h2 class="title topictitle2" id="ariaid-title2">1. Stel een kennisgeving op</h2><div class="body"><p class="p">Voor de kennisgeving worden de volgende <a class="xref" href="begrippenlijst_kennisgeving.html#kennisgeving">kennisgeving</a>-modules toegevoegd:</p><ol class="ol"><li class="li"><p class="p">de <a class="xref" href="data_xsd_Element_data_ExpressionIdentificatie.html#ExpressionIdentificatie"><code class="ph codeph">ExpressionIdentificatie</code></a> van de kennisgeving met:</p><ul class="ul"><li class="li"><p class="p"><a class="xref" href="data_xsd_Element_data_FRBRWork.html#FRBRWork"><code class="ph codeph">FRBRWork</code></a>,</p></li><li class="li"><p class="p"><a class="xref" href="data_xsd_Element_data_FRBRExpression.html#FRBRExpression"><code class="ph codeph">FRBRExpression</code></a>,</p></li><li class="li"><p class="p"><a class="xref" href="data_xsd_Element_data_soortWork.html#soortWork"><code class="ph codeph">soortWork</code></a>. Voor een kennisgeving is dit <code class="ph codeph">/join/id/stop/work_023</code>.</p></li></ul></li><li class="li"><p class="p">de <a class="xref" href="tekst_xsd_Element_tekst_Kennisgeving.html#Kennisgeving"><code class="ph codeph">Kennisgeving</code></a>-module met de tekst van de kennisgeving.</p></li><li class="li"><p class="p">de <a class="xref" href="data_xsd_Element_data_KennisgevingMetadata.html#KennisgevingMetadata"><code class="ph codeph">KennisgevingMetadata</code></a>, met daarin:</p><ul class="ul"><li class="li"><p class="p">de <a class="xref" href="data_xsd_Element_data_eindverantwoordelijke.html#eindverantwoordelijke"><code class="ph codeph">eindverantwoordelijke</code></a>,</p></li><li class="li"><p class="p">de <a class="xref" href="data_xsd_Element_data_maker.html#maker"><code class="ph codeph">maker</code></a>,</p></li><li class="li"><p class="p">de <a class="xref" href="data_xsd_Element_data_officieleTitel.html#officieleTitel"><code class="ph codeph">officieleTitel</code></a>,</p></li><li class="li"><p class="p">de <a class="xref" href="data_xsd_Element_data_onderwerpen.html#onderwerpen"><code class="ph codeph">onderwerpen</code></a>,</p></li><li class="li"><p class="p">de <a class="xref" href="data_xsd_Element_data_mededelingOver.html#mededelingOver"><code class="ph codeph">mededelingOver</code></a>.</p></li></ul></li><li class="li"><p class="p">de <a class="xref" href="data_xsd_Element_data_Procedureverloopmutatie.html#Procedureverloopmutatie"><code class="ph codeph">Procedureverloopmutatie</code></a>. Hierin wordt de einddatum beroepstermijn als procedurestap opgegeven. Dit gebeurt door een <a class="xref" href="__informatiemodel_index_Procedurestap.html#Procedurestap"><code class="ph codeph">Procedurestap</code></a> met daarin een <a class="xref" href="data_xsd_Element_data_soortStap.html#soortStap"><code class="ph codeph">soortStap</code></a>  <code class="ph codeph">/join/id/stop/procedure/stap_016</code>. Voor de betekenis van <code class="ph codeph">BekendOp</code> bij deze procedurestap, zie <a class="xref" href="besluitproces_rechterlijkemacht_procedurele_status.html#BekendOp">BekendOp</a>.</p></li></ol><p class="p">Aan de hand van de procedurestap <em class="ph i">Einde beroepstermijn</em> kunnen systemen afleiden dat de status van het besluit <em class="ph i">niet onherroepelijk</em> is. Deze procedurestap wordt met de <a class="xref" href="EA_233F9A157B1F4d11A41DBE8FC3424244.html#Pkg">kennisgeving (informatiemodel)</a> meegeleverd als procedureverloopmutatie.</p></div><article class="topic nested2" aria-labelledby="ariaid-title3" id="voorbeeld-procedureverloopmutatie-met-einde-beroepstermijn"><h3 class="title topictitle3" id="ariaid-title3">Voorbeeld procedureverloopmutatie met einde beroepstermijn</h3><div class="body"><pre class="pre codeblock"><code>&lt;Procedureverloopmutatie&gt;
+  &lt;bekendOp&gt;2020-01-21&lt;/bekendOp&gt;
+  &lt;voegStappenToe&gt;
+    &lt;Procedurestap&gt;
+      &lt;!-- Einde beroepstermijn --&gt;
+      &lt;soortStap&gt;/join/id/stop/procedure/stap_016&lt;/soortStap&gt;
+      &lt;voltooidOp&gt;2020-03-04&lt;/voltooidOp&gt;
+    &lt;/Procedurestap&gt;
+  &lt;/voegStappenToe&gt;
+&lt;/Procedureverloopmutatie&gt;</code></pre></div></article></article><article class="topic nested1" aria-labelledby="ariaid-title4" id="zie-ook"><h2 class="title topictitle2" id="ariaid-title4">Zie ook</h2><div class="body"><ul class="ul"><li class="li"><p class="p">Juridische informatie over <a class="xref" href="juridische-uitgangspunten.html#beroep">beroep</a> en de <a class="xref" href="verwerking-beroep.html">verwerking van beroep in STOP</a>.</p></li></ul></div></article></article></main></body></html>

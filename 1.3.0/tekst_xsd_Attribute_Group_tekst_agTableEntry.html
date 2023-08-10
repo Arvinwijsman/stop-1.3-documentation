@@ -1,0 +1,294 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="nl-nl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="agTableEntry"><meta name="DC.language" content="nl-nl"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Attribuutgroep: tekst:agTableEntry</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="agTableEntry"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a><ul><li><a href="imop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="imop_xml.html">XML-serialisatie</a></li><li><a href="uitwisselpakket.html">Uitwisselpakket</a></li><li><a href="schemata_gebruik.html">Gebruik van IMOP</a></li><li><a href="schema_documentatie.html">Schemadocumentatie</a><ul><li><a href="schema_documentatie_legenda.html">Legenda van de schemadocumentatie</a></li><li><a href="imop_modules.html">STOP-modules in IMOP</a></li><li><a href="tekst_xsd_Main_schema_tekst_xsd.html">Schema imop-tekst.xsd</a><ul><li><a href="tekst_xsd_Element_tekst_Aanhef.html">Aanhef</a></li><li><a href="tekst_xsd_Element_tekst_abbr.html">abbr</a></li><li><a href="tekst_xsd_Element_tekst_Afdeling.html">Afdeling</a></li><li><a href="tekst_xsd_Element_tekst_Afkondiging.html">Afkondiging</a></li><li><a href="tekst_xsd_Attribute_Group_tekst_agAKN.html">agAKN</a></li><li><a href="tekst_xsd_Attribute_Group_tekst_agAlgemeen.html">agAlgemeen</a></li><li><a href="tekst_xsd_Attribute_Group_tekst_agCitaat.html">agCitaat</a></li><li><a href="tekst_xsd_Attribute_Group_tekst_agColspec.html">agColspec</a></li><li><a href="tekst_xsd_Attribute_Group_tekst_agComponentMutatie.html">agComponentMutatie</a></li><li><a href="tekst_xsd_Attribute_Group_tekst_agComponentNieuweRegeling.html">agComponentNieuweRegeling</a></li><li><a href="tekst_xsd_Attribute_Group_tekst_agContactgegevens.html">agContactgegevens</a></li><li><a href="tekst_xsd_Attribute_Group_tekst_agDoelReferentie.html">agDoelReferentie</a></li><li><a href="tekst_xsd_Attribute_Group_tekst_agExtrefRefSoort.html">agExtrefRefSoort</a></li><li><a href="tekst_xsd_Attribute_Group_tekst_agIllustratie.html">agIllustratie</a></li><li><a href="tekst_xsd_Attribute_Group_tekst_agInlineTekstAfbeelding.html">agInlineTekstAfbeelding</a></li><li><a href="tekst_xsd_Attribute_Group_tekst_agSchemaVersie.html">agSchemaVersie</a></li><li><a href="tekst_xsd_Attribute_Group_tekst_agTable.html">agTable</a></li><li><a href="tekst_xsd_Attribute_Group_tekst_agTableBody.html">agTableBody</a></li><li class="active"><a href="tekst_xsd_Attribute_Group_tekst_agTableEntry.html">agTableEntry</a></li><li><a href="tekst_xsd_Attribute_Group_tekst_agTableGroup.html">agTableGroup</a></li><li><a href="tekst_xsd_Attribute_Group_tekst_agTableHead.html">agTableHead</a></li><li><a href="tekst_xsd_Attribute_Group_tekst_agTableRow.html">agTableRow</a></li><li><a href="tekst_xsd_Attribute_Group_tekst_agVerplaatsing.html">agVerplaatsing</a></li><li><a href="tekst_xsd_Attribute_Group_tekst_agVervang.html">agVervang</a></li><li><a href="tekst_xsd_Attribute_Group_tekst_agVervangKop.html">agVervangKop</a></li><li><a href="tekst_xsd_Attribute_Group_tekst_agWat.html">agWat</a></li><li><a href="tekst_xsd_Attribute_Group_tekst_agWijzigactie.html">agWijzigactie</a></li><li><a href="tekst_xsd_Attribute_Group_tekst_agWijzigLocatie.html">agWijzigLocatie</a></li><li><a href="tekst_xsd_Element_tekst_Al.html">Al</a></li><li><a href="tekst_xsd_Element_tekst_AlgemeneToelichting.html">AlgemeneToelichting</a></li><li><a href="tekst_xsd_Element_tekst_Artikel.html">Artikel</a></li><li><a href="tekst_xsd_Element_tekst_ArtikelgewijzeToelichting.html">ArtikelgewijzeToelichting</a></li><li><a href="tekst_xsd_Element_tekst_b.html">b</a></li><li><a href="tekst_xsd_Element_tekst_Begrip.html">Begrip</a></li><li><a href="tekst_xsd_Element_tekst_Begrippenlijst.html">Begrippenlijst</a></li><li><a href="tekst_xsd_Element_tekst_BesluitCompact.html">BesluitCompact</a></li><li><a href="tekst_xsd_Element_tekst_BesluitKlassiek.html">BesluitKlassiek</a></li><li><a href="tekst_xsd_Element_tekst_BesluitMutatie.html">BesluitMutatie</a></li><li><a href="tekst_xsd_Element_tekst_Bijlage.html">Bijlage</a></li><li><a href="tekst_xsd_Element_tekst_Bijschrift.html">Bijschrift</a></li><li><a href="tekst_xsd_Element_tekst_Bladaanduiding.html">Bladaanduiding</a></li><li><a href="tekst_xsd_Element_tekst_BladGR.html">BladGR</a></li><li><a href="tekst_xsd_Element_tekst_Boek.html">Boek</a></li><li><a href="tekst_xsd_Element_tekst_br.html">br</a></li><li><a href="tekst_xsd_Element_tekst_Bron.html">Bron</a></li><li><a href="tekst_xsd_Element_tekst_Citaat.html">Citaat</a></li><li><a href="tekst_xsd_Element_tekst_colspec.html">colspec</a></li><li><a href="tekst_xsd_Element_tekst_Conditie.html">Conditie</a></li><li><a href="tekst_xsd_Element_tekst_Considerans.html">Considerans</a></li><li><a href="tekst_xsd_Element_tekst_Contact.html">Contact</a></li><li><a href="tekst_xsd_Element_tekst_Dagtekening.html">Dagtekening</a></li><li><a href="tekst_xsd_Element_tekst_Deel.html">Deel</a></li><li><a href="tekst_xsd_Element_tekst_Definitie.html">Definitie</a></li><li><a href="tekst_xsd_Element_tekst_Divisie.html">Divisie</a></li><li><a href="tekst_xsd_Element_tekst_Divisietekst.html">Divisietekst</a></li><li><a href="tekst_xsd_Simple_Type_tekst_dtColWidth.html">dtColWidth</a></li><li><a href="tekst_xsd_Simple_Type_tekst_dtComponentnaam.html">dtComponentnaam</a></li><li><a href="tekst_xsd_Simple_Type_tekst_dtNootNummerLengte.html">dtNootNummerLengte</a></li><li><a href="tekst_xsd_Simple_Type_tekst_dtNulOfEen.html">dtNulOfEen</a></li><li><a href="tekst_xsd_Simple_Type_tekst_dtSchemaVersie.html">dtSchemaVersie</a></li><li><a href="tekst_xsd_Simple_Type_tekst_dtScope.html">dtScope</a></li><li><a href="tekst_xsd_Element_tekst_entry.html">entry</a></li><li><a href="tekst_xsd_Element_tekst_ExtIoRef.html">ExtIoRef</a></li><li><a href="tekst_xsd_Element_tekst_ExtRef.html">ExtRef</a></li><li><a href="tekst_xsd_Element_tekst_Figuur.html">Figuur</a></li><li><a href="tekst_xsd_Element_tekst_Formule.html">Formule</a></li><li><a href="tekst_xsd_Element_tekst_Gemeenteblad.html">Gemeenteblad</a></li><li><a href="tekst_xsd_Element_tekst_Gereserveerd.html">Gereserveerd</a></li><li><a href="tekst_xsd_Element_tekst_Groep.html">Groep</a></li><li><a href="tekst_xsd_Element_tekst_Hoofdstuk.html">Hoofdstuk</a></li><li><a href="tekst_xsd_Element_tekst_i.html">i</a></li><li><a href="tekst_xsd_Element_tekst_Illustratie.html">Illustratie</a></li><li><a href="tekst_xsd_Element_tekst_Inhoud.html">Inhoud</a></li><li><a href="tekst_xsd_Element_tekst_Inhoudsopgave.html">Inhoudsopgave</a></li><li><a href="tekst_xsd_Element_tekst_InleidendeTekst.html">InleidendeTekst</a></li><li><a href="tekst_xsd_Element_tekst_InlineTekstAfbeelding.html">InlineTekstAfbeelding</a></li><li><a href="tekst_xsd_Element_tekst_Instructie.html">Instructie</a></li><li><a href="tekst_xsd_Element_tekst_IntIoRef.html">IntIoRef</a></li><li><a href="tekst_xsd_Element_tekst_IntRef.html">IntRef</a></li><li><a href="tekst_xsd_Element_tekst_Kadertekst.html">Kadertekst</a></li><li><a href="tekst_xsd_Element_tekst_Kennisgeving.html">Kennisgeving</a></li><li><a href="tekst_xsd_Element_tekst_Kop.html">Kop</a></li><li><a href="tekst_xsd_Element_tekst_Label.html">Label</a></li><li><a href="tekst_xsd_Element_tekst_Li.html">Li</a></li><li><a href="tekst_xsd_Element_tekst_Lichaam.html">Lichaam</a></li><li><a href="tekst_xsd_Element_tekst_Lid.html">Lid</a></li><li><a href="tekst_xsd_Element_tekst_LidNummer.html">LidNummer</a></li><li><a href="tekst_xsd_Element_tekst_Lijst.html">Lijst</a></li><li><a href="tekst_xsd_Element_tekst_Lijstaanhef.html">Lijstaanhef</a></li><li><a href="tekst_xsd_Element_tekst_Lijstsluiting.html">Lijstsluiting</a></li><li><a href="tekst_xsd_Element_tekst_LiNummer.html">LiNummer</a></li><li><a href="tekst_xsd_Element_tekst_Motivering.html">Motivering</a></li><li><a href="tekst_xsd_Element_tekst_NieuweTekst.html">NieuweTekst</a></li><li><a href="tekst_xsd_Element_tekst_Noot.html">Noot</a></li><li><a href="tekst_xsd_Element_tekst_NootNummer.html">NootNummer</a></li><li><a href="tekst_xsd_Element_tekst_Nootref.html">Nootref</a></li><li><a href="tekst_xsd_Element_tekst_Nummer.html">Nummer</a></li><li><a href="tekst_xsd_Element_tekst_OfficielePublicatie.html">OfficielePublicatie</a></li><li><a href="tekst_xsd_Element_tekst_Ondertekening.html">Ondertekening</a></li><li><a href="tekst_xsd_Element_tekst_OpmerkingVersie.html">OpmerkingVersie</a></li><li><a href="tekst_xsd_Element_tekst_Opschrift.html">Opschrift</a></li><li><a href="tekst_xsd_Element_tekst_Paragraaf.html">Paragraaf</a></li><li><a href="tekst_xsd_Element_tekst_Provinciaalblad.html">Provinciaalblad</a></li><li><a href="tekst_xsd_Element_tekst_Rectificatie.html">Rectificatie</a></li><li><a href="tekst_xsd_Element_tekst_Rectificatietekst.html">Rectificatietekst</a></li><li><a href="tekst_xsd_Element_tekst_Redactioneel.html">Redactioneel</a></li><li><a href="tekst_xsd_Element_tekst_RegelingCompact.html">RegelingCompact</a></li><li><a href="tekst_xsd_Element_tekst_RegelingKlassiek.html">RegelingKlassiek</a></li><li><a href="tekst_xsd_Element_tekst_RegelingMutatie.html">RegelingMutatie</a></li><li><a href="tekst_xsd_Element_tekst_RegelingOpschrift.html">RegelingOpschrift</a></li><li><a href="tekst_xsd_Element_tekst_RegelingTijdelijkdeel.html">RegelingTijdelijkdeel</a></li><li><a href="tekst_xsd_Element_tekst_RegelingVrijetekst.html">RegelingVrijetekst</a></li><li><a href="tekst_xsd_Element_tekst_row.html">row</a></li><li><a href="tekst_xsd_Element_tekst_Slotformulering.html">Slotformulering</a></li><li><a href="tekst_xsd_Element_tekst_Sluiting.html">Sluiting</a></li><li><a href="tekst_xsd_Element_tekst_Staatsblad.html">Staatsblad</a></li><li><a href="tekst_xsd_Element_tekst_Staatscourant.html">Staatscourant</a></li><li><a href="tekst_xsd_Element_tekst_strong.html">strong</a></li><li><a href="tekst_xsd_Element_tekst_sub.html">sub</a></li><li><a href="tekst_xsd_Element_tekst_Subparagraaf.html">Subparagraaf</a></li><li><a href="tekst_xsd_Element_tekst_Subsubparagraaf.html">Subsubparagraaf</a></li><li><a href="tekst_xsd_Element_tekst_Subtitel.html">Subtitel</a></li><li><a href="tekst_xsd_Element_tekst_sup.html">sup</a></li><li><a href="tekst_xsd_Element_tekst_table.html">table</a></li><li><a href="tekst_xsd_Element_tekst_tbody.html">tbody</a></li><li><a href="tekst_xsd_Element_tekst_Tekstrevisie.html">Tekstrevisie</a></li><li><a href="tekst_xsd_Element_tekst_Term.html">Term</a></li><li><a href="tekst_xsd_Element_tekst_tgroup.html">tgroup</a></li><li><a href="tekst_xsd_Element_tekst_thead.html">thead</a></li><li><a href="tekst_xsd_Element_tekst_Titel.html">Titel</a></li><li><a href="tekst_xsd_Element_tekst_Titelregel.html">Titelregel</a></li><li><a href="tekst_xsd_Element_tekst_title.html">title</a></li><li><a href="tekst_xsd_Element_tekst_Toelichting.html">Toelichting</a></li><li><a href="tekst_xsd_Element_tekst_Tussenkop.html">Tussenkop</a></li><li><a href="tekst_xsd_Element_tekst_u.html">u</a></li><li><a href="tekst_xsd_Element_tekst_Vervallen.html">Vervallen</a></li><li><a href="tekst_xsd_Element_tekst_Vervang.html">Vervang</a></li><li><a href="tekst_xsd_Element_tekst_VervangKop.html">VervangKop</a></li><li><a href="tekst_xsd_Element_tekst_VervangRegeling.html">VervangRegeling</a></li><li><a href="tekst_xsd_Element_tekst_Verwijder.html">Verwijder</a></li><li><a href="tekst_xsd_Element_tekst_VerwijderdeTekst.html">VerwijderdeTekst</a></li><li><a href="tekst_xsd_Element_tekst_VoegToe.html">VoegToe</a></li><li><a href="tekst_xsd_Element_tekst_Wat.html">Wat</a></li><li><a href="tekst_xsd_Element_tekst_Waterschapsblad.html">Waterschapsblad</a></li><li><a href="tekst_xsd_Element_tekst_WijzigArtikel.html">WijzigArtikel</a></li><li><a href="tekst_xsd_Element_tekst_WijzigBijlage.html">WijzigBijlage</a></li><li><a href="tekst_xsd_Element_tekst_WijzigInstructies.html">WijzigInstructies</a></li><li><a href="tekst_xsd_Element_tekst_WijzigLid.html">WijzigLid</a></li><li><a href="tekst_xsd_Simple_Type_tekst_wlFormaatIllustratie.html">wlFormaatIllustratie</a></li><li><a href="tekst_xsd_Simple_Type_tekst_wlKleurIllustratie.html">wlKleurIllustratie</a></li><li><a href="tekst_xsd_Simple_Type_tekst_wlPositieBijschrift.html">wlPositieBijschrift</a></li><li><a href="tekst_xsd_Simple_Type_tekst_wlPositieWijziging.html">wlPositieWijziging</a></li><li><a href="tekst_xsd_Simple_Type_tekst_wlRevisie.html">wlRevisie</a></li><li><a href="tekst_xsd_Simple_Type_tekst_wlSoortContact.html">wlSoortContact</a></li><li><a href="tekst_xsd_Simple_Type_tekst_wlSoortExtrefNotatie.html">wlSoortExtrefNotatie</a></li><li><a href="tekst_xsd_Simple_Type_tekst_wlTableAlignHorizontal.html">wlTableAlignHorizontal</a></li><li><a href="tekst_xsd_Simple_Type_tekst_wlTableAlignVertical.html">wlTableAlignVertical</a></li><li><a href="tekst_xsd_Simple_Type_tekst_wlTableFrame.html">wlTableFrame</a></li><li><a href="tekst_xsd_Simple_Type_tekst_wlTableOrientatie.html">wlTableOrientatie</a></li><li><a href="tekst_xsd_Simple_Type_tekst_wlTypeIntIoRef.html">wlTypeIntIoRef</a></li><li><a href="tekst_xsd_Simple_Type_tekst_wlTypeLijst.html">wlTypeLijst</a></li><li><a href="tekst_xsd_Simple_Type_tekst_wlTypeNoot.html">wlTypeNoot</a></li><li><a href="tekst_xsd_Simple_Type_tekst_wlUitlijningIllustratie.html">wlUitlijningIllustratie</a></li><li><a href="tekst_xsd_Simple_Type_tekst_wlWijzigactieBeperkt.html">wlWijzigactieBeperkt</a></li><li><a href="tekst_xsd_Simple_Type_tekst_wlWijzigactieElementen.html">wlWijzigactieElementen</a></li></ul></li><li><a href="gio_xsd_Main_schema_gio_xsd.html">Schema imop-gio.xsd</a></li><li><a href="geo_xsd_Main_schema_geo_xsd.html">Schema imop-geo.xsd</a></li><li><a href="se_xsd_Main_schema_se_xsd.html">Schema se-FeatureStyle-imop.xsd</a></li><li><a href="ogc_xsd_Main_schema_ogc_xsd.html">Schema se-filter-imop.xsd</a></li><li><a href="data_xsd_Main_schema_data_xsd.html">Schema imop-data.xsd</a></li><li><a href="cons_xsd_Main_schema_cons_xsd.html">Schema imop-consolidatie.xsd</a></li><li><a href="rsc_xsd_Main_schema_rsc_xsd.html">Schema imop-resources.xsd</a></li><li><a href="br_xsd_Main_schema_br_xsd.html">Schema imop-bedrijfsregels.xsd</a></li><li><a href="sv_xsd_Main_schema_sv_xsd.html">Schema imop-schemata.xsd</a></li><li><a href="uws_xsd_Main_schema_uws_xsd.html">Schema imop-uitwisseling.xsd</a></li></ul></li><li><a href="imop_bedrijfsregels.html">Bedrijfsregels</a></li><li><a href="imop_waardelijsten.html">Waardelijsten</a></li></ul></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+   <h1 class="title topictitle1" id="ariaid-title1">Attribuutgroep: tekst:agTableEntry</h1>
+   <div class="body">
+      <table class="table frame-all"><caption></caption><colgroup><col style="width:10.714285714285714%"><col style="width:89.28571428571429%"></colgroup><tbody class="tbody">
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Namespace</td>
+                  <td class="entry align-left colsep-1 rowsep-1">https://standaarden.overheid.nl/stop/imop/tekst/</td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Definitie</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="div">
+      <p class="p">De attribuutgroep <code class="ph codeph">agTableEntry</code> bevat de set attributen waarmee de weergave
+      van een cel binnen een tabel kan worden beïnvloed.</p>
+   </div>
+   </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Informatie</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="div">
+    <div class="p"><strong class="ph b">Attributen</strong><ul class="ul">
+      <li class="li"><code class="keyword markupname xmlatt">@align</code> - optioneel<em class="ph i"> - Waardelijst:</em><dl class="dl">
+        
+          <dt class="dt dlterm">left</dt>
+          <dd class="dd"><p class="p">Tekst wordt links uitgelijnd voor de cel
+            (<code class="keyword markupname xmlelement">&lt;tekst:entry&gt;</code>).</p></dd>
+        
+        
+          <dt class="dt dlterm">right</dt>
+          <dd class="dd"><p class="p">Tekst wordt rechts uitgelijnd voor de cel
+            (<code class="keyword markupname xmlelement">&lt;tekst:entry&gt;</code>).</p></dd>
+        
+        
+          <dt class="dt dlterm">center</dt>
+          <dd class="dd"><p class="p">Tekst wordt gecentreerd uitgelijnd voor de cel
+            (<code class="keyword markupname xmlelement">&lt;tekst:entry&gt;</code>).</p></dd>
+        
+        
+          <dt class="dt dlterm">justify</dt>
+          <dd class="dd"><p class="p">Tekst wordt over de breedte van een cel uitgelijnd
+            (<code class="keyword markupname xmlelement">&lt;tekst:entry&gt;</code>).</p></dd>
+        
+        
+          <dt class="dt dlterm">char</dt>
+          <dd class="dd"><p class="p">Tekst wordt uitgelijnd op de positie van het karakter dat in het attribuut
+            <code class="keyword markupname xmlatt">@char</code> is gespecificeerd.</p> <p class="p">Bij gebruik van de
+            <code class="keyword markupname xmlatt">@align</code> = 'char' zijn de attribute <code class="keyword markupname xmlatt">@char</code> en
+            <code class="keyword markupname xmlatt">@charoff</code> verplicht.</p> <p class="p"><strong class="ph b">NB</strong> Het verwerken van een uitlijning op
+            een specifiek karakter - align="char" - is complex voor software waarmee de weergave van
+            een tabel wordt gegenereerd. Gebruik van uitlijning op een specifiek karakter wordt
+            afgeraden.. </p></dd>
+        
+        </dl></li>
+
+      <li class="li"><code class="keyword markupname xmlatt">@char</code> - optioneel - <em class="ph i">Type:</em> <code class="ph codeph">xs:string</code> -
+        Uitlijningsteken. Instelling voor cellen die in deze kolom beginnen. Als uitlijning van
+        tekens is opgegeven, is de waarde het enkele uitlijningsteken voor alle impliciete
+        <code class="keyword markupname xmlatt">@char</code>-waarden voor invoer direct in de kolom. Moet gecombineerd met het
+        attribuut <code class="keyword markupname xmlatt">@charoff</code> worden gebruikt. Dit attribuut is verplicht bij de
+        <code class="keyword markupname xmlatt">@align</code> met de waarde 'char'.</li>
+
+      <li class="li"><code class="keyword markupname xmlatt">@charoff</code> - optioneel - <em class="ph i">Type:</em> <code class="ph codeph">xs:positiveInteger</code> -
+        Horizontale positie van het uitlijnings-teken wanneer <code class="keyword markupname xmlatt">@align</code> = 'char'. Voor
+        het uitlijnen op tekens - zoals: een komma "," - op tekst. De horizontale verschuiving is
+        het percentage van de huidige kolombreedte links van het uitlijnings-teken. Deze waarde moet
+        een getal zijn, groter dan 0 en kleiner dan of gelijk aan 100. Dit attribuut is verplicht
+        bij de <code class="keyword markupname xmlatt">@align</code> met de waarde 'char'.</li>
+      
+      <li class="li"><code class="keyword markupname xmlatt">@colname</code> - optioneel - <em class="ph i">Type:</em> <code class="ph codeph">xs:NMTOKEN</code> -
+        Identifier van een kolom, gebruikt om de positie of het horizontale bereik van kolommen in
+        een rij op te geven door middel van verwijzing in <code class="keyword markupname xmlatt">@colname</code>,
+        <code class="keyword markupname xmlatt">@namest</code> en / of <code class="keyword markupname xmlatt">@nameend</code>. Deze waarde kan hetzelfde zijn als
+        <code class="keyword markupname xmlatt">@colnum</code> voorafgegaan door "col". Wanneer er sprake is van een horizontale
+        overspanning dan <strong class="ph b">moet</strong> deze waarde overeenkomen met de <code class="keyword markupname xmlatt">@colname</code> van de
+        <code class="keyword markupname xmlelement">&lt;colspec&gt;</code> voor de betreffende kolom.</li>
+
+      <li class="li"><code class="keyword markupname xmlatt">@colsep</code> - optioneel - <em class="ph i">Type:</em> <code class="ph codeph">tekst:dtNulOfEen</code> - Het
+        attribuut <code class="keyword markupname xmlatt">@colsep</code> geeft aan of voor een kolom een verticale lijn tussen de
+        kolom en de opvolgende kolom moet worden geplaatst. Als <code class="keyword markupname xmlatt">@colsep</code> niet nul is,
+        wordt een lijn geplaatst; indien nul, dan wordt de belijning niet getoond. Deze instelling
+        wordt genegeerd voor de linkerzijde van de eerste kolom en de rechterzijde van de laatste
+        kolom van de tabel, omdat voor die posities de <code class="keyword markupname xmlatt">@frame</code> instelling voor de
+        hele tabel van toepassing is. Te gebruiken bij de cel (<code class="keyword markupname xmlelement">&lt;tekst:entry&gt;</code>)
+        indien dit afwijkt van de waarde voor de kolom.</li>
+
+      <li class="li"><code class="keyword markupname xmlatt">@morerows</code> - optioneel - <em class="ph i">Type:</em> <code class="ph codeph">xs:positiveInteger</code> -
+        Voor verticale overspanning van een cel (<code class="keyword markupname xmlelement">&lt;tekst:entry&gt;</code>) over meerdere
+        rijen (<code class="keyword markupname xmlelement">&lt;tekst:row&gt;</code>). De waarde is het aantal rijen gerekend vanaf de
+        bovenste initiërende cel voor de overspanning.</li>
+
+      <li class="li"><code class="keyword markupname xmlatt">@nameend</code> - optioneel - <em class="ph i">Type:</em> <code class="ph codeph">xs:NMTOKEN</code> - Voor
+        horizontale overspanning van meerdere naast elkaar gelegen cellen
+        (<code class="keyword markupname xmlelement">&lt;tekst:entry&gt;</code>). <code class="keyword markupname xmlatt">@nameend</code> bevat de identifier van de
+        laatste kolom voor de overspanning. Deze waarde <strong class="ph b">moet</strong> overeenkomen met de
+        <code class="keyword markupname xmlatt">@colname</code> van de <code class="keyword markupname xmlelement">&lt;colspec&gt;</code> voor de betreffende kolom.</li>
+
+      <li class="li"><code class="keyword markupname xmlatt">@namest</code> - optioneel - <em class="ph i">Type:</em> <code class="ph codeph">xs:NMTOKEN</code> - Voor
+        horizontale overspanning van meerdere naast elkaar gelegen cellen
+        (<code class="keyword markupname xmlelement">&lt;tekst:entry&gt;</code>). <code class="keyword markupname xmlatt">@nameest</code> bevat de identifier van de
+        eerste kolom voor de overspanning. De waarde van <code class="keyword markupname xmlatt">@namest</code> is gelijk aan de
+        waarde van <code class="keyword markupname xmlatt">@colname</code>. Deze waarde <strong class="ph b">moet</strong> overeenkomen met de
+        <code class="keyword markupname xmlatt">@colname</code> van de <code class="keyword markupname xmlelement">&lt;colspec&gt;</code> voor de betreffende kolom.</li>
+
+      <li class="li"><code class="keyword markupname xmlatt">@rotate</code> - optioneel - <em class="ph i">Type:</em> <code class="ph codeph">tekst:dtNulOfEen</code> - 
+        Wanneer de waarde voor het attribuut <code class="keyword markupname xmlatt">@rotate</code> op "1" wordt gezet dan wordt de
+        inhoud van de cel (<code class="keyword markupname xmlelement">&lt;tekst:entry&gt;</code>) 90˚ rechtsom gedraaid (met de klok
+        mee).</li>
+
+      <li class="li"><code class="keyword markupname xmlatt">@rowsep</code> - optioneel - <em class="ph i">Type:</em> - <code class="ph codeph">tekst:dtNulOfEen</code> -
+        Het attribuut <code class="keyword markupname xmlatt">@rowsep</code> geeft aan of voor een rij
+        (<code class="keyword markupname xmlelement">&lt;tekst:row&gt;</code>) een horizontale lijn tussen de rij en de opvolgende rij
+        moet worden geplaatst. Als <code class="keyword markupname xmlatt">@rowsep</code> niet nul is, wordt een lijn geplaatst;
+        indien nul, dan wordt de belijning niet getoond. Deze instelling wordt genegeerd voor de
+        laatste rij van de tabel, omdat voor die positie de <code class="keyword markupname xmlatt">@frame</code> instelling voor
+        de hele tabel van toepassing is. Te gebruiken bij de cel
+        (<code class="keyword markupname xmlelement">&lt;tekst:entry&gt;</code>) indien dit afwijkt van de waarde voor de rij.</li>
+
+      <li class="li"><code class="keyword markupname xmlatt">@valign</code> - optioneel<em class="ph i"> - Waardelijst:</em><dl class="dl">
+        
+          <dt class="dt dlterm">top</dt>
+          <dd class="dd"><p class="p">Tekst wordt verticaal aan de bovenkant van een cel uitgelijnd.</p></dd>
+        
+        
+          <dt class="dt dlterm">middle</dt>
+          <dd class="dd"><p class="p">Tekst wordt verticaal in het midden van een cel uitgelijnd.</p></dd>
+        
+        
+          <dt class="dt dlterm">bottom</dt>
+          <dd class="dd"><p class="p">Tekst wordt verticaal aan de onderkant van een cel uitgelijnd.</p></dd>
+        
+        </dl></li>
+      </ul></div>
+  </div>
+  <div class="div">
+    <p class="p"><strong class="ph b">Voorbeeld</strong></p>
+    <p class="p">Zie voor een voorbeeld het voorbeeld bij het element
+      <a class="xref link_xsd" href="tekst_xsd_Element_tekst_table.html#table">tekst:table</a>.</p>
+  </div>
+</td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Informatiemodel</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Diagram</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <p class="p"></p>
+                  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Gebruikt door</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="p">
+                        <table class="table frame-all"><caption></caption><colgroup><col style="width:20%"><col style="width:80%"></colgroup><tbody class="tbody">
+                                 <tr class="row">
+                                    <td class="entry align-left colsep-1 rowsep-1">Element </td>
+                                    <td class="entry align-left colsep-1 rowsep-1">
+                                       <a class="xref" href="tekst_xsd_Element_tekst_entry.html#entry">Element tekst:entry</a>
+                                    </td>
+                                 </tr>
+                              </tbody></table>
+                     </div>
+                  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Attributen</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="p">
+                        <table class="table frame-all"><caption></caption><colgroup><col style="width:42.857142857142854%"><col style="width:42.857142857142854%"><col style="width:14.285714285714285%"></colgroup><thead class="thead">
+                                 <tr class="row">
+                                    <th class="entry align-left colsep-1 rowsep-1" id="agTableEntry__entry__17">QName</th>
+                                    <th class="entry align-left colsep-1 rowsep-1" id="agTableEntry__entry__18">Type</th>
+                                    <th class="entry align-left colsep-1 rowsep-1" id="agTableEntry__entry__19">Use</th>
+                                 </tr>
+                              </thead><tbody class="tbody">
+                                 <tr class="row">
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agTableEntry__entry__17">align</td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agTableEntry__entry__18">
+                                       <a class="xref" href="tekst_xsd_Simple_Type_tekst_wlTableAlignHorizontal.html#wlTableAlignHorizontal">Simple Type tekst:wlTableAlignHorizontal</a>
+                                    </td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agTableEntry__entry__19">optional</td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agTableEntry__entry__17">char</td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agTableEntry__entry__18">xs:string</td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agTableEntry__entry__19">optional</td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agTableEntry__entry__17">charoff</td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agTableEntry__entry__18">xs:positiveInteger</td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agTableEntry__entry__19">optional</td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agTableEntry__entry__17">colname</td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agTableEntry__entry__18">xs:NMTOKEN</td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agTableEntry__entry__19">optional</td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agTableEntry__entry__17">colsep</td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agTableEntry__entry__18">
+                                       <a class="xref" href="tekst_xsd_Simple_Type_tekst_dtNulOfEen.html#dtNulOfEen">Simple Type tekst:dtNulOfEen</a>
+                                    </td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agTableEntry__entry__19">optional</td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agTableEntry__entry__17">morerows</td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agTableEntry__entry__18">xs:positiveInteger</td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agTableEntry__entry__19">optional</td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agTableEntry__entry__17">nameend</td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agTableEntry__entry__18">xs:NMTOKEN</td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agTableEntry__entry__19">optional</td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agTableEntry__entry__17">namest</td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agTableEntry__entry__18">xs:NMTOKEN</td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agTableEntry__entry__19">optional</td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agTableEntry__entry__17">rotate</td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agTableEntry__entry__18">
+                                       <a class="xref" href="tekst_xsd_Simple_Type_tekst_dtNulOfEen.html#dtNulOfEen">Simple Type tekst:dtNulOfEen</a>
+                                    </td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agTableEntry__entry__19">optional</td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agTableEntry__entry__17">rowsep</td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agTableEntry__entry__18">
+                                       <a class="xref" href="tekst_xsd_Simple_Type_tekst_dtNulOfEen.html#dtNulOfEen">Simple Type tekst:dtNulOfEen</a>
+                                    </td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agTableEntry__entry__19">optional</td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agTableEntry__entry__17">valign</td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agTableEntry__entry__18">
+                                       <a class="xref" href="tekst_xsd_Simple_Type_tekst_wlTableAlignVertical.html#wlTableAlignVertical">Simple Type tekst:wlTableAlignVertical</a>
+                                    </td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agTableEntry__entry__19">optional</td>
+                                 </tr>
+                              </tbody></table>
+                     </div>
+                  </td>
+               </tr>
+               </tbody></table>
+   </div>
+</article></main></body></html>

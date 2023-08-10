@@ -1,0 +1,45 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="stap-2-aanleveren-besluit"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Stap 2: Aanleveren Besluit</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="stap-2-aanleveren-besluit"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a><ul><li><a href="stop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="leeswijzers.html">Leeswijzers</a><ul><li><a href="toepassing.html">Basis van STOP</a></li><li><a href="architectuur.html">Architectuur en ontwerpkeuzes</a></li><li><a href="gebruik.html">Software-ontwikkeling met STOP</a><ul><li><a href="quickstart_overzicht.html">Snelstartgids STOP-XML</a><ul><li><a href="quickstart_1.html">Stap 1: Opstellen nieuwe regelingversie en GIOversie met OW data</a></li><li class="active"><a href="quickstart_2.html">Stap 2: Aanleveren Besluit</a><ul><li><a href="quickstart_2_ExpressionIdentificatieBesluit.html">data:ExpressionIdentificatie (Besluit)</a></li><li><a href="quickstart_2_BesluitMetadata.html">data:BesluitMetadata</a></li><li><a href="quickstart_2_ProcedureVerloop.html">data:Procedureverloop</a></li><li><a href="quickstart_2_ConsolidatieInformatie.html">data:ConsolidatieInformatie</a></li><li><a href="quickstart_2_Besluiten.html">Modellen voor besluiten</a></li></ul></li><li><a href="quickstart_2a.html">Stap 2a: Optioneel: Kennisgeving bij Besluit</a></li><li><a href="quickstart_3.html">Stap 3: Consolideren na bekendmaking</a></li></ul></li><li><a href="tekstmodellen.html">Modellering van tekst</a></li><li><a href="io-intro.html">Informatie-object</a></li><li><a href="gio-intro.html">Geografisch informatie-object</a></li><li><a href="IO_Document.html">Document als informatie-object</a></li><li><a href="naamgevingsconventie.html">Naamgevingsconventie</a></li><li><a href="context_modules.html">Tijdsafhankelijke (context)informatie</a></li><li><a href="annotaties.html">Annotaties</a></li></ul></li><li><a href="voortbouwen_op_STOP.html">Voortbouwen op STOP</a></li></ul></li><li><a href="EA_4D1D7FD517FE4d8dA9A2B905D202C92B.html">Informatiemodel</a></li><li><a href="businessrules.html">Bedrijfsregels</a></li></ul></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1">Stap 2: Aanleveren Besluit</h1><div class="body"><p class="p">Op een bepaald moment legt het bevoegd gezag de nieuwe Regelingversie en/of GIOversie vast in een bekend te maken besluit in haar plansoftware.  Een Besluit kan:</p><ul class="ul"><li class="li"><p class="p">een nieuwe versie van een Regeling bekendmaken (via een initieel besluit); of</p></li><li class="li"><p class="p">de wijzigingen op een bestaande versie van een regeling bekendmaken (via een wijzigingsbesluit).</p></li></ul><p class="p">Een besluit dient aangeleverd te worden met de set samenhangende STOP-modules die hieronder beschreven zijn. In de aanlevering aan de LVBB wordt daarnaast ook informatie van de wordtVersie van de Regeling (de <a class="xref" href="quickstart_1_ExpressionIdentificatieRegeling.html">ExpressionIdentificatie</a> en <a class="xref" href="quickstart_1_RegelingMetadata.html">RegelingMetadata</a>), GIOversie(s) en OW-data meegeleverd (zie ook het <a class="xref" href="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/">bronhouderkoppelvlakschema</a>).</p><p class="p"><strong class="ph b">STOP-XML Modules Besluit</strong></p><ul class="ul"><li class="li"><p class="p"><a class="xref" href="quickstart_2_ExpressionIdentificatieBesluit.html">data:ExpressionIdentificatie</a> van het Besluit</p></li><li class="li"><p class="p"><a class="xref" href="quickstart_2_BesluitMetadata.html">data:BesluitMetadata</a> (met onderscheid hierbinnen tussen definitieve en ontwerpbesluiten)</p></li><li class="li"><p class="p"><a class="xref" href="quickstart_2_ProcedureVerloop.html">data:ProcedureVerloop</a></p></li><li class="li"><p class="p"><a class="xref" href="quickstart_2_ConsolidatieInformatie.html">data:ConsolidatieInformatie</a></p></li><li class="li"><p class="p"><a class="xref" href="quickstart_2_Besluiten.html">Besluit</a> met hierbinnen de keuze uit twee modellen/STOP-XML modules</p></li></ul></div></article></main></body></html>

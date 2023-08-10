@@ -1,0 +1,293 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="nl-nl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="Pkg"><meta name="DC.language" content="nl-nl"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Objectgericht muteren</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="Pkg"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a><ul><li><a href="stop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="leeswijzers.html">Leeswijzers</a></li><li><a href="EA_4D1D7FD517FE4d8dA9A2B905D202C92B.html">Informatiemodel</a><ul><li><a href="EA_9E187217A693458593B4BC483B77322B.html">Legenda van de diagrammen</a></li><li><a href="EA_068BE3F17D2D41a8AA2E39A355337401.html">Toepassingsgebied</a></li><li><a href="EA_BEA65540863F4cedAE03E4C3D0A29EAA.html">Algemeen</a><ul><li><a href="EA_188A75C61FB54d108E7659F3FE5DE8F3.html">Het FRBR model</a></li><li><a href="EA_BD0B9B5F34C548eeB092538800D54713.html">Identificatie</a></li><li><a href="EA_1A45BBE5EC4F4bb2BBD7F5E701CE0479.html">Instrument en instrumentversies</a></li><li><a href="EA_F557E4DB59344ae894555F646FE2631E.html">Implementatie en versionering</a></li><li><a href="EA_59E55D5894754481B3D9890DD60CD071.html">Tekstmodellering</a></li><li><a href="EA_61016E983B974885A6CEF61D9C34F3C3.html">Objectgericht modelleren en muteren</a><ul><li><a href="EA_C966BB1FF80841f6A587C16FB89171B2.html">Objectgericht modelleren</a></li><li class="active"><a href="EA_1F41E8E7749D4f44A0873F2F6C3E7B91.html">Objectgericht muteren</a></li><li><a href="EA_0C48F87B241441c185C510F3BC23A871.html">Historie van een object</a></li></ul></li><li><a href="EA_E15D6EFB90DE4277A46E39F7FE5EFFCC.html">Begrippen en waardelijsten</a></li></ul></li><li><a href="EA_A1BBB86A635B4bf6B2FCECD1CFE6A3C9.html">Besluiten en regelgeving</a></li><li><a href="EA_E0EFE05F9FBB45c6AB2493B9FF9037EC.html">Officiële publicaties</a></li><li><a href="EA_81311E5C8AD34b35B153B21B50080288.html">Consolidatie van regelgeving</a></li></ul></li><li><a href="businessrules.html">Bedrijfsregels</a></li></ul></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title topictitle1" id="ariaid-title1">Objectgericht muteren</h1>
+  <div class="body">
+      <figure class="fig fignone ea_diagram" id="Pkg__B09A7557E519443d8809688660150C9F">
+<div class="p"><div class="fig imagemap"><img usemap="#d239925e18" class="image zoomable" src="img/EA_B09A7557E519443d8809688660150C9F.png"><map name="d239925e18" id="d239925e18"><area href="#Pkg__5471324A9718402a8B38697C216EA441" alt="Vervang module (entiteit)" title="Vervang module (entiteit)" shape="rect" coords="423,591,617,644"><area href="#Pkg__6E026D5C4C77470dABA073FDD4D3C3D5" alt="Informatie tbv weergave van verschil (entiteit)" title="Informatie tbv weergave van verschil (entiteit)" shape="rect" coords="706,468,863,540"><area href="#Pkg__93119E063EF44219958F60D45545FDE5" alt="Versie van de module (entiteit)" title="Versie van de module (entiteit)" shape="rect" coords="320,143,452,214"><area href="#Pkg__0733F128812842a0AA781A33C88C59E3" alt="Als wijziging (entiteit)" title="Als wijziging (entiteit)" shape="rect" coords="114,243,246,315"><area href="#Pkg__A1C5FCFC41FC4cb9B1FE644BCC59511C" alt="Als volledige versie (entiteit)" title="Als volledige versie (entiteit)" shape="rect" coords="112,143,245,214"><area href="#Pkg__057D3FA8D7CD4c679B86B5CEE76A81BB" alt="Specificatie van een module (entiteit)" title="Specificatie van een module (entiteit)" shape="rect" coords="13,13,179,95"><area href="#Pkg__EF18971E33DC40a8AA70859A6304B3DC" alt="Objectversie (entiteit)" title="Objectversie (entiteit)" shape="rect" coords="706,362,863,442"><area href="#Pkg__DB349B4D6D6845e68EB19E2E2CD10B80" alt="Verwijder (entiteit)" title="Verwijder (entiteit)" shape="rect" coords="423,487,617,540"><area href="#Pkg__35E0EF74740B4f1f86266C659ADE43D7" alt="Voeg toe (entiteit)" title="Voeg toe (entiteit)" shape="rect" coords="423,329,617,394"><area href="#Pkg__2854EE447EDA45b49A88599C9656F353" alt="Vervang (entiteit)" title="Vervang (entiteit)" shape="rect" coords="423,414,617,467"><area href="#Pkg__B2E99ADB82384ab4A7876000DD77C9F7" alt="Operatie (entiteit)" title="Operatie (entiteit)" shape="rect" coords="320,243,452,315"></map></div></div>
+</figure>
+<section class="section ea_elementen"><h2 class="title sectiontitle">Elementen</h2>
+            
+            <table class="table ea_element" id="Pkg__A1C5FCFC41FC4cb9B1FE644BCC59511C"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__A1C5FCFC41FC4cb9B1FE644BCC59511C__entry__1" colspan="4">Als volledige versie</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row">
+                            <td class="entry ea_genspec_titel" headers="Pkg__A1C5FCFC41FC4cb9B1FE644BCC59511C__entry__1">Specialisatie van</td>
+                            <td class="entry ea_genspec_lijst" headers="Pkg__A1C5FCFC41FC4cb9B1FE644BCC59511C__entry__1" colspan="3"><a class="xref ea_genspec_direct link_ea" href="#Pkg__057D3FA8D7CD4c679B86B5CEE76A81BB">Specificatie van een module (entiteit)</a></td>
+                        </tr>
+                    </tbody></table>
+            <table class="table ea_element" id="Pkg__0733F128812842a0AA781A33C88C59E3"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__0733F128812842a0AA781A33C88C59E3__entry__1" colspan="4">Als wijziging</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row">
+                            <td class="entry ea_genspec_titel" headers="Pkg__0733F128812842a0AA781A33C88C59E3__entry__1">Specialisatie van</td>
+                            <td class="entry ea_genspec_lijst" headers="Pkg__0733F128812842a0AA781A33C88C59E3__entry__1" colspan="3"><a class="xref ea_genspec_direct link_ea" href="#Pkg__057D3FA8D7CD4c679B86B5CEE76A81BB">Specificatie van een module (entiteit)</a></td>
+                        </tr>
+                    <tr class="row ea_attribuut_header">
+                            <td class="entry" headers="Pkg__0733F128812842a0AA781A33C88C59E3__entry__1"><strong class="ph b">Eigenschappen</strong></td>
+                            <td class="entry" headers="Pkg__0733F128812842a0AA781A33C88C59E3__entry__1"><strong class="ph b">Type</strong></td>
+                            <td class="entry" headers="Pkg__0733F128812842a0AA781A33C88C59E3__entry__1"><strong class="ph b">Kardinaliteit</strong></td>
+                            <td class="entry" headers="Pkg__0733F128812842a0AA781A33C88C59E3__entry__1"><strong class="ph b">Beschrijving</strong></td>
+                        </tr>
+                        <tr class="row ea_attribuut" id="Pkg__7C688838CDB74309AB1985ED082A1580">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__0733F128812842a0AA781A33C88C59E3__entry__1">Was</td>
+                            <td class="entry" headers="Pkg__0733F128812842a0AA781A33C88C59E3__entry__1"><a class="xref link_ea" href="EA_BD0B9B5F34C548eeB092538800D54713.html#Pkg__8DBA840974F643be8EEACBBB4954F8DD">STOP identificatie (entiteit)</a></td>
+                            <td class="entry" headers="Pkg__0733F128812842a0AA781A33C88C59E3__entry__1">1..1</td>
+                            <td class="entry" headers="Pkg__0733F128812842a0AA781A33C88C59E3__entry__1">
+                                </td>
+                         </tr>
+                    </tbody></table>
+            <table class="table ea_element" id="Pkg__6E026D5C4C77470dABA073FDD4D3C3D5"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__6E026D5C4C77470dABA073FDD4D3C3D5__entry__1" colspan="4">Informatie tbv weergave van verschil</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row">
+                        <td class="entry ea_doc_titel" headers="Pkg__6E026D5C4C77470dABA073FDD4D3C3D5__entry__1">Beschrijving</td>
+                        <td class="entry ea_element_beschrijving" headers="Pkg__6E026D5C4C77470dABA073FDD4D3C3D5__entry__1" colspan="3"></td>
+                    </tr>
+                    </tbody></table>
+            <table class="table ea_element" id="Pkg__EF18971E33DC40a8AA70859A6304B3DC"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__EF18971E33DC40a8AA70859A6304B3DC__entry__1" colspan="4">Objectversie</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row">
+                            <td class="entry ea_genspec_titel" headers="Pkg__EF18971E33DC40a8AA70859A6304B3DC__entry__1">Generalisatie van</td>
+                            <td class="entry ea_genspec_lijst" headers="Pkg__EF18971E33DC40a8AA70859A6304B3DC__entry__1" colspan="3"><a class="xref link_ea" href="EA_0A632807C2A04761865CBEE6A12BCEEC.html#Pkg__17D1E494ADA9491c87975D37C9888AFE">Afdeling (entiteit)</a>, <a class="xref ea_genspec_direct link_ea" href="EA_0A632807C2A04761865CBEE6A12BCEEC.html#Pkg__96237B6A07C940e09265C7712119E56E">Artikel (entiteit)</a>, <a class="xref link_ea" href="EA_0A632807C2A04761865CBEE6A12BCEEC.html#Pkg__C0D5FDCA6E044069A946953DB6718E86">Artikel met leden (entiteit)</a>, <a class="xref link_ea" href="EA_0A632807C2A04761865CBEE6A12BCEEC.html#Pkg__9557CF5B1DA047409846F0182E053443">Artikel zonder leden (entiteit)</a>, <a class="xref link_ea" href="EA_0B0A2D36B8F4476289BC46A863548D6B.html#Pkg__53EA7B21039447e8ACE43C64A6CE724C">Artikelgewijze toelichting op besluit (entiteit)</a>, <a class="xref link_ea" href="EA_73A4EA5DA9F84384A96B71880F695FC6.html#Pkg__F7C50D8B32CA45f59513E243E13E8284">Artikelgewijze toelichting op regeling (entiteit)</a>, <a class="xref link_ea" href="EA_0B0A2D36B8F4476289BC46A863548D6B.html#Pkg__C91350C130EE4c418AB67423D6B77623">Bijlage bij besluit (entiteit)</a>, <a class="xref link_ea" href="EA_73A4EA5DA9F84384A96B71880F695FC6.html#Pkg__0C9C170A37E84dee8E29F5DFFBC6C692">Bijlage bij regeling (entiteit)</a>, <a class="xref link_ea" href="EA_0A632807C2A04761865CBEE6A12BCEEC.html#Pkg__BD0C0C25F13140f5B39AACFE52713A67">Boek (entiteit)</a>, <a class="xref link_ea" href="EA_0A632807C2A04761865CBEE6A12BCEEC.html#Pkg__857F2CCA881E4f4e82E485FBC4FC1407">Deel (entiteit)</a>, <a class="xref ea_genspec_direct link_ea" href="EA_EBCC9FE084674d9d9EE24FB92A8CEA01.html#Pkg__40BE11E79EF04622A9FA8D705C9B8FE5">Divisie (entiteit)</a>, <a class="xref ea_genspec_direct link_ea" href="EA_3FF7ADD14171420c8FCACC6A218F2EB8.html#Pkg__603A765AAA2A4b8b9C522763FDDAA46F">Divisietekst (entiteit)</a>, <a class="xref link_ea" href="EA_0A632807C2A04761865CBEE6A12BCEEC.html#Pkg__242178BEAA2B4c8dAF9E1346925C8CA0">Hoofdstuk (entiteit)</a>, <a class="xref link_ea" href="EA_540502E245F04feaA8D298E5858B0382.html#Pkg__3C3AC70B35FF48189DC6546375959568">Lichaam (entiteit)</a>, <a class="xref link_ea" href="EA_233F9A157B1F4d11A41DBE8FC3424244.html#Pkg__C980C2884C474f03A80201F10CFA7139">Lichaam (entiteit)</a>, <a class="xref link_ea" href="EA_0B0A2D36B8F4476289BC46A863548D6B.html#Pkg__F8D13BD5EAA24ad9B45D433BC372E458">Motivering (entiteit)</a>, <a class="xref link_ea" href="EA_0A632807C2A04761865CBEE6A12BCEEC.html#Pkg__FF0F1E6015694024B1D3C5A2CD458996">Paragraaf (entiteit)</a>, <a class="xref ea_genspec_direct link_ea" href="EA_215C5F7818F84a2285EDBC1EFD681020.html#Pkg__D04DDED556684cedB91A0ABCD15FD584">Structuurelement (entiteit)</a>, <a class="xref link_ea" href="EA_0A632807C2A04761865CBEE6A12BCEEC.html#Pkg__2CEF3202326C4e4f9AE1D103C9DD54CF">Titel (entiteit)</a>, <a class="xref link_ea" href="EA_0B0A2D36B8F4476289BC46A863548D6B.html#Pkg__4D78B1513CB046b083118B49BC086979">Toelichting op besluit (entiteit)</a>, <a class="xref link_ea" href="EA_73A4EA5DA9F84384A96B71880F695FC6.html#Pkg__5DB50D30F9114579A6D82F764E9C050A">Toelichting op regeling (entiteit)</a>, <a class="xref link_ea" href="EA_EBCC9FE084674d9d9EE24FB92A8CEA01.html#Pkg__1E5C51D47A5C4dc3916D013EC309EB6A">Vrijetekststructuur (entiteit)</a>, <a class="xref link_ea" href="EA_0B0A2D36B8F4476289BC46A863548D6B.html#Pkg__8CEF9B6264444612BC0077D1D59BB62E">Wijzigbijlage (entiteit)</a></td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry ea_eltpackages_titel" headers="Pkg__EF18971E33DC40a8AA70859A6304B3DC__entry__1">Zie ook</td>
+                            <td class="entry ea_eltpackages_lijst" headers="Pkg__EF18971E33DC40a8AA70859A6304B3DC__entry__1" colspan="3"><a class="xref link_ea" href="EA_0A632807C2A04761865CBEE6A12BCEEC.html#Pkg">Artikelstructuur (onderwerp)</a>, <a class="xref link_ea" href="EA_0C48F87B241441c185C510F3BC23A871.html#Pkg">Historie van een object (onderwerp)</a>, <a class="xref ea_eltpackages_default link_ea" href="EA_C966BB1FF80841f6A587C16FB89171B2.html#Pkg">Objectgericht modelleren (onderwerp)</a>, <a class="xref link_ea" href="EA_EBCC9FE084674d9d9EE24FB92A8CEA01.html#Pkg">Vrijetekststructuur (onderwerp)</a></td>
+                        </tr>
+                    <tr class="row ea_attribuut_header">
+                            <td class="entry" headers="Pkg__EF18971E33DC40a8AA70859A6304B3DC__entry__1"><strong class="ph b">Eigenschappen</strong></td>
+                            <td class="entry" headers="Pkg__EF18971E33DC40a8AA70859A6304B3DC__entry__1"><strong class="ph b">Type</strong></td>
+                            <td class="entry" headers="Pkg__EF18971E33DC40a8AA70859A6304B3DC__entry__1"><strong class="ph b">Kardinaliteit</strong></td>
+                            <td class="entry" headers="Pkg__EF18971E33DC40a8AA70859A6304B3DC__entry__1"><strong class="ph b">Beschrijving</strong></td>
+                        </tr>
+                        <tr class="row ea_attribuut" id="Pkg__2F27A4E910FC43e0B5D9FB01B9539009">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__EF18971E33DC40a8AA70859A6304B3DC__entry__1">wId</td>
+                            <td class="entry" headers="Pkg__EF18971E33DC40a8AA70859A6304B3DC__entry__1">string</td>
+                            <td class="entry" headers="Pkg__EF18971E33DC40a8AA70859A6304B3DC__entry__1">1..1</td>
+                            <td class="entry" headers="Pkg__EF18971E33DC40a8AA70859A6304B3DC__entry__1">
+                                </td>
+                         </tr>
+                    </tbody></table>
+            <table class="table ea_element" id="Pkg__B2E99ADB82384ab4A7876000DD77C9F7"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__B2E99ADB82384ab4A7876000DD77C9F7__entry__1" colspan="4">Operatie</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row">
+                            <td class="entry ea_genspec_titel" headers="Pkg__B2E99ADB82384ab4A7876000DD77C9F7__entry__1">Generalisatie van</td>
+                            <td class="entry ea_genspec_lijst" headers="Pkg__B2E99ADB82384ab4A7876000DD77C9F7__entry__1" colspan="3"><a class="xref ea_genspec_direct link_ea" href="#Pkg__2854EE447EDA45b49A88599C9656F353">Vervang (entiteit)</a>, <a class="xref ea_genspec_direct link_ea" href="#Pkg__5471324A9718402a8B38697C216EA441">Vervang module (entiteit)</a>, <a class="xref ea_genspec_direct link_ea" href="#Pkg__DB349B4D6D6845e68EB19E2E2CD10B80">Verwijder (entiteit)</a>, <a class="xref ea_genspec_direct link_ea" href="#Pkg__35E0EF74740B4f1f86266C659ADE43D7">Voeg toe (entiteit)</a></td>
+                        </tr>
+                    <tr class="row ea_attribuut_header">
+                            <td class="entry" headers="Pkg__B2E99ADB82384ab4A7876000DD77C9F7__entry__1"><strong class="ph b">Eigenschappen</strong></td>
+                            <td class="entry" headers="Pkg__B2E99ADB82384ab4A7876000DD77C9F7__entry__1"><strong class="ph b">Type</strong></td>
+                            <td class="entry" headers="Pkg__B2E99ADB82384ab4A7876000DD77C9F7__entry__1"><strong class="ph b">Kardinaliteit</strong></td>
+                            <td class="entry" headers="Pkg__B2E99ADB82384ab4A7876000DD77C9F7__entry__1"><strong class="ph b">Beschrijving</strong></td>
+                        </tr>
+                        <tr class="row ea_attribuut" id="Pkg__483EFA8EDD9240d6B43CF2BDDCF98FB4">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__B2E99ADB82384ab4A7876000DD77C9F7__entry__1">Identificatie in work</td>
+                            <td class="entry" headers="Pkg__B2E99ADB82384ab4A7876000DD77C9F7__entry__1"></td>
+                            <td class="entry" headers="Pkg__B2E99ADB82384ab4A7876000DD77C9F7__entry__1">1..1</td>
+                            <td class="entry" headers="Pkg__B2E99ADB82384ab4A7876000DD77C9F7__entry__1">
+                                </td>
+                         </tr>
+                    </tbody></table>
+            <table class="table ea_element" id="Pkg__057D3FA8D7CD4c679B86B5CEE76A81BB"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__057D3FA8D7CD4c679B86B5CEE76A81BB__entry__1" colspan="4">Specificatie van een module</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row">
+                            <td class="entry ea_genspec_titel" headers="Pkg__057D3FA8D7CD4c679B86B5CEE76A81BB__entry__1">Generalisatie van</td>
+                            <td class="entry ea_genspec_lijst" headers="Pkg__057D3FA8D7CD4c679B86B5CEE76A81BB__entry__1" colspan="3"><a class="xref ea_genspec_direct link_ea" href="#Pkg__A1C5FCFC41FC4cb9B1FE644BCC59511C">Als volledige versie (entiteit)</a>, <a class="xref ea_genspec_direct link_ea" href="#Pkg__0733F128812842a0AA781A33C88C59E3">Als wijziging (entiteit)</a></td>
+                        </tr>
+                    <tr class="row ea_attribuut_header">
+                            <td class="entry" headers="Pkg__057D3FA8D7CD4c679B86B5CEE76A81BB__entry__1"><strong class="ph b">Eigenschappen</strong></td>
+                            <td class="entry" headers="Pkg__057D3FA8D7CD4c679B86B5CEE76A81BB__entry__1"><strong class="ph b">Type</strong></td>
+                            <td class="entry" headers="Pkg__057D3FA8D7CD4c679B86B5CEE76A81BB__entry__1"><strong class="ph b">Kardinaliteit</strong></td>
+                            <td class="entry" headers="Pkg__057D3FA8D7CD4c679B86B5CEE76A81BB__entry__1"><strong class="ph b">Beschrijving</strong></td>
+                        </tr>
+                        <tr class="row ea_attribuut" id="Pkg__9CB56E4BEC9C4831AAAA39519B9F1561">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__057D3FA8D7CD4c679B86B5CEE76A81BB__entry__1">FRBRwork</td>
+                            <td class="entry" headers="Pkg__057D3FA8D7CD4c679B86B5CEE76A81BB__entry__1"><a class="xref link_ea" href="EA_BD0B9B5F34C548eeB092538800D54713.html#Pkg__8DBA840974F643be8EEACBBB4954F8DD">STOP identificatie (entiteit)</a></td>
+                            <td class="entry" headers="Pkg__057D3FA8D7CD4c679B86B5CEE76A81BB__entry__1">1..1</td>
+                            <td class="entry" headers="Pkg__057D3FA8D7CD4c679B86B5CEE76A81BB__entry__1">
+                                </td>
+                         </tr>
+                        <tr class="row ea_attribuut" id="Pkg__2B687BCB082E49d39F83146A76403DEC">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__057D3FA8D7CD4c679B86B5CEE76A81BB__entry__1">Wordt</td>
+                            <td class="entry" headers="Pkg__057D3FA8D7CD4c679B86B5CEE76A81BB__entry__1"><a class="xref link_ea" href="EA_BD0B9B5F34C548eeB092538800D54713.html#Pkg__8DBA840974F643be8EEACBBB4954F8DD">STOP identificatie (entiteit)</a></td>
+                            <td class="entry" headers="Pkg__057D3FA8D7CD4c679B86B5CEE76A81BB__entry__1">1..1</td>
+                            <td class="entry" headers="Pkg__057D3FA8D7CD4c679B86B5CEE76A81BB__entry__1">
+                                <div class="div"><div class="div">
+    <p class="p">De identificatie van de expression die ontstaat na verwerken van de mutatie</p>
+  </div>
+  </div>
+                                </td>
+                         </tr>
+                    </tbody></table>
+            <table class="table ea_element" id="Pkg__93119E063EF44219958F60D45545FDE5"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__93119E063EF44219958F60D45545FDE5__entry__1" colspan="4">Versie van de module</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row">
+                            <td class="entry ea_eltpackages_titel" headers="Pkg__93119E063EF44219958F60D45545FDE5__entry__1">Zie ook</td>
+                            <td class="entry ea_eltpackages_lijst" headers="Pkg__93119E063EF44219958F60D45545FDE5__entry__1" colspan="3"><a class="xref link_ea" href="EA_0C48F87B241441c185C510F3BC23A871.html#Pkg">Historie van een object (onderwerp)</a>, <a class="xref ea_eltpackages_default link_ea" href="EA_C966BB1FF80841f6A587C16FB89171B2.html#Pkg">Objectgericht modelleren (onderwerp)</a></td>
+                        </tr>
+                    </tbody></table>
+            <table class="table ea_element" id="Pkg__2854EE447EDA45b49A88599C9656F353"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__2854EE447EDA45b49A88599C9656F353__entry__1" colspan="4">Vervang</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row">
+                        <td class="entry ea_doc_titel" headers="Pkg__2854EE447EDA45b49A88599C9656F353__entry__1">Definitie</td>
+                        <td class="entry ea_element_beschrijving" headers="Pkg__2854EE447EDA45b49A88599C9656F353__entry__1" colspan="3"><div class="div">
+    <p class="p">Het tekstonderdeel <code class="keyword markupname xmlelement">&lt;tekst:Vervang&gt;</code> geeft aan welk tekstonderdeel
+      (mutatie-eenheid) in een reeds bestaande regeling moet worden vervangen.</p>
+  </div>
+  </td>
+                    </tr>
+                    <tr class="row noimlinks-ea:{2854EE44-7EDA-45b4-9A88-599C9656F353}">
+                        <td class="entry ea_doc_titel" headers="Pkg__2854EE447EDA45b49A88599C9656F353__entry__1">Implementatie</td>
+                        <td class="entry ea_relatedlinks_lijst" headers="Pkg__2854EE447EDA45b49A88599C9656F353__entry__1" colspan="3"><a class="xref link_xsd" href="tekst_xsd_Element_tekst_Vervang.html#Vervang">tekst:Vervang</a></td>
+                    </tr>
+                        <tr class="row">
+                            <td class="entry ea_genspec_titel" headers="Pkg__2854EE447EDA45b49A88599C9656F353__entry__1">Specialisatie van</td>
+                            <td class="entry ea_genspec_lijst" headers="Pkg__2854EE447EDA45b49A88599C9656F353__entry__1" colspan="3"><a class="xref ea_genspec_direct link_ea" href="#Pkg__B2E99ADB82384ab4A7876000DD77C9F7">Operatie (entiteit)</a></td>
+                        </tr>
+                    </tbody></table>
+            <table class="table ea_element" id="Pkg__5471324A9718402a8B38697C216EA441"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__5471324A9718402a8B38697C216EA441__entry__1" colspan="4">Vervang module</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row">
+                        <td class="entry ea_doc_titel" headers="Pkg__5471324A9718402a8B38697C216EA441__entry__1">Definitie</td>
+                        <td class="entry ea_element_beschrijving" headers="Pkg__5471324A9718402a8B38697C216EA441__entry__1" colspan="3"><div class="div">
+    <p class="p">De <code class="keyword markupname xmlelement">&lt;tekst:VervangRegeling&gt;</code> bevat de "integrale tekstvervanging" voor
+      een RegelingVersie.</p>
+  </div>
+  </td>
+                    </tr>
+                    <tr class="row noimlinks-ea:{5471324A-9718-402a-8B38-697C216EA441}">
+                        <td class="entry ea_doc_titel" headers="Pkg__5471324A9718402a8B38697C216EA441__entry__1">Implementatie</td>
+                        <td class="entry ea_relatedlinks_lijst" headers="Pkg__5471324A9718402a8B38697C216EA441__entry__1" colspan="3"><a class="xref link_xsd" href="tekst_xsd_Element_tekst_VervangRegeling.html#VervangRegeling">tekst:VervangRegeling</a></td>
+                    </tr>
+                        <tr class="row">
+                            <td class="entry ea_genspec_titel" headers="Pkg__5471324A9718402a8B38697C216EA441__entry__1">Specialisatie van</td>
+                            <td class="entry ea_genspec_lijst" headers="Pkg__5471324A9718402a8B38697C216EA441__entry__1" colspan="3"><a class="xref ea_genspec_direct link_ea" href="#Pkg__B2E99ADB82384ab4A7876000DD77C9F7">Operatie (entiteit)</a></td>
+                        </tr>
+                    </tbody></table>
+            <table class="table ea_element" id="Pkg__DB349B4D6D6845e68EB19E2E2CD10B80"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__DB349B4D6D6845e68EB19E2E2CD10B80__entry__1" colspan="4">Verwijder</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row">
+                        <td class="entry ea_doc_titel" headers="Pkg__DB349B4D6D6845e68EB19E2E2CD10B80__entry__1">Definitie</td>
+                        <td class="entry ea_element_beschrijving" headers="Pkg__DB349B4D6D6845e68EB19E2E2CD10B80__entry__1" colspan="3"><div class="div">
+      <p class="p">Het tekstonderdeel <code class="keyword markupname xmlelement">&lt;tekst:Verwijder&gt;</code> geeft aan welk tekstonderdeel
+      (mutatie-eenheid) uit een reeds bestaande regeling moet worden verwijderd.</p>
+   </div>
+   </td>
+                    </tr>
+                    <tr class="row noimlinks-ea:{DB349B4D-6D68-45e6-8EB1-9E2E2CD10B80}">
+                        <td class="entry ea_doc_titel" headers="Pkg__DB349B4D6D6845e68EB19E2E2CD10B80__entry__1">Implementatie</td>
+                        <td class="entry ea_relatedlinks_lijst" headers="Pkg__DB349B4D6D6845e68EB19E2E2CD10B80__entry__1" colspan="3"><a class="xref link_xsd" href="tekst_xsd_Element_tekst_Verwijder.html#Verwijder">tekst:Verwijder</a></td>
+                    </tr>
+                        <tr class="row">
+                            <td class="entry ea_genspec_titel" headers="Pkg__DB349B4D6D6845e68EB19E2E2CD10B80__entry__1">Specialisatie van</td>
+                            <td class="entry ea_genspec_lijst" headers="Pkg__DB349B4D6D6845e68EB19E2E2CD10B80__entry__1" colspan="3"><a class="xref ea_genspec_direct link_ea" href="#Pkg__B2E99ADB82384ab4A7876000DD77C9F7">Operatie (entiteit)</a></td>
+                        </tr>
+                    </tbody></table>
+            <table class="table ea_element" id="Pkg__35E0EF74740B4f1f86266C659ADE43D7"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__35E0EF74740B4f1f86266C659ADE43D7__entry__1" colspan="4">Voeg toe</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row">
+                        <td class="entry ea_doc_titel" headers="Pkg__35E0EF74740B4f1f86266C659ADE43D7__entry__1">Definitie</td>
+                        <td class="entry ea_element_beschrijving" headers="Pkg__35E0EF74740B4f1f86266C659ADE43D7__entry__1" colspan="3"><div class="div">
+      <p class="p">Het tekstonderdeel <code class="keyword markupname xmlelement">&lt;tekst:VoegToe&gt;</code> wordt gebruikt voor het toevoegen van een
+      tekstonderdeel aan een reeds bestaande regeling.</p>
+   </div>
+   </td>
+                    </tr>
+                    <tr class="row noimlinks-ea:{35E0EF74-740B-4f1f-8626-6C659ADE43D7}">
+                        <td class="entry ea_doc_titel" headers="Pkg__35E0EF74740B4f1f86266C659ADE43D7__entry__1">Implementatie</td>
+                        <td class="entry ea_relatedlinks_lijst" headers="Pkg__35E0EF74740B4f1f86266C659ADE43D7__entry__1" colspan="3"><a class="xref link_xsd" href="tekst_xsd_Element_tekst_VoegToe.html#VoegToe">tekst:VoegToe</a></td>
+                    </tr>
+                        <tr class="row">
+                            <td class="entry ea_genspec_titel" headers="Pkg__35E0EF74740B4f1f86266C659ADE43D7__entry__1">Specialisatie van</td>
+                            <td class="entry ea_genspec_lijst" headers="Pkg__35E0EF74740B4f1f86266C659ADE43D7__entry__1" colspan="3"><a class="xref ea_genspec_direct link_ea" href="#Pkg__B2E99ADB82384ab4A7876000DD77C9F7">Operatie (entiteit)</a></td>
+                        </tr>
+                    <tr class="row ea_attribuut_header">
+                            <td class="entry" headers="Pkg__35E0EF74740B4f1f86266C659ADE43D7__entry__1"><strong class="ph b">Eigenschappen</strong></td>
+                            <td class="entry" headers="Pkg__35E0EF74740B4f1f86266C659ADE43D7__entry__1"><strong class="ph b">Type</strong></td>
+                            <td class="entry" headers="Pkg__35E0EF74740B4f1f86266C659ADE43D7__entry__1"><strong class="ph b">Kardinaliteit</strong></td>
+                            <td class="entry" headers="Pkg__35E0EF74740B4f1f86266C659ADE43D7__entry__1"><strong class="ph b">Beschrijving</strong></td>
+                        </tr>
+                        <tr class="row ea_attribuut" id="Pkg__5000EED2B1A8435eAB19183912ACB644">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__35E0EF74740B4f1f86266C659ADE43D7__entry__1">Positie in module</td>
+                            <td class="entry" headers="Pkg__35E0EF74740B4f1f86266C659ADE43D7__entry__1"></td>
+                            <td class="entry" headers="Pkg__35E0EF74740B4f1f86266C659ADE43D7__entry__1">0..1</td>
+                            <td class="entry" headers="Pkg__35E0EF74740B4f1f86266C659ADE43D7__entry__1">
+                                </td>
+                         </tr>
+                    </tbody></table>
+        </section>
+  </div>
+</article></main></body></html>

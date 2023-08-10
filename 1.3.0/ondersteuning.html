@@ -1,0 +1,71 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="ondersteuning"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Ondersteuning</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="ondersteuning"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a><ul><li class="active"><a href="ondersteuning.html">Ondersteuning</a></li><li><a href="wijzigingsbericht.html">Wijzigingsbericht </a></li></ul></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1">Ondersteuning</h1><div class="body"></div><article class="topic nested1" aria-labelledby="ariaid-title2" id="helpdesk"><h2 class="title topictitle2" id="ariaid-title2">Helpdesk</h2><div class="body"><p class="p">KOOP beantwoordt vragen over STOP via
+<a class="xref" href="mailto:stopstandaard@koop.overheid.nl" target="_blank">stopstandaard@koop.overheid.nl</a>.</p></div></article><article class="topic nested1" aria-labelledby="ariaid-title3" id="bevindingen"><h2 class="title topictitle2" id="ariaid-title3">Bevindingen</h2><div class="body"><p class="p">Vermeende fouten in de technische hulpmiddelen of documentatie
+en bevindingen over toepassing van de standaard waarvoor een
+wijziging in de standaard nodig is, kunnen gemeld worden via de
+<a class="xref" href="https://gitlab.com/koop/STOP/standaard/issues" target="_blank">Gitlab issue tracker</a>.
+Hier wordt ook de status van de bevindingen bijgehouden, en zijn
+eerder gemelde bevindingen in te zien.</p></div><article class="topic nested2" aria-labelledby="ariaid-title4" id="melden-van-een-bevinding"><h3 class="title topictitle3" id="ariaid-title4">Melden van een bevinding</h3><div class="body"><ul class="ul"><li class="li"><p class="p">Ga naar de
+<a class="xref" href="https://gitlab.com/koop/STOP/standaard/issues" target="_blank">Gitlab issue tracker</a></p></li><li class="li"><p class="p">Zoek eerst of er al een bevinding is gerapporteerd over het hetzelfde onderwerp.</p></li><li class="li"><p class="p">Zo niet, maak een nieuwe bevinding aan. Daarvoor is alleen een gitlab account nodig.</p></li><li class="li"><p class="p">Kies voor het beschrijven van de bevinding een van de beschikbare templates.
+<img class="image" src="img/bevinding_nieuw.png" alt="Nieuwe bevinding"><br></p></li></ul></div></article><article class="topic nested2" aria-labelledby="ariaid-title5" id="in-behandeling-nemen-van-een-bevinding"><h3 class="title topictitle3" id="ariaid-title5">In behandeling nemen van een bevinding</h3><div class="body"><p class="p">Zodra een bevinding wordt ontvangen, start een procedure om de bevinding te beoordelen.
+Dit proces is te volgen via de blauwe labels die aan de bevinding worden toegevoegd,
+en is te volgen via het bord <a class="xref" href="https://gitlab.com/koop/STOP/standaard/-/boards/1353723" target="_blank">Acceptatie</a>:</p><ul class="ul"><li class="li"><p class="p">KOOP markeert de bevinding als <em class="ph i">Te onderzoeken</em></p></li><li class="li"><p class="p">KOOP kan contact opnemen als er vragen zijn over de inhoud van de bevinding.</p></li><li class="li"><p class="p">Als onderdeel van het onderzoek doet KOOP een voorstel voor het oppakken van de bevinding.
+De gele labels (<em class="ph i">schema</em>, <em class="ph i">documentatie</em>, <em class="ph i">voorbeelden</em>) geven aan welke onderdelen
+van de standaard vooral geraakt worden. Tevens wordt via de groene labels (<em class="ph i">correctie</em>, <em class="ph i">uitbreiding</em>)
+aangegeven wat het effect van de voorgestelde oplossing op de standaard is.</p></li><li class="li"><p class="p">Na afronding van het onderzoek krijgt de bevinding het label <em class="ph i">Te bespreken</em>.
+Het bespreken gebeurt in een DSO afstemmingsoverleg. Daar wordt besloten of een bevinding
+opgepakt gaat worden (<em class="ph i">Geaccepteerd</em>) of niet (<em class="ph i">Niet geaccepteerd</em>). In het laatste geval
+zal de reden aangegeven worden bij de bevinding.</p></li></ul></div></article><article class="topic nested2" aria-labelledby="ariaid-title6" id="plannen-van-het-oplossen-van-een-bevinding"><h3 class="title topictitle3" id="ariaid-title6">Plannen van het oplossen van een bevinding</h3><div class="body"><p class="p">Als een bevinding <em class="ph i">Geaccepteerd</em> is wordt het verwerken van de oplossing in de standaard
+gepland. Dat is te volgen op het bord <a class="xref" href="https://gitlab.com/koop/STOP/standaard/-/boards/1353727" target="_blank">Planning</a>,
+waarbij een <em class="ph i">milestone</em> aan de bevinding gekoppeld wordt:</p><ul class="ul"><li class="li"><p class="p"><em class="ph i">Eerstvolgende versie</em>: het streven is om de oplossing van de bevinding in de
+eerstvolgende versie van de standaard mee te nemen.</p></li><li class="li"><p class="p"><em class="ph i">Eerstvolgende of latere versie</em>: het streven is om de oplossing van de bevinding zo snel mogelijk
+in een oplevering van de standaard mee te nemen. Dat is bij voorkeur de eerstvolgende oplevering,
+maar het kan ook een van de volgende opleveringen zijn.</p></li><li class="li"><p class="p"><em class="ph i">Toekomstige versie</em>: het is nog niet bekend in welke oplevering de oplossing van de bevinding meegenomenn wordt.</p></li></ul></div></article><article class="topic nested2" aria-labelledby="ariaid-title7" id="opgeloste-bevindingen"><h3 class="title topictitle3" id="ariaid-title7">Opgeloste bevindingen</h3><div class="body"><p class="p">Als een bevinding opgelost is, wordt de milestone gezet op de versie van de standaard
+waarvan de oplossing onderdeel uitmaakt. Via het <a class="xref" href="https://gitlab.com/koop/STOP/standaard/-/milestones" target="_blank">overzicht van milestones</a>
+is per versie van de standaard na te gaan welke bevindingen zijn opgelost. De bevinding
+krijgt als label <em class="ph i">Gerealiseerd</em> en wordt gesloten.</p><p class="p">Als bij het oplossen van de bevinding blijkt dat de oplossing alsnog niet nodig of wenselijk is,
+krijgt de bevinding als label <em class="ph i">Niet opgepakt</em> en wordt gesloten. De reden voor het niet oplossen
+van de bevinding wordt bij de bevinding vermeld.</p></div></article></article></article></main></body></html>

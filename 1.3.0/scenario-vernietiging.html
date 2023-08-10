@@ -1,0 +1,68 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="vernietiging"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Vernietiging</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="vernietiging"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a><ul><li><a href="stop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="leeswijzers.html">Leeswijzers</a><ul><li><a href="toepassing.html">Basis van STOP</a><ul><li><a href="juridische-context.html">Juridische context STOP</a></li><li><a href="proces_overzicht.html">Hoofdlijnen van het STOP-proces</a><ul><li><a href="proces_overzicht_compleet.html">Geïntegreerd proces van bekendmaken en consolideren</a><ul><li><a href="proces_besluit_en_regeling.html">Besluit en regeling</a></li><li><a href="proces_consolidatie.html">Consolidatie van besluiten</a></li><li><a href="doel.html">Doel</a></li><li><a href="proces_tekstmodellen.html">Tekstmodellen voor (artikelgewijze) regelingen en besluiten</a></li><li><a href="proces_besluit.html">Opnemen van regelgeving in een besluit</a></li><li><a href="proces_iwt.html">Inwerkingtredingsbepaling</a></li><li><a href="proces_overgangsrecht.html">Overgangsrecht</a></li><li><a href="proces_samenloop.html">Oplossen van samenloop</a></li><li><a href="besluitproces_rectificatie.html">Rectificatie van een besluit</a></li><li><a href="besluitproces_rechterlijkemacht.html">Beroep</a><ul><li><a href="besluitproces_rechterlijkemacht_achtergrond.html">Over beroep</a></li><li><a href="besluitproces_rechterlijkemacht_herroepelijkheidbesluit.html">Herroepelijkheid</a></li><li><a href="besluitproces_rechterlijke_macht_beroep_en_geconsolideerde_regelgeving.html">Beroep en geconsolideerde regeling</a></li><li><a href="besluitproces_rechterlijke_macht_omgaan_met_beroep.html">Verwerken beroep</a><ul><li><a href="besluitproces_rechterlijke_macht_beroep_mogelijk.html">Verwerken mogelijkheid beroep</a></li><li><a href="besluitproces_rechterlijke_macht_verwerken_beroep.html">Verwerken beroep ingesteld</a></li><li><a href="besluitproces_rechterlijke_macht_verwerken_schorsing.html">Verwerken schorsing</a></li><li><a href="besluitproces_rechterlijke_macht_verwerken_opheffen_schorsing.html">Verwerken schorsing opgeheven</a></li><li><a href="besluitproces_rechterlijkemacht_scenarios.html">Verwerken uitspraak beroep</a><ul><li><a href="scenario-beroep-ongegrond.html">Beroep ongegrond</a></li><li><a href="scenario-vernietiging-zonder-rechtsgevolgen.html">Vernietiging met behoud van rechtsgevolgen</a></li><li><a href="scenario-gedeeltelijke-vernietiging.html">Gedeeltelijke vernietiging</a></li><li class="active"><a href="scenario-vernietiging.html">Vernietiging</a></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li><li><a href="architectuur.html">Architectuur en ontwerpkeuzes</a></li><li><a href="gebruik.html">Software-ontwikkeling met STOP</a></li><li><a href="voortbouwen_op_STOP.html">Voortbouwen op STOP</a></li></ul></li><li><a href="EA_4D1D7FD517FE4d8dA9A2B905D202C92B.html">Informatiemodel</a></li><li><a href="businessrules.html">Bedrijfsregels</a></li></ul></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1">Vernietiging</h1><div class="body"><p class="p">Als een beroepsorgaan het beroep gegrond heeft verklaard en het besluit daarbij heeft <strong class="ph b">vernietigd</strong>, moeten door het BG de volgende extra processtappen worden verricht:</p></div><article class="topic nested1" aria-labelledby="ariaid-title2" id="1-maak-een-kennisgeving-vernietiging"><h2 class="title topictitle2" id="ariaid-title2">1. Maak een kennisgeving vernietiging</h2><div class="body"><p class="p">De kennisgeving bestaat uit de volgende modules:</p><ol class="ol"><li class="li"><p class="p">De modules zoals omschreven in stappen 1.1 t/m 1.3 van het scenario <a class="xref" href="scenario-vernietiging-zonder-rechtsgevolgen">vernietiging met behoud van rechtsgevolgen</a>.</p></li><li class="li"><p class="p">De <a class="xref" href="data_xsd_Element_data_ConsolidatieInformatie.html#ConsolidatieInformatie"><code class="ph codeph">ConsolidatieInformatie</code></a> om aan te geven dat de regeling- en eventuele <code class="ph codeph">TeConsolideren</code> informatie-objecten van het vernietigde besluit niet meer bij het doel horen. Deze module bevat <code class="ph codeph">TerugtrekkingRegeling</code> en <code class="ph codeph">TerugtrekkingTijdstempel</code> waarmee de <code class="ph codeph">juridischWerkendVanaf</code>-datum bij het doel wordt weggehaald. Eventueel wordt ook een <code class="ph codeph">TerugtrekkingInformatieobject</code> toegevoegd.</p></li></ol></div><article class="topic nested2" aria-labelledby="ariaid-title3" id="voorbeeld-consolidatie-informatie-kennisgeving-vernietiging"><h3 class="title topictitle3" id="ariaid-title3">Voorbeeld consolidatie-informatie kennisgeving vernietiging</h3><div class="body"><pre class="pre codeblock"><code>&lt;ConsolidatieInformatie&gt;
+  &lt;Terugtrekkingen&gt;
+    &lt;TerugtrekkingRegeling&gt;
+      &lt;!-- ontkoppeling van het doel aan de regelingversie van &lt;RegelingMutatie&gt;  --&gt;
+      &lt;doelen&gt;
+        &lt;doel&gt;/join/id/proces/gm9999/2020/VergrotenVuurwerkverbodsgebied&lt;/doel&gt;
+      &lt;/doelen&gt;
+      &lt;instrumentVersie&gt;/akn/nl/act/gm9999/2020/REG0001/nld@2020-06-16;2&lt;/instrumentVersie&gt;
+      &lt;eId&gt;gm9999_1__content_1&lt;/eId&gt;
+    &lt;/TerugtrekkingRegeling&gt;
+    &lt;TerugtrekkingInformatieobject&gt;
+      &lt;doelen&gt;
+        &lt;doel&gt;/join/id/proces/gm9999/2020/VergrotenVuurwerkverbodsgebied&lt;/doel&gt;
+      &lt;/doelen&gt;      
+      &lt;instrumentVersie&gt;/join/id/regdata/gm9999/2019/gio993859238/nld@2020-06-16;2&lt;/instrumentVersie&gt;
+      &lt;eId&gt;gm9999_1__content_1&lt;/eId&gt;
+    &lt;/TerugtrekkingInformatieobject&gt;
+    &lt;TerugtrekkingTijdstempel&gt;
+        &lt;doel&gt;/join/id/proces/gm9999/2020/VergrotenVuurwerkverbodsgebied&lt;/doel&gt;
+        &lt;soortTijdstempel&gt;juridischWerkendVanaf&lt;/soortTijdstempel&gt;
+        &lt;eId&gt;gm9999_1__content_2&lt;/eId&gt;
+    &lt;/TerugtrekkingTijdstempel&gt;
+  &lt;/Terugtrekkingen&gt;
+&lt;/ConsolidatieInformatie&gt;</code></pre></div></article></article><article class="topic nested1" aria-labelledby="ariaid-title4" id="2-verwerk-de-onherroepelijkheid-van-het-besluit"><h2 class="title topictitle2" id="ariaid-title4">2. Verwerk de onherroepelijkheid van het besluit</h2><div class="body"><p class="p">Komt met deze vernietiging een einde aan alle beroepsprocedures (evt. na het ongebruikt verstrijken van de hogerberoepstermijn), dan moet het BG het besluit de status onherroepelijk geven door het aanleveren van de procedurestap "Beroep(en) definitief afgedaan)". Dit gebeurt door een <a class="xref" href="__informatiemodel_index_Procedurestap.html#Procedurestap"><code class="ph codeph">Procedurestap</code></a> met daarin een <a class="xref" href="data_xsd_Element_data_soortStap.html#soortStap"><code class="ph codeph">soortStap</code></a> met de waarde <code class="ph codeph">/join/id/stop/procedure/stap_021</code> (beroep(en) definitief afgedaan). Voor de betekenis van <code class="ph codeph">BekendOp</code> bij deze procedurestap, zie <a class="xref" href="besluitproces_rechterlijkemacht_procedurele_status.html#BekendOp">BekendOp</a>.</p><p class="p">De Procedureverloopmutatie wordt aangeleverd met een directe mutatie, of wordt meegeleverd met de kennisgeving uit stap 1, als er geen hogerberoepstermijn is die afgewacht hoeft te worden.</p><p class="p">Lopen er nog andere beroepprocedures dan is er nog geen definitief einde en geeft het BG nu nog niets door.</p></div></article><article class="topic nested1" aria-labelledby="ariaid-title5" id="zie-ook"><h2 class="title topictitle2" id="ariaid-title5">Zie ook</h2><div class="body"><ul class="ul"><li class="li"><p class="p">Voor een volledig uitgewerkt scenario met voorbeelden van onderdelen, van opstelfase van het vernietigde besluit tot en met consolidatie naar aanleiding van de vernietiging, zie <a class="xref" href="https://koop.gitlab.io/STOP/standaard/1.3.0/go/go.html?id=git%3Avoorbeelden/Besluiten%20en%20regelingen/03%20Proces%20rondom%20besluit/05%20Scenarios%20mbt%20gerechtelijke%20macht/02%20Vernietiging/index.md" target="_blank">Uitleg voorbeelden scenario vernietiging</a>.</p></li><li class="li"><p class="p">Als een beroepsorgaan uitspraak doet en een besluit (gedeeltelijk) vernietigd waarvan de regeling inmiddels is gewijzigd door andere besluiten, is er sprake van samenloop. Dat wil zeggen: de vernietiging maakt de geconsolideerde regelingversie die voortvloeide uit het vernietigde besluit (gedeeltelijk) incorrect, alsmede de geconsolideerde regelingversies van  opeenvolgende besluiten die op het vernietigde besluit waren gebaseerd. Zie <a class="xref" href="proces_samenloop.html">oplossen samenloop</a> over hoe het BG ervoor kan zorgen dat vernietiging van het besluit is verwerkt in de huidige geconsolideerde regeling.</p></li></ul></div></article></article></main></body></html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="rectificatie-van-een-besluit"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Rectificatie van een besluit</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="rectificatie-van-een-besluit"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a><ul><li><a href="stop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="leeswijzers.html">Leeswijzers</a><ul><li><a href="toepassing.html">Basis van STOP</a><ul><li><a href="juridische-context.html">Juridische context STOP</a></li><li><a href="proces_overzicht.html">Hoofdlijnen van het STOP-proces</a><ul><li><a href="proces_overzicht_compleet.html">Geïntegreerd proces van bekendmaken en consolideren</a><ul><li><a href="proces_besluit_en_regeling.html">Besluit en regeling</a></li><li><a href="proces_consolidatie.html">Consolidatie van besluiten</a></li><li><a href="doel.html">Doel</a></li><li><a href="proces_tekstmodellen.html">Tekstmodellen voor (artikelgewijze) regelingen en besluiten</a></li><li><a href="proces_besluit.html">Opnemen van regelgeving in een besluit</a></li><li><a href="proces_iwt.html">Inwerkingtredingsbepaling</a></li><li><a href="proces_overgangsrecht.html">Overgangsrecht</a></li><li><a href="proces_samenloop.html">Oplossen van samenloop</a></li><li class="active"><a href="besluitproces_rectificatie.html">Rectificatie van een besluit</a><ul><li><a href="besluitproces_rectificatie_beschrijving.html">Inleiding op rectificaties</a></li><li><a href="besluitproces_rectificatie_model.html">STOP-modellering van een rectificatie</a></li><li><a href="besluitproces_rectificatie_renvooi.html">Correcties in renvooi</a></li><li><a href="besluitproces_rectificatie_annotaties.html">Annotaties in rectificaties</a></li><li><a href="besluitproces_rectificatie_scenarios.html">Rectificatiescenario's</a></li><li><a href="besluitproces_rectificatie_XML_voorbeelden.html">Rectificatie XML-voorbeelden</a></li></ul></li><li><a href="besluitproces_rechterlijkemacht.html">Beroep</a></li></ul></li></ul></li></ul></li><li><a href="architectuur.html">Architectuur en ontwerpkeuzes</a></li><li><a href="gebruik.html">Software-ontwikkeling met STOP</a></li><li><a href="voortbouwen_op_STOP.html">Voortbouwen op STOP</a></li></ul></li><li><a href="EA_4D1D7FD517FE4d8dA9A2B905D202C92B.html">Informatiemodel</a></li><li><a href="businessrules.html">Bedrijfsregels</a></li></ul></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1">Rectificatie van een besluit</h1><div class="body"><dl class="dl"><dt class="dt dlterm"><a class="xref" href="besluitproces_rectificatie_beschrijving.html">Beschrijving</a></dt><dd class="dd"><p class="p">Beschrijft wat een rectificatie is, wanneer het gebruikt moet worden, en wat het effect van een rectificatie is.</p></dd><dt class="dt dlterm"><a class="xref" href="besluitproces_rectificatie_model.html">STOP-modellering van een rectificatie</a></dt><dd class="dd"><p class="p">Overzicht van de elementen van een rectificatie zoals gemodelleerd in STOP, en verwijzingen naar de technische documentatie.</p></dd><dt class="dt dlterm"><a class="xref" href="besluitproces_rectificatie_renvooi.html">Renvooiweergave voor rectificaties</a></dt><dd class="dd"><p class="p">STOP gebruikt het tekstmutatiemechanisme om correcties in de tekst van een besluit weer te geven. Het maken van deze renvooiweergave is in grote lijnen hetzelfde als voor het opstellen van een "standaard" wijzigingsbesluit. De verschillen worden op deze pagina toegelicht.</p></dd><dt class="dt dlterm"><a class="xref" href="besluitproces_rectificatie_annotaties.html">Annotaties/service-informatie bij rectificaties</a></dt><dd class="dd"><p class="p">De rectificatie kan correcties in tekst of informatieobjecten beschrijven die ook doorgevoerd moeten worden in de annotaties/service-informatie bij het besluit of regelingen.</p></dd><dt class="dt dlterm"><a class="xref" href="besluitproces_rectificatie_scenarios.html">Rectificatiescenarios</a></dt><dd class="dd"><p class="p">Richtlijnen voor het opstellen van een rectificatie, onderverdeeld naar de verschillende aspecten van een besluit die gecorrigeerd kunnen worden.</p></dd><dt class="dt dlterm"><a class="xref" href="besluitproces_rectificatie_XML_voorbeelden.html">Voorbeelden</a></dt><dd class="dd"><p class="p">Voorbeelden van rectificaties die in IMOP-XML gecodeerd zijn.</p></dd></dl></div></article></main></body></html>

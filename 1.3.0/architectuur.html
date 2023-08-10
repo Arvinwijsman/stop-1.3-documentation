@@ -1,0 +1,46 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="architectuur-en-ontwerpkeuzes"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Architectuur en ontwerpkeuzes</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="architectuur-en-ontwerpkeuzes"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a><ul><li><a href="stop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="leeswijzers.html">Leeswijzers</a><ul><li><a href="toepassing.html">Basis van STOP</a></li><li class="active"><a href="architectuur.html">Architectuur en ontwerpkeuzes</a><ul><li><a href="tijdreizen.html">Tijdreizen</a></li><li><a href="regeltekst.html">Tekststructuur en -inhoud</a></li><li><a href="functioneelpresenteren.html">Functioneel presenteren</a></li></ul></li><li><a href="gebruik.html">Software-ontwikkeling met STOP</a></li><li><a href="voortbouwen_op_STOP.html">Voortbouwen op STOP</a></li></ul></li><li><a href="EA_4D1D7FD517FE4d8dA9A2B905D202C92B.html">Informatiemodel</a></li><li><a href="businessrules.html">Bedrijfsregels</a></li></ul></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1">Architectuur en ontwerpkeuzes</h1><div class="body"><p class="p">Deze leeswijzers beschrijven de structuur van de STOP-standaard, en geven een beeld van de eisen en uitgangspunten die zijn gehanteerd tijdens het ontwerp.
+Doelgroep van deze leeswijzers zijn architecten en ontwerpers van informatiemodellen.</p><dl class="dl"><dt class="dt dlterm"><a class="xref" href="modulaire_structuur.html">Modulaire structuur</a></dt><dd class="dd"><p class="p">Beschrijft hoe de informatie die met de STOP-standaard uitgewisseld kan worden is ingedeeld in modules, en dat die modules voor het daadwerkelijk uitwisselen van informatie in API's verwerkt moeten worden.</p></dd><dt class="dt dlterm"><a class="xref" href="tijdreizen.html">Tijdreizen</a></dt><dd class="dd"><p class="p">Beschrijft het tijdreizen in juridische content. Voor juridische informatie is het niet alleen van belang wat de geldige regelingen op dit moment zijn, maar ook wat de geldige regeling op een bepaald moment in het verleden waren. De tijdstempels in het STOP informatiemodel hebben hun oorsprong in deze manier van tijdreizen.</p></dd><dt class="dt dlterm"><a class="xref" href="regeltekst.html">Tekststructuur en -inhoud</a></dt><dd class="dd"><p class="p">Beschrijft de verschillende modellen om dezelfde (juridische) tekst te beschrijven.</p></dd><dt class="dt dlterm"><a class="xref" href="functioneelpresenteren.html">Functioneel presenteren</a></dt><dd class="dd"><p class="p">Beschrijft het principe van functioneel verbeelden: alleen als het een functie heeft om de presentatie voor te schrijven is het onderdeel van de standaard.</p></dd></dl></div></article></main></body></html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="waardelijsten"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Waardelijsten</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="waardelijsten"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a><ul><li><a href="imop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="imop_xml.html">XML-serialisatie</a></li><li><a href="uitwisselpakket.html">Uitwisselpakket</a></li><li><a href="schemata_gebruik.html">Gebruik van IMOP</a></li><li><a href="schema_documentatie.html">Schemadocumentatie</a></li><li><a href="imop_bedrijfsregels.html">Bedrijfsregels</a></li><li class="active"><a href="imop_waardelijsten.html">Waardelijsten</a></li></ul></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1">Waardelijsten</h1><div class="body"><p class="p">IMOP schrijft voor diverse XML-elementen het gebruik van voorgedefinieerde waardes voor. Deze zijn vooralsnog te vinden op <a class="xref" href="https://koop.gitlab.io/STOP/standaard/1.3.0/go/go.html?id=git%3Awaardelijsten" target="_blank">Gitlab</a>.</p><p class="p">Doelstelling is om zo min mogelijk of eigenlijk geen eigen waardelijsten te gebruiken, maar te verwijzen naar een linked-data-catalogus. De waardelijsten waar STOP gebruik van maakt zijn afkomstig uit de linked-data-catalogus <strong class="ph b">Thesaurus en Ontologie Open overheidsInformatie</strong> (TOOI). Het voornemen is om in release B van het LVBB bronhouderkoppelvlak volledig over te gaan naar het gebruik van de TOOI catalogus in plaats van de waardelijsten die met STOP worden meegeleverd. De STOP waardelijsten zullen dan verdwijnen.</p><p class="p">Vooruitlopend daarop zijn bij de waardelijsten in STOP verwijzingen (<code class="ph codeph">vindplaats</code>) opgenomen naar de corresponderende TOOI waardelijsten. Generieke waardelijsten binnen STOP (zoals <a class="xref" href="https://koop.gitlab.io/STOP/standaard/1.3.0/go/go.html?id=git%3Awaardelijsten/gemeente.xml" target="_blank">gemeente.xml</a> of <a class="xref" href="https://koop.gitlab.io/STOP/standaard/1.3.0/go/go.html?id=git%3Awaardelijsten/onderwerp.xml" target="_blank">onderwerp.xml</a>) bevatten identifiers die gecodeerd zijn conform de TOOI methodiek. Waardelijsten die specifiek voor STOP zijn, te herkennen aan identifiers die beginnen met <code class="ph codeph">/join/id/stop/</code>, zijn nu ook zoveel mogelijk voorzien van een <code class="ph codeph">vindplaats</code> die verwijst naar de TOOI tegenhanger. De <code class="ph codeph">vindplaats</code> is de waarde die gebruikt moet worden als het bronhouderkoppelvlak overschakelt op TOOI identifiers.</p><p class="p"><strong class="ph b">LET OP:</strong> Aan de gebruikte identifiers in de waardelijsten kan dus <em class="ph i">geen</em> betekenis toegekend worden. Dat wil zeggen: het is niet de bedoeling om in plaats van de relatie tussen STOP identificatie en de TOOI vindplaats te "ontdekken" hoe de relatie in elkaar zit en softwarematig de een naar de ander te vertalen. Deze vertaling zal voor een aantal identifiers afwijkend zijn; een deel van de identifiers zal in de toekomst wijzigen door de overgang naar TOOI. De STOP waardelijsten moeten gelezen worden als een relatietabel.</p></div></article></main></body></html>

@@ -1,0 +1,370 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="nl-nl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="agInlineTekstAfbeelding"><meta name="DC.language" content="nl-nl"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Attribuutgroep: tekst:agInlineTekstAfbeelding</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="agInlineTekstAfbeelding"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a><ul><li><a href="imop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="imop_xml.html">XML-serialisatie</a></li><li><a href="uitwisselpakket.html">Uitwisselpakket</a></li><li><a href="schemata_gebruik.html">Gebruik van IMOP</a></li><li><a href="schema_documentatie.html">Schemadocumentatie</a><ul><li><a href="schema_documentatie_legenda.html">Legenda van de schemadocumentatie</a></li><li><a href="imop_modules.html">STOP-modules in IMOP</a></li><li><a href="tekst_xsd_Main_schema_tekst_xsd.html">Schema imop-tekst.xsd</a><ul><li><a href="tekst_xsd_Element_tekst_Aanhef.html">Aanhef</a></li><li><a href="tekst_xsd_Element_tekst_abbr.html">abbr</a></li><li><a href="tekst_xsd_Element_tekst_Afdeling.html">Afdeling</a></li><li><a href="tekst_xsd_Element_tekst_Afkondiging.html">Afkondiging</a></li><li><a href="tekst_xsd_Attribute_Group_tekst_agAKN.html">agAKN</a></li><li><a href="tekst_xsd_Attribute_Group_tekst_agAlgemeen.html">agAlgemeen</a></li><li><a href="tekst_xsd_Attribute_Group_tekst_agCitaat.html">agCitaat</a></li><li><a href="tekst_xsd_Attribute_Group_tekst_agColspec.html">agColspec</a></li><li><a href="tekst_xsd_Attribute_Group_tekst_agComponentMutatie.html">agComponentMutatie</a></li><li><a href="tekst_xsd_Attribute_Group_tekst_agComponentNieuweRegeling.html">agComponentNieuweRegeling</a></li><li><a href="tekst_xsd_Attribute_Group_tekst_agContactgegevens.html">agContactgegevens</a></li><li><a href="tekst_xsd_Attribute_Group_tekst_agDoelReferentie.html">agDoelReferentie</a></li><li><a href="tekst_xsd_Attribute_Group_tekst_agExtrefRefSoort.html">agExtrefRefSoort</a></li><li><a href="tekst_xsd_Attribute_Group_tekst_agIllustratie.html">agIllustratie</a></li><li class="active"><a href="tekst_xsd_Attribute_Group_tekst_agInlineTekstAfbeelding.html">agInlineTekstAfbeelding</a></li><li><a href="tekst_xsd_Attribute_Group_tekst_agSchemaVersie.html">agSchemaVersie</a></li><li><a href="tekst_xsd_Attribute_Group_tekst_agTable.html">agTable</a></li><li><a href="tekst_xsd_Attribute_Group_tekst_agTableBody.html">agTableBody</a></li><li><a href="tekst_xsd_Attribute_Group_tekst_agTableEntry.html">agTableEntry</a></li><li><a href="tekst_xsd_Attribute_Group_tekst_agTableGroup.html">agTableGroup</a></li><li><a href="tekst_xsd_Attribute_Group_tekst_agTableHead.html">agTableHead</a></li><li><a href="tekst_xsd_Attribute_Group_tekst_agTableRow.html">agTableRow</a></li><li><a href="tekst_xsd_Attribute_Group_tekst_agVerplaatsing.html">agVerplaatsing</a></li><li><a href="tekst_xsd_Attribute_Group_tekst_agVervang.html">agVervang</a></li><li><a href="tekst_xsd_Attribute_Group_tekst_agVervangKop.html">agVervangKop</a></li><li><a href="tekst_xsd_Attribute_Group_tekst_agWat.html">agWat</a></li><li><a href="tekst_xsd_Attribute_Group_tekst_agWijzigactie.html">agWijzigactie</a></li><li><a href="tekst_xsd_Attribute_Group_tekst_agWijzigLocatie.html">agWijzigLocatie</a></li><li><a href="tekst_xsd_Element_tekst_Al.html">Al</a></li><li><a href="tekst_xsd_Element_tekst_AlgemeneToelichting.html">AlgemeneToelichting</a></li><li><a href="tekst_xsd_Element_tekst_Artikel.html">Artikel</a></li><li><a href="tekst_xsd_Element_tekst_ArtikelgewijzeToelichting.html">ArtikelgewijzeToelichting</a></li><li><a href="tekst_xsd_Element_tekst_b.html">b</a></li><li><a href="tekst_xsd_Element_tekst_Begrip.html">Begrip</a></li><li><a href="tekst_xsd_Element_tekst_Begrippenlijst.html">Begrippenlijst</a></li><li><a href="tekst_xsd_Element_tekst_BesluitCompact.html">BesluitCompact</a></li><li><a href="tekst_xsd_Element_tekst_BesluitKlassiek.html">BesluitKlassiek</a></li><li><a href="tekst_xsd_Element_tekst_BesluitMutatie.html">BesluitMutatie</a></li><li><a href="tekst_xsd_Element_tekst_Bijlage.html">Bijlage</a></li><li><a href="tekst_xsd_Element_tekst_Bijschrift.html">Bijschrift</a></li><li><a href="tekst_xsd_Element_tekst_Bladaanduiding.html">Bladaanduiding</a></li><li><a href="tekst_xsd_Element_tekst_BladGR.html">BladGR</a></li><li><a href="tekst_xsd_Element_tekst_Boek.html">Boek</a></li><li><a href="tekst_xsd_Element_tekst_br.html">br</a></li><li><a href="tekst_xsd_Element_tekst_Bron.html">Bron</a></li><li><a href="tekst_xsd_Element_tekst_Citaat.html">Citaat</a></li><li><a href="tekst_xsd_Element_tekst_colspec.html">colspec</a></li><li><a href="tekst_xsd_Element_tekst_Conditie.html">Conditie</a></li><li><a href="tekst_xsd_Element_tekst_Considerans.html">Considerans</a></li><li><a href="tekst_xsd_Element_tekst_Contact.html">Contact</a></li><li><a href="tekst_xsd_Element_tekst_Dagtekening.html">Dagtekening</a></li><li><a href="tekst_xsd_Element_tekst_Deel.html">Deel</a></li><li><a href="tekst_xsd_Element_tekst_Definitie.html">Definitie</a></li><li><a href="tekst_xsd_Element_tekst_Divisie.html">Divisie</a></li><li><a href="tekst_xsd_Element_tekst_Divisietekst.html">Divisietekst</a></li><li><a href="tekst_xsd_Simple_Type_tekst_dtColWidth.html">dtColWidth</a></li><li><a href="tekst_xsd_Simple_Type_tekst_dtComponentnaam.html">dtComponentnaam</a></li><li><a href="tekst_xsd_Simple_Type_tekst_dtNootNummerLengte.html">dtNootNummerLengte</a></li><li><a href="tekst_xsd_Simple_Type_tekst_dtNulOfEen.html">dtNulOfEen</a></li><li><a href="tekst_xsd_Simple_Type_tekst_dtSchemaVersie.html">dtSchemaVersie</a></li><li><a href="tekst_xsd_Simple_Type_tekst_dtScope.html">dtScope</a></li><li><a href="tekst_xsd_Element_tekst_entry.html">entry</a></li><li><a href="tekst_xsd_Element_tekst_ExtIoRef.html">ExtIoRef</a></li><li><a href="tekst_xsd_Element_tekst_ExtRef.html">ExtRef</a></li><li><a href="tekst_xsd_Element_tekst_Figuur.html">Figuur</a></li><li><a href="tekst_xsd_Element_tekst_Formule.html">Formule</a></li><li><a href="tekst_xsd_Element_tekst_Gemeenteblad.html">Gemeenteblad</a></li><li><a href="tekst_xsd_Element_tekst_Gereserveerd.html">Gereserveerd</a></li><li><a href="tekst_xsd_Element_tekst_Groep.html">Groep</a></li><li><a href="tekst_xsd_Element_tekst_Hoofdstuk.html">Hoofdstuk</a></li><li><a href="tekst_xsd_Element_tekst_i.html">i</a></li><li><a href="tekst_xsd_Element_tekst_Illustratie.html">Illustratie</a></li><li><a href="tekst_xsd_Element_tekst_Inhoud.html">Inhoud</a></li><li><a href="tekst_xsd_Element_tekst_Inhoudsopgave.html">Inhoudsopgave</a></li><li><a href="tekst_xsd_Element_tekst_InleidendeTekst.html">InleidendeTekst</a></li><li><a href="tekst_xsd_Element_tekst_InlineTekstAfbeelding.html">InlineTekstAfbeelding</a></li><li><a href="tekst_xsd_Element_tekst_Instructie.html">Instructie</a></li><li><a href="tekst_xsd_Element_tekst_IntIoRef.html">IntIoRef</a></li><li><a href="tekst_xsd_Element_tekst_IntRef.html">IntRef</a></li><li><a href="tekst_xsd_Element_tekst_Kadertekst.html">Kadertekst</a></li><li><a href="tekst_xsd_Element_tekst_Kennisgeving.html">Kennisgeving</a></li><li><a href="tekst_xsd_Element_tekst_Kop.html">Kop</a></li><li><a href="tekst_xsd_Element_tekst_Label.html">Label</a></li><li><a href="tekst_xsd_Element_tekst_Li.html">Li</a></li><li><a href="tekst_xsd_Element_tekst_Lichaam.html">Lichaam</a></li><li><a href="tekst_xsd_Element_tekst_Lid.html">Lid</a></li><li><a href="tekst_xsd_Element_tekst_LidNummer.html">LidNummer</a></li><li><a href="tekst_xsd_Element_tekst_Lijst.html">Lijst</a></li><li><a href="tekst_xsd_Element_tekst_Lijstaanhef.html">Lijstaanhef</a></li><li><a href="tekst_xsd_Element_tekst_Lijstsluiting.html">Lijstsluiting</a></li><li><a href="tekst_xsd_Element_tekst_LiNummer.html">LiNummer</a></li><li><a href="tekst_xsd_Element_tekst_Motivering.html">Motivering</a></li><li><a href="tekst_xsd_Element_tekst_NieuweTekst.html">NieuweTekst</a></li><li><a href="tekst_xsd_Element_tekst_Noot.html">Noot</a></li><li><a href="tekst_xsd_Element_tekst_NootNummer.html">NootNummer</a></li><li><a href="tekst_xsd_Element_tekst_Nootref.html">Nootref</a></li><li><a href="tekst_xsd_Element_tekst_Nummer.html">Nummer</a></li><li><a href="tekst_xsd_Element_tekst_OfficielePublicatie.html">OfficielePublicatie</a></li><li><a href="tekst_xsd_Element_tekst_Ondertekening.html">Ondertekening</a></li><li><a href="tekst_xsd_Element_tekst_OpmerkingVersie.html">OpmerkingVersie</a></li><li><a href="tekst_xsd_Element_tekst_Opschrift.html">Opschrift</a></li><li><a href="tekst_xsd_Element_tekst_Paragraaf.html">Paragraaf</a></li><li><a href="tekst_xsd_Element_tekst_Provinciaalblad.html">Provinciaalblad</a></li><li><a href="tekst_xsd_Element_tekst_Rectificatie.html">Rectificatie</a></li><li><a href="tekst_xsd_Element_tekst_Rectificatietekst.html">Rectificatietekst</a></li><li><a href="tekst_xsd_Element_tekst_Redactioneel.html">Redactioneel</a></li><li><a href="tekst_xsd_Element_tekst_RegelingCompact.html">RegelingCompact</a></li><li><a href="tekst_xsd_Element_tekst_RegelingKlassiek.html">RegelingKlassiek</a></li><li><a href="tekst_xsd_Element_tekst_RegelingMutatie.html">RegelingMutatie</a></li><li><a href="tekst_xsd_Element_tekst_RegelingOpschrift.html">RegelingOpschrift</a></li><li><a href="tekst_xsd_Element_tekst_RegelingTijdelijkdeel.html">RegelingTijdelijkdeel</a></li><li><a href="tekst_xsd_Element_tekst_RegelingVrijetekst.html">RegelingVrijetekst</a></li><li><a href="tekst_xsd_Element_tekst_row.html">row</a></li><li><a href="tekst_xsd_Element_tekst_Slotformulering.html">Slotformulering</a></li><li><a href="tekst_xsd_Element_tekst_Sluiting.html">Sluiting</a></li><li><a href="tekst_xsd_Element_tekst_Staatsblad.html">Staatsblad</a></li><li><a href="tekst_xsd_Element_tekst_Staatscourant.html">Staatscourant</a></li><li><a href="tekst_xsd_Element_tekst_strong.html">strong</a></li><li><a href="tekst_xsd_Element_tekst_sub.html">sub</a></li><li><a href="tekst_xsd_Element_tekst_Subparagraaf.html">Subparagraaf</a></li><li><a href="tekst_xsd_Element_tekst_Subsubparagraaf.html">Subsubparagraaf</a></li><li><a href="tekst_xsd_Element_tekst_Subtitel.html">Subtitel</a></li><li><a href="tekst_xsd_Element_tekst_sup.html">sup</a></li><li><a href="tekst_xsd_Element_tekst_table.html">table</a></li><li><a href="tekst_xsd_Element_tekst_tbody.html">tbody</a></li><li><a href="tekst_xsd_Element_tekst_Tekstrevisie.html">Tekstrevisie</a></li><li><a href="tekst_xsd_Element_tekst_Term.html">Term</a></li><li><a href="tekst_xsd_Element_tekst_tgroup.html">tgroup</a></li><li><a href="tekst_xsd_Element_tekst_thead.html">thead</a></li><li><a href="tekst_xsd_Element_tekst_Titel.html">Titel</a></li><li><a href="tekst_xsd_Element_tekst_Titelregel.html">Titelregel</a></li><li><a href="tekst_xsd_Element_tekst_title.html">title</a></li><li><a href="tekst_xsd_Element_tekst_Toelichting.html">Toelichting</a></li><li><a href="tekst_xsd_Element_tekst_Tussenkop.html">Tussenkop</a></li><li><a href="tekst_xsd_Element_tekst_u.html">u</a></li><li><a href="tekst_xsd_Element_tekst_Vervallen.html">Vervallen</a></li><li><a href="tekst_xsd_Element_tekst_Vervang.html">Vervang</a></li><li><a href="tekst_xsd_Element_tekst_VervangKop.html">VervangKop</a></li><li><a href="tekst_xsd_Element_tekst_VervangRegeling.html">VervangRegeling</a></li><li><a href="tekst_xsd_Element_tekst_Verwijder.html">Verwijder</a></li><li><a href="tekst_xsd_Element_tekst_VerwijderdeTekst.html">VerwijderdeTekst</a></li><li><a href="tekst_xsd_Element_tekst_VoegToe.html">VoegToe</a></li><li><a href="tekst_xsd_Element_tekst_Wat.html">Wat</a></li><li><a href="tekst_xsd_Element_tekst_Waterschapsblad.html">Waterschapsblad</a></li><li><a href="tekst_xsd_Element_tekst_WijzigArtikel.html">WijzigArtikel</a></li><li><a href="tekst_xsd_Element_tekst_WijzigBijlage.html">WijzigBijlage</a></li><li><a href="tekst_xsd_Element_tekst_WijzigInstructies.html">WijzigInstructies</a></li><li><a href="tekst_xsd_Element_tekst_WijzigLid.html">WijzigLid</a></li><li><a href="tekst_xsd_Simple_Type_tekst_wlFormaatIllustratie.html">wlFormaatIllustratie</a></li><li><a href="tekst_xsd_Simple_Type_tekst_wlKleurIllustratie.html">wlKleurIllustratie</a></li><li><a href="tekst_xsd_Simple_Type_tekst_wlPositieBijschrift.html">wlPositieBijschrift</a></li><li><a href="tekst_xsd_Simple_Type_tekst_wlPositieWijziging.html">wlPositieWijziging</a></li><li><a href="tekst_xsd_Simple_Type_tekst_wlRevisie.html">wlRevisie</a></li><li><a href="tekst_xsd_Simple_Type_tekst_wlSoortContact.html">wlSoortContact</a></li><li><a href="tekst_xsd_Simple_Type_tekst_wlSoortExtrefNotatie.html">wlSoortExtrefNotatie</a></li><li><a href="tekst_xsd_Simple_Type_tekst_wlTableAlignHorizontal.html">wlTableAlignHorizontal</a></li><li><a href="tekst_xsd_Simple_Type_tekst_wlTableAlignVertical.html">wlTableAlignVertical</a></li><li><a href="tekst_xsd_Simple_Type_tekst_wlTableFrame.html">wlTableFrame</a></li><li><a href="tekst_xsd_Simple_Type_tekst_wlTableOrientatie.html">wlTableOrientatie</a></li><li><a href="tekst_xsd_Simple_Type_tekst_wlTypeIntIoRef.html">wlTypeIntIoRef</a></li><li><a href="tekst_xsd_Simple_Type_tekst_wlTypeLijst.html">wlTypeLijst</a></li><li><a href="tekst_xsd_Simple_Type_tekst_wlTypeNoot.html">wlTypeNoot</a></li><li><a href="tekst_xsd_Simple_Type_tekst_wlUitlijningIllustratie.html">wlUitlijningIllustratie</a></li><li><a href="tekst_xsd_Simple_Type_tekst_wlWijzigactieBeperkt.html">wlWijzigactieBeperkt</a></li><li><a href="tekst_xsd_Simple_Type_tekst_wlWijzigactieElementen.html">wlWijzigactieElementen</a></li></ul></li><li><a href="gio_xsd_Main_schema_gio_xsd.html">Schema imop-gio.xsd</a></li><li><a href="geo_xsd_Main_schema_geo_xsd.html">Schema imop-geo.xsd</a></li><li><a href="se_xsd_Main_schema_se_xsd.html">Schema se-FeatureStyle-imop.xsd</a></li><li><a href="ogc_xsd_Main_schema_ogc_xsd.html">Schema se-filter-imop.xsd</a></li><li><a href="data_xsd_Main_schema_data_xsd.html">Schema imop-data.xsd</a></li><li><a href="cons_xsd_Main_schema_cons_xsd.html">Schema imop-consolidatie.xsd</a></li><li><a href="rsc_xsd_Main_schema_rsc_xsd.html">Schema imop-resources.xsd</a></li><li><a href="br_xsd_Main_schema_br_xsd.html">Schema imop-bedrijfsregels.xsd</a></li><li><a href="sv_xsd_Main_schema_sv_xsd.html">Schema imop-schemata.xsd</a></li><li><a href="uws_xsd_Main_schema_uws_xsd.html">Schema imop-uitwisseling.xsd</a></li></ul></li><li><a href="imop_bedrijfsregels.html">Bedrijfsregels</a></li><li><a href="imop_waardelijsten.html">Waardelijsten</a></li></ul></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+   <h1 class="title topictitle1" id="ariaid-title1">Attribuutgroep: tekst:agInlineTekstAfbeelding</h1>
+   <div class="body">
+      <table class="table frame-all"><caption></caption><colgroup><col style="width:10.714285714285714%"><col style="width:89.28571428571429%"></colgroup><tbody class="tbody">
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Namespace</td>
+                  <td class="entry align-left colsep-1 rowsep-1">https://standaarden.overheid.nl/stop/imop/tekst/</td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Definitie</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="div">
+      <p class="p">De attribuutgroep <code class="ph codeph">agInlineTekstAfbeelding</code> bevat attributen ter ondersteuning van het element 
+      <code class="keyword markupname xmlelement">&lt;tekst:InlineTekstAfbeelding&gt;</code>. Het beschrijft eigenschappen van de InlineTekstAfbeelding en
+      instructies voor de verbeelding ervan.</p>
+   </div>
+   </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Informatie</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="div">
+    <p class="p">Deze attributen worden ook gebruikt door <a class="xref link_xsd" href="tekst_xsd_Attribute_Group_tekst_agIllustratie.html#agIllustratie">attribuutgroep tekst:agIllustratie</a> en zijn
+      daarmee ook van toepassing op <a class="xref link_xsd" href="tekst_xsd_Element_tekst_Illustratie.html#Illustratie">tekst:Illustratie</a>.</p>
+  </div>
+  <div class="div">
+    <p class="p"><strong class="ph b">Definities</strong> zoals gebruikt in de tekst hieronder</p>
+    <dl class="dl">
+      
+        <dt class="dt dlterm">afbeeldingsbestand</dt>
+        <dd class="dd">het fysieke bestand waarin de afbeelding is geserialiseerd</dd>
+      
+      
+        <dt class="dt dlterm">tekst:Illustratie</dt>
+        <dd class="dd">de codering in STOP-XML van de aanroep van een het afbeeldingsbestand, met bijbehorende
+          attributen. Hiervoor kan ook <a class="xref link_xsd" href="tekst_xsd_Element_tekst_InlineTekstAfbeelding.html#InlineTekstAfbeelding">tekst:InlineTekstAfbeelding</a> worden
+          gelezen.</dd>
+      
+      
+        <dt class="dt dlterm">afbeelding</dt>
+        <dd class="dd">de weergave van het afbeeldingsbestand in de output in een van de publicatieformaten
+          (PDF, HTML, ...)</dd>
+      
+    </dl>
+  </div>
+  <div class="div">
+    <div class="p"><strong class="ph b">Attributen</strong><ul class="ul">
+        <li class="li"><code class="keyword markupname xmlatt">@alt</code> - optioneel in XSD, maar sterk aangeraden - <em class="ph i">Type:</em>
+          <code class="ph codeph">xs:string</code> - Alternatieve tekstuele representatie te gebruiken wanneer een
+          toepassing een illustratie niet kan tonen. Vergelijkbaar met HTML <code class="keyword markupname xmlatt">@alt</code>. De
+            <a class="xref" href="https://www.digitoegankelijk.nl/uitleg-van-eisen/afbeeldingen" target="_blank">"Digitale toegankelijkheidseisen" voor niet-tekstuele content</a>,
+          die gebaseerd zijn op de <a class="xref" href="https://www.w3.org/TR/WCAG21/" target="_blank">Web
+            Content Accessibility Guidelines (WCAG) 2.1</a>, schrijven voor dat een afbeelding
+          zoveel als mogelijk van een "adequate beschrijving" moet worden voorzien. </li>
+
+        <li class="li"><code class="keyword markupname xmlatt">@breedte</code> - verplicht - <em class="ph i">Type:</em>
+          <code class="ph codeph">xs:positiveInteger</code> - Het aantal pixels in horizontale richting aanwezig in het
+          afbeeldingsbestand.</li>
+        <li class="li"><code class="keyword markupname xmlatt">@hoogte</code> - verplicht - <em class="ph i">Type:</em>
+          <code class="ph codeph">xs:positiveInteger</code> - Het aantal pixels in verticale richting  aanwezig in het
+          afbeeldingsbestand.</li>
+        <li class="li"><code class="keyword markupname xmlatt">@dpi</code> - verplicht - <em class="ph i">Type:</em>
+          <code class="ph codeph">xs:positiveInteger</code> - "Dots per inch"; De eenheid te gebruiken om de
+          omvang van een de afbeelding te bepalen - Dit hoeft niet gelijk te zijn aan de DPI-waarde
+          waarvoor het plaatje gemaakt is of (indien van toepassing) de DPI waarde van het medium waarop 
+          de illustratie afgebeeld wordt. Deze eenheid wordt ook wel ppi (pixels
+          per inch) genoemd. Zie hieronder bij "<em class="ph i">Berekenen van de grootte van een afbeelding</em>"
+          hoe <code class="keyword markupname xmlatt">@breedte</code>, <code class="keyword markupname xmlatt">@hoogte</code> en <code class="keyword markupname xmlatt">@dpi</code> moeten
+          worden toegepast in het specificeren van de afbeeldingsgrootte.</li>
+
+        <li class="li"><code class="keyword markupname xmlatt">@formaat</code> - verplicht - Het MIME-type van het afbeeldingsbestand. Dit is
+          niet gelijk aan of hoeft niet te corresponderen met de gebruikte extensie van de
+          bestandsnaam, al is dat wel staande praktijk. Zie voor de waardelijst en de uitleg daarvan
+          hieronder bij "<em class="ph i">Formaat</em>".</li>
+        <li class="li"><code class="keyword markupname xmlatt">@naam</code> - verplicht - <em class="ph i">Type:</em>
+          <code class="ph codeph">xs:string</code> - De exacte bestandsnaam inclusief extensie van het
+          aangeleverde afbeeldingsbestand.</li>
+
+        <li class="li"><code class="keyword markupname xmlatt">@kleur</code> - optioneel - Boolean (0 of 1) die aangeeft of de afbeelding in
+          zwart/wit is of kleur heeft. <strong class="ph b">Dit attribuut wordt niet gebruikt in de verwerking van
+            STOP-afbeeldingen; het gebruik wordt derhalve afgeraden.</strong>. De waardes betekenen:<ul class="ul">
+            <li class="li"><strong class="ph b">waarde '<code class="ph codeph">0</code>'</strong>: de afbeelding is zwart/wit.</li>
+            <li class="li"><strong class="ph b">waarde '<code class="ph codeph">1</code>'</strong>: de afbeelding heeft kleur.</li>
+          </ul></li>
+        <li class="li"><code class="keyword markupname xmlatt">@schaal</code> - optioneel - <em class="ph i">Type:</em>
+          <code class="ph codeph">xs:string</code> - het gewenste percentage van de schaling van de originele
+          afbeelding. <strong class="ph b">Dit attribuut wordt niet gebruikt in de verwerking van STOP-afbeeldingen;
+            het gebruik wordt derhalve afgeraden.</strong>.</li>
+      </ul></div>
+  </div>
+  <div class="div">
+    <p class="p"><strong class="ph b">Berekenen van de grootte van een afbeelding</strong></p>
+    <p class="p">
+      De afbeeldingsbestanden worden geschaald afgebeeld in PDF en HTML op basis van de in
+      <code class="keyword markupname xmlelement">&lt;tekst:Illustratie&gt;</code> gecodeerde <code class="keyword markupname xmlatt">@hoogte</code>,
+      <code class="keyword markupname xmlatt">@breedte</code> en <code class="keyword markupname xmlatt">@dpi</code>. Hierbij is de hoogte-breedte-ratio constant;
+      met andere worden, er wordt alleen proportioneel geschaald. De afmetingen moeten geïnterpreteerd
+      worden ten opzichte van een A4-pagina met een zetspiegel (het deel dat door tekst in 
+      beslag genomen wordt) van 240x155mm.
+      
+    </p>
+    <br><div class="imagecenter"><img class="image imagecenter" src="img/tekst_agInlineTekstAfbeelding.png" alt="Berekenen van de grootte van een afbeelding"></div><br>
+    <p class="p">
+      Als een afbeelding op een ander medium dan PDF getoond wordt, dan moeten de relatieve groottes
+      (% van zetspiegel) gebruikt worden om de afbeelding te schalen ten opzichte van de tekst. Als de
+      afbeelding bijvoorbeeld getoond wordt op een webpagina pagina waarbij de tekst een breedte heeft van
+      600px, en de afbeelding heeft een breedte van 37% van de zetspiegel, dan moet de afbeelding op de
+      webpagina geschaald worden naar 37% van 600 = 222px.
+    </p>
+    <p class="p">
+      Een voorbeeld van een afbeeldingsgrootte voor <code class="ph codeph">dpi = 300</code>
+    </p>
+    <table class="table simpletable frame-all"><caption></caption><colgroup><col><col></colgroup><thead class="thead">
+          <tr class="row">
+            <th class="entry colsep-1 rowsep-1" id="agInlineTekstAfbeelding__entry__7">300 dpi</th>
+            <th class="entry colsep-1 rowsep-1" id="agInlineTekstAfbeelding__entry__8">px</th>
+            <th class="entry colsep-1 rowsep-1" id="agInlineTekstAfbeelding__entry__9">inch</th>
+            <th class="entry colsep-1 rowsep-1" id="agInlineTekstAfbeelding__entry__10">mm</th>
+            <th class="entry colsep-1 rowsep-1" id="agInlineTekstAfbeelding__entry__11">% van zetspiegel</th>
+          </tr>
+        </thead><tbody class="tbody">
+          <tr class="row">
+            <td class="entry colsep-1 rowsep-1" headers="agInlineTekstAfbeelding__entry__7">hoogte</td>
+            <td class="entry colsep-1 rowsep-1" headers="agInlineTekstAfbeelding__entry__8">1200</td>
+            <td class="entry colsep-1 rowsep-1" headers="agInlineTekstAfbeelding__entry__9">4</td>
+            <td class="entry colsep-1 rowsep-1" headers="agInlineTekstAfbeelding__entry__10">101,6</td>
+            <td class="entry colsep-1 rowsep-1" headers="agInlineTekstAfbeelding__entry__11">42%</td>
+          </tr>
+          <tr class="row">
+            <td class="entry colsep-1 rowsep-1" headers="agInlineTekstAfbeelding__entry__7">breedte</td>
+            <td class="entry colsep-1 rowsep-1" headers="agInlineTekstAfbeelding__entry__8">900</td>
+            <td class="entry colsep-1 rowsep-1" headers="agInlineTekstAfbeelding__entry__9">3</td>
+            <td class="entry colsep-1 rowsep-1" headers="agInlineTekstAfbeelding__entry__10">76,2</td>
+            <td class="entry colsep-1 rowsep-1" headers="agInlineTekstAfbeelding__entry__11">49%</td>
+          </tr>
+        </tbody></table>
+    <p class="p">
+      Als <code class="ph codeph">dpi = 400</code> wordt de afbeeldingsgrootte van dezelfde
+      afbeeldingsbestand:
+    </p>
+    <table class="table simpletable frame-all"><caption></caption><colgroup><col><col><col><col></colgroup><thead class="thead">
+          <tr class="row">
+            <th class="entry colsep-1 rowsep-1" id="agInlineTekstAfbeelding__entry__22">400 dpi</th>
+            <th class="entry colsep-1 rowsep-1" id="agInlineTekstAfbeelding__entry__23">px</th>
+            <th class="entry colsep-1 rowsep-1" id="agInlineTekstAfbeelding__entry__24">inch</th>
+            <th class="entry colsep-1 rowsep-1" id="agInlineTekstAfbeelding__entry__25">mm</th>
+            <th class="entry colsep-1 rowsep-1" id="agInlineTekstAfbeelding__entry__26">% van zetspiegel</th>
+          </tr>
+        </thead><tbody class="tbody">
+          <tr class="row">
+            <td class="entry colsep-1 rowsep-1" headers="agInlineTekstAfbeelding__entry__22">hoogte</td>
+            <td class="entry colsep-1 rowsep-1" headers="agInlineTekstAfbeelding__entry__23">1200</td>
+            <td class="entry colsep-1 rowsep-1" headers="agInlineTekstAfbeelding__entry__24">3</td>
+            <td class="entry colsep-1 rowsep-1" headers="agInlineTekstAfbeelding__entry__25">76,2</td>
+            <td class="entry colsep-1 rowsep-1" headers="agInlineTekstAfbeelding__entry__26">32%</td>
+          </tr>
+          <tr class="row">
+            <td class="entry colsep-1 rowsep-1" headers="agInlineTekstAfbeelding__entry__22">breedte</td>
+            <td class="entry colsep-1 rowsep-1" headers="agInlineTekstAfbeelding__entry__23">900</td>
+            <td class="entry colsep-1 rowsep-1" headers="agInlineTekstAfbeelding__entry__24">2,25</td>
+            <td class="entry colsep-1 rowsep-1" headers="agInlineTekstAfbeelding__entry__25">57,2</td>
+            <td class="entry colsep-1 rowsep-1" headers="agInlineTekstAfbeelding__entry__26">37%</td>
+          </tr>
+        </tbody></table>
+  </div>
+  <div class="div">
+    <p class="p">
+      <strong class="ph b">Voorbeeld</strong>
+    </p>
+    <pre class="pre codeblock"><code>
+      &lt;InlineTekstAfbeelding
+      naam="smiley.jpg"
+      breedte="600"
+      hoogte="500"
+      formaat="image/jpeg"
+      alt="lachend gezichtje"
+      dpi="300"/&gt;
+    </code></pre>
+  </div>
+  <div class="div">
+    <p class="p">
+      <strong class="ph b">Kwaliteitseisen aan een afbeelding</strong>
+    </p>
+    <p class="p">
+      Uitgangspunt voor de afbeelding van een <code class="keyword markupname xmlelement">&lt;tekst:Illustratie&gt;</code> is dat een
+      afbeeldingsbestand met voldoende kwaliteit aangeleverd wordt zodat deze zonder verdere
+      verwerking kan worden opgenomen in de PDF (volgens PDF/A-1a) die gemaakt wordt voor de
+      officiële bekendmaking in de Staatscourant. De regels om dit te bereiken zijn
+    </p>
+    <ol class="ol">
+      <li class="li">
+        Het attribuut <code class="keyword markupname xmlatt">@hoogte</code> van <code class="keyword markupname xmlelement">&lt;tekst:Illustratie&gt;</code> MOET
+        gelijk zijn aan het aantal verticale pixels in het afbeeldingsbestand.
+      </li>
+      <li class="li">
+        Het attribuut <code class="keyword markupname xmlatt">@breedte</code> van <code class="keyword markupname xmlelement">&lt;tekst:Illustratie&gt;</code> MOET
+        gelijk zijn aan het aantal horizontale pixels in het afbeeldingsbestand.
+      </li>
+      <li class="li">
+        De afbeelding moet een resolutie hebben van 300 ppi of hoger: Het <code class="keyword markupname xmlatt">@dpi</code> van
+        <code class="keyword markupname xmlelement">&lt;tekst:Illustratie&gt;</code> MOET dus groter of gelijk aan 300 zijn.
+      </li>
+      <li class="li">De maximale hoogte van een afbeelding is 240mm.</li>
+      <li class="li">De maximale breedte van een afbeelding is 155mm.</li>
+      <li class="li">Een afbeeldingsbestand bevat geen transparantie.</li>
+    </ol>
+    <p class="p">
+      Een afbeeldingsbestand dat aan deze eisen voldoen kan ook automatisch worden verwerkt in
+      HTML-verschijningsvormen.
+    </p>
+  </div>
+  <div class="div">
+    <p class="p">
+      <strong class="ph b">Formaat</strong>
+    </p>
+    <p class="p">In STOP versie 1.3.0 worden alleen binaire (bitmap-)formaten geaccepteerd</p>
+    <ol class="ol">
+      <li class="li">
+        <code class="ph codeph">image/jpeg</code>: standaard bestandsnaam-extensie .jpg of .jpeg
+      </li>
+      <li class="li">
+        <code class="ph codeph">image/png</code>: standaard bestandsnaam-extensie .png
+      </li>
+    </ol>
+    <p class="p">Andere formaten worden niet ondersteund:</p>
+    <ol class="ol">
+      <li class="li">PDF/A-1, voorgeschreven door de Bekendmakingswet, sluit een aantal formaten uit. </li>
+      <li class="li">
+        <code class="ph codeph">image/gif</code> is een "proprietary" formaat.
+      </li>
+      <li class="li">
+        <code class="ph codeph">image/tiff</code> zorgt voor groter bestandsformaten die makkelijk verkleind
+        kunnen worden door aan te leveren als image/jpg (met loss) of image/png (lossless).
+      </li>
+    </ol>
+  </div>
+</td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Informatiemodel</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Diagram</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <p class="p"></p>
+                  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Gebruikt door</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="p">
+                        <table class="table frame-all"><caption></caption><colgroup><col style="width:20%"><col style="width:80%"></colgroup><tbody class="tbody">
+                                 <tr class="row">
+                                    <td class="entry align-left colsep-1 rowsep-1">Element </td>
+                                    <td class="entry align-left colsep-1 rowsep-1">
+                                       <a class="xref" href="tekst_xsd_Element_tekst_InlineTekstAfbeelding.html#InlineTekstAfbeelding">Element tekst:InlineTekstAfbeelding</a>
+                                    </td>
+                                 </tr>
+                              </tbody></table>
+                     </div>
+                  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Attributen</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="p">
+                        <table class="table frame-all"><caption></caption><colgroup><col style="width:42.857142857142854%"><col style="width:42.857142857142854%"><col style="width:14.285714285714285%"></colgroup><thead class="thead">
+                                 <tr class="row">
+                                    <th class="entry align-left colsep-1 rowsep-1" id="agInlineTekstAfbeelding__entry__47">QName</th>
+                                    <th class="entry align-left colsep-1 rowsep-1" id="agInlineTekstAfbeelding__entry__48">Type</th>
+                                    <th class="entry align-left colsep-1 rowsep-1" id="agInlineTekstAfbeelding__entry__49">Use</th>
+                                 </tr>
+                              </thead><tbody class="tbody">
+                                 <tr class="row">
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agInlineTekstAfbeelding__entry__47">alt</td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agInlineTekstAfbeelding__entry__48"></td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agInlineTekstAfbeelding__entry__49">optional</td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agInlineTekstAfbeelding__entry__47">breedte</td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agInlineTekstAfbeelding__entry__48">xs:positiveInteger</td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agInlineTekstAfbeelding__entry__49">required</td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agInlineTekstAfbeelding__entry__47">dpi</td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agInlineTekstAfbeelding__entry__48">xs:positiveInteger</td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agInlineTekstAfbeelding__entry__49">required</td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agInlineTekstAfbeelding__entry__47">formaat</td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agInlineTekstAfbeelding__entry__48">
+                                       <a class="xref" href="tekst_xsd_Simple_Type_tekst_wlFormaatIllustratie.html#wlFormaatIllustratie">Simple Type tekst:wlFormaatIllustratie</a>
+                                    </td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agInlineTekstAfbeelding__entry__49">required</td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agInlineTekstAfbeelding__entry__47">hoogte</td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agInlineTekstAfbeelding__entry__48">xs:positiveInteger</td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agInlineTekstAfbeelding__entry__49">required</td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agInlineTekstAfbeelding__entry__47">kleur</td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agInlineTekstAfbeelding__entry__48">
+                                       <a class="xref" href="tekst_xsd_Simple_Type_tekst_dtNulOfEen.html#dtNulOfEen">Simple Type tekst:dtNulOfEen</a>
+                                    </td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agInlineTekstAfbeelding__entry__49">optional</td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agInlineTekstAfbeelding__entry__47">naam</td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agInlineTekstAfbeelding__entry__48"></td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agInlineTekstAfbeelding__entry__49">required</td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agInlineTekstAfbeelding__entry__47">schaal</td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agInlineTekstAfbeelding__entry__48"></td>
+                                    <td class="entry align-left colsep-1 rowsep-1" headers="agInlineTekstAfbeelding__entry__49">optional</td>
+                                 </tr>
+                              </tbody></table>
+                     </div>
+                  </td>
+               </tr>
+               </tbody></table>
+   </div>
+</article></main></body></html>

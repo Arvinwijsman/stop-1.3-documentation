@@ -1,0 +1,701 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="nl-nl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="Pkg"><meta name="DC.language" content="nl-nl"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Implementatie en versionering</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="Pkg"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a><ul><li><a href="stop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="leeswijzers.html">Leeswijzers</a></li><li><a href="EA_4D1D7FD517FE4d8dA9A2B905D202C92B.html">Informatiemodel</a><ul><li><a href="EA_9E187217A693458593B4BC483B77322B.html">Legenda van de diagrammen</a></li><li><a href="EA_068BE3F17D2D41a8AA2E39A355337401.html">Toepassingsgebied</a></li><li><a href="EA_BEA65540863F4cedAE03E4C3D0A29EAA.html">Algemeen</a><ul><li><a href="EA_188A75C61FB54d108E7659F3FE5DE8F3.html">Het FRBR model</a></li><li><a href="EA_BD0B9B5F34C548eeB092538800D54713.html">Identificatie</a></li><li><a href="EA_1A45BBE5EC4F4bb2BBD7F5E701CE0479.html">Instrument en instrumentversies</a></li><li class="active"><a href="EA_F557E4DB59344ae894555F646FE2631E.html">Implementatie en versionering</a></li><li><a href="EA_59E55D5894754481B3D9890DD60CD071.html">Tekstmodellering</a></li><li><a href="EA_61016E983B974885A6CEF61D9C34F3C3.html">Objectgericht modelleren en muteren</a></li><li><a href="EA_E15D6EFB90DE4277A46E39F7FE5EFFCC.html">Begrippen en waardelijsten</a></li></ul></li><li><a href="EA_A1BBB86A635B4bf6B2FCECD1CFE6A3C9.html">Besluiten en regelgeving</a></li><li><a href="EA_E0EFE05F9FBB45c6AB2493B9FF9037EC.html">Officiële publicaties</a></li><li><a href="EA_81311E5C8AD34b35B153B21B50080288.html">Consolidatie van regelgeving</a></li></ul></li><li><a href="businessrules.html">Bedrijfsregels</a></li></ul></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+  <h1 class="title topictitle1" id="ariaid-title1">Implementatie en versionering</h1>
+  <div class="body">
+      <div class="div">
+    <p class="p">De Standaard Officiële Publicaties bestaat uit twee delen: </p>
+    <ul class="ul">
+      <li class="li">het informatiemodel van de standaard in <a class="xref" href="https://www.iso.org/standard/32620.html" target="_blank">UML</a> en tekst; dit
+        beschrijft de informatie-klassen en hun onderlinge samenhang </li>
+      <li class="li">een Implementatiemodel Officiële Publicaties (IMOP) van STOP, dat beschrijft hoe de
+        informatie uit de standaard geserialiseerd moet worden naar uitwisselbare <a class="xref" href="https://www.w3.org/XML/" target="_blank">XML</a>.</li>
+    </ul>
+    <p class="p">Deze twee delen kennen elk verschillende versies. Op deze pagina wordt de samenhang tussen
+      standaard, implementatiemodel, serialisatie en de verschillende versies daarvan
+      beschreven.</p>
+  </div>
+<figure class="fig fignone ea_diagram" id="Pkg__C981BA86A13D463f92AD6A111A522167"><figcaption><span class="fig--title-label">Figuur 1. </span>Standaard en implementatiemodel</figcaption>
+<div class="p"><div class="fig imagemap"><img usemap="#d473956e46" class="image zoomable" src="img/EA_C981BA86A13D463f92AD6A111A522167.png"><map name="d473956e46" id="d473956e46"><area href="#Pkg__CA10A9464579411281C66AD0121C0C29" alt="Implementatiemodel Officiële Publicaties (entiteit)" title="Implementatiemodel Officiële Publicaties (entiteit)" shape="rect" coords="454,90,693,155"><area href="#Pkg__269D652D8370492f9FDBD7FDEA91B2ED" alt="Serialisatie (entiteit)" title="Serialisatie (entiteit)" shape="rect" coords="290,373,409,434"><area href="#Pkg__4BBC91C6D7FB44eaA712AD29803F690A" alt="Bedrijfsregel (entiteit)" title="Bedrijfsregel (entiteit)" shape="rect" coords="65,303,200,372"><area href="#Pkg__B1D30DE0FDDB41059CB3F5CC1ABA4B61" alt="Schematron (entiteit)" title="Schematron (entiteit)" shape="rect" coords="499,298,634,366"><area href="#Pkg__4C1C7F5900AA44259E9CEE5273C224FD" alt="Schema (entiteit)" title="Schema (entiteit)" shape="rect" coords="499,177,634,258"><area href="#Pkg__5DAB70EEE0D7444095A1F6CA89FFE96A" alt="Standaard Officiële Publicaties (entiteit)" title="Standaard Officiële Publicaties (entiteit)" shape="rect" coords="13,13,692,75"><area href="#Pkg__B4649197FA68449e913F625FA43F27DF" alt="Module (entiteit)" title="Module (entiteit)" shape="rect" coords="65,177,200,258"></map></div></div>
+</figure>
+<div class="div">
+    <p class="p">Elke versie van de Standaard Officiële Publicaties (STOP) definieert </p>
+    <ol class="ol">
+      <li class="li">alle soorten <strong class="ph b">modules</strong> en de samenhang daarvan binnen het informatiemodel; de inhoud
+        van een module is de uit te wisselen informatie </li>
+      <li class="li">de <strong class="ph b">bedrijfsregels</strong> die de samenhang tussen de modules inperkt, beperkingen stelt aan
+        toegestane waarden van informatie in de module, en andere eisen waaraan de informatie moet
+        voldoen.</li>
+    </ol>
+    <p class="p">Elke versie van de standaard wordt geïmplementeerd middels één of meer versies van het
+      <strong class="ph b">Implementatiemodel Officiële Publicaties</strong> (IMOP). Een IMOP-versie bestaat uit een set
+      hulpmiddelen die beschikbaar worden gesteld om de beschreven informatie,
+      geserialiseerd als XML, te maken, te valideren en uit te wisselen:</p>
+    <ul class="ul">
+      <li class="li"><strong class="ph b">schema's</strong> (XSD's) leggen de structuur van de modules in XML vast</li>
+      <li class="li"><strong class="ph b">schematrons</strong> implementeren bedrijfsregels waarmee gevalideerd kan worden of de
+        geserialiseerde informatie voldoet aan de bedrijfsregel. Niet alle bedrijfsregels kunnen in
+        een schematron worden vastgelegd</li>
+      <li class="li"><strong class="ph b">transformaties</strong> (XSLT's) om de serialisaties van de ene naar de andere IMOP-versie
+        over te zetten, als mogelijk </li>
+    </ul>
+    <p class="p">Voor dezelfde versie van STOP kunnen meerdere versies van IMOP uitgebracht worden. In een
+      nieuwe versie van IMOP zijn de hulpmiddelen verbeterd: schema's zijn gestroomlijnd, validaties
+      zijn aangescherpt en er zijn wellicht fouten uitgehaald. Alle versies van IMOP die bij
+      dezelfde versie van STOP horen, worden gemaakt voor hetzelfde informatiemodel en voor dezelfde
+      bedrijfsregels. </p>
+  </div>
+<figure class="fig fignone ea_diagram" id="Pkg__31F13F331EFB435597BBC48C5F40F78A"><figcaption><span class="fig--title-label">Figuur 2. </span>Versionering</figcaption>
+<div class="p"><div class="fig imagemap"><img usemap="#d473956e169" class="image zoomable" src="img/EA_31F13F331EFB435597BBC48C5F40F78A.png"><map name="d473956e169" id="d473956e169"><area href="#Pkg__C0393E31654A4dd39C06D465E66F1D45" alt="Moduleversie (entiteit)" title="Moduleversie (entiteit)" shape="rect" coords="370,362,602,429"><area href="#Pkg__CA10A9464579411281C66AD0121C0C29" alt="Implementatiemodel Officiële Publicaties (entiteit)" title="Implementatiemodel Officiële Publicaties (entiteit)" shape="rect" coords="679,120,929,185"><area href="#Pkg__4BBC91C6D7FB44eaA712AD29803F690A" alt="Bedrijfsregel (entiteit)" title="Bedrijfsregel (entiteit)" shape="rect" coords="32,410,212,479"><area href="#Pkg__1096A8FEA04C4a4c9A76349816A049F1" alt="Versionering serialisatie (entiteit)" title="Versionering serialisatie (entiteit)" shape="rect" coords="320,13,602,83"><area href="#Pkg__B1D30DE0FDDB41059CB3F5CC1ABA4B61" alt="Schematron (entiteit)" title="Schematron (entiteit)" shape="rect" coords="679,303,814,372"><area href="#Pkg__269D652D8370492f9FDBD7FDEA91B2ED" alt="Serialisatie (entiteit)" title="Serialisatie (entiteit)" shape="rect" coords="13,13,245,74"><area href="#Pkg__4C1C7F5900AA44259E9CEE5273C224FD" alt="Schema (entiteit)" title="Schema (entiteit)" shape="rect" coords="679,202,814,283"><area href="#Pkg__5DAB70EEE0D7444095A1F6CA89FFE96A" alt="Standaard Officiële Publicaties (entiteit)" title="Standaard Officiële Publicaties (entiteit)" shape="rect" coords="679,13,929,83"><area href="#Pkg__263B45B8B78F44339D5372DBA3BDEB9D" alt="Serialisatie moduleversie (entiteit)" title="Serialisatie moduleversie (entiteit)" shape="rect" coords="370,168,602,302"><area href="#Pkg__B4649197FA68449e913F625FA43F27DF" alt="Module (entiteit)" title="Module (entiteit)" shape="rect" coords="32,253,212,344"></map></div></div>
+</figure>
+<div class="div">
+    <p class="p">Opeenvolgende STOP-versies zullen de standaard in het algemeen niet volledig op zijn kop
+      zetten. Dat betekent dat zowel het informatiemodel als de bedrijfsregels voor een specifieke
+      module in opeenvolgende versies van de standaard identiek kunnen zijn. Er is dan sprake van
+      dezelfde modelversie voor de module, en dus ook van dezelfde wijze van serialiseren van de
+      module. Er is één serialisatiewijze voor één moduleversie.</p>
+    <p class="p">Elke IMOP-versie legt de beschikbare modelversies vast in een (cumulatief) overzicht: de
+      <a class="xref link_ea" href="#Pkg__1096A8FEA04C4a4c9A76349816A049F1">"versionering van de
+      serialisaties"</a>. Dit overzicht geeft alle serialisatie-versies van alle modules uit alle
+      bekende en nog ondersteunde versies van de standaard, ook de preview- of "release
+      candidate"-STOP-versies. Dit overzicht wordt zelf geserialiseerd als XML en uitgeleverd als
+      onderdeel van een IMOP-versie.</p>
+    <p class="p">Bij elke versie van (de serialisatie van) een versie van een module wordt vastgelegd in welke
+      versie van de standaard deze is geïntroduceerd. Daarnaast wordt verwezen naar de meest recente
+      versie van de hulpmiddelen die gebruikt kunnen worden om de serialisatie te maken en valideren.
+      In latere versies van het implementatiemodel kunnen een nieuw schema en/of
+      nieuwe schematrons voor een bestaande modelversie geleverd worden. Die moeten gezien worden als
+      verbeterde versies van de eerdere schema/schematrons. Een serialisatie van
+      informatie die conform het informatiemodel en de bedrijfsregels van de modelversie is
+      opgesteld zal valide zijn volgens de nieuwe schema's en schematrons. Een serialisatie van
+      informatie die niet (helemaal) voldoet aan het informatiemodel en de bedrijfsregels van de
+      modelversie kan door de eerdere schema/schematrons als valide aangemerkt worden, maar door de
+      nieuwe versies als niet-valide gezien worden. </p>
+  </div>
+<figure class="fig fignone ea_diagram" id="Pkg__9F5CEB2C2D254aa5AE9F177FD29C6EA4"><figcaption><span class="fig--title-label">Figuur 3. </span>Transformaties</figcaption>
+<div class="p"><div class="fig imagemap"><img usemap="#d473956e288" class="image zoomable" src="img/EA_9F5CEB2C2D254aa5AE9F177FD29C6EA4.png"><map name="d473956e288" id="d473956e288"><area href="#Pkg__CA10A9464579411281C66AD0121C0C29" alt="Implementatiemodel Officiële Publicaties (entiteit)" title="Implementatiemodel Officiële Publicaties (entiteit)" shape="rect" coords="704,315,947,382"><area href="#Pkg__269D652D8370492f9FDBD7FDEA91B2ED" alt="Serialisatie (entiteit)" title="Serialisatie (entiteit)" shape="rect" coords="695,67,947,150"><area href="#Pkg__88006B2F26DE4a33A7E1FA3C9A86B8FE" alt="Transformatie (entiteit)" title="Transformatie (entiteit)" shape="rect" coords="456,135,627,204"><area href="#Pkg__269D652D8370492f9FDBD7FDEA91B2ED" alt="Serialisatie (entiteit)" title="Serialisatie (entiteit)" shape="rect" coords="108,67,361,150"><area href="#Pkg__D1592F117C12499eA1869EDC08FB883A" alt="Moduleversie transformatie (entiteit)" title="Moduleversie transformatie (entiteit)" shape="rect" coords="374,242,618,319"><area href="#Pkg__263B45B8B78F44339D5372DBA3BDEB9D" alt="Serialisatie moduleversie (entiteit)" title="Serialisatie moduleversie (entiteit)" shape="rect" coords="108,202,335,279"></map></div></div>
+</figure>
+<div class="div">
+    <p class="p">De moduleversie in het cumulatieve overzicht van modules bevat voor een aantal modules ook informatie om de
+      geserialiseerde inhoud van een module die is opgesteld voor de ene moduleversie
+      geautomatiseerd te transformeren naar (een serialisatie van) hetzelfde type module die voldoet
+      aan een andere moduleversie.</p>
+    <p class="p"> Een transformatie wordt alleen vermeld als het denkbaar is dat zo'n transformatie mogelijk
+      is. Als voor zo'n transformatie altijd aanvullende informatie van buiten de module nodig is,
+      of als er keuzes gemaakt moeten worden die niet te automatiseren zijn, dan zal geen
+      transformatie vermeld worden. Maar ook als er wel een transformatie denkbaar is, kan blijken
+      dat de specifieke inhoud van een module niet om te zetten is; de transformatie zal dan falen. </p>
+    <p class="p">Het kan zijn dat er wel een transformatie mogelijk is die valide is volgens de hulpmiddelen (schema's/schematrons)
+    van de andere versie, maar die misschien niet voldoet aan alle richtlijnen van de andere versie.
+    In dat geval wordt de uitkomst van de transformatie als <strong class="ph b">Naar beste kunnen</strong> gemarkeerd.
+      Dit is het best uit te leggen met een voorbeeld:</p>
+    <ul class="ul">
+      <li class="li">
+        Stel dat <strong class="ph b">A</strong> een serialisatie is die gemaakt is conform IMOP versie 1.0.0. In A worden
+        de elementen <em class="ph i">div</em> en <em class="ph i">par</em> gebruikt. Het verschil tussen de twee elementen is de manier waarop
+        de inhoud ervan wordt weergegeven. De standaard bevat richtlijnen wanneer een
+        <em class="ph i">div</em> gebruikt moet worden en wanneer een <em class="ph i">par</em>. Dat hangt af van de inhoud die in
+        een van deze elementen wordt vastgelegd, en dat is door software niet te bepalen. Het is de mens 
+        die de afweging moet maken.
+      </li>
+      <li class="li">In STOP v2.0 worden aanvullende richtlijnen opgenomen wanneer <em class="ph i">div</em> en <em class="ph i">par</em>
+        gebruikt moeten worden. Vaak zullen <em class="ph i">div</em> en <em class="ph i">par</em> op dezelfde manier gebruikt worden in STOP 1.0
+        en in STOP 2.0, maar in STOP 2.0 zal soms <em class="ph i">div</em> gebruikt worden waar in STOP 1.0 nog <em class="ph i">par</em> werd gebruikt.
+      </li>
+      <li class="li">
+        Stel dat de informatie die in A is vastgelegd zodanig is dat volgens de richtlijnen van STOP 2.0 (en IMOP 2.0.0) 
+        wordt geserialiseerd, daar niet A uitkomt maar <strong class="ph b">B</strong>, waarbij op sommige plaatsen <em class="ph i">div</em> gebruikt is in plaats van <em class="ph i">par</em>.
+      </li>
+      <li class="li">
+        Omdat het de mens is die de afweging tussen het gebruik van <em class="ph i">div</em> en <em class="ph i">par</em> moet maken,
+        is het niet mogelijk om een transformatie te schrijven die A omzet in B. Maar dat zou betekenen dat
+        het niet mogelijk is kennis te nemen van de inhoud van A als software alleen IMOP v2.0.0 ondersteunt.
+      </li>
+      <li class="li">
+        Omdat het verschil tussen <em class="ph i">div</em> en <em class="ph i">par</em> alleen de weergave is, heeft het toch meerwaarde
+        om een transformatie aan te bieden. Deze transformatie laat de twee elementen ongewijzigd en voldoet daarmee
+        niet aan de richtlijnen van STOP 2.0, maar komt er wel dicht bij in de buurt. De uitkomst van de transformatie
+        wordt als <em class="ph i">Naar beste kunnen</em> gemarkeerd om aan te geven dat het resultaat niet helemaal correct is.
+      </li>
+    </ul>
+  </div>
+<section class="section ea_elementen"><h2 class="title sectiontitle">Elementen</h2>
+            
+            <table class="table ea_element" id="Pkg__4BBC91C6D7FB44eaA712AD29803F690A"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__4BBC91C6D7FB44eaA712AD29803F690A__entry__1" colspan="4">Bedrijfsregel</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row ea_attribuut_header">
+                            <td class="entry" headers="Pkg__4BBC91C6D7FB44eaA712AD29803F690A__entry__1"><strong class="ph b">Eigenschappen</strong></td>
+                            <td class="entry" headers="Pkg__4BBC91C6D7FB44eaA712AD29803F690A__entry__1"><strong class="ph b">Type</strong></td>
+                            <td class="entry" headers="Pkg__4BBC91C6D7FB44eaA712AD29803F690A__entry__1"><strong class="ph b">Kardinaliteit</strong></td>
+                            <td class="entry" headers="Pkg__4BBC91C6D7FB44eaA712AD29803F690A__entry__1"><strong class="ph b">Beschrijving</strong></td>
+                        </tr>
+                        <tr class="row ea_attribuut" id="Pkg__2CB35781251545cd9639B59D88A84C8C">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__4BBC91C6D7FB44eaA712AD29803F690A__entry__1">Code</td>
+                            <td class="entry" headers="Pkg__4BBC91C6D7FB44eaA712AD29803F690A__entry__1">string</td>
+                            <td class="entry" headers="Pkg__4BBC91C6D7FB44eaA712AD29803F690A__entry__1">0..1</td>
+                            <td class="entry" headers="Pkg__4BBC91C6D7FB44eaA712AD29803F690A__entry__1">
+                                <div class="div"><div class="div">
+    <p class="p">Unieke code voor een bedrijfsregel</p>
+  </div>
+  </div>
+                                <div class="div noimlinks-ea:{2CB35781-2515-45cd-9639-B59D88A84C8C}">
+                                    <p class="p ea_relatedlinks_titel"><p class="lines">Implementatie:</p>
+                                    <a class="xref link_xsd" href="br_xsd_Element_br_code.html#code">br:code</a></p>
+                                </div>
+                                </td>
+                         </tr>
+                    </tbody></table>
+            <table class="table ea_element" id="Pkg__CA10A9464579411281C66AD0121C0C29"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__CA10A9464579411281C66AD0121C0C29__entry__1" colspan="4">Implementatiemodel Officiële Publicaties</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row">
+                        <td class="entry ea_doc_titel" headers="Pkg__CA10A9464579411281C66AD0121C0C29__entry__1">Beschrijving</td>
+                        <td class="entry ea_element_beschrijving" headers="Pkg__CA10A9464579411281C66AD0121C0C29__entry__1" colspan="3"><div class="div">
+    <p class="p">Het Implementatiemodel Officiële Publicaties (IMOP) beschrijft 
+    hoe de informatie zoals in de standaard (STOP) beschreven is, in XML geserialiseerd 
+    moet worden zodat het uitgewisseld kan worden.</p>
+    <p class="p">
+      Bij elke nieuwe versie van de standaard (STOP) hoort een nieuwe versie van het implementatiemodel (IMOP) waarin de
+      serialisatie wordt beschreven en de eisen die daaraan gesteld worden. Van IMOP kan daarna
+      een nieuwe versie verschijnen waar bijvoorbeeld schema's zijn gestroomlijnd,
+      validaties zijn aangescherpt, nieuwe transformaties zijn opgenomen en/of fouten
+      uit de implementatie zijn hersteld. Een nieuwe versie van IMOP beschrijft in principe
+      nog steeds dezelfde serialisatie, dat wil zeggen: een serialisatie van informatie die
+      voldoet aan het informatiemodel en bedrijfsregels uit de standaard, voldoet aan alle
+      schema's en schematrons uit elke versie van IMOP die bij dezelfde versie van de standaard hoort.
+    </p>
+  </div>
+</td>
+                    </tr>
+                    <tr class="row ea_attribuut_header">
+                            <td class="entry" headers="Pkg__CA10A9464579411281C66AD0121C0C29__entry__1"><strong class="ph b">Eigenschappen</strong></td>
+                            <td class="entry" headers="Pkg__CA10A9464579411281C66AD0121C0C29__entry__1"><strong class="ph b">Type</strong></td>
+                            <td class="entry" headers="Pkg__CA10A9464579411281C66AD0121C0C29__entry__1"><strong class="ph b">Kardinaliteit</strong></td>
+                            <td class="entry" headers="Pkg__CA10A9464579411281C66AD0121C0C29__entry__1"><strong class="ph b">Beschrijving</strong></td>
+                        </tr>
+                        <tr class="row ea_attribuut" id="Pkg__4B8A79AB09854e57AD731F19F537CAF6">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__CA10A9464579411281C66AD0121C0C29__entry__1">Implementatieversie</td>
+                            <td class="entry" headers="Pkg__CA10A9464579411281C66AD0121C0C29__entry__1">versienummer</td>
+                            <td class="entry" headers="Pkg__CA10A9464579411281C66AD0121C0C29__entry__1">1..1</td>
+                            <td class="entry" headers="Pkg__CA10A9464579411281C66AD0121C0C29__entry__1">
+                                <div class="div"><div class="div">
+    <p class="p">Het versienummer van het Implementatiemodel Officiële Publicaties (IMOP) waarmee de
+      XML-serialisatie is gemaakt.</p>
+    <p class="p"> Het versienummer voldoet aan de <a class="xref" href="https://www.semver.org/" target="_blank">semver</a> standaard. De algemene vorm is
+      <em class="ph i">major</em>.<em class="ph i">minor</em>.<em class="ph i">patch</em>-<em class="ph i">label</em>, waarbij het <em class="ph i">label</em> gedeelte
+      optioneel is en voor elke <em class="ph i">major</em>.<em class="ph i">minor</em> versie hooguit één versie met een label
+      bestaat. </p>
+    <p class="p">De <code class="keyword markupname xmlatt">@schemaversie</code> bij een serialisatie van een module legt de versie van het
+      implementatiemodel (IMOP) vast die gebruikt is bij het creëren van serialisatie van de
+      module.</p>
+  </div>
+  </div>
+                                <div class="div noimlinks-ea:{4B8A79AB-0985-4e57-AD73-1F19F537CAF6}">
+                                    <p class="p ea_relatedlinks_titel"><p class="lines">Implementatie:</p>
+                                    <a class="xref link_xsd" href="tekst_xsd_Attribute_Group_tekst_agSchemaVersie.html#agSchemaVersie">attribuutgroep tekst:agSchemaVersie</a>, <a class="xref link_xsd" href="cons_xsd_Attribute_Group_cons_agSchemaVersie.html#agSchemaVersie">attribuutgroep cons:agSchemaVersie</a>, <a class="xref link_xsd" href="data_xsd_Attribute_Group_data_agSchemaVersie.html#agSchemaVersie">attribuutgroep data:agSchemaVersie</a>, <a class="xref link_xsd" href="rsc_xsd_Attribute_Group_rsc_agSchemaVersie.html#agSchemaVersie">attribuutgroep rsc:agSchemaVersie</a>, <a class="xref link_xsd" href="br_xsd_Attribute_Group_br_agSchemaVersie.html#agSchemaVersie">attribuutgroep br:agSchemaVersie</a>, <a class="xref link_xsd" href="sv_xsd_Attribute_Group_sv_agSchemaVersie.html#agSchemaVersie">attribuutgroep sv:agSchemaVersie</a>, <a class="xref link_xsd" href="uws_xsd_Attribute_Group_uws_agSchemaVersie.html#agSchemaVersie">attribuutgroep uws:agSchemaVersie</a>, <a class="xref link_xsd" href="uws_xsd_Element_uws_schemaversie.html#schemaversie">uws:schemaversie</a></p>
+                                </div>
+                                </td>
+                         </tr>
+                    </tbody></table>
+            <table class="table ea_element" id="Pkg__B4649197FA68449e913F625FA43F27DF"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__B4649197FA68449e913F625FA43F27DF__entry__1" colspan="4">Module</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row">
+                        <td class="entry ea_doc_titel" headers="Pkg__B4649197FA68449e913F625FA43F27DF__entry__1">Definitie</td>
+                        <td class="entry ea_element_beschrijving" headers="Pkg__B4649197FA68449e913F625FA43F27DF__entry__1" colspan="3"><div class="div">
+    <p class="p"> Een <em class="ph i">Module</em> is een abstractie om een deel van de informatie in of over een <a class="xref link_ea" href="EA_1A45BBE5EC4F4bb2BBD7F5E701CE0479.html#Pkg__21707A82A7DD486b9D7CA5921A07CEE5">Instrumentversie</a>, <a class="xref link_ea" href="EA_AFAF97EA251247c9B2CC7B9922384BF8.html#Pkg__44363340236B437d88C976236E18934B">Toestand</a> of om <a class="xref link_ea" href="EA_1A45BBE5EC4F4bb2BBD7F5E701CE0479.html#Pkg__6E006EB7C4644e1993AD8CB36F94E660">Context informatie</a> te modelleren. In
+      een module van een bepaald type wordt gelijksoortige informatie bijeengebracht. Bij de
+      specificatie van een API voor een STOP-gebruikend systeem wordt de uitgewisselde informatie
+      samengesteld uit de beschikbare modules. Een module is daarmee de kleinste hoeveelheid
+      informatie die uitgewisseld kan worden. </p>
+  </div>
+  </td>
+                    </tr>
+                    <tr class="row noimlinks-ea:{B4649197-FA68-449e-913F-625FA43F27DF}">
+                        <td class="entry ea_doc_titel" headers="Pkg__B4649197FA68449e913F625FA43F27DF__entry__1">Implementatie</td>
+                        <td class="entry ea_relatedlinks_lijst" headers="Pkg__B4649197FA68449e913F625FA43F27DF__entry__1" colspan="3"><a class="xref link_xsd" href="uws_xsd_Element_uws_Module.html#Module">uws:Module</a></td>
+                    </tr>
+                        <tr class="row">
+                            <td class="entry ea_genspec_titel" headers="Pkg__B4649197FA68449e913F625FA43F27DF__entry__1">Generalisatie van</td>
+                            <td class="entry ea_genspec_lijst" headers="Pkg__B4649197FA68449e913F625FA43F27DF__entry__1" colspan="3"><a class="xref link_ea" href="EA_06EBFA9D4CAD4ff29AFBE17665E06C18.html#Pkg__327E3B0A8E5142149CE8903B536C6F22">Actuele consolidatie-informatie (entiteit)</a>, <a class="xref ea_genspec_direct link_ea" href="EA_1A45BBE5EC4F4bb2BBD7F5E701CE0479.html#Pkg__99F356B0966743bdB78D554099C56416">Annotatie (entiteit)</a>, <a class="xref ea_genspec_direct link_ea" href="EA_BD0B9B5F34C548eeB092538800D54713.html#Pkg__010868542DA2402b91269700853D00EB">Consolidatie identificatie (entiteit)</a>, <a class="xref link_ea" href="EA_5E740899BABE47d1B62053A402064B33.html#Pkg__E480ACE31F414f8aB3CF2309232EB934">Consolidatie-informatie (entiteit)</a>, <a class="xref ea_genspec_direct link_ea" href="EA_1A45BBE5EC4F4bb2BBD7F5E701CE0479.html#Pkg__6E006EB7C4644e1993AD8CB36F94E660">Context informatie (entiteit)</a>, <a class="xref ea_genspec_direct link_ea" href="EA_C966BB1FF80841f6A587C16FB89171B2.html#Pkg__0EF0F41ED57B42abADCC1EB5D5DC82D7">Expression identificatie (entiteit)</a>, <a class="xref ea_genspec_direct link_ea" href="EA_1C752EC8163240cbA9644D1CD9266E58.html#Pkg__1B1D108A52034885BA79F3992DDCDD47">Geo-informatieobject vaststelling (entiteit)</a>, <a class="xref ea_genspec_direct link_ea" href="EA_1C752EC8163240cbA9644D1CD9266E58.html#Pkg__D75450C54CA2412d9F53EFAE6E50002C">Geo-informatieobject versie (entiteit)</a>, <a class="xref ea_genspec_direct link_ea" href="EA_1C752EC8163240cbA9644D1CD9266E58.html#Pkg__4BE8928CF3864ce9B7D207D63EC4E43A">Geografische context (entiteit)</a>, <a class="xref link_ea" href="EA_C0439F1B47B549bf95F43D2318161D9B.html#Pkg__2F904AAEEDB24d0c9D44B765150A6034">Gerechterlijke procedure status (entiteit)</a>, <a class="xref link_ea" href="EA_EC0E326D36954e38824C5898BB506C1F.html#Pkg__A2F2DEA14B12484b814F20127D05BA8D">Hoofdregeling (tekst) (entiteit)</a>, <a class="xref ea_genspec_direct link_ea" href="EA_1A45BBE5EC4F4bb2BBD7F5E701CE0479.html#Pkg__12954D29A4F741cdAEC2131201F89E7B">Instrumentversie informatie (entiteit)</a>, <a class="xref ea_genspec_direct link_ea" href="EA_44F1995C792B4434829942718BB589BA.html#Pkg__257BF00353CE46ffBE185443C001533A">Juridische borging van (entiteit)</a>, <a class="xref link_ea" href="EA_F798EBB99D38431f9884C8D2E7DA0B6B.html#Pkg__8591597A8C3F45a184F912AAE1BED38B">Juridische verantwoording  (entiteit)</a>, <a class="xref link_ea" href="EA_EC4DE25BFB1341e6B632337DAF9C2791.html#Pkg__7A6C6B4457C74829B60CF9F7A20DDF46">Metadata Informatieobject (entiteit)</a>, <a class="xref ea_genspec_direct link_ea" href="EA_EC4DE25BFB1341e6B632337DAF9C2791.html#Pkg__6EE3C6491F3349e5BB5614C99ED9EBEE">Metadata Informatieobjectversie (entiteit)</a>, <a class="xref link_ea" href="EA_E071E43092384cd394D942ECD77D959F.html#Pkg__60DC54E95566484f9FDF81FCB8678A9B">Metadata besluit (entiteit)</a>, <a class="xref link_ea" href="EA_233F9A157B1F4d11A41DBE8FC3424244.html#Pkg__3FCB55375A0148019974D3231C29BFBB">Metadata kennisgeving (entiteit)</a>, <a class="xref link_ea" href="EA_E8EDA73EF3B842a9AB27E3B3E23B1470.html#Pkg__90BB00386ADA4cbfA663CC0B33CAAE4C">Metadata officiële publicatie (entiteit)</a>, <a class="xref link_ea" href="EA_E8EDA73EF3B842a9AB27E3B3E23B1470.html#Pkg__B4378ADBB9EA43a18371429FBD094B81">Metadata officiële publicatie versie (entiteit)</a>, <a class="xref link_ea" href="EA_CE0701FE9A054073B11E9531BE7681D4.html#Pkg__F5B688B951F347cfB53CDF6339FF8A85">Metadata rectificatie (entiteit)</a>, <a class="xref link_ea" href="EA_93CB8E590C2B43829E3E007614134DE4.html#Pkg__C9EA047830974eca9CCC53880C373C5F">Metadata regeling (entiteit)</a>, <a class="xref link_ea" href="EA_93CB8E590C2B43829E3E007614134DE4.html#Pkg__1BE20254F40E45d1B050234D275691B2">Metadata regelingversie (entiteit)</a>, <a class="xref ea_genspec_direct link_ea" href="EA_8FBBC5C6DF3B4508B429D11845BACA21.html#Pkg__40A96FF8306945c5869F384BE8C69F95">PDF document (entiteit)</a>, <a class="xref link_ea" href="EA_85DA3D0FDE4F4d4a9F848DDFAC3591B4.html#Pkg__242F0CD5E62E407aB90DD26FB083443F">Procedureverloop (entiteit)</a>, <a class="xref link_ea" href="EA_85DA3D0FDE4F4d4a9F848DDFAC3591B4.html#Pkg__E0BFA3B5131F4adbA87B9DEE50FFACE7">Procedureverloopmutatie (entiteit)</a>, <a class="xref link_ea" href="EA_354F82ADD7C2441cBF0FA7D361B63C75.html#Pkg__AC57A2D747F34eb1927EE0E8BFFB47B6">Proefversies (entiteit)</a>, <a class="xref ea_genspec_direct link_ea" href="EA_EC0E326D36954e38824C5898BB506C1F.html#Pkg__AAD3DB3CCAF2490eAC6AAFB4F481DFA6">Regeling (tekst) (entiteit)</a>, <a class="xref link_ea" href="EA_EC0E326D36954e38824C5898BB506C1F.html#Pkg__D5194946C0C04c5bA515FF74BC65C8FD">Regeling compact (tekst) (entiteit)</a>, <a class="xref link_ea" href="EA_EC0E326D36954e38824C5898BB506C1F.html#Pkg__5DA4E0D4C01340cdA4208646B3A05EAC">Regeling klassiek (tekst) (entiteit)</a>, <a class="xref link_ea" href="EA_EC0E326D36954e38824C5898BB506C1F.html#Pkg__3B879F96232F417fA2261A8CECB9B0B6">Regeling met artikelstructuur (entiteit)</a>, <a class="xref link_ea" href="EA_EC0E326D36954e38824C5898BB506C1F.html#Pkg__76FCEBC0378A44599E1B27FDE41B06EA">Regeling met vrijetekststructuur (entiteit)</a>, <a class="xref link_ea" href="EA_77AF770705D4439c946D8E821BC18F18.html#Pkg__6A942F72D6F0454aBB277A0AC8579DF9">Symbolisatie (entiteit)</a>, <a class="xref ea_genspec_direct link_ea" href="EA_233F9A157B1F4d11A41DBE8FC3424244.html#Pkg__FA6D8EED09E24a80BD5E4489E3354FD2">Tekst kennisgeving (entiteit)</a>, <a class="xref ea_genspec_direct link_ea" href="EA_62A76AC7435E4bdcA0D6CFFD7AAF6C0D.html#Pkg__C033E92B25A546669702BCA9A425EDBB">Tekst rectificatie (entiteit)</a>, <a class="xref link_ea" href="EA_EC0E326D36954e38824C5898BB506C1F.html#Pkg__74EA7FA2F07B43e48B3B0F8A3E2A759E">Tijdelijk regelingdeel (tekst) (entiteit)</a>, <a class="xref link_ea" href="EA_3FF7ADD14171420c8FCACC6A218F2EB8.html#Pkg__52E3D18BA2C54a13930B0ECD7D221877">Toelichtingsrelaties (entiteit)</a>, <a class="xref link_ea" href="EA_21F155BFDF91485e9CC1901FE5B5A024.html#Pkg__2D30E69527CB489d9F7ECDC2B93EF770">Toestanden (entiteit)</a>, <a class="xref link_ea" href="EA_B23DD48A67B642f69DDB45E1663593C4.html#Pkg__CF3B0A7AE3D24e2fB60725327F34F183">Uitbreidbare waardelijst (entiteit)</a>, <a class="xref ea_genspec_direct link_ea" href="EA_B23DD48A67B642f69DDB45E1663593C4.html#Pkg__4BBB150315E842f287B19F27C689721A">Waardelijst (entiteit)</a>, <a class="xref ea_genspec_direct link_ea" href="EA_BD0B9B5F34C548eeB092538800D54713.html#Pkg__63DA0B997B154bff930F9F7FFC7ACF23">Work identificatie (entiteit)</a></td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry ea_eltpackages_titel" headers="Pkg__B4649197FA68449e913F625FA43F27DF__entry__1">Zie ook</td>
+                            <td class="entry ea_eltpackages_lijst" headers="Pkg__B4649197FA68449e913F625FA43F27DF__entry__1" colspan="3"><a class="xref ea_eltpackages_default link_ea" href="EA_1A45BBE5EC4F4bb2BBD7F5E701CE0479.html#Pkg">Instrument en instrumentversies (onderwerp)</a></td>
+                        </tr>
+                    <tr class="row ea_attribuut_header">
+                            <td class="entry" headers="Pkg__B4649197FA68449e913F625FA43F27DF__entry__1"><strong class="ph b">Eigenschappen</strong></td>
+                            <td class="entry" headers="Pkg__B4649197FA68449e913F625FA43F27DF__entry__1"><strong class="ph b">Type</strong></td>
+                            <td class="entry" headers="Pkg__B4649197FA68449e913F625FA43F27DF__entry__1"><strong class="ph b">Kardinaliteit</strong></td>
+                            <td class="entry" headers="Pkg__B4649197FA68449e913F625FA43F27DF__entry__1"><strong class="ph b">Beschrijving</strong></td>
+                        </tr>
+                        <tr class="row ea_attribuut" id="Pkg__2C39AC0F53EC4b37A86401036EEE94F0">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__B4649197FA68449e913F625FA43F27DF__entry__1">Naam</td>
+                            <td class="entry" headers="Pkg__B4649197FA68449e913F625FA43F27DF__entry__1">string</td>
+                            <td class="entry" headers="Pkg__B4649197FA68449e913F625FA43F27DF__entry__1">1..1</td>
+                            <td class="entry" headers="Pkg__B4649197FA68449e913F625FA43F27DF__entry__1">
+                                <div class="div"><div class="div">
+      <p class="p">De naam (localName) van het XML-element waarmee de module in de serialisatie wordt gerepresenteerd.</p>
+   </div>
+   </div>
+                                <div class="div noimlinks-ea:{2C39AC0F-53EC-4b37-A864-01036EEE94F0}">
+                                    <p class="p ea_relatedlinks_titel"><p class="lines">Implementatie:</p>
+                                    <a class="xref link_xsd" href="br_xsd_Element_br_localName.html#localName">br:localName</a>, <a class="xref link_xsd" href="sv_xsd_Element_sv_localName.html#localName">sv:localName</a>, <a class="xref link_xsd" href="uws_xsd_Element_uws_localName.html#localName">uws:localName</a></p>
+                                </div>
+                                </td>
+                         </tr>
+                        <tr class="row ea_attribuut" id="Pkg__7FE138DA78A54bf1AA1ED3CA0878D941">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__B4649197FA68449e913F625FA43F27DF__entry__1">Namespace</td>
+                            <td class="entry" headers="Pkg__B4649197FA68449e913F625FA43F27DF__entry__1">string</td>
+                            <td class="entry" headers="Pkg__B4649197FA68449e913F625FA43F27DF__entry__1">1..1</td>
+                            <td class="entry" headers="Pkg__B4649197FA68449e913F625FA43F27DF__entry__1">
+                                </td>
+                         </tr>
+                    </tbody></table>
+            <table class="table ea_element" id="Pkg__C0393E31654A4dd39C06D465E66F1D45"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__C0393E31654A4dd39C06D465E66F1D45__entry__1" colspan="4">Moduleversie</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row">
+                        <td class="entry ea_doc_titel" headers="Pkg__C0393E31654A4dd39C06D465E66F1D45__entry__1">Definitie</td>
+                        <td class="entry ea_element_beschrijving" headers="Pkg__C0393E31654A4dd39C06D465E66F1D45__entry__1" colspan="3"><div class="div">
+    <p class="p">Een versie van de definitie van een module in de standaard. Dit is een combinatie van het
+      informatiemodel voor de module en alle relevante bedrijfsregels. Er ontstaat een nieuwe versie
+      van de module in de standaard als het informatiemodel wijzigt en/of als de bedrijfsregels,
+      invulinstructies etc veranderen.</p>
+  </div>
+  </td>
+                    </tr>
+                    <tr class="row ea_attribuut_header">
+                            <td class="entry" headers="Pkg__C0393E31654A4dd39C06D465E66F1D45__entry__1"><strong class="ph b">Eigenschappen</strong></td>
+                            <td class="entry" headers="Pkg__C0393E31654A4dd39C06D465E66F1D45__entry__1"><strong class="ph b">Type</strong></td>
+                            <td class="entry" headers="Pkg__C0393E31654A4dd39C06D465E66F1D45__entry__1"><strong class="ph b">Kardinaliteit</strong></td>
+                            <td class="entry" headers="Pkg__C0393E31654A4dd39C06D465E66F1D45__entry__1"><strong class="ph b">Beschrijving</strong></td>
+                        </tr>
+                        <tr class="row ea_attribuut" id="Pkg__8B07D4181E634178B263FE69BA3EFCAA">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__C0393E31654A4dd39C06D465E66F1D45__entry__1">Introductieversie</td>
+                            <td class="entry" headers="Pkg__C0393E31654A4dd39C06D465E66F1D45__entry__1">major.minor.label</td>
+                            <td class="entry" headers="Pkg__C0393E31654A4dd39C06D465E66F1D45__entry__1">1..1</td>
+                            <td class="entry" headers="Pkg__C0393E31654A4dd39C06D465E66F1D45__entry__1">
+                                <div class="div"><div class="div">
+    <p class="p">
+      De versie van de standaard (STOP) waarbij de versie van de module voor het eerst
+      de vorm heeft zoals door het informatiemodel en relevante bedrijfsregels is beschreven.
+    </p>
+  </div>
+</div>
+                                </td>
+                         </tr>
+                    </tbody></table>
+            <table class="table ea_element" id="Pkg__D1592F117C12499eA1869EDC08FB883A"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__D1592F117C12499eA1869EDC08FB883A__entry__1" colspan="4">Moduleversie transformatie</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row ea_attribuut_header">
+                            <td class="entry" headers="Pkg__D1592F117C12499eA1869EDC08FB883A__entry__1"><strong class="ph b">Eigenschappen</strong></td>
+                            <td class="entry" headers="Pkg__D1592F117C12499eA1869EDC08FB883A__entry__1"><strong class="ph b">Type</strong></td>
+                            <td class="entry" headers="Pkg__D1592F117C12499eA1869EDC08FB883A__entry__1"><strong class="ph b">Kardinaliteit</strong></td>
+                            <td class="entry" headers="Pkg__D1592F117C12499eA1869EDC08FB883A__entry__1"><strong class="ph b">Beschrijving</strong></td>
+                        </tr>
+                        <tr class="row ea_attribuut" id="Pkg__489AAEADE0E84d5c9CBD372E168DF5D8">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__D1592F117C12499eA1869EDC08FB883A__entry__1">Transformatie</td>
+                            <td class="entry" headers="Pkg__D1592F117C12499eA1869EDC08FB883A__entry__1">URL</td>
+                            <td class="entry" headers="Pkg__D1592F117C12499eA1869EDC08FB883A__entry__1">1..1</td>
+                            <td class="entry" headers="Pkg__D1592F117C12499eA1869EDC08FB883A__entry__1">
+                                <div class="div"><div class="div">
+    <p class="p">Internet-adres dat gebruikt kan worden om de transformatie (als XSLT) op te halen</p>
+  </div>
+  </div>
+                                <div class="div noimlinks-ea:{489AAEAD-E0E8-4d5c-9CBD-372E168DF5D8}">
+                                    <p class="p ea_relatedlinks_titel"><p class="lines">Implementatie:</p>
+                                    <a class="xref link_xsd" href="sv_xsd_Element_sv_locatie.html#locatie">sv:locatie</a></p>
+                                </div>
+                                </td>
+                         </tr>
+                        <tr class="row ea_attribuut" id="Pkg__052C9A7147C94338AF495E76EBBA6155">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__D1592F117C12499eA1869EDC08FB883A__entry__1">Introductieversie</td>
+                            <td class="entry" headers="Pkg__D1592F117C12499eA1869EDC08FB883A__entry__1">major.minor-label</td>
+                            <td class="entry" headers="Pkg__D1592F117C12499eA1869EDC08FB883A__entry__1">1..1</td>
+                            <td class="entry" headers="Pkg__D1592F117C12499eA1869EDC08FB883A__entry__1">
+                                <div class="div"><div class="div">
+    <p class="p">De versie van het implementatiemodel (IMOP) waarbij de serialisatie van de module voor het eerst
+    de vorm heeft zoals door de versieinformatie is beschreven.</p>
+  </div>
+  </div>
+                                <div class="div noimlinks-ea:{052C9A71-47C9-4338-AF49-5E76EBBA6155}">
+                                    <p class="p ea_relatedlinks_titel"><p class="lines">Implementatie:</p>
+                                    <a class="xref link_xsd" href="sv_xsd_Element_sv_introductieversie.html#introductieversie">sv:introductieversie</a></p>
+                                </div>
+                                </td>
+                         </tr>
+                    </tbody></table>
+            <table class="table ea_element" id="Pkg__4C1C7F5900AA44259E9CEE5273C224FD"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__4C1C7F5900AA44259E9CEE5273C224FD__entry__1" colspan="4">Schema</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row ea_attribuut_header">
+                            <td class="entry" headers="Pkg__4C1C7F5900AA44259E9CEE5273C224FD__entry__1"><strong class="ph b">Eigenschappen</strong></td>
+                            <td class="entry" headers="Pkg__4C1C7F5900AA44259E9CEE5273C224FD__entry__1"><strong class="ph b">Type</strong></td>
+                            <td class="entry" headers="Pkg__4C1C7F5900AA44259E9CEE5273C224FD__entry__1"><strong class="ph b">Kardinaliteit</strong></td>
+                            <td class="entry" headers="Pkg__4C1C7F5900AA44259E9CEE5273C224FD__entry__1"><strong class="ph b">Beschrijving</strong></td>
+                        </tr>
+                        <tr class="row ea_attribuut" id="Pkg__041054E4B9F84eb9A1256CBD2B111DE0">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__4C1C7F5900AA44259E9CEE5273C224FD__entry__1">Namespace</td>
+                            <td class="entry" headers="Pkg__4C1C7F5900AA44259E9CEE5273C224FD__entry__1">string</td>
+                            <td class="entry" headers="Pkg__4C1C7F5900AA44259E9CEE5273C224FD__entry__1">1..1</td>
+                            <td class="entry" headers="Pkg__4C1C7F5900AA44259E9CEE5273C224FD__entry__1">
+                                </td>
+                         </tr>
+                        <tr class="row ea_attribuut" id="Pkg__30DBED27D11C450991985D868A00F81C">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__4C1C7F5900AA44259E9CEE5273C224FD__entry__1">Beschikbaar op</td>
+                            <td class="entry" headers="Pkg__4C1C7F5900AA44259E9CEE5273C224FD__entry__1">URL</td>
+                            <td class="entry" headers="Pkg__4C1C7F5900AA44259E9CEE5273C224FD__entry__1">1..1</td>
+                            <td class="entry" headers="Pkg__4C1C7F5900AA44259E9CEE5273C224FD__entry__1">
+                                <div class="div"><div class="div">
+    <p class="p">Internet-adres dat gebruikt kan worden om het schema (als XSD-bestand) op te halen. Het
+      XSD-bestand bevat de formele definities voor de XML-implementatie van het informatiemodel.</p>
+  </div>
+  </div>
+                                <div class="div noimlinks-ea:{30DBED27-D11C-4509-9198-5D868A00F81C}">
+                                    <p class="p ea_relatedlinks_titel"><p class="lines">Implementatie:</p>
+                                    <a class="xref link_xsd" href="sv_xsd_Element_sv_schema.html#schema">sv:schema</a></p>
+                                </div>
+                                </td>
+                         </tr>
+                    </tbody></table>
+            <table class="table ea_element" id="Pkg__B1D30DE0FDDB41059CB3F5CC1ABA4B61"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__B1D30DE0FDDB41059CB3F5CC1ABA4B61__entry__1" colspan="4">Schematron</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row ea_attribuut_header">
+                            <td class="entry" headers="Pkg__B1D30DE0FDDB41059CB3F5CC1ABA4B61__entry__1"><strong class="ph b">Eigenschappen</strong></td>
+                            <td class="entry" headers="Pkg__B1D30DE0FDDB41059CB3F5CC1ABA4B61__entry__1"><strong class="ph b">Type</strong></td>
+                            <td class="entry" headers="Pkg__B1D30DE0FDDB41059CB3F5CC1ABA4B61__entry__1"><strong class="ph b">Kardinaliteit</strong></td>
+                            <td class="entry" headers="Pkg__B1D30DE0FDDB41059CB3F5CC1ABA4B61__entry__1"><strong class="ph b">Beschrijving</strong></td>
+                        </tr>
+                        <tr class="row ea_attribuut" id="Pkg__2D091140FEAA4f43AB4BF35FD1575D8B">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__B1D30DE0FDDB41059CB3F5CC1ABA4B61__entry__1">Beschikbaar op</td>
+                            <td class="entry" headers="Pkg__B1D30DE0FDDB41059CB3F5CC1ABA4B61__entry__1">URL</td>
+                            <td class="entry" headers="Pkg__B1D30DE0FDDB41059CB3F5CC1ABA4B61__entry__1">1..1</td>
+                            <td class="entry" headers="Pkg__B1D30DE0FDDB41059CB3F5CC1ABA4B61__entry__1">
+                                <div class="div"><div class="div">
+    <p class="p">Internet-adres dat gebruikt kan worden om de schematron (als SCH-bestand) op te halen</p>
+  </div>
+  </div>
+                                <div class="div noimlinks-ea:{2D091140-FEAA-4f43-AB4B-F35FD1575D8B}">
+                                    <p class="p ea_relatedlinks_titel"><p class="lines">Implementatie:</p>
+                                    <a class="xref link_xsd" href="sv_xsd_Element_sv_schematron.html#schematron">sv:schematron</a></p>
+                                </div>
+                                </td>
+                         </tr>
+                    </tbody></table>
+            <table class="table ea_element" id="Pkg__269D652D8370492f9FDBD7FDEA91B2ED"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__269D652D8370492f9FDBD7FDEA91B2ED__entry__1" colspan="4">Serialisatie</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row">
+                        <td class="entry ea_doc_titel" headers="Pkg__269D652D8370492f9FDBD7FDEA91B2ED__entry__1">Beschrijving</td>
+                        <td class="entry ea_element_beschrijving" headers="Pkg__269D652D8370492f9FDBD7FDEA91B2ED__entry__1" colspan="3"><div class="div">
+    <p class="p">
+      STOP biedt voor elke <a class="xref link_ea" href="#Pkg__B4649197FA68449e913F625FA43F27DF">Module</a>
+      een voorschrift hoe de informatie in de module geserialiseerd moet worden als onderdeel
+      van data uitwisseling. Die specificaties vormen geen onderdeel van het informatiemodel,
+      maar het informatiemodel verwijst wel naar de documentatie ervan.
+    </p>
+  </div>
+</td>
+                    </tr>
+                    <tr class="row">
+                            <td class="entry ea_genspec_titel" headers="Pkg__269D652D8370492f9FDBD7FDEA91B2ED__entry__1">Generalisatie van</td>
+                            <td class="entry ea_genspec_lijst" headers="Pkg__269D652D8370492f9FDBD7FDEA91B2ED__entry__1" colspan="3"><a class="xref ea_genspec_direct link_ea" href="EA_BD0B9B5F34C548eeB092538800D54713.html#Pkg__4EB999FA0BB443ca8153E241E578F6E7">Manifestation identificatie (entiteit)</a></td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry ea_eltpackages_titel" headers="Pkg__269D652D8370492f9FDBD7FDEA91B2ED__entry__1">Zie ook</td>
+                            <td class="entry ea_eltpackages_lijst" headers="Pkg__269D652D8370492f9FDBD7FDEA91B2ED__entry__1" colspan="3"><a class="xref link_ea" href="EA_1A45BBE5EC4F4bb2BBD7F5E701CE0479.html#Pkg">Instrument en instrumentversies (onderwerp)</a></td>
+                        </tr>
+                    <tr class="row ea_attribuut_header">
+                            <td class="entry" headers="Pkg__269D652D8370492f9FDBD7FDEA91B2ED__entry__1"><strong class="ph b">Eigenschappen</strong></td>
+                            <td class="entry" headers="Pkg__269D652D8370492f9FDBD7FDEA91B2ED__entry__1"><strong class="ph b">Type</strong></td>
+                            <td class="entry" headers="Pkg__269D652D8370492f9FDBD7FDEA91B2ED__entry__1"><strong class="ph b">Kardinaliteit</strong></td>
+                            <td class="entry" headers="Pkg__269D652D8370492f9FDBD7FDEA91B2ED__entry__1"><strong class="ph b">Beschrijving</strong></td>
+                        </tr>
+                        <tr class="row ea_attribuut" id="Pkg__4F5343E38A4A4ca19A31CCC044819705">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__269D652D8370492f9FDBD7FDEA91B2ED__entry__1">Implementatieversie</td>
+                            <td class="entry" headers="Pkg__269D652D8370492f9FDBD7FDEA91B2ED__entry__1">versienummer</td>
+                            <td class="entry" headers="Pkg__269D652D8370492f9FDBD7FDEA91B2ED__entry__1">1..1</td>
+                            <td class="entry" headers="Pkg__269D652D8370492f9FDBD7FDEA91B2ED__entry__1">
+                                </td>
+                         </tr>
+                        <tr class="row ea_attribuut" id="Pkg__4546BDC1E4A94eff87946B59E7C32535">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__269D652D8370492f9FDBD7FDEA91B2ED__entry__1">NaarBesteKunnen</td>
+                            <td class="entry" headers="Pkg__269D652D8370492f9FDBD7FDEA91B2ED__entry__1">bool</td>
+                            <td class="entry" headers="Pkg__269D652D8370492f9FDBD7FDEA91B2ED__entry__1">0..1</td>
+                            <td class="entry" headers="Pkg__269D652D8370492f9FDBD7FDEA91B2ED__entry__1">
+                                <div class="div"><div class="div">
+    <p class="p">Indien <em class="ph i">true</em>: geeft aan dat de serialisatie van de module weliswaar technisch voldoet aan 
+    de eisen die gesteld worden door het implementatiemodel (IMOP), maar mogelijk
+    niet aan alle richtlijnen die in de standaard aan de module gesteld worden.</p>
+    <p class="p">
+      Dit attribuut wordt aan de serialisatie toegevoegd als de serialisatie is ontstaan uit een
+      (geautomatiseerde) transformatie van de ene naar de andere versie van een module,
+      waarbij  de relevante invulinstructies of andere richtlijnen verschillend zijn in beide versies.
+      Een mens zou de transformatie wellicht anders hebben uitgevoerd door de informatie uit de
+      ene serialisatie op een andere manier te modelleren (conform de andere richtlijnen) en dat opnieuw te
+      serisaliseren.
+    </p>
+  </div>
+  </div>
+                                </td>
+                         </tr>
+                    </tbody></table>
+            <table class="table ea_element" id="Pkg__263B45B8B78F44339D5372DBA3BDEB9D"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__263B45B8B78F44339D5372DBA3BDEB9D__entry__1" colspan="4">Serialisatie moduleversie</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row">
+                        <td class="entry ea_doc_titel" headers="Pkg__263B45B8B78F44339D5372DBA3BDEB9D__entry__1">Definitie</td>
+                        <td class="entry ea_element_beschrijving" headers="Pkg__263B45B8B78F44339D5372DBA3BDEB9D__entry__1" colspan="3"><div class="div">
+     <p class="p">De beschrijving van (de serialisatie van) een versie van een moduledefinitie.
+     De serialisatie blijft in opeenvolgende IMOP-versies ongewijzigd.</p>
+   </div>
+   </td>
+                    </tr>
+                    <tr class="row noimlinks-ea:{263B45B8-B78F-4433-9D53-72DBA3BDEB9D}">
+                        <td class="entry ea_doc_titel" headers="Pkg__263B45B8B78F44339D5372DBA3BDEB9D__entry__1">Implementatie</td>
+                        <td class="entry ea_relatedlinks_lijst" headers="Pkg__263B45B8B78F44339D5372DBA3BDEB9D__entry__1" colspan="3"><a class="xref link_xsd" href="sv_xsd_Element_sv_Moduleversie.html#Moduleversie">sv:Moduleversie</a></td>
+                    </tr>
+                    <tr class="row ea_attribuut_header">
+                            <td class="entry" headers="Pkg__263B45B8B78F44339D5372DBA3BDEB9D__entry__1"><strong class="ph b">Eigenschappen</strong></td>
+                            <td class="entry" headers="Pkg__263B45B8B78F44339D5372DBA3BDEB9D__entry__1"><strong class="ph b">Type</strong></td>
+                            <td class="entry" headers="Pkg__263B45B8B78F44339D5372DBA3BDEB9D__entry__1"><strong class="ph b">Kardinaliteit</strong></td>
+                            <td class="entry" headers="Pkg__263B45B8B78F44339D5372DBA3BDEB9D__entry__1"><strong class="ph b">Beschrijving</strong></td>
+                        </tr>
+                        <tr class="row ea_attribuut" id="Pkg__8DD0044C14FC4117A5D57A28953B29DD">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__263B45B8B78F44339D5372DBA3BDEB9D__entry__1">Naam</td>
+                            <td class="entry" headers="Pkg__263B45B8B78F44339D5372DBA3BDEB9D__entry__1">string</td>
+                            <td class="entry" headers="Pkg__263B45B8B78F44339D5372DBA3BDEB9D__entry__1">1..1</td>
+                            <td class="entry" headers="Pkg__263B45B8B78F44339D5372DBA3BDEB9D__entry__1">
+                                <div class="div"><div class="div">
+      <p class="p">De naam (localName) van het XML-element waarmee de module in de serialisatie wordt gerepresenteerd.</p>
+   </div>
+   </div>
+                                <div class="div noimlinks-ea:{8DD0044C-14FC-4117-A5D5-7A28953B29DD}">
+                                    <p class="p ea_relatedlinks_titel"><p class="lines">Implementatie:</p>
+                                    <a class="xref link_xsd" href="br_xsd_Element_br_localName.html#localName">br:localName</a>, <a class="xref link_xsd" href="sv_xsd_Element_sv_localName.html#localName">sv:localName</a>, <a class="xref link_xsd" href="uws_xsd_Element_uws_localName.html#localName">uws:localName</a></p>
+                                </div>
+                                </td>
+                         </tr>
+                        <tr class="row ea_attribuut" id="Pkg__ABD95DF3C69446c98B769BA283ACFA5D">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__263B45B8B78F44339D5372DBA3BDEB9D__entry__1">Namespace</td>
+                            <td class="entry" headers="Pkg__263B45B8B78F44339D5372DBA3BDEB9D__entry__1">string</td>
+                            <td class="entry" headers="Pkg__263B45B8B78F44339D5372DBA3BDEB9D__entry__1">1..1</td>
+                            <td class="entry" headers="Pkg__263B45B8B78F44339D5372DBA3BDEB9D__entry__1">
+                                </td>
+                         </tr>
+                        <tr class="row ea_attribuut" id="Pkg__558A8159292942afAE820CCECC4997B1">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__263B45B8B78F44339D5372DBA3BDEB9D__entry__1">Introductieversie</td>
+                            <td class="entry" headers="Pkg__263B45B8B78F44339D5372DBA3BDEB9D__entry__1">major.minor-label</td>
+                            <td class="entry" headers="Pkg__263B45B8B78F44339D5372DBA3BDEB9D__entry__1">1..1</td>
+                            <td class="entry" headers="Pkg__263B45B8B78F44339D5372DBA3BDEB9D__entry__1">
+                                <div class="div"><div class="div">
+    <p class="p">De versie van het implementatiemodel (IMOP) waarbij de serialisatie van de module voor het eerst
+    de vorm heeft zoals door de versieinformatie is beschreven.</p>
+  </div>
+  </div>
+                                <div class="div noimlinks-ea:{558A8159-2929-42af-AE82-0CCECC4997B1}">
+                                    <p class="p ea_relatedlinks_titel"><p class="lines">Implementatie:</p>
+                                    <a class="xref link_xsd" href="sv_xsd_Element_sv_introductieversie.html#introductieversie">sv:introductieversie</a></p>
+                                </div>
+                                </td>
+                         </tr>
+                        <tr class="row ea_attribuut" id="Pkg__AAF55F1BC8494095BA55818D53FBA8F9">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__263B45B8B78F44339D5372DBA3BDEB9D__entry__1">Schema</td>
+                            <td class="entry" headers="Pkg__263B45B8B78F44339D5372DBA3BDEB9D__entry__1">URL</td>
+                            <td class="entry" headers="Pkg__263B45B8B78F44339D5372DBA3BDEB9D__entry__1">1..1</td>
+                            <td class="entry" headers="Pkg__263B45B8B78F44339D5372DBA3BDEB9D__entry__1">
+                                <div class="div"><div class="div">
+    <p class="p">Internet-adres dat gebruikt kan worden om het schema (als XSD-bestand) op te halen. Het
+      XSD-bestand bevat de formele definities voor de XML-implementatie van het informatiemodel.</p>
+  </div>
+  </div>
+                                <div class="div noimlinks-ea:{AAF55F1B-C849-4095-BA55-818D53FBA8F9}">
+                                    <p class="p ea_relatedlinks_titel"><p class="lines">Implementatie:</p>
+                                    <a class="xref link_xsd" href="sv_xsd_Element_sv_schema.html#schema">sv:schema</a></p>
+                                </div>
+                                </td>
+                         </tr>
+                        <tr class="row ea_attribuut" id="Pkg__E801F77D8A0447a38E6C6F3B6A15D49F">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__263B45B8B78F44339D5372DBA3BDEB9D__entry__1">Schematron</td>
+                            <td class="entry" headers="Pkg__263B45B8B78F44339D5372DBA3BDEB9D__entry__1">URL</td>
+                            <td class="entry" headers="Pkg__263B45B8B78F44339D5372DBA3BDEB9D__entry__1">0..*</td>
+                            <td class="entry" headers="Pkg__263B45B8B78F44339D5372DBA3BDEB9D__entry__1">
+                                <div class="div"><div class="div">
+    <p class="p">Internet-adres dat gebruikt kan worden om de schematron (als SCH-bestand) op te halen</p>
+  </div>
+  </div>
+                                <div class="div noimlinks-ea:{E801F77D-8A04-47a3-8E6C-6F3B6A15D49F}">
+                                    <p class="p ea_relatedlinks_titel"><p class="lines">Implementatie:</p>
+                                    <a class="xref link_xsd" href="sv_xsd_Element_sv_schematron.html#schematron">sv:schematron</a></p>
+                                </div>
+                                </td>
+                         </tr>
+                    </tbody></table>
+            <table class="table ea_element" id="Pkg__5DAB70EEE0D7444095A1F6CA89FFE96A"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__5DAB70EEE0D7444095A1F6CA89FFE96A__entry__1" colspan="4">Standaard Officiële Publicaties</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row ea_attribuut_header">
+                            <td class="entry" headers="Pkg__5DAB70EEE0D7444095A1F6CA89FFE96A__entry__1"><strong class="ph b">Eigenschappen</strong></td>
+                            <td class="entry" headers="Pkg__5DAB70EEE0D7444095A1F6CA89FFE96A__entry__1"><strong class="ph b">Type</strong></td>
+                            <td class="entry" headers="Pkg__5DAB70EEE0D7444095A1F6CA89FFE96A__entry__1"><strong class="ph b">Kardinaliteit</strong></td>
+                            <td class="entry" headers="Pkg__5DAB70EEE0D7444095A1F6CA89FFE96A__entry__1"><strong class="ph b">Beschrijving</strong></td>
+                        </tr>
+                        <tr class="row ea_attribuut" id="Pkg__808C8BAE1A274aad83AE97287780F11B">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__5DAB70EEE0D7444095A1F6CA89FFE96A__entry__1">Standaardversie</td>
+                            <td class="entry" headers="Pkg__5DAB70EEE0D7444095A1F6CA89FFE96A__entry__1">major.minor-label</td>
+                            <td class="entry" headers="Pkg__5DAB70EEE0D7444095A1F6CA89FFE96A__entry__1">1..1</td>
+                            <td class="entry" headers="Pkg__5DAB70EEE0D7444095A1F6CA89FFE96A__entry__1">
+                                <div class="div"><div class="div">
+    <p class="p">De versie van de standaard. Het versienummer voldoet aan de <a class="xref" href="https://www.semver.org/" target="_blank">semver</a> standaard.
+    De algemene vorm is <em class="ph i">major</em>.<em class="ph i">minor</em>.0-<em class="ph i">label</em>,
+    waarbij het <em class="ph i">label</em> gedeelte optioneel is en  voor elke <em class="ph i">major</em>.<em class="ph i">minor</em> versie hooguit één versie met een label bestaat.</p>
+  </div>
+</div>
+                                </td>
+                         </tr>
+                    </tbody></table>
+            <table class="table ea_element" id="Pkg__88006B2F26DE4a33A7E1FA3C9A86B8FE"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__88006B2F26DE4a33A7E1FA3C9A86B8FE__entry__1" colspan="4">Transformatie</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row">
+                        <td class="entry ea_doc_titel" headers="Pkg__88006B2F26DE4a33A7E1FA3C9A86B8FE__entry__1">Definitie</td>
+                        <td class="entry ea_element_beschrijving" headers="Pkg__88006B2F26DE4a33A7E1FA3C9A86B8FE__entry__1" colspan="3"><div class="div">
+    <p class="p">Een beschikbare transformatie om de serialisatie van een module die conform de 
+      beschreven serialisatievoorschriften is gemaakt om te zetten naar de serialisatie van dezelfde 
+      module conform een andere serialisatieversie. Dit is dus een omzetting van een module die 
+      is gemaakt volgens een bepaalde moduleversie naar een andere moduleversie.</p>
+  </div>
+  </td>
+                    </tr>
+                    <tr class="row noimlinks-ea:{88006B2F-26DE-4a33-A7E1-FA3C9A86B8FE}">
+                        <td class="entry ea_doc_titel" headers="Pkg__88006B2F26DE4a33A7E1FA3C9A86B8FE__entry__1">Implementatie</td>
+                        <td class="entry ea_relatedlinks_lijst" headers="Pkg__88006B2F26DE4a33A7E1FA3C9A86B8FE__entry__1" colspan="3"><a class="xref link_xsd" href="sv_xsd_Element_sv_Transformatie.html#Transformatie">sv:Transformatie</a></td>
+                    </tr>
+                    <tr class="row ea_attribuut_header">
+                            <td class="entry" headers="Pkg__88006B2F26DE4a33A7E1FA3C9A86B8FE__entry__1"><strong class="ph b">Eigenschappen</strong></td>
+                            <td class="entry" headers="Pkg__88006B2F26DE4a33A7E1FA3C9A86B8FE__entry__1"><strong class="ph b">Type</strong></td>
+                            <td class="entry" headers="Pkg__88006B2F26DE4a33A7E1FA3C9A86B8FE__entry__1"><strong class="ph b">Kardinaliteit</strong></td>
+                            <td class="entry" headers="Pkg__88006B2F26DE4a33A7E1FA3C9A86B8FE__entry__1"><strong class="ph b">Beschrijving</strong></td>
+                        </tr>
+                        <tr class="row ea_attribuut" id="Pkg__E773F341E61A4a3eB275121E5DF3B5C2">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__88006B2F26DE4a33A7E1FA3C9A86B8FE__entry__1">Beschikbaar op</td>
+                            <td class="entry" headers="Pkg__88006B2F26DE4a33A7E1FA3C9A86B8FE__entry__1">URL</td>
+                            <td class="entry" headers="Pkg__88006B2F26DE4a33A7E1FA3C9A86B8FE__entry__1">1..1</td>
+                            <td class="entry" headers="Pkg__88006B2F26DE4a33A7E1FA3C9A86B8FE__entry__1">
+                                <div class="div"><div class="div">
+    <p class="p">Internet-adres dat gebruikt kan worden om de transformatie (als XSLT) op te halen</p>
+  </div>
+  </div>
+                                <div class="div noimlinks-ea:{E773F341-E61A-4a3e-B275-121E5DF3B5C2}">
+                                    <p class="p ea_relatedlinks_titel"><p class="lines">Implementatie:</p>
+                                    <a class="xref link_xsd" href="sv_xsd_Element_sv_locatie.html#locatie">sv:locatie</a></p>
+                                </div>
+                                </td>
+                         </tr>
+                    </tbody></table>
+            <table class="table ea_element" id="Pkg__1096A8FEA04C4a4c9A76349816A049F1"><caption></caption><colgroup><col style="width:13.333333333333334%"><col style="width:13.333333333333334%"><col style="width:6.666666666666667%"><col style="width:66.66666666666666%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry ea_element_naam" id="Pkg__1096A8FEA04C4a4c9A76349816A049F1__entry__1" colspan="4">Versionering serialisatie</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                    <tr class="row">
+                        <td class="entry ea_doc_titel" headers="Pkg__1096A8FEA04C4a4c9A76349816A049F1__entry__1">Beschrijving</td>
+                        <td class="entry ea_element_beschrijving" headers="Pkg__1096A8FEA04C4a4c9A76349816A049F1__entry__1" colspan="3"><div class="div">
+    <p class="p">
+      Beschrijving van alle versies van de serialisatie van alle modules uit alle
+      gepubliceerde, nog ondersteunde versies van het Implementatiemodel Officiële Publicaties (IMOP).
+    </p>
+  </div>
+</td>
+                    </tr>
+                    <tr class="row ea_attribuut_header">
+                            <td class="entry" headers="Pkg__1096A8FEA04C4a4c9A76349816A049F1__entry__1"><strong class="ph b">Eigenschappen</strong></td>
+                            <td class="entry" headers="Pkg__1096A8FEA04C4a4c9A76349816A049F1__entry__1"><strong class="ph b">Type</strong></td>
+                            <td class="entry" headers="Pkg__1096A8FEA04C4a4c9A76349816A049F1__entry__1"><strong class="ph b">Kardinaliteit</strong></td>
+                            <td class="entry" headers="Pkg__1096A8FEA04C4a4c9A76349816A049F1__entry__1"><strong class="ph b">Beschrijving</strong></td>
+                        </tr>
+                        <tr class="row ea_attribuut" id="Pkg__313832FE4D844eb48DDCDB21FE3C903A">
+                            <td class="entry ea_attribuut_naam" headers="Pkg__1096A8FEA04C4a4c9A76349816A049F1__entry__1">Hoogst bekende versie</td>
+                            <td class="entry" headers="Pkg__1096A8FEA04C4a4c9A76349816A049F1__entry__1">versienummer</td>
+                            <td class="entry" headers="Pkg__1096A8FEA04C4a4c9A76349816A049F1__entry__1">1..1</td>
+                            <td class="entry" headers="Pkg__1096A8FEA04C4a4c9A76349816A049F1__entry__1">
+                                <div class="div"><div class="div">
+    <p class="p">De hoogste/grootste versie van de implementatie van de standaard waarvan de informatie in dit overzicht is meegenomen.
+    Dat kan een preview/release candidate versie zijn. Het overzicht bevat versieinformatie uit alle 
+    versies van (de implementatie van) de standaard voor zover ze nog ondersteund worden.</p>
+  </div>
+</div>
+                                </td>
+                         </tr>
+                    </tbody></table>
+        </section>
+  </div>
+</article></main></body></html>

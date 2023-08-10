@@ -1,0 +1,139 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="nl-nl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="melding"><meta name="DC.language" content="nl-nl"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Element br:melding</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="melding"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a><ul><li><a href="imop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="imop_xml.html">XML-serialisatie</a></li><li><a href="uitwisselpakket.html">Uitwisselpakket</a></li><li><a href="schemata_gebruik.html">Gebruik van IMOP</a></li><li><a href="schema_documentatie.html">Schemadocumentatie</a><ul><li><a href="schema_documentatie_legenda.html">Legenda van de schemadocumentatie</a></li><li><a href="imop_modules.html">STOP-modules in IMOP</a></li><li><a href="tekst_xsd_Main_schema_tekst_xsd.html">Schema imop-tekst.xsd</a></li><li><a href="gio_xsd_Main_schema_gio_xsd.html">Schema imop-gio.xsd</a></li><li><a href="geo_xsd_Main_schema_geo_xsd.html">Schema imop-geo.xsd</a></li><li><a href="se_xsd_Main_schema_se_xsd.html">Schema se-FeatureStyle-imop.xsd</a></li><li><a href="ogc_xsd_Main_schema_ogc_xsd.html">Schema se-filter-imop.xsd</a></li><li><a href="data_xsd_Main_schema_data_xsd.html">Schema imop-data.xsd</a></li><li><a href="cons_xsd_Main_schema_cons_xsd.html">Schema imop-consolidatie.xsd</a></li><li><a href="rsc_xsd_Main_schema_rsc_xsd.html">Schema imop-resources.xsd</a></li><li><a href="br_xsd_Main_schema_br_xsd.html">Schema imop-bedrijfsregels.xsd</a><ul><li><a href="br_xsd_Attribute_Group_br_agSchemaVersie.html">agSchemaVersie</a></li><li><a href="br_xsd_Element_br_Attribuutgroep.html">Attribuutgroep</a></li><li><a href="br_xsd_Element_br_b.html">b</a></li><li><a href="br_xsd_Element_br_Bedrijfsregel.html">Bedrijfsregel</a></li><li><a href="br_xsd_Element_br_Bedrijfsregelgroep.html">Bedrijfsregelgroep</a></li><li><a href="br_xsd_Element_br_Bedrijfsregels.html">Bedrijfsregels</a></li><li><a href="br_xsd_Element_br_beperkingVoor.html">beperkingVoor</a></li><li><a href="br_xsd_Element_br_code.html">code</a></li><li><a href="br_xsd_Element_br_codeph.html">codeph</a></li><li><a href="br_xsd_Element_br_codeRef.html">codeRef</a></li><li><a href="br_xsd_Element_br_context.html">context</a></li><li><a href="br_xsd_Element_br_documentatie.html">documentatie</a></li><li><a href="br_xsd_Element_br_Documenttype.html">Documenttype</a></li><li><a href="br_xsd_Simple_Type_br_dtCode.html">dtCode</a></li><li><a href="br_xsd_Simple_Type_br_dtFormat.html">dtFormat</a></li><li><a href="br_xsd_Simple_Type_br_dtNulOfEen.html">dtNulOfEen</a></li><li><a href="br_xsd_Simple_Type_br_dtSchemaVersie.html">dtSchemaVersie</a></li><li><a href="br_xsd_Simple_Type_br_dtScope.html">dtScope</a></li><li><a href="br_xsd_Simple_Type_br_dtWaardeRef.html">dtWaardeRef</a></li><li><a href="br_xsd_Element_br_eigenaar.html">eigenaar</a></li><li><a href="br_xsd_Element_br_eigenaarRef.html">eigenaarRef</a></li><li><a href="br_xsd_Element_br_Element.html">Element</a></li><li><a href="br_xsd_Element_br_ernst.html">ernst</a></li><li><a href="br_xsd_Element_br_geldendeBedrijfsregels.html">geldendeBedrijfsregels</a></li><li><a href="br_xsd_Element_br_geldtVoor.html">geldtVoor</a></li><li><a href="br_xsd_Element_br_groepsnaam.html">groepsnaam</a></li><li><a href="br_xsd_Element_br_i.html">i</a></li><li><a href="br_xsd_Element_br_id.html">id</a></li><li><a href="br_xsd_Simple_Type_br_idType.html">idType</a></li><li><a href="br_xsd_Element_br_implementatieDoorEigenaar.html">implementatieDoorEigenaar</a></li><li><a href="br_xsd_Element_br_li.html">li</a></li><li><a href="br_xsd_Element_br_link.html">link</a></li><li><a href="br_xsd_Element_br_localName.html">localName</a></li><li class="active"><a href="br_xsd_Element_br_melding.html">melding</a></li><li><a href="br_xsd_Element_br_namespace.html">namespace</a></li><li><a href="br_xsd_Element_br_ol.html">ol</a></li><li><a href="br_xsd_Element_br_opmerking.html">opmerking</a></li><li><a href="br_xsd_Element_br_p.html">p</a></li><li><a href="br_xsd_Element_br_regel.html">regel</a></li><li><a href="br_xsd_Element_br_Regelingtype.html">Regelingtype</a></li><li><a href="br_xsd_Element_br_soortRegeling.html">soortRegeling</a></li><li><a href="br_xsd_Element_br_u.html">u</a></li><li><a href="br_xsd_Element_br_ul.html">ul</a></li><li><a href="br_xsd_Element_br_var.html">var</a></li><li><a href="br_xsd_Element_br_versie.html">versie</a></li><li><a href="br_xsd_Simple_Type_br_wlErnst.html">wlErnst</a></li><li><a href="br_xsd_Element_br_xref.html">xref</a></li></ul></li><li><a href="sv_xsd_Main_schema_sv_xsd.html">Schema imop-schemata.xsd</a></li><li><a href="uws_xsd_Main_schema_uws_xsd.html">Schema imop-uitwisseling.xsd</a></li></ul></li><li><a href="imop_bedrijfsregels.html">Bedrijfsregels</a></li><li><a href="imop_waardelijsten.html">Waardelijsten</a></li></ul></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+   <h1 class="title topictitle1" id="ariaid-title1">Element br:melding</h1>
+   <div class="body">
+      <table class="table frame-all"><caption></caption><colgroup><col style="width:10.714285714285714%"><col style="width:89.28571428571429%"></colgroup><tbody class="tbody">
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Namespace</td>
+                  <td class="entry align-left colsep-1 rowsep-1">https://standaarden.overheid.nl/stop/imop/bedrijfsregels/</td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Definitie</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="div">
+    <p class="p">De melding voor de gebruiker als aan de business rule niet voldaan is</p>
+  </div>
+  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Informatie</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="div">
+    <p class="p">De melding bevat aanwijzingen (middels <code class="ph codeph"><a class="xref link_xsd" href="br_xsd_Element_br_var.html#var">br:var</a></code>)
+      om de gebruiker duidelijk te maken waar en waarom de fout optreedt. Ook wordt een remedie beschreven hoe
+      de informatie kan worden veranderd om deze wel valide ten opzichte van de rule te maken.</p>
+  </div>
+  <div class="div">
+    <p class="p"><strong class="ph b">Voorbeeld</strong></p>
+    <pre class="pre codeblock"><code>&lt;melding&gt;Het attribuut @eId of een deel van de eId &lt;var naam="eId"/&gt; van element &lt;var
+    naam="element"/&gt; eindigt op een '.', dit is niet toegestaan. Verwijder de laatste punt(en)
+    '.' voor deze eId&lt;/melding&gt;</code></pre>
+  </div>
+  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Informatiemodel</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Verwijzingen</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <a class="xref link_xsd" href="br_xsd_Element_br_var.html#var">br:var</a></td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Diagram</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="p">
+                        <div class="fig imagemap" id="melding__br_xsd_Element_br_melding"><img usemap="#d286433e113" class="image" src="img/br_xsd_Element_br_melding.png"><map name="d286433e113" id="d286433e113"><area href="br_xsd_Element_br_var.html#var" alt="Element br:var" title="Element br:var" shape="rect" coords="187,6,247,31"></map></div>
+                     </div>
+                  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Eigenschappen</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="p">
+                        <table class="table frame-all"><caption></caption><colgroup><col style="width:20%"><col style="width:80%"></colgroup><tbody class="tbody">
+                                 <tr class="row">
+                                    <td class="entry align-left colsep-1 rowsep-1">content: </td>
+                                    <td class="entry align-left colsep-1 rowsep-1">
+                                       <strong class="ph b">complex</strong>
+                                    </td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td class="entry align-left colsep-1 rowsep-1">mixed: </td>
+                                    <td class="entry align-left colsep-1 rowsep-1">
+                                       <strong class="ph b">true</strong>
+                                    </td>
+                                 </tr>
+                              </tbody></table>
+                     </div>
+                  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Gebruikt door</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <div class="p">
+                        <table class="table frame-all"><caption></caption><colgroup><col style="width:20%"><col style="width:80%"></colgroup><tbody class="tbody">
+                                 <tr class="row">
+                                    <td class="entry align-left colsep-1 rowsep-1">Element </td>
+                                    <td class="entry align-left colsep-1 rowsep-1">
+                                       <a class="xref" href="br_xsd_Element_br_Bedrijfsregel.html#Bedrijfsregel">Element br:Bedrijfsregel</a>
+                                    </td>
+                                 </tr>
+                              </tbody></table>
+                     </div>
+                  </td>
+               </tr>
+               <tr class="row">
+                  <td class="entry align-left colsep-1 rowsep-1">Kinderen</td>
+                  <td class="entry align-left colsep-1 rowsep-1">
+                     <a class="xref" href="br_xsd_Element_br_var.html#var">Element br:var</a>
+                  </td>
+               </tr>
+               </tbody></table>
+   </div>
+</article></main></body></html>

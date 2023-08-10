@@ -1,0 +1,45 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2022"><meta name="DC.rights.owner" content="(C) Copyright 2022"><meta name="DC.type" content="topic"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="bedrijfsregels"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/stop.css"><title>Bedrijfsregels</title>
+  <link rel="shortcut icon" href="https://koop.gitlab.io/STOP/standaard/1.3.0/img/stop.png">
+  <link rel="alternate" type="application/rss+xml" title="RSS voor publicaties van de Standaard Officiële Publicaties" href="https://koop.gitlab.io/STOP/standaard/rss.xml">
+  <script type="text/javascript" src="https://koop.gitlab.io/STOP/standaard/1.3.0/versieinfo.js"></script>
+</head><body id="bedrijfsregels"><header role="banner"><div>
+  <table>
+    <tr>
+      <td colspan="2">Standaard Officiële Publicaties</td>
+      <td class="versie"><span id="_VersieTekst"></span> <a href="https://koop.gitlab.io/STOP/standaard/rss.xml"><img class="rss_icon" src="https://koop.gitlab.io/STOP/standaard/img/rss.png"></a></td>
+    </tr>
+    <tr>
+      <td class="subtitle" id="_VersieActualiteit"></td>
+      <td colspan="2" class="search">
+        Zoek naar
+          <input type="text" id="search_tekst" size="31" value="trefwoord(en)" onfocus="this.value=''">
+        met
+        <form method="get" action="https://www.google.com/search" target="_blank" id="myBtn" onsubmit="search_google()">
+          <input type="text" name="q" id="search_google_q" size="31" value="" style="display:none;">
+          <input type="submit" value="Google">
+        </form>
+      </td>
+    </tr>
+  </table>
+  
+  <script type="text/javascript">
+    function search_google () {
+    document.getElementById('search_google_q').value = document.getElementById('search_tekst').value + ' site:https://koop.gitlab.io/STOP/standaard/'
+    }
+    // Execute a function when the user releases a key on the keyboard
+    document.getElementById("search_tekst").addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+    //Cancel the default action, if needed
+    //event.preventDefault();
+    search_google ();
+    document.forms["myBtn"].submit();
+    }
+    });
+    document.getElementById('_VersieTekst').innerHTML = VersieInfo_VersieTekst()
+    document.getElementById('_VersieActualiteit').innerHTML = VersieInfo_VersieActualiteit()
+  </script>
+  
+</div></header><nav role="toc"><ul><li><a href="index.html">Introductie</a></li><li><a href="over_stop.html">Over de standaard</a></li><li><a href="stop_index.html">Standaard Officiële Publicaties</a><ul><li><a href="stop_wijzigingsoverzicht.html">Wijzigingsoverzicht</a></li><li><a href="leeswijzers.html">Leeswijzers</a></li><li><a href="EA_4D1D7FD517FE4d8dA9A2B905D202C92B.html">Informatiemodel</a></li><li class="active"><a href="businessrules.html">Bedrijfsregels</a><ul><li><a href="businessrules_codes.html">Bedrijfsregels per code</a></li><li><a href="businessrules_modules.html">Bedrijfsregels per module</a></li></ul></li></ul></li><li><a href="imop_index.html">Implementatiemodel Officiële Publicaties</a></li><li><a href="begrippenlijst.html">Begrippenlijst</a></li></ul></nav><main role="main"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1">Bedrijfsregels</h1><div class="body"><p class="p">In deze sectie van de documentatie zijn alle bedrijfsregels bijeengebracht geordend op</p><ul class="ul"><li class="li"><p class="p"><a class="xref" href="businessrules_codes.html">meldingscode</a> en</p></li><li class="li"><p class="p">per <a class="xref" href="businessrules_modules.html">STOP module</a>.</p></li></ul><p class="p">De standaard stelt uiteenlopende randvoorwaarden waaraan de informatie moet voldoen die is opgenomen in een van de STOP-modules. Een deel van de randvoorwaarden is vastgelegd in de <a class="xref" href="schema_documentatie.html">schema's</a> van de implementatie van de standaard. De bedrijfsregels beschrijven de overige randvoorwaarden die aan de informatie gesteld worden. Het gaat bijvoorbeeld om bedrijfsregels die een vertaling zijn van invulinstructies, of die de consistentie borgen tussen verschillende elementen van de informatie. De bedrijfsregels zijn van toepassing voor elk systeem dat gebruik maakt van STOP.</p><p class="p">Bedrijfsregels zijn van toepassing op één of meer STOP modules en worden aangeduid met een nummer, bijv. STOP1020. Een bedrijfsregel heeft een beschrijving, een ernst (fout of waarschuwing) en indien de bedrijfsregel binnen STOP gevalideerd kan worden, een melding. Daarnaast bevat de bedrijfsregel een verwijzing naar de schemadocumentatie van relevante elementen.</p><p class="p">Een deel van de bedrijfsregels is geïmplementeerd als <a class="xref" href="https://www.schematron.com" target="_blank">schematron</a>. Deze zijn te vinden bij de STOP-schema's op gitlab (de <a class="xref" href="https://koop.gitlab.io/STOP/standaard/1.3.0/go/go.html?id=git%3Aschema/stop" target="_blank">.sch bestanden</a>). De overige bedrijfsregels (zie <a class="xref" href="https://www.geonovum.nl/geo-standaarden/omgevingswet/STOPTPOD" target="_blank">validatiematrix</a>) zijn niet op een dergelijke manier uit te drukken en zijn òf door het <a class="xref" href="https://koop.gitlab.io/lvbb/bronhouderkoppelvlak/">Bronhouderkoppelvlak</a> geïmplementeerd, òf worden (in de toekomst) door de LVBB geïmplementeerd.</p><p class="p">De STOP-bedrijfsregels zijn ook beschikbaar als <a class="xref" href="https://koop.gitlab.io/STOP/standaard/1.3.0/go/go.html?id=git%3Aservice/bedrijfsregels" target="_blank">xml-file</a>.</p></div></article></main></body></html>
